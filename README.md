@@ -2,6 +2,24 @@
 
 A comprehensive system for crawling, analyzing, and reporting on AI education policy adoption across all 50 US states.
 
+## 🎯 NEW: Interactive Visualization Dashboard
+
+**Launch the web app to explore data interactively:**
+
+```bash
+bash run_app.sh
+# or: streamlit run app.py
+```
+
+The dashboard provides:
+- 📊 Interactive charts and visualizations
+- 🗺️ State-by-state comparisons and rankings
+- 🌎 Regional analysis
+- 🔍 Detailed state exploration
+- 📈 Policy indicator heatmaps
+
+See [APP_GUIDE.md](APP_GUIDE.md) for full dashboard documentation.
+
 ## Overview
 
 This project automatically:
@@ -9,6 +27,7 @@ This project automatically:
 - Identifies AI education policy indicators
 - Scores states on policy adoption levels
 - Generates detailed reports and visualizations
+- Provides interactive web dashboard for data exploration
 
 ## Features
 
