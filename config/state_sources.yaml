@@ -1,0 +1,301 @@
+# State Education Department URLs and AI Policy Resources
+states:
+  Alabama:
+    name: "Alabama"
+    abbr: "AL"
+    education_dept: "https://www.alsde.edu/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Alaska:
+    name: "Alaska"
+    abbr: "AK"
+    education_dept: "https://education.alaska.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Arizona:
+    name: "Arizona"
+    abbr: "AZ"
+    education_dept: "https://www.azed.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Arkansas:
+    name: "Arkansas"
+    abbr: "AR"
+    education_dept: "https://dese.ade.arkansas.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  California:
+    name: "California"
+    abbr: "CA"
+    education_dept: "https://www.cde.ca.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Colorado:
+    name: "Colorado"
+    abbr: "CO"
+    education_dept: "https://www.cde.state.co.us/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Connecticut:
+    name: "Connecticut"
+    abbr: "CT"
+    education_dept: "https://portal.ct.gov/SDE"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Delaware:
+    name: "Delaware"
+    abbr: "DE"
+    education_dept: "https://www.doe.k12.de.us/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Florida:
+    name: "Florida"
+    abbr: "FL"
+    education_dept: "https://www.fldoe.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Georgia:
+    name: "Georgia"
+    abbr: "GA"
+    education_dept: "https://www.gadoe.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Hawaii:
+    name: "Hawaii"
+    abbr: "HI"
+    education_dept: "https://www.hawaiipublicschools.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Idaho:
+    name: "Idaho"
+    abbr: "ID"
+    education_dept: "https://www.sde.idaho.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Illinois:
+    name: "Illinois"
+    abbr: "IL"
+    education_dept: "https://www.isbe.net/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Indiana:
+    name: "Indiana"
+    abbr: "IN"
+    education_dept: "https://www.in.gov/doe/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Iowa:
+    name: "Iowa"
+    abbr: "IA"
+    education_dept: "https://educateiowa.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Kansas:
+    name: "Kansas"
+    abbr: "KS"
+    education_dept: "https://www.ksde.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Kentucky:
+    name: "Kentucky"
+    abbr: "KY"
+    education_dept: "https://www.education.ky.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Louisiana:
+    name: "Louisiana"
+    abbr: "LA"
+    education_dept: "https://www.louisianabelieves.com/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Maine:
+    name: "Maine"
+    abbr: "ME"
+    education_dept: "https://www.maine.gov/doe/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Maryland:
+    name: "Maryland"
+    abbr: "MD"
+    education_dept: "https://www.marylandpublicschools.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Massachusetts:
+    name: "Massachusetts"
+    abbr: "MA"
+    education_dept: "https://www.doe.mass.edu/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Michigan:
+    name: "Michigan"
+    abbr: "MI"
+    education_dept: "https://www.michigan.gov/mde"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Minnesota:
+    name: "Minnesota"
+    abbr: "MN"
+    education_dept: "https://education.mn.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Mississippi:
+    name: "Mississippi"
+    abbr: "MS"
+    education_dept: "https://www.mdek12.org/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Missouri:
+    name: "Missouri"
+    abbr: "MO"
+    education_dept: "https://dese.mo.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Montana:
+    name: "Montana"
+    abbr: "MT"
+    education_dept: "https://opi.mt.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Nebraska:
+    name: "Nebraska"
+    abbr: "NE"
+    education_dept: "https://www.education.ne.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Nevada:
+    name: "Nevada"
+    abbr: "NV"
+    education_dept: "http://www.doe.nv.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "New Hampshire":
+    name: "New Hampshire"
+    abbr: "NH"
+    education_dept: "https://www.education.nh.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "New Jersey":
+    name: "New Jersey"
+    abbr: "NJ"
+    education_dept: "https://www.nj.gov/education/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "New Mexico":
+    name: "New Mexico"
+    abbr: "NM"
+    education_dept: "https://webnew.ped.state.nm.us/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "New York":
+    name: "New York"
+    abbr: "NY"
+    education_dept: "http://www.nysed.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "North Carolina":
+    name: "North Carolina"
+    abbr: "NC"
+    education_dept: "https://www.dpi.nc.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "North Dakota":
+    name: "North Dakota"
+    abbr: "ND"
+    education_dept: "https://www.nd.gov/dpi/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Ohio:
+    name: "Ohio"
+    abbr: "OH"
+    education_dept: "https://education.ohio.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Oklahoma:
+    name: "Oklahoma"
+    abbr: "OK"
+    education_dept: "https://sde.ok.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Oregon:
+    name: "Oregon"
+    abbr: "OR"
+    education_dept: "https://www.oregon.gov/ode/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Pennsylvania:
+    name: "Pennsylvania"
+    abbr: "PA"
+    education_dept: "https://www.education.pa.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "Rhode Island":
+    name: "Rhode Island"
+    abbr: "RI"
+    education_dept: "https://www.ride.ri.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "South Carolina":
+    name: "South Carolina"
+    abbr: "SC"
+    education_dept: "https://ed.sc.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "South Dakota":
+    name: "South Dakota"
+    abbr: "SD"
+    education_dept: "https://doe.sd.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Tennessee:
+    name: "Tennessee"
+    abbr: "TN"
+    education_dept: "https://www.tn.gov/education.html"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Texas:
+    name: "Texas"
+    abbr: "TX"
+    education_dept: "https://tea.texas.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Utah:
+    name: "Utah"
+    abbr: "UT"
+    education_dept: "https://www.schools.utah.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Vermont:
+    name: "Vermont"
+    abbr: "VT"
+    education_dept: "https://education.vermont.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Virginia:
+    name: "Virginia"
+    abbr: "VA"
+    education_dept: "https://www.doe.virginia.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Washington:
+    name: "Washington"
+    abbr: "WA"
+    education_dept: "https://www.k12.wa.us/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  "West Virginia":
+    name: "West Virginia"
+    abbr: "WV"
+    education_dept: "https://wvde.us/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Wisconsin:
+    name: "Wisconsin"
+    abbr: "WI"
+    education_dept: "https://dpi.wi.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
+
+  Wyoming:
+    name: "Wyoming"
+    abbr: "WY"
+    education_dept: "https://edu.wyoming.gov/"
+    policy_keywords: ["artificial intelligence", "AI", "technology plan", "digital learning"]
