@@ -29,6 +29,11 @@ data/cache/
 data/raw/
 *.log
 
+# Generated output directories
+output/
+output_demo/
+output_*/
+
 .DS_Store
 .vscode/
 .idea/
