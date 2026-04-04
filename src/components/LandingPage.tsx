@@ -61,16 +61,8 @@ export function LandingPage({
 
         <nav className="landing-topnav" aria-label="Landing navigation">
           <button type="button" onClick={onOpenProjectOverview}>
-            Research grounding
+            Project overview
           </button>
-          <button type="button" onClick={onOpenProjectOverview}>
-            Methodology
-          </button>
-          {!isAuthenticated ? (
-            <button type="button" onClick={onSkipTesting}>
-              Skip for testing
-            </button>
-          ) : null}
           <button type="button" onClick={isAuthenticated ? onOpenDashboard : onOpenLogin}>
             {isAuthenticated ? "Open workspace" : "Sign in"}
           </button>
@@ -80,8 +72,13 @@ export function LandingPage({
       <main>
         <section className="landing-hero">
           <div className="landing-hero-backdrop" aria-hidden="true">
+            <div className="landing-aurora" />
             <div className="landing-glow landing-glow-a" />
             <div className="landing-glow landing-glow-b" />
+            <div className="landing-orbit landing-orbit-a" />
+            <div className="landing-orbit landing-orbit-b" />
+            <div className="landing-signal-pulse landing-signal-pulse-a" />
+            <div className="landing-signal-pulse landing-signal-pulse-b" />
             <div className="landing-gridlines" />
           </div>
 
@@ -120,12 +117,12 @@ export function LandingPage({
 
           <div className="landing-hero-panel">
             <div className="landing-panel-card landing-panel-card-primary">
-              <span>Workspace status</span>
-              <strong>{isAuthenticated ? "Ready" : "Awaiting sign-in"}</strong>
+              <span>Coverage snapshot</span>
+              <strong>{isAuthenticated ? "Live workspace" : "24 published states"}</strong>
               <p>
                 {isAuthenticated
-                  ? "Your research workspace is connected. Open the dashboard to continue."
-                  : "Sign in to connect the landing page to the live surveillance dashboard."}
+                  ? "Your workspace is connected and ready to open the live policy dashboard."
+                  : "Current publication reflects routed and reviewed state records in the observatory."}
               </p>
             </div>
 
