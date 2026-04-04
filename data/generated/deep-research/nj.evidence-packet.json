@@ -1,0 +1,134 @@
+{
+  "$schema": "./evidence-packets.schema.json",
+  "jurisdiction_id": "state-nj",
+  "state_abbr": "NJ",
+  "reviewed_at": "2026-04-04T18:30:00.000Z",
+  "investigation_reason": ["source_conflict", "citation_gap"],
+  "summary": "New Jersey's official AI-in-education footprint is real but lighter-touch than states with a formal statewide guidance document. NJDOE maintains an official AI resource hub and, in 2025, issued a statewide grant program to support AI classroom pilots, curricula, and teacher training. The evidence supports an emerging-to-framework stage rather than a fully formalized statewide policy.",
+  "candidate_sources": [
+    {
+      "title": "Artificial Intelligence (AI) | New Jersey Department of Education",
+      "url": "https://www.nj.gov/education/innovation/ai/",
+      "authority_level": "official_guidance",
+      "source_type": "department_resource_hub",
+      "selected": true,
+      "why_it_matters": "This is the main official NJDOE AI page and frames the state's AI-in-education posture."
+    },
+    {
+      "title": "New Jersey Department of Education Announces Grant Awards to Support Artificial Intelligence in Education",
+      "url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+      "authority_level": "official_press_release",
+      "source_type": "grant_announcement",
+      "selected": true,
+      "why_it_matters": "The grant announcement provides the clearest official evidence of active implementation, teacher training, and AI classroom pilots."
+    }
+  ],
+  "field_level_findings": {
+    "ai_use_allowed": {
+      "value": 1,
+      "rationale": "NJDOE signals that AI should be discussed and responsibly explored, and the 2025 grants explicitly back local classroom pilots, but the state does not yet publish a stronger statewide classroom-use rule set.",
+      "evidence_quote": "This webpage provides an overview of foundational AI terms and concepts, high-level discussion questions regarding AI in education to consider at the Local Education Agency (LEA) leadership and classroom educator levels...",
+      "source_url": "https://www.nj.gov/education/innovation/ai/"
+    },
+    "assessment_policy": {
+      "value": 0,
+      "rationale": "The reviewed official sources do not contain explicit statewide AI assessment or disclosure rules."
+    },
+    "privacy_policy": {
+      "value": 0,
+      "rationale": "The reviewed official sources do not contain explicit statewide AI student-data privacy or procurement controls."
+    },
+    "teacher_pd_support": {
+      "value": 2,
+      "rationale": "NJDOE is materially supporting educator learning through official webinars, curated educator resources, and grants that include teacher training in AI integration.",
+      "evidence_quote": "The “Teaching with AI” component will support initiatives such as pilot programs using generative AI tools to enhance instructional practices... and teacher training in AI integration.",
+      "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf"
+    },
+    "implementation_stage": {
+      "value": 2,
+      "rationale": "New Jersey is beyond simple exploration because statewide grant funding is backing local AI pilots and AI curricula, but the evidence still stops short of a full statewide formal policy framework.",
+      "evidence_quote": "The “Artificial Intelligence Innovation in Education Grant” will support initiatives in 10 school districts to advance the role of AI in the classroom.",
+      "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf"
+    }
+  },
+  "conflicts_found": [],
+  "open_questions": [
+    "If NJDOE publishes a formal statewide AI guidance memo or model policy, the state's implementation-stage score should likely increase.",
+    "Privacy and assessment coding should remain zero until explicit statewide language appears."
+  ],
+  "approval_recommendation": {
+    "approval_route": "sample_audit",
+    "confidence": 0.79,
+    "rationale": "New Jersey now has supportable evidence for teacher-support and implementation activity, but the current posture is still more resource-and-grant oriented than formal policy, so sample audit remains the right route."
+  },
+  "recommended_record": {
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.79,
+    "policy_strength": 5,
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "resource-curation",
+    "notes": "Deep-research review confirms that New Jersey has an official NJDOE AI resource hub and active statewide AI grantmaking for local pilots and teacher training, but not yet a stronger formal statewide AI guidance document.",
+    "verification_status": "supported",
+    "verification_notes": "Official New Jersey sources support low-to-moderate AI use, teacher-support, and implementation coding. Assessment and privacy remain uncoded because the reviewed state sources are not explicit on those domains.",
+    "policy_domains": ["ai_use", "teacher_pd", "governance"],
+    "source_documents": [
+      {
+        "url": "https://www.nj.gov/education/innovation/ai/",
+        "title": "Artificial Intelligence (AI) | New Jersey Department of Education",
+        "raw_file": null,
+        "published_date_guess": "2026"
+      },
+      {
+        "url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "title": "New Jersey Department of Education Announces Grant Awards to Support Artificial Intelligence in Education",
+        "raw_file": null,
+        "published_date_guess": "January 22, 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "This webpage provides an overview of foundational AI terms and concepts, high-level discussion questions regarding AI in education to consider at the Local Education Agency (LEA) leadership and classroom educator levels...",
+        "source_url": "https://www.nj.gov/education/innovation/ai/",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The “Teaching with AI” component will support initiatives such as pilot programs using generative AI tools to enhance instructional practices... and teacher training in AI integration.",
+        "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "The “Artificial Intelligence Innovation in Education Grant” will support initiatives in 10 school districts to advance the role of AI in the classroom.",
+        "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "chunk_id": null
+      }
+    ]
+  },
+  "gold_record": {
+    "jurisdiction_id": "state-nj",
+    "state_abbr": "NJ",
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_domains": ["ai_use", "teacher_pd", "governance"],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": ["ai_use_allowed", "teacher_pd_support", "implementation_stage"],
+    "source_packet": "data/generated/deep-research/nj.evidence-packet.json",
+    "review_confidence": 0.79,
+    "evidence_urls": [
+      "https://www.nj.gov/education/innovation/ai/",
+      "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf"
+    ],
+    "notes": "Deep-research-reviewed hard case. Official New Jersey sources support an emerging, grant-backed AI posture rather than a full statewide formal policy."
+  }
+}

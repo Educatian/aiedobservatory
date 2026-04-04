@@ -1,0 +1,8 @@
+{
+  "jurisdiction_id": "state-va",
+  "state_abbr": "VA",
+  "mode": "prompt_only",
+  "model": "o4-mini-deep-research",
+  "created_at": "2026-04-04T16:15:56.122Z",
+  "prompt": "Research the strongest current official statewide AI-in-education policy sources for Virginia (VA).\n\nContext:\n- Current approval route: human_review\n- Review status: needs_revision\n- Confidence: 0\n- Routing reasons: source_conflict\n- Deep research reasons: source_conflict\n\nCurrent known sources:\n- Untitled | https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education\n\nRequirements:\n- Prioritize official statewide sources such as department of education pages, state board guidance, formal frameworks, model policies, statutes, or regulations.\n- Identify whether the current record is missing a stronger primary source.\n- Flag conflicts between press releases and primary documents.\n- Provide field-level evidence relevant to AI use, assessment, privacy, teacher professional development, and implementation stage.\n- Recommend one of: auto_approve, sample_audit, human_review.\n- Return a concise evidence memo with direct source links and unresolved questions."
+}

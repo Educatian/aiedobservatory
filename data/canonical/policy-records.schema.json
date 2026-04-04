@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIED Policy Canonical Record",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "record_id",
+      "jurisdiction_id",
+      "jurisdiction_name",
+      "jurisdiction_type",
+      "state_abbr",
+      "review_status",
+      "extraction_status",
+      "version",
+      "updated_at",
+      "source_documents"
+    ],
+    "properties": {
+      "record_id": { "type": "string" },
+      "jurisdiction_id": { "type": "string" },
+      "jurisdiction_name": { "type": "string" },
+      "jurisdiction_type": {
+        "type": "string",
+        "enum": ["state", "district", "school"]
+      },
+      "parent_jurisdiction_id": {
+        "type": ["string", "null"]
+      },
+      "state_abbr": { "type": "string" },
+      "year": { "type": ["integer", "null"] },
+      "effective_date": { "type": ["string", "null"] },
+      "review_status": {
+        "type": "string",
+        "enum": ["pending_review", "approved", "needs_revision"]
+      },
+      "extraction_status": {
+        "type": "string",
+        "enum": ["not_extracted", "draft_extracted", "validated"]
+      },
+      "coder_type": {
+        "type": ["string", "null"],
+        "enum": ["human", "llm", "hybrid", null]
+      },
+      "extraction_model": { "type": ["string", "null"] },
+      "confidence": {
+        "type": ["number", "null"],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "approval_route": {
+        "type": ["string", "null"],
+        "enum": ["auto_approve", "sample_audit", "human_review", null]
+      },
+      "audit_status": {
+        "type": ["string", "null"],
+        "enum": ["not_required", "pending_sample", "pending_human_review", "completed", null]
+      },
+      "source_authority": {
+        "type": ["string", "null"],
+        "enum": [
+          "binding_law_or_regulation",
+          "official_guidance",
+          "official_model_policy",
+          "official_press_release",
+          "secondary_reporting",
+          "unknown",
+          null
+        ]
+      },
+      "routing_reasons": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "deep_research_recommended": {
+        "type": ["boolean", "null"]
+      },
+      "deep_research_reasons": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "policy_strength": { "type": ["number", "null"] },
+      "policy_domains": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "ai_use_allowed": { "type": ["integer", "null"] },
+      "assessment_policy": { "type": ["integer", "null"] },
+      "privacy_policy": { "type": ["integer", "null"] },
+      "teacher_pd_support": { "type": ["integer", "null"] },
+      "implementation_stage": { "type": ["integer", "null"] },
+      "policy_orientation": { "type": ["string", "null"] },
+      "notes": { "type": ["string", "null"] },
+      "verification_status": {
+        "type": ["string", "null"],
+        "enum": ["supported", "needs_review", null]
+      },
+      "verification_notes": { "type": ["string", "null"] },
+      "version": { "type": "integer" },
+      "updated_at": { "type": "string" },
+      "source_documents": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["url"],
+          "properties": {
+            "url": { "type": "string" },
+            "title": { "type": ["string", "null"] },
+            "raw_file": { "type": ["string", "null"] },
+            "published_date_guess": { "type": ["string", "null"] }
+          }
+        }
+      },
+      "evidence_spans": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "field": { "type": "string" },
+            "quote": { "type": "string" },
+            "source_url": { "type": "string" },
+            "chunk_id": { "type": ["string", "null"] }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "aied-policy-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "crawl:sources": "node scripts/crawl-policy-sources.mjs",
+    "pipeline:import:docx": "node scripts/import-local-docx.mjs",
+    "pipeline:merge:manifest": "node scripts/merge-manifest-into-canonical.mjs",
+    "pipeline:merge:coverage": "node scripts/merge-agentic-coverage-additions.mjs",
+    "pipeline:scaffold": "node scripts/scaffold-canonical-records.mjs",
+    "pipeline:chunk": "node scripts/build-evidence-index.mjs",
+    "pipeline:extract:auto": "node scripts/run-extraction-auto.mjs",
+    "pipeline:extract": "node scripts/extract-policy-records.mjs",
+    "pipeline:extract:gemini": "node scripts/extract-policy-records-gemini.mjs",
+    "pipeline:extract:pdf:gemini": "node scripts/extract-policy-record-from-pdf-gemini.mjs",
+    "pipeline:route": "node scripts/route-policy-records.mjs",
+    "pipeline:deep-research": "node scripts/run-deep-research-fallback.mjs",
+    "pipeline:deep-research:apply": "node scripts/apply-deep-research-packets.mjs",
+    "pipeline:gold:sync": "node scripts/sync-gold-set-from-packets.mjs",
+    "pipeline:review:apply": "node scripts/apply-review-decision.mjs",
+    "pipeline:verify:gemini": "node scripts/verify-policy-records-gemini.mjs",
+    "pipeline:validate": "node scripts/validate-policy-records.mjs",
+    "pipeline:review-queue": "node scripts/build-review-queue.mjs",
+    "pipeline:publish": "node scripts/publish-app-data.mjs",
+    "pipeline:evaluate": "node scripts/evaluate-policy-records.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.0"
+  }
+}

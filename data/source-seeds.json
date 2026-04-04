@@ -1,0 +1,182 @@
+[
+  {
+    "state_abbr": "CA",
+    "state_name": "California",
+    "agency": "California Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+    "notes": "Primary state AI in Education guidance hub."
+  },
+  {
+    "state_abbr": "CA",
+    "state_name": "California",
+    "agency": "California Department of Education",
+    "region_type": "state",
+    "seed_type": "official_letter",
+    "url": "https://www.cde.ca.gov/nr/el/le/yr26ltr0109.asp",
+    "notes": "Official release letter for 2026 AI guidance."
+  },
+  {
+    "state_abbr": "DE",
+    "state_name": "Delaware",
+    "agency": "Delaware Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
+    "notes": "Delaware Department of Education generative AI guidance page."
+  },
+  {
+    "state_abbr": "GA",
+    "state_name": "Georgia",
+    "agency": "Georgia Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
+    "notes": "Georgia Department of Education AI in K-12 guidance landing page."
+  },
+  {
+    "state_abbr": "KY",
+    "state_name": "Kentucky",
+    "agency": "Kentucky Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+    "notes": "Official KDE AI in Kentucky K-12 guidance hub."
+  },
+  {
+    "state_abbr": "KY",
+    "state_name": "Kentucky",
+    "agency": "Kentucky Department of Education",
+    "region_type": "state",
+    "seed_type": "official_model_policy",
+    "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+    "notes": "Official KDE AI Guidance Brief PDF."
+  },
+  {
+    "state_abbr": "MA",
+    "state_name": "Massachusetts",
+    "agency": "Massachusetts Department of Elementary and Secondary Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.doe.mass.edu/edtech/ai/default.html",
+    "notes": "Official DESE AI in K-12 guidance hub."
+  },
+  {
+    "state_abbr": "MA",
+    "state_name": "Massachusetts",
+    "agency": "Massachusetts Department of Elementary and Secondary Education",
+    "region_type": "state",
+    "seed_type": "official_model_policy",
+    "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+    "notes": "Official Massachusetts Guidance for Artificial Intelligence in K-12 Education PDF."
+  },
+  {
+    "state_abbr": "NC",
+    "state_name": "North Carolina",
+    "agency": "North Carolina Department of Public Instruction",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.dpi.nc.gov/press-release/ncdpi-generative-ai-implementation-recommendations-and-considerations-pk-13-public-schools",
+    "notes": "Published guidebook PDF landing page."
+  },
+  {
+    "state_abbr": "NC",
+    "state_name": "North Carolina",
+    "agency": "North Carolina Department of Public Instruction",
+    "region_type": "state",
+    "seed_type": "press_release",
+    "url": "https://www.dpi.nc.gov/news/press-releases/2024/01/16/ncdpi-releases-guidance-use-artificial-intelligence-schools",
+    "notes": "Release announcing the NCDPI AI guidebook."
+  },
+  {
+    "state_abbr": "NJ",
+    "state_name": "New Jersey",
+    "agency": "New Jersey Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.nj.gov/education/innovation/ai/",
+    "notes": "NJDOE artificial intelligence guidance page."
+  },
+  {
+    "state_abbr": "OH",
+    "state_name": "Ohio",
+    "agency": "Ohio Department of Education and Workforce",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://education.ohio.gov/Topics/AI-in-Ohio-s-Education",
+    "notes": "ODEW AI in Ohio's Education hub with model policy and implementation resources."
+  },
+  {
+    "state_abbr": "OR",
+    "state_name": "Oregon",
+    "agency": "Oregon Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+    "notes": "Official Oregon Department of Education generative AI guidance hub."
+  },
+  {
+    "state_abbr": "RI",
+    "state_name": "Rhode Island",
+    "agency": "Rhode Island Department of Education",
+    "region_type": "state",
+    "seed_type": "press_release",
+    "url": "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
+    "notes": "RIDE release announcing statewide AI guidance for LEAs."
+  },
+  {
+    "state_abbr": "TX",
+    "state_name": "Texas",
+    "agency": "Texas Education Agency",
+    "region_type": "state",
+    "seed_type": "technology_framework",
+    "url": "https://tea.texas.gov/academics/learning-support-and-programs/technology-planning/long-range-plan-for-technology",
+    "notes": "Technology planning entrypoint while searching for explicit AI-specific guidance."
+  },
+  {
+    "state_abbr": "TX",
+    "state_name": "Texas",
+    "agency": "Texas Education Agency",
+    "region_type": "state",
+    "seed_type": "virtual_hybrid_guidance",
+    "url": "https://tea.texas.gov/about-tea/news-and-multimedia/correspondence/taa-letters/sb-569-overview-virtual-and-hybrid-learning-guidance-for-the-2025-2026-school-year",
+    "notes": "Related statewide instructional-technology policy signal."
+  },
+  {
+    "state_abbr": "UT",
+    "state_name": "Utah",
+    "agency": "Utah State Board of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://schools.utah.gov/informationtechnology/artificialintelligence/index.php",
+    "notes": "USBE AI framework and related guidance hub."
+  },
+  {
+    "state_abbr": "VA",
+    "state_name": "Virginia",
+    "agency": "Virginia Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
+    "notes": "VDOE technology in education page with AI section and guidance links."
+  },
+  {
+    "state_abbr": "WA",
+    "state_name": "Washington",
+    "agency": "Office of Superintendent of Public Instruction",
+    "region_type": "state",
+    "seed_type": "press_release",
+    "url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+    "notes": "Official OSPI release announcing state AI guidance."
+  },
+  {
+    "state_abbr": "WV",
+    "state_name": "West Virginia",
+    "agency": "West Virginia Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+    "notes": "Official WVDE artificial intelligence guidance page."
+  }
+]

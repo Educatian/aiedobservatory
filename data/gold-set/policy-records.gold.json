@@ -1,0 +1,123 @@
+[
+  {
+    "jurisdiction_id": "state-ca",
+    "state_abbr": "CA",
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support"
+    ],
+    "notes": "Seed gold example based on manually reviewed California guidance."
+  },
+  {
+    "jurisdiction_id": "state-nj",
+    "state_abbr": "NJ",
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "source_packet": "data/generated/deep-research/nj.evidence-packet.json",
+    "review_confidence": 0.79,
+    "evidence_urls": [
+      "https://www.nj.gov/education/innovation/ai/",
+      "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf"
+    ],
+    "notes": "Deep-research-reviewed hard case. Official New Jersey sources support an emerging, grant-backed AI posture rather than a full statewide formal policy."
+  },
+  {
+    "jurisdiction_id": "state-ri",
+    "state_abbr": "RI",
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "privacy_policy"
+    ],
+    "notes": "Seed gold example to validate evaluation plumbing."
+  },
+  {
+    "jurisdiction_id": "state-tx",
+    "state_abbr": "TX",
+    "ai_use_allowed": 0,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 0,
+    "implementation_stage": 1,
+    "policy_domains": [
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "implementation_stage"
+    ],
+    "source_packet": "data/generated/deep-research/tx.evidence-packet.json",
+    "review_confidence": 0.58,
+    "evidence_urls": [
+      "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+      "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training"
+    ],
+    "notes": "Deep-research-reviewed hard case. Official Texas sources support governance-only AI training requirements, not a mature statewide classroom policy."
+  },
+  {
+    "jurisdiction_id": "state-va",
+    "state_abbr": "VA",
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "source_packet": "data/generated/deep-research/va.evidence-packet.json",
+    "review_confidence": 0.88,
+    "evidence_urls": [
+      "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
+      "https://www.doe.virginia.gov/home/showpublisheddocument/51991/638406435372930000"
+    ],
+    "notes": "Deep-research-reviewed hard case. Official Virginia sources support guided AI integration and strong statewide educator-support activity."
+  }
+]

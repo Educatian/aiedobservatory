@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIED Policy Gold Set Record",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "jurisdiction_id",
+      "state_abbr",
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "properties": {
+      "jurisdiction_id": { "type": "string" },
+      "state_abbr": { "type": "string" },
+      "ai_use_allowed": { "type": ["integer", "null"] },
+      "assessment_policy": { "type": ["integer", "null"] },
+      "privacy_policy": { "type": ["integer", "null"] },
+      "teacher_pd_support": { "type": ["integer", "null"] },
+      "implementation_stage": { "type": ["integer", "null"] },
+      "policy_domains": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "approval_route": {
+        "type": ["string", "null"],
+        "enum": ["auto_approve", "sample_audit", "human_review", null]
+      },
+      "required_evidence_fields": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "source_packet": { "type": ["string", "null"] },
+      "review_confidence": {
+        "type": ["number", "null"],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "evidence_urls": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "notes": { "type": ["string", "null"] }
+    }
+  }
+}

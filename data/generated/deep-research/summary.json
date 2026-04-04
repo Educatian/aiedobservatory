@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-04-04T16:15:56.123Z",
+  "model": "o4-mini-deep-research",
+  "count": 3,
+  "items": [
+    {
+      "state_abbr": "TX",
+      "mode": "prompt_only",
+      "output": "C:\\Users\\jewoo\\Documents\\Playground\\aied-policy-atlas\\data\\generated\\deep-research\\tx.json"
+    },
+    {
+      "state_abbr": "VA",
+      "mode": "prompt_only",
+      "output": "C:\\Users\\jewoo\\Documents\\Playground\\aied-policy-atlas\\data\\generated\\deep-research\\va.json"
+    },
+    {
+      "state_abbr": "NJ",
+      "mode": "prompt_only",
+      "output": "C:\\Users\\jewoo\\Documents\\Playground\\aied-policy-atlas\\data\\generated\\deep-research\\nj.json"
+    }
+  ]
+}

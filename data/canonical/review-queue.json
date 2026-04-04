@@ -1,0 +1,62 @@
+[
+  {
+    "review_id": "review-state-nj-v1",
+    "record_id": "state-nj-v1",
+    "jurisdiction_name": "New Jersey",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T17:00:14.680Z"
+  },
+  {
+    "review_id": "review-state-tx-v1",
+    "record_id": "state-tx-v1",
+    "jurisdiction_name": "Texas",
+    "queue_type": "human_review",
+    "priority": "medium",
+    "reason": "Requires human review under approval policy",
+    "routing_reasons": [
+      "routing_default_human_review"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T17:00:14.680Z"
+  },
+  {
+    "review_id": "review-state-va-v1",
+    "record_id": "state-va-v1",
+    "jurisdiction_name": "Virginia",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T17:00:14.680Z"
+  },
+  {
+    "review_id": "review-state-wv-v1",
+    "record_id": "state-wv-v1",
+    "jurisdiction_name": "West Virginia",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T17:00:14.680Z"
+  }
+]

@@ -1,0 +1,285 @@
+{
+  "source_seeds": [
+    {
+      "state_abbr": "MA",
+      "state_name": "Massachusetts",
+      "agency": "Massachusetts Department of Elementary and Secondary Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.doe.mass.edu/edtech/ai/default.html",
+      "notes": "Official DESE AI in K-12 guidance hub."
+    },
+    {
+      "state_abbr": "MA",
+      "state_name": "Massachusetts",
+      "agency": "Massachusetts Department of Elementary and Secondary Education",
+      "region_type": "state",
+      "seed_type": "official_model_policy",
+      "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+      "notes": "Official Massachusetts Guidance for Artificial Intelligence in K-12 Education PDF."
+    },
+    {
+      "state_abbr": "KY",
+      "state_name": "Kentucky",
+      "agency": "Kentucky Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+      "notes": "Official KDE AI in Kentucky K-12 guidance hub."
+    },
+    {
+      "state_abbr": "KY",
+      "state_name": "Kentucky",
+      "agency": "Kentucky Department of Education",
+      "region_type": "state",
+      "seed_type": "official_model_policy",
+      "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+      "notes": "Official KDE AI Guidance Brief PDF."
+    },
+    {
+      "state_abbr": "WV",
+      "state_name": "West Virginia",
+      "agency": "West Virginia Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+      "notes": "Official WVDE artificial intelligence guidance page."
+    }
+  ],
+  "canonical_records": [
+    {
+      "record_id": "state-ma-v1",
+      "jurisdiction_id": "state-ma",
+      "jurisdiction_name": "Massachusetts",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "MA",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.94,
+      "policy_strength": 13,
+      "ai_use_allowed": 2,
+      "assessment_policy": 3,
+      "privacy_policy": 2,
+      "teacher_pd_support": 3,
+      "implementation_stage": 3,
+      "policy_orientation": "capacity-building",
+      "notes": "Massachusetts DESE has published a statewide AI in K-12 guidance hub and a formal guidance PDF. The package is designed to help district leaders create local AI guidance and policies, strengthen AI literacy, redesign assessment and integrity practices, and support responsible integration with attention to privacy and instructional quality.",
+      "version": 1,
+      "updated_at": "2026-04-04T17:30:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "title": "Artificial Intelligence (AI) in K12 Schools",
+          "raw_file": null,
+          "published_date_guess": "December 18, 2025"
+        },
+        {
+          "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+          "title": "Massachusetts Guidance for Artificial Intelligence in K-12 Education",
+          "raw_file": null,
+          "published_date_guess": "2025"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "This guide is designed to support district leaders in creating and refining AI-related implementation guidance.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "Guide development of rubrics that assess process and reasoning as well as ethical use of AI tools.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "Educators are addressing emerging concerns related to academic integrity, bias, data privacy, misinformation, and instructional quality.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "This resource helps build AI literacy through practical support, real-world examples, and guided reflection.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "It offers a foundation for developing local guidance and policies while training educators and building adaptive systems.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Responsibly integrating AI tools, strengthening AI literacy and building adaptive systems that evolve with emerging technologies.",
+          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official DESE guidance page and statewide guidance PDF support the coded use, assessment, privacy, professional learning, and implementation values.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": []
+    },
+    {
+      "record_id": "state-ky-v1",
+      "jurisdiction_id": "state-ky",
+      "jurisdiction_name": "Kentucky",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "KY",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.91,
+      "policy_strength": 8,
+      "ai_use_allowed": 3,
+      "assessment_policy": 0,
+      "privacy_policy": 1,
+      "teacher_pd_support": 1,
+      "implementation_stage": 3,
+      "policy_orientation": "human-centered",
+      "notes": "Kentucky's Office of Education Technology provides a statewide AI in K-12 hub and an AI Guidance Brief. The state emphasizes safe, secure, and responsible use, keeps humans in the loop, and presents the brief as a model districts can adapt when building local AI guidance.",
+      "version": 1,
+      "updated_at": "2026-04-04T17:30:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "title": "AI in Kentucky K-12",
+          "raw_file": null,
+          "published_date_guess": "February 1, 2026"
+        },
+        {
+          "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+          "title": "AI Guidance Brief",
+          "raw_file": null,
+          "published_date_guess": "2024"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "Encourage, engage, and empower the safe, secure, and responsible uses of Artificial Intelligence into school efficiency and the learning space.",
+          "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "We recommend that each KY K-12 teacher, leader, and staff member become familiar with using safe, secure, and responsible AI.",
+          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "Districts have received regular guidance from KDE and opportunities to provide feedback to KDE and one another.",
+          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "KY K-12 was one of the first states to offer AI guidance to all its public-school districts.",
+          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Ensuring humans remain in the loop with strong AI implementations.",
+          "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official KDE guidance materials support a statewide, human-centered guidance profile with moderate governance and support coverage.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": []
+    },
+    {
+      "record_id": "state-wv-v1",
+      "jurisdiction_id": "state-wv",
+      "jurisdiction_name": "West Virginia",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "WV",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.88,
+      "policy_strength": 8,
+      "ai_use_allowed": 3,
+      "assessment_policy": 0,
+      "privacy_policy": 0,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "guardrail-oriented",
+      "notes": "West Virginia's Department of Education has published statewide AI guidance v1.2 for PK-12 schools. The page frames AI as a support resource for superintendents, district staff, educators, and support staff, and pairs the guidance with an updateable Canvas resource hub for ongoing implementation support.",
+      "version": 1,
+      "updated_at": "2026-04-04T17:30:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "title": "Artificial Intelligence",
+          "raw_file": null,
+          "published_date_guess": null
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "WVDE Artificial Intelligence guidance v1.2 provides support for the use of artificial intelligence across various roles in West Virginia PK-12 schools.",
+          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "The West Virginia Department of Education has developed a Canvas resource site, a hub of materials and resources for county school districts and educators.",
+          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "This site will be regularly updated alongside this guidance to ensure it remains a relevant and valuable resource.",
+          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "The guidance intends to focus on effectively and safely integrating AI in classroom instruction, school administration, and district operations.",
+          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official WVDE guidance page supports a released-guidance profile with explicit implementation support and educator resource infrastructure.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": []
+    }
+  ]
+}

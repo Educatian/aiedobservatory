@@ -1,0 +1,8 @@
+{
+  "jurisdiction_id": "state-oh",
+  "state_abbr": "OH",
+  "mode": "prompt_only",
+  "model": "o4-mini-deep-research",
+  "created_at": "2026-04-04T16:15:08.856Z",
+  "prompt": "Research the strongest current official statewide AI-in-education policy sources for Ohio (OH).\n\nContext:\n- Current approval route: human_review\n- Review status: approved\n- Confidence: 1\n- Routing reasons: manual_review_completed\n- Deep research reasons: none\n\nCurrent known sources:\n- Untitled | https://education.ohio.gov/Topics/AI-in-Ohio-s-Education\n- AI in Education Model Policy | https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US\n\nRequirements:\n- Prioritize official statewide sources such as department of education pages, state board guidance, formal frameworks, model policies, statutes, or regulations.\n- Identify whether the current record is missing a stronger primary source.\n- Flag conflicts between press releases and primary documents.\n- Provide field-level evidence relevant to AI use, assessment, privacy, teacher professional development, and implementation stage.\n- Recommend one of: auto_approve, sample_audit, human_review.\n- Return a concise evidence memo with direct source links and unresolved questions."
+}

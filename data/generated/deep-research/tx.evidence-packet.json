@@ -1,0 +1,126 @@
+{
+  "$schema": "./evidence-packets.schema.json",
+  "jurisdiction_id": "state-tx",
+  "state_abbr": "TX",
+  "reviewed_at": "2026-04-04T18:30:00.000Z",
+  "investigation_reason": ["coverage_gap", "weak_official_source"],
+  "summary": "Texas has statewide official AI governance and awareness-training requirements that reach school districts, but the review did not find a comparably strong Texas Education Agency classroom-facing AI guidance package for K-12 instruction, assessment, or privacy. The most supportable coding is therefore a low-strength governance signal rather than a mature statewide classroom policy.",
+  "candidate_sources": [
+    {
+      "title": "Statewide Artificial Intelligence (AI) Awareness Training | Texas Department of Information Resources",
+      "url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+      "authority_level": "binding_law_or_regulation",
+      "source_type": "statewide_ai_training_requirement",
+      "selected": true,
+      "why_it_matters": "This page cites Texas Government Code requirements for annual AI awareness training and explicitly names school-district cybersecurity coordinators."
+    },
+    {
+      "title": "School Board Member Training | Texas Education Agency",
+      "url": "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training",
+      "authority_level": "official_guidance",
+      "source_type": "education_agency_training_page",
+      "selected": true,
+      "why_it_matters": "TEA acknowledges annual cybersecurity and artificial-intelligence training in statewide trustee training requirements."
+    },
+    {
+      "title": "Long Range Plan For Technology | Texas Education Agency",
+      "url": "https://tea.texas.gov/academics/learning-support-and-programs/technology-planning/long-range-plan-for-technology",
+      "authority_level": "official_guidance",
+      "source_type": "technology_strategy",
+      "selected": false,
+      "why_it_matters": "This plan is relevant background on statewide technology strategy but does not appear to provide explicit AI-in-education coding guidance."
+    }
+  ],
+  "field_level_findings": {
+    "ai_use_allowed": {
+      "value": 0,
+      "rationale": "No official statewide classroom-use guidance for educator or student AI use was found in the reviewed Texas sources."
+    },
+    "assessment_policy": {
+      "value": 0,
+      "rationale": "No official statewide AI-specific assessment, disclosure, or academic-integrity guidance was found in the reviewed Texas sources."
+    },
+    "privacy_policy": {
+      "value": 0,
+      "rationale": "The reviewed sources did not provide K-12 AI-specific student-data or procurement/privacy guardrails."
+    },
+    "teacher_pd_support": {
+      "value": 0,
+      "rationale": "The statewide AI training requirement applies to government entities and explicitly names district cybersecurity coordinators, not educator-facing professional learning for classroom AI integration."
+    },
+    "implementation_stage": {
+      "value": 1,
+      "rationale": "Texas shows an early statewide AI governance signal through mandated annual AI awareness training, but not an operational statewide K-12 classroom implementation framework.",
+      "evidence_quote": "For school districts, only the district's cybersecurity coordinator is required to complete annual AI training.",
+      "source_url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training"
+    }
+  },
+  "conflicts_found": [],
+  "open_questions": [
+    "A later TEA-issued classroom AI framework may exist outside the currently indexed official pages and should be rechecked in the next refresh cycle.",
+    "If Texas publishes educator-facing AI guidance or model district policy language, the record should be recoded immediately."
+  ],
+  "approval_recommendation": {
+    "approval_route": "human_review",
+    "confidence": 0.58,
+    "rationale": "The reviewed evidence is official and current but does not support strong classroom-policy coding, so the record should stay visible as a low-confidence governance-only case pending stronger education-specific guidance."
+  },
+  "recommended_record": {
+    "review_status": "pending_review",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.58,
+    "policy_strength": 1,
+    "ai_use_allowed": 0,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 0,
+    "implementation_stage": 1,
+    "policy_orientation": "governance-first",
+    "notes": "Deep-research review found official statewide AI-awareness training requirements for Texas government entities and school-district cybersecurity coordinators, but did not find a stronger TEA classroom-facing AI policy package for statewide instructional use, assessment, or privacy.",
+    "verification_status": "supported",
+    "verification_notes": "Official Texas sources support a low-strength statewide governance signal only. No stronger statewide classroom AI guidance was located in this review.",
+    "policy_domains": ["governance"],
+    "source_documents": [
+      {
+        "url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+        "title": "Statewide Artificial Intelligence (AI) Awareness Training | Texas Department of Information Resources",
+        "raw_file": null,
+        "published_date_guess": "2026"
+      },
+      {
+        "url": "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training",
+        "title": "School Board Member Training | Texas Education Agency",
+        "raw_file": null,
+        "published_date_guess": "2026"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "implementation_stage",
+        "quote": "For school districts, only the district's cybersecurity coordinator is required to complete annual AI training.",
+        "source_url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+        "chunk_id": null
+      }
+    ]
+  },
+  "gold_record": {
+    "jurisdiction_id": "state-tx",
+    "state_abbr": "TX",
+    "ai_use_allowed": 0,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 0,
+    "implementation_stage": 1,
+    "policy_domains": ["governance"],
+    "approval_route": "human_review",
+    "required_evidence_fields": ["implementation_stage"],
+    "source_packet": "data/generated/deep-research/tx.evidence-packet.json",
+    "review_confidence": 0.58,
+    "evidence_urls": [
+      "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+      "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training"
+    ],
+    "notes": "Deep-research-reviewed hard case. Official Texas sources support governance-only AI training requirements, not a mature statewide classroom policy."
+  }
+}

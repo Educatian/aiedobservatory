@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "roles": [
+    {
+      "id": "scout",
+      "goal": "Discover official policy sources for each jurisdiction.",
+      "inputs": ["source registry", "target jurisdiction list"],
+      "outputs": ["candidate official URLs", "seed updates"],
+      "must_not": ["code policy variables directly"]
+    },
+    {
+      "id": "retriever",
+      "goal": "Fetch and normalize source documents.",
+      "inputs": ["source seeds"],
+      "outputs": ["raw HTML/PDF", "plain text", "manifest metadata"],
+      "must_not": ["publish app-ready policy records"]
+    },
+    {
+      "id": "extractor",
+      "goal": "Generate structured policy observations from retrieved evidence.",
+      "inputs": ["RAG chunks", "codebook"],
+      "outputs": ["proposed policy records", "evidence spans", "confidence"],
+      "must_not": ["silently overwrite canonical data"]
+    },
+    {
+      "id": "verifier",
+      "goal": "Validate extracted records against evidence and rules.",
+      "inputs": ["proposed policy records", "manifest", "validation rules"],
+      "outputs": ["validated record", "issues", "review flag"],
+      "must_not": ["invent evidence that is not traceable"]
+    },
+    {
+      "id": "deep_research",
+      "goal": "Investigate hard cases with weak sourcing, source conflicts, or missing citations.",
+      "inputs": ["flagged records", "candidate official URLs", "open questions"],
+      "outputs": ["evidence memo", "recommended primary source", "approval recommendation"],
+      "must_not": ["directly publish canonical records", "replace routine extraction for every record"]
+    },
+    {
+      "id": "publisher",
+      "goal": "Version and publish canonical records after validation.",
+      "inputs": ["validated policy records", "review decisions", "approval routing"],
+      "outputs": ["canonical dataset", "review queue", "diff history"],
+      "must_not": ["bypass validation or review requirements"]
+    }
+  ]
+}

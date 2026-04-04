@@ -1,0 +1,1328 @@
+[
+  {
+    "record_id": "state-ca-v1",
+    "jurisdiction_id": "state-ca",
+    "jurisdiction_name": "California",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "CA",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 14,
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "Human-Centered",
+    "notes": "California has released a comprehensive, non-mandatory guidance document for local educational agencies (LEAs). The guidance is explicitly \"human-centered\" and provides detailed recommendations and guiding questions on key issues including academic integrity, data privacy, and educator professional development. It encourages thoughtful, safe, and effective integration of AI into schools while emphasizing that the guidance is informative rather than prescriptive.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "title": "Artificial Intelligence - Professional Learning (CA Dept of Education)",
+        "raw_file": "data/generated/raw/CA-official-guidance.html",
+        "published_date_guess": "January 1, 2026"
+      },
+      {
+        "url": "https://www.cde.ca.gov/nr/el/le/yr26ltr0109.asp",
+        "title": "CA Artificial Intelligence in Education Guidance - Letters (CA Dept of Education)",
+        "raw_file": "data/generated/raw/CA-official-letter.html",
+        "published_date_guess": "January 9, 2026"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Guidance for the Safe and Effective Use of Artificial Intelligence in California Public Schools Learning With AI, Learning About AI Please note: This document is meant to provide helpful guidance to our partners in education and is in no way required to be followed.",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-3"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "How can transparency be defined and communicated, including citing the level of AI involvement in student work? How can students be provided opportunities to explain, justify, or reflect on their AI use when completing assignments?",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-120"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Before adopting AI tools, LEAs must ensure alignment with local policies, California's goals for safe, inclusive learning, and state/federal laws related to data privacy, data use, and student/parental rights.",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-126"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Is a signed Data Privacy Agreement (DPA) required and available?",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-12"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Local educational agencies are encouraged to offer ongoing, role-specific professional learning for paraeducators, administrators, counselors, coaches, teachers, classified staff, school volunteers, and parents.",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-40"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Access the AI in Education Guidance and related resources on the California Department of Education (CDE) AI web page at https://www.cde.ca.gov/ci/pl/aiincalifornia.asp .",
+        "source_url": "https://www.cde.ca.gov/nr/el/le/yr26ltr0109.asp",
+        "chunk_id": "www-cde-ca-gov-nr-el-le-yr26ltr0109-asp-chunk-0"
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "This guidance emphasizes keeping human connection, ethical decision-making, and adaptable system design at the center of AI's role in transitional kindergarten through grade 12 (TK-12) education.",
+        "source_url": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+        "chunk_id": "www-cde-ca-gov-ci-pl-aiincalifornia-asp-chunk-17"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "The record is well-supported by the provided guidance document. All coded values align directly with the text, which explicitly mentions being 'guidance', 'human-centered', and encourages professional development.",
+    "approval_route": "auto_approve",
+    "audit_status": "not_required",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "high_confidence",
+      "strong_evidence",
+      "no_conflict"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-de-v1",
+    "jurisdiction_id": "state-de",
+    "jurisdiction_name": "Delaware",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "DE",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 14,
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "Supportive",
+    "notes": "Delaware has released comprehensive guidance through its Council on Educational Technology. The guidance covers key areas like allowable use, academic integrity, student data privacy (with strong controls), and teacher professional development. It is intended to be a resource for districts and charter schools to develop their own local policies.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
+        "title": "Generative AI in Delaware Education &#8211; Delaware Department of Education",
+        "raw_file": "data/generated/raw/DE-official-guidance.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/wp-content/uploads/2025/02/GenAI_ISP-AUP-CodeConduct_Guidance.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-education-delaware-gov-wp-content-uploads-2025-02-genai-isp-aup-codeconduct-guidance-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/wp-content/uploads/2026/03/delaware_generative_ai_DE_guidance.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-education-delaware-gov-wp-content-uploads-2026-03-delaware-generative-ai-de-guidance-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
+        "title": "Classroom Management for Generative AI &#8211; Delaware Department of Education",
+        "raw_file": "data/generated/raw/DE-official-guidance-linked-3.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/implementing-ai/",
+        "title": "Implementing AI for Districts and Charter Schools &#8211; Delaware Department of Education",
+        "raw_file": "data/generated/raw/DE-official-guidance-linked-4.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/integrating-ai/",
+        "title": "Integrating AI in the Classroom &#8211; Delaware Department of Education",
+        "raw_file": "data/generated/raw/DE-official-guidance-linked-5.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/",
+        "title": "AI in Delaware Education &#8211; Delaware Department of Education",
+        "raw_file": "data/generated/raw/DE-official-guidance-linked-6.html",
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Allowable use statements provide a framework for permissible AI use across districts, schools, and classrooms. These statements establish expectations for ethical and responsible engagement with Gen AI technologies, ensuring consistency and clarity for everyone.",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-classroom-management-for-generative-ai-chunk-1"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "School District and Charter School leaders may use this guidance to support incorporating AI into their local policies (e.g., responsible use, academic integrity, etc.).",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-classroom-management-for-generative-ai-chunk-2"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Classroom Management Policies and Attribution This section discusses the importance of proper attribution, both for students and instructors.",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-classroom-management-for-generative-ai-chunk-1"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "School Districts and Charter Schools must prioritize establishing robust data governance policies with precise data collection, storage, access, and sharing protocols.",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/integrating-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-generative-ai-integrating-ai-chunk-1"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Steps should be taken to review specific age restrictions, privacy, and student data collection practices within all third-party vendors.",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/implementing-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-generative-ai-implementing-ai-chunk-2"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Scalable training and delivery methods are recommended to guarantee that all educators and students across Delaware have equal opportunities to benefit from Generative AI technologies....",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-generative-ai-chunk-3"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "The Delaware Council on Educational Technology presents this guidance to support educators and education leaders in the appropriate, equitable, and inclusive use of AI in classrooms across the State of Delaware.",
+        "source_url": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
+        "chunk_id": "education-delaware-gov-educators-academic-support-standards-and-instruction-digital-de-instructional-resources-ai-in-delaware-education-generative-ai-chunk-0"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed Delaware guidance pages support the coded domains and implementation stage.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-ga-v1",
+    "jurisdiction_id": "state-ga",
+    "jurisdiction_name": "Georgia",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "GA",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 7,
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_orientation": "supportive",
+    "notes": "The Georgia Department of Education (GaDOE) has released formal guidance on leveraging AI in K-12 settings. The document provides best practices for the ethical and effective use of AI tools and mentions the importance of training for educators to harness AI's potential for a more personalized educational environment.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
+        "title": null,
+        "raw_file": "data/generated/raw/GA-official-guidance.html",
+        "published_date_guess": "Jan 21, 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "GaDOE’s guidance outlines general information and best practices to ensure the ethical, effective, and secure use of AI tools and systems within our schools.",
+        "source_url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
+        "chunk_id": "login-community-gadoe-org-documents-leveraging-ai-in-the-k-12-setting-chunk-0"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Through continued collaboration, training, and adherence to these guidelines, Georgia schools can harness the power of AI to create a more personalized, efficient, and innovative educational environment for all students.",
+        "source_url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
+        "chunk_id": "login-community-gadoe-org-documents-leveraging-ai-in-the-k-12-setting-chunk-0"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Date Published: Jan 21, 2025... Document Type: Guidance",
+        "source_url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
+        "chunk_id": "login-community-gadoe-org-documents-leveraging-ai-in-the-k-12-setting-chunk-1"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the GaDOE guidance landing page supports a released-guidance profile with lighter domain coverage.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "secondary_reporting",
+    "routing_reasons": [
+      "weak_source_authority"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-ky-v1",
+    "jurisdiction_id": "state-ky",
+    "jurisdiction_name": "Kentucky",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "KY",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.91,
+    "policy_strength": 8,
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
+    "implementation_stage": 3,
+    "policy_orientation": "human-centered",
+    "notes": "Kentucky's Office of Education Technology provides a statewide AI in K-12 hub and an AI Guidance Brief. The state emphasizes safe, secure, and responsible use, keeps humans in the loop, and presents the brief as a model districts can adapt when building local AI guidance.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+        "title": "AI in Kentucky K-12",
+        "raw_file": null,
+        "published_date_guess": "February 1, 2026"
+      },
+      {
+        "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+        "title": "AI Guidance Brief",
+        "raw_file": null,
+        "published_date_guess": "2024"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Encourage, engage, and empower the safe, secure, and responsible uses of Artificial Intelligence into school efficiency and the learning space.",
+        "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "We recommend that each KY K-12 teacher, leader, and staff member become familiar with using safe, secure, and responsible AI.",
+        "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Districts have received regular guidance from KDE and opportunities to provide feedback to KDE and one another.",
+        "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "KY K-12 was one of the first states to offer AI guidance to all its public-school districts.",
+        "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Ensuring humans remain in the loop with strong AI implementations.",
+        "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official KDE guidance materials support a statewide, human-centered guidance profile with moderate governance and support coverage.",
+    "approval_route": "auto_approve",
+    "audit_status": "not_required",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "high_confidence",
+      "strong_evidence",
+      "no_conflict"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-ma-v1",
+    "jurisdiction_id": "state-ma",
+    "jurisdiction_name": "Massachusetts",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "MA",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.94,
+    "policy_strength": 13,
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 2,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "capacity-building",
+    "notes": "Massachusetts DESE has published a statewide AI in K-12 guidance hub and a formal guidance PDF. The package is designed to help district leaders create local AI guidance and policies, strengthen AI literacy, redesign assessment and integrity practices, and support responsible integration with attention to privacy and instructional quality.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "title": "Artificial Intelligence (AI) in K12 Schools",
+        "raw_file": null,
+        "published_date_guess": "December 18, 2025"
+      },
+      {
+        "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+        "title": "Massachusetts Guidance for Artificial Intelligence in K-12 Education",
+        "raw_file": null,
+        "published_date_guess": "2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "This guide is designed to support district leaders in creating and refining AI-related implementation guidance.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Guide development of rubrics that assess process and reasoning as well as ethical use of AI tools.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Educators are addressing emerging concerns related to academic integrity, bias, data privacy, misinformation, and instructional quality.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "This resource helps build AI literacy through practical support, real-world examples, and guided reflection.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "It offers a foundation for developing local guidance and policies while training educators and building adaptive systems.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Responsibly integrating AI tools, strengthening AI literacy and building adaptive systems that evolve with emerging technologies.",
+        "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official DESE guidance page and statewide guidance PDF support the coded use, assessment, privacy, professional learning, and implementation values.",
+    "approval_route": "auto_approve",
+    "audit_status": "not_required",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "high_confidence",
+      "strong_evidence",
+      "no_conflict"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-nc-v1",
+    "jurisdiction_id": "state-nc",
+    "jurisdiction_name": "North Carolina",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NC",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 16,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 4,
+    "policy_orientation": "Supportive",
+    "notes": "North Carolina's Department of Public Instruction (NCDPI) released a comprehensive guidebook with recommendations for generative AI implementation in January 2024. The guidance is strong across all categories, providing an implementation roadmap for districts, detailed frameworks for responsible use (e.g., 'EVERY framework'), and specific recommendations for adapting assessments (e.g., 'AI Resistant, AI Assisted, AI Partnered Assignments'). The policy strongly emphasizes building educator capacity through differentiated professional learning, coaching, and microcredentialing. It also includes robust guidance on student data privacy, vendor management, and academic integrity. The guidebook is a living document with a version history showing regular updates, indicating an operationalized and recurring system.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "local://ncdpi-generative-ai-guidebook",
+        "title": "NCDPI Generative AI Implementation Recommendations and Considerations for PK-13 Public Schools",
+        "raw_file": "data/generated/raw/NC-local-guidebook.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.dpi.nc.gov/news/press-releases/2024/01/16/ncdpi-releases-guidance-use-artificial-intelligence-schools",
+        "title": "NCDPI releases guidance on the use of artificial intelligence in schools | NC DPI",
+        "raw_file": "data/generated/raw/NC-press-release.html",
+        "published_date_guess": "January 16, 2024"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "NCDPI strongly recommends that each PSU follow this implementation roadmap, which includes creating a plan for building the human capacity/AI literacy of all staff and students and creating public-facing generative AI guidelines that ensure a common understanding of how generative AI tools may be used within the educat...",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-4"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Academic Integrity: AI guidance should help educators adapt instruction and assessment to account for ubiquitous AI, while also teaching personal accountability and academic integrity.",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-44"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Added AI Resistant, AI Assisted, AI Partnered Assignments",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-7"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Meet Vendor Security Standards: If using third-party platforms or services, verify that the vendors adhere to stringent security standards. This includes evaluating their data protection policies, encryption practices, and overall commitment to cybersecurity.",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-151"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Remind all users that PII is off-limits to generative Al tools (including uploading or pasting in of data into genAI models as well as typing it in a chat)",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-52"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "This professional learning must be differentiated, allowing educators at all levels from beginners to early adopters to engage meaningfully with AI based on their comfort, content area, and student population. Districts are encouraged to use microcredentialing pathways, coaching supports,...",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-42"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "The North Carolina Department of Public Instruction (NCDPI) recently released a guidebook for the use of generative artificial intelligence in public schools.",
+        "source_url": "https://www.dpi.nc.gov/news/press-releases/2024/01/16/ncdpi-releases-guidance-use-artificial-intelligence-schools",
+        "chunk_id": "www-dpi-nc-gov-news-press-releases-2024-01-16-ncdpi-releases-guidance-use-artificial-intelligence-schools-chunk-0"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "05 Added AI Resistant, AI Assisted, AI Partnered Assignments p. 29 3/20/24",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-7"
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Rather than creating strict restrictions, effective guidelines focus on empowering students and educators as well as ensuring ethical and responsible use.",
+        "source_url": "local://ncdpi-generative-ai-guidebook",
+        "chunk_id": "local-ncdpi-generative-ai-guidebook-chunk-44"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the NCDPI guidebook and press release support the coded privacy, assessment, and implementation values.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-nj-v1",
+    "jurisdiction_id": "state-nj",
+    "jurisdiction_name": "New Jersey",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NJ",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.79,
+    "policy_strength": 5,
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "resource-curation",
+    "notes": "Deep-research review confirms that New Jersey has an official NJDOE AI resource hub and active statewide AI grantmaking for local pilots and teacher training, but not yet a stronger formal statewide AI guidance document.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.nj.gov/education/innovation/ai/",
+        "title": "Artificial Intelligence (AI) | New Jersey Department of Education",
+        "raw_file": null,
+        "published_date_guess": "2026"
+      },
+      {
+        "url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "title": "New Jersey Department of Education Announces Grant Awards to Support Artificial Intelligence in Education",
+        "raw_file": null,
+        "published_date_guess": "January 22, 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "This webpage provides an overview of foundational AI terms and concepts, high-level discussion questions regarding AI in education to consider at the Local Education Agency (LEA) leadership and classroom educator levels...",
+        "source_url": "https://www.nj.gov/education/innovation/ai/",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The “Teaching with AI” component will support initiatives such as pilot programs using generative AI tools to enhance instructional practices... and teacher training in AI integration.",
+        "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "The “Artificial Intelligence Innovation in Education Grant” will support initiatives in 10 school districts to advance the role of AI in the classroom.",
+        "source_url": "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Official New Jersey sources support low-to-moderate AI use, teacher-support, and implementation coding. Assessment and privacy remain uncoded because the reviewed state sources are not explicit on those domains.",
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-oh-v1",
+    "jurisdiction_id": "state-oh",
+    "jurisdiction_name": "Ohio",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "OH",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 15,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "supportive",
+    "notes": "This document is a model policy developed by the Ohio Department of Education and Workforce to guide local districts. A state law requires all public, community, and STEM schools to adopt a formal policy on AI use by July 1, 2026. The model policy provides comprehensive and strong guidance across all categories, including acceptable use, academic integrity, data privacy and security, and the need for professional learning to build AI literacy for educators.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://education.ohio.gov/Topics/AI-in-Ohio-s-Education",
+        "title": null,
+        "raw_file": "data/generated/raw/OH-official-guidance.html",
+        "published_date_guess": "July 1, 2026"
+      },
+      {
+        "url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "title": "AI in Education Model Policy",
+        "raw_file": "data/generated/raw/OH-local-pdf.pdf",
+        "published_date_guess": "December 30, 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "The [district/school] recognizes that responsible and appropriate uses of Al by students and educators will vary depending on the context, including but not limited to grade level, subject, and/or the nature of the classroom activity or assignment.",
+        "source_url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Students are expected to complete assignments and assessments in a manner that reflects their own understanding and effort, critically analyze AI-generated content and not misrepresent it as original work,...",
+        "source_url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The [district/school] is committed to protecting the privacy and security of all student and staff data. The adoption and implementation of any AI tool must adhere to existing data privacy and security policies that include, but are not limited to, Personally Identifiable Information (PII), FERPA,...",
+        "source_url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "it is the policy of the Board that [district/school] responsibly integrate AI by building AI literacy for all students and educators, including integration of AI into relevant curriculum, professional learning opportunities, and safe and responsible usage.",
+        "source_url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "By July 1, 2026, all Ohio traditional public school districts, community schools, and STEM schools are required to adopt a formal policy on the use of artificial intelligence (AI). To support this statewide initiative, the Ohio Department of Education and Workforce,...",
+        "source_url": "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the official Ohio model policy PDF supports the coded assessment, privacy, teacher learning, and implementation values.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-or-v1",
+    "jurisdiction_id": "state-or",
+    "jurisdiction_name": "Oregon",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "OR",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 11,
+    "ai_use_allowed": 3,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "Supportive",
+    "notes": "The Oregon Department of Education (ODE) has published a comprehensive webpage with resources and guidance for K-12 schools. The state provides two key guidance documents: \"Generative Artificial Intelligence in K-12 Classrooms\" and \"Developing Policy and Protocols for the Use of Generative AI in K-12 Classrooms.\" The state also curates an extensive list of resources for teacher professional development, AI literacy for students, and links to sample policies from local districts. The guidance focuses on supporting districts in developing their own policies for the safe, ethical, and effective use of AI.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "title": null,
+        "raw_file": "data/generated/raw/OR-official-guidance.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-www-oregon-gov-ode-educator-resources-teachingcontent-documents-developing-20policy-20and-20protocols-20for-20the-.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-www-oregon-gov-ode-educator-resources-teachingcontent-documents-generative-20artificial-20intelligence-20-ai-20in-.pdf",
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Generative Artificial Intelligence in K-12 Classrooms offers general guidance for Oregon school and district leaders planning, implementing and evaluating genAI tools into their school culture.",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      },
+      {
+        "field": "ai_use_allowed",
+        "quote": "Developing Policy and Protocols for the Use of Generative AI in K-12 Classrooms guides leaders through a process for developing guidance or policy related to the safe, ethical, equitable, and effective use of genAI.",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Sample policy from Oregon school districts: ... Academic Integrity & Responsible Use of Technology - Tigard Tualatin SD Academic Integrity and Use of AI & Staff Use of AI - Salem-Keizer Public Schools",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "AI in Education - Privacy and Security",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-2"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "This website includes resources to support educators with the rapid evolvement of Generative AI in K-12 education settings.",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "AI Literacy Resources for Teachers",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-2"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "ODE recently updated resources for the use of generative Artificial Intelligence (genAI) in Oregon schools (for a one-page summary of the latest pages, please see our summary document ): • Generative Artificial Intelligence in K-12 Classrooms offers general guidance for Oregon school and district leaders",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "This website includes resources to support educators with the rapid evolvement of Generative AI in K-12 education settings.",
+        "source_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "chunk_id": "www-oregon-gov-ode-educator-resources-teachingcontent-pages-generative-artificial-intelligence-28ai-29-for-k-12-schools-aspx-chunk-1"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the Oregon guidance hub and linked materials support the released-guidance coding.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-ri-v1",
+    "jurisdiction_id": "state-ri",
+    "jurisdiction_name": "Rhode Island",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "RI",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 9,
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "Enthusiast",
+    "notes": "Rhode Island's Department of Education (RIDE) has released formal guidance to support local education agencies in the responsible use of AI. While not a formal policy or regulation, it provides a structure for implementation. The state has also created a professional learning webinar series to help educators build capacity and integrate AI into teaching and learning. The overall tone is very supportive of AI adoption in schools.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
+        "title": "Rhode Island Department of Education Releases Guidance for Responsible Use of Artificial Intelligence in Schools | RI Department of Education",
+        "raw_file": "data/generated/raw/RI-press-release.html",
+        "published_date_guess": "August 15, 2025"
+      },
+      {
+        "url": "https://ride.ri.gov/students-families/AI",
+        "title": "Artificial Intelligence (AI) in Rhode Island Schools | RI Department of Education",
+        "raw_file": "data/generated/raw/RI-press-release-linked-1.html",
+        "published_date_guess": "August 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "RIDE released released guidance to support local education agencies (LEAs) across the state in navigating and implementing policies and practices for the responsible, effective, and equitable use of Artificial Intelligence (AI) in classrooms.",
+        "source_url": "https://ride.ri.gov/students-families/AI",
+        "chunk_id": "ride-ri-gov-students-families-ai-chunk-0"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "RIDE’s AI Guidance Series was a professional learning experience designed to help Rhode Island educators and leaders understand, govern, and thoughtfully integrate artificial intelligence across teaching, learning, and operations.",
+        "source_url": "https://ride.ri.gov/students-families/AI",
+        "chunk_id": "ride-ri-gov-students-families-ai-chunk-2"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "In August 2025, RIDE released released guidance to support local education agencies (LEAs) across the state in navigating and implementing policies and practices for the responsible, effective, and equitable use of Artificial Intelligence (AI) in classrooms.",
+        "source_url": "https://ride.ri.gov/students-families/AI",
+        "chunk_id": "ride-ri-gov-students-families-ai-chunk-0"
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Artificial intelligence is not the future for our schools – it’s the present, and our goal is to ensure it enhances teaching and learning to unlock our students’ full potential",
+        "source_url": "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
+        "chunk_id": "ride-ri-gov-press-releases-rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools-chunk-1"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "The evidence confirms that Rhode Island's Department of Education (RIDE) has issued guidance and provides state-led professional development through a webinar series to encourage the responsible use of AI in schools.",
+    "approval_route": "auto_approve",
+    "audit_status": "not_required",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "high_confidence",
+      "strong_evidence",
+      "no_conflict"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-ut-v1",
+    "jurisdiction_id": "state-ut",
+    "jurisdiction_name": "Utah",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "UT",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 15,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "Balanced",
+    "notes": "The document is a comprehensive framework from the Utah State Board of Education. It provides guiding principles, examples of responsible and prohibited uses, and special considerations for privacy and security. The document is dated March 2026, suggesting it may be a forward-looking plan or a draft, but it is presented as a complete guidance document. It emphasizes a balanced approach, avoiding an outright ban while establishing clear guardrails for safe and ethical implementation.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "local://utah-aiframework-pdf",
+        "title": "AI Framework",
+        "raw_file": "data/generated/raw/UT-local-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/informationtechnology/artificialintelligence/index.php",
+        "title": "Artificial Intelligence",
+        "raw_file": "data/generated/raw/UT-official-guidance.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/informationtechnology/artificialintelligence/_artificialintelligence/AIFramework.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-schools-utah-gov-informationtechnology-artificialintelligence-artificialintelligence-aiframework-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/informationtechnology/artificialintelligence/_artificialintelligence/AI-Learner.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-schools-utah-gov-informationtechnology-artificialintelligence-artificialintelligence-ai-learner-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/informationtechnology/artificialintelligence/_artificialintelligence/AI%20Educator.pdf",
+        "title": "Discovered from official_guidance",
+        "raw_file": "data/generated/raw/https-schools-utah-gov-informationtechnology-artificialintelligence-artificialintelligence-ai-20educator-pdf.pdf",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/studentdataprivacy/index.php",
+        "title": "Student Data Privacy",
+        "raw_file": "data/generated/raw/UT-official-guidance-linked-4.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/licensing/index.php",
+        "title": "Educator Licensing",
+        "raw_file": "data/generated/raw/UT-official-guidance-linked-5.html",
+        "published_date_guess": null
+      },
+      {
+        "url": "https://schools.utah.gov/curr/educatordevelopment/index.php",
+        "title": "Educator Development",
+        "raw_file": "data/generated/raw/UT-official-guidance-linked-6.html",
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "This document guides Utah students, staff, and school communities on the appropriate and responsible use of artificial intelligence (AI), particularly generative AI tools, in classroom instruction, school management, and system-wide operations where permitted by local policy.",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Students and staff should not copy from any source, including generative AI, without prior approval and adequate documentation. Students should not submit AI-generated work as their original work. Staff and students will be taught how to properly cite or acknowledge the use of AI where applicable.",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Staff and students are prohibited from entering confidential or personally identifiable information into unauthorized AI tools, such as those without approved data privacy agreements. This extends to contracted vendors and other third parties.",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "We educate our staff and students about AI. Promoting AI literacy among students and staff is central to addressing the risks of AI use and teaches critical skills for students' futures. Students and staff will be given support to develop their AI literacy, which includes how to use AI, when to use it,...",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Artificial Intelligence Framework for Utah P-12 Education: Guidance on the Use of AI in Our Schools",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Conversely, an outright ban on AI in schools impedes the development of essential future workforce skills. Instead, a balanced and informed approach is preferred, encompassing both maximizing learning and attending to security measures.",
+        "source_url": "local://utah-aiframework-pdf",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the Utah AI Framework PDF supports the balanced, guardrail-heavy coding profile.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-va-v1",
+    "jurisdiction_id": "state-va",
+    "jurisdiction_name": "Virginia",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "VA",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.88,
+    "policy_strength": 8,
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "capacity-building",
+    "notes": "Deep-research review found stronger official statewide evidence for Virginia than the prior placeholder record. VDOE and Board of Education materials support guided AI integration, statewide educator training, and active implementation support.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
+        "title": "Technology in Education | Virginia Department of Education",
+        "raw_file": null,
+        "published_date_guess": "2026"
+      },
+      {
+        "url": "https://www.doe.virginia.gov/home/showpublisheddocument/51991/638406435372930000",
+        "title": "Virginia Education Technology Plan 2024-2030 | Virginia Board of Education",
+        "raw_file": null,
+        "published_date_guess": "2024"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Develop and recommend guidance that allows for the integration of artificial intelligence and holds expectations for academic integrity.",
+        "source_url": "https://www.doe.virginia.gov/home/showpublisheddocument/51991/638406435372930000",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The Virginia Department of Education (VDOE) provided Generative AI teacher training in the fall of 2024... these workshops enrolled 360 educators.",
+        "source_url": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "The VDOE’s AI Advisory Committee provides strategic recommendations, elevates concerns about AI integration, and advises on effectively integrating AI while supporting innovation and responsible digital practices.",
+        "source_url": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Official Virginia sources support moderate AI-use guidance and strong teacher-support / implementation coding. Assessment and privacy remain uncoded because the reviewed sources are not explicit on those domains.",
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-wa-v1",
+    "jurisdiction_id": "state-wa",
+    "jurisdiction_name": "Washington",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "WA",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 1,
+    "policy_strength": 12,
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_orientation": "Promotional",
+    "notes": "Washington's Office of Superintendent of Public Instruction (OSPI) released formal guidance in January 2024. The policy is strongly promotional, encouraging educators to embrace AI as a tool for personalized learning and productivity. The guidance is framed with a \"human-centered\" approach, emphasizing human inquiry and reflection. It provides specific guidance on ethical applications, including academic integrity and data privacy, and includes a list of topics for educator professional learning.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "title": "Superintendent Reykdal Introduces Guidance for Integration of Human-Centered AI in Washington’s Public Schools",
+        "raw_file": "data/generated/raw/WA-press-release.html",
+        "published_date_guess": "January 18, 2024"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "The guidance, which centers on human inquiry and empowerment, encourages educators and school leaders to embrace the use of AI as a tool to support personalized student learning, enhance productivity for school employees, and equip students to thrive in a rapidly changing technological world.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-1"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "A significant focus of the guidance is on the ethical application of AI in schools, including academic integrity, data privacy, safety, and respect.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-5"
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Jake Rember, Director of Special Education and Director of Technology at Brinnon Elementary, uses AI to customize art projects for students with disabilities, develop classroom assessments based on student interests, and streamline administrative tasks.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-4"
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "A significant focus of the guidance is on the ethical application of AI in schools, including academic integrity, data privacy, safety, and respect.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-5"
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The guidance also includes... an initial list of topics for district leaders to prioritize for educator professional learning.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-6"
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Today, the Office of Superintendent of Public Instruction (OSPI) published a roadmap to guide the implementation of Artificial Intelligence (AI) in Washington’s schools, making Washington the fifth state in the nation to publish state-level guidance on AI use in its public schools.",
+        "source_url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
+        "chunk_id": "ospi-k12-wa-us-about-ospi-news-center-news-releases-superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools-chunk-0"
+      }
+    ],
+    "extraction_model": "gemini-2.5-pro",
+    "verification_status": "supported",
+    "verification_notes": "Human review confirmed the published OSPI guidance and evidence spans support the coded policy profile.",
+    "approval_route": "human_review",
+    "audit_status": "completed",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "manual_review_completed"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ]
+  },
+  {
+    "record_id": "state-wv-v1",
+    "jurisdiction_id": "state-wv",
+    "jurisdiction_name": "West Virginia",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "WV",
+    "year": null,
+    "effective_date": null,
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.88,
+    "policy_strength": 8,
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_orientation": "guardrail-oriented",
+    "notes": "West Virginia's Department of Education has published statewide AI guidance v1.2 for PK-12 schools. The page frames AI as a support resource for superintendents, district staff, educators, and support staff, and pairs the guidance with an updateable Canvas resource hub for ongoing implementation support.",
+    "version": 1,
+    "updated_at": "2026-04-04T16:59:57.385Z",
+    "source_documents": [
+      {
+        "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+        "title": "Artificial Intelligence",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "WVDE Artificial Intelligence guidance v1.2 provides support for the use of artificial intelligence across various roles in West Virginia PK-12 schools.",
+        "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The West Virginia Department of Education has developed a Canvas resource site, a hub of materials and resources for county school districts and educators.",
+        "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "This site will be regularly updated alongside this guidance to ensure it remains a relevant and valuable resource.",
+        "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "The guidance intends to focus on effectively and safely integrating AI in classroom instruction, school administration, and district operations.",
+        "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official WVDE guidance page supports a released-guidance profile with explicit implementation support and educator resource infrastructure.",
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ]
+  }
+]
