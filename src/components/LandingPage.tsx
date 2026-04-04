@@ -1,4 +1,5 @@
 import { AppIcon } from "./AppIcon";
+import { AmbientMapBackground } from "./AmbientMapBackground";
 
 interface LandingPageProps {
   isAuthenticated: boolean;
@@ -72,6 +73,7 @@ export function LandingPage({
       <main>
         <section className="landing-hero">
           <div className="landing-hero-backdrop" aria-hidden="true">
+            <AmbientMapBackground />
             <div className="landing-aurora" />
             <div className="landing-glow landing-glow-a" />
             <div className="landing-glow landing-glow-b" />

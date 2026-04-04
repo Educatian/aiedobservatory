@@ -3623,6 +3623,72 @@ tbody td {
   pointer-events: none;
 }
 
+.landing-map-ambient {
+  position: absolute;
+  inset: 2.5rem -4rem auto auto;
+  width: min(58rem, 70vw);
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  transform-origin: center;
+  animation: landing-map-drift 28s ease-in-out infinite alternate;
+}
+
+.landing-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 18px 40px rgba(7, 21, 34, 0.12));
+}
+
+.landing-map-fill {
+  fill: url(#ambientMapFill);
+  opacity: 0.72;
+}
+
+.landing-map-outline {
+  stroke: url(#ambientMapStroke);
+  stroke-width: 1.5;
+  opacity: 0.42;
+}
+
+.landing-map-grid path {
+  stroke: rgba(218, 241, 252, 0.18);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.landing-map-flow path {
+  fill: none;
+  stroke: rgba(130, 247, 216, 0.28);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 7 16;
+  animation: landing-map-flow 18s linear infinite;
+}
+
+.landing-map-nodes circle {
+  fill: rgba(247, 252, 255, 0.92);
+  stroke: rgba(92, 184, 253, 0.42);
+  stroke-width: 4;
+  animation: landing-map-node 6.2s ease-in-out infinite;
+}
+
+.landing-map-nodes circle:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.landing-map-nodes circle:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+.landing-map-nodes circle:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.landing-map-nodes circle:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
 .landing-aurora {
   position: absolute;
   inset: -18% -10% auto -12%;
@@ -3889,6 +3955,38 @@ tbody td {
   }
 }
 
+@keyframes landing-map-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(-1.5rem, 1rem, 0) scale(1.02);
+    opacity: 0.68;
+  }
+}
+
+@keyframes landing-map-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -92;
+  }
+}
+
+@keyframes landing-map-node {
+  0%,
+  100% {
+    transform: scale(0.94);
+    opacity: 0.68;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
 @keyframes landing-glow-drift {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
@@ -3942,6 +4040,9 @@ tbody td {
 
 @media (prefers-reduced-motion: reduce) {
   .landing-aurora,
+  .landing-map-ambient,
+  .landing-map-flow path,
+  .landing-map-nodes circle,
   .landing-glow,
   .landing-orbit,
   .landing-signal-pulse,
