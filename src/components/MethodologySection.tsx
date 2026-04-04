@@ -11,6 +11,7 @@ function formatPercent(value: number | null | undefined): string {
 }
 
 export function MethodologySection({ records }: MethodologySectionProps) {
+  const codebookDownloadHref = `${import.meta.env.BASE_URL}downloads/academic-sentinel-codebook.pdf`;
   const codedRecords = records.filter((record) => record.snapshotStatus === "coded");
   const autoApproved = codedRecords.filter((record) => record.approvalRoute === "auto_approve").length;
   const sampleAudits = codedRecords.filter((record) => record.auditStatus === "pending_sample").length;
@@ -92,7 +93,7 @@ export function MethodologySection({ records }: MethodologySectionProps) {
             </p>
             <a
               className="methodology-download-link"
-              href="/downloads/academic-sentinel-codebook.pdf"
+              href={codebookDownloadHref}
               download="academic-sentinel-codebook.pdf"
             >
               Download Codebook PDF
