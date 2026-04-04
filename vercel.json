@@ -1,13 +1,11 @@
 {
-  "crons": [
-    {
-      "path": "/api/cron/policy-refresh",
-      "schedule": "17 9 * * *"
-    }
-  ],
   "rewrites": [
     {
       "source": "/projectoverview",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/projectoverview/(.*)",
       "destination": "/index.html"
     },
     {
