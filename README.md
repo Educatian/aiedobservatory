@@ -12,6 +12,8 @@
 
 Evidence-grounded observatory for tracking AI-in-education guidance across U.S. states.
 
+Brand assets for deployment and sharing live in [`public/app-icon.svg`](./public/app-icon.svg), [`public/icon-192.png`](./public/icon-192.png), [`public/icon-512.png`](./public/icon-512.png), and [`public/social-preview.png`](./public/social-preview.png).
+
 ## What it is
 
 This project turns fragmented guidance pages, PDFs, implementation memos, and related policy artifacts into inspectable state-level records for leadership, policy analysis, and longitudinal monitoring.
