@@ -1,5 +1,23 @@
 [
   {
+    "state_abbr": "AZ",
+    "state_name": "Arizona",
+    "agency": "Arizona Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.azed.gov/information-technology/artificial-intelligence",
+    "notes": "ADE AI guidance hub."
+  },
+  {
+    "state_abbr": "AZ",
+    "state_name": "Arizona",
+    "agency": "Arizona Department of Education",
+    "region_type": "state",
+    "seed_type": "official_press_release",
+    "url": "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool",
+    "notes": "ADE statewide AI deployment release."
+  },
+  {
     "state_abbr": "CA",
     "state_name": "California",
     "agency": "California Department of Education",
@@ -18,6 +36,42 @@
     "notes": "Official release letter for 2026 AI guidance."
   },
   {
+    "state_abbr": "CO",
+    "state_name": "Colorado",
+    "agency": "Colorado Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://ed.cde.state.co.us/artificialintelligence",
+    "notes": "CDE AI hub."
+  },
+  {
+    "state_abbr": "CO",
+    "state_name": "Colorado",
+    "agency": "Colorado Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources",
+    "notes": "CDE AI resources page."
+  },
+  {
+    "state_abbr": "CT",
+    "state_name": "Connecticut",
+    "agency": "Connecticut Commission for Educational Technology",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+    "notes": "Connecticut AI guidance page."
+  },
+  {
+    "state_abbr": "CT",
+    "state_name": "Connecticut",
+    "agency": "Connecticut State Department of Education",
+    "region_type": "state",
+    "seed_type": "official_press_release",
+    "url": "https://portal.ct.gov/sde/press-room/press-releases/2025/csde-launches-groundbreaking-artificial-intelligence-pilot-program",
+    "notes": "CSDE AI pilot press release."
+  },
+  {
     "state_abbr": "DE",
     "state_name": "Delaware",
     "agency": "Delaware Department of Education",
@@ -34,6 +88,24 @@
     "seed_type": "official_guidance",
     "url": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
     "notes": "Georgia Department of Education AI in K-12 guidance landing page."
+  },
+  {
+    "state_abbr": "IA",
+    "state_name": "Iowa",
+    "agency": "Iowa Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+    "notes": "Iowa district AI governance feature."
+  },
+  {
+    "state_abbr": "IA",
+    "state_name": "Iowa",
+    "agency": "Iowa Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards",
+    "notes": "Iowa AI standards development announcement."
   },
   {
     "state_abbr": "KY",
@@ -70,6 +142,51 @@
     "seed_type": "official_model_policy",
     "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
     "notes": "Official Massachusetts Guidance for Artificial Intelligence in K-12 Education PDF."
+  },
+  {
+    "state_abbr": "ME",
+    "state_name": "Maine",
+    "agency": "Maine Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+    "notes": "Maine DOE AI toolkit page."
+  },
+  {
+    "state_abbr": "MI",
+    "state_name": "Michigan",
+    "agency": "Michigan Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
+    "notes": "Michigan AI resource page."
+  },
+  {
+    "state_abbr": "MN",
+    "state_name": "Minnesota",
+    "agency": "Minnesota Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+    "notes": "MDE AI in Education page."
+  },
+  {
+    "state_abbr": "MO",
+    "state_name": "Missouri",
+    "agency": "Missouri Department of Elementary and Secondary Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+    "notes": "DESE computer science page."
+  },
+  {
+    "state_abbr": "MO",
+    "state_name": "Missouri",
+    "agency": "Missouri Department of Elementary and Secondary Education",
+    "region_type": "state",
+    "seed_type": "official_model_policy",
+    "url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+    "notes": "Missouri AI guidance PDF."
   },
   {
     "state_abbr": "NC",
@@ -117,6 +234,24 @@
     "notes": "Official Oregon Department of Education generative AI guidance hub."
   },
   {
+    "state_abbr": "PA",
+    "state_name": "Pennsylvania",
+    "agency": "Pennsylvania Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+    "notes": "Pennsylvania AI in K-12 guidance page."
+  },
+  {
+    "state_abbr": "PA",
+    "state_name": "Pennsylvania",
+    "agency": "Office of the Governor of Pennsylvania",
+    "region_type": "state",
+    "seed_type": "official_press_release",
+    "url": "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-takes-action-to-protect-pennsylvanians-using-ai.html",
+    "notes": "Pennsylvania AI governance release."
+  },
+  {
     "state_abbr": "RI",
     "state_name": "Rhode Island",
     "agency": "Rhode Island Department of Education",
@@ -124,6 +259,24 @@
     "seed_type": "press_release",
     "url": "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
     "notes": "RIDE release announcing statewide AI guidance for LEAs."
+  },
+  {
+    "state_abbr": "SC",
+    "state_name": "South Carolina",
+    "agency": "South Carolina Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
+    "notes": "SCDE career guidance page."
+  },
+  {
+    "state_abbr": "SC",
+    "state_name": "South Carolina",
+    "agency": "South Carolina Department of Education",
+    "region_type": "state",
+    "seed_type": "official_model_policy",
+    "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+    "notes": "SCDE AI standards framework."
   },
   {
     "state_abbr": "TX",

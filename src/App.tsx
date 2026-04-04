@@ -1,5 +1,6 @@
-import { startTransition, useDeferredValue, useEffect, useMemo, useState } from "react";
+import { startTransition, useDeferredValue, useEffect, useEffectEvent, useMemo, useState } from "react";
 import { CompareMatrixView } from "./components/CompareMatrixView";
+import { LiveActivityRail } from "./components/LiveActivityRail";
 import { MethodologySection } from "./components/MethodologySection";
 import { NewAnalysisDrawer } from "./components/NewAnalysisDrawer";
 import { PolicyDetailPanel } from "./components/PolicyDetailPanel";
@@ -7,11 +8,14 @@ import { PolicyDomainsSection } from "./components/PolicyDomainsSection";
 import { PolicyStageSection } from "./components/PolicyStageSection";
 import { PolicyTable } from "./components/PolicyTable";
 import { PolicyTileMap } from "./components/PolicyTileMap";
+import { ProjectOverviewPage } from "./components/ProjectOverviewPage";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { getPolicyStageLabel } from "./data/policyData";
-import { policyRecords } from "./data/policyData";
+import { policyRecords as initialPolicyRecords } from "./data/policyData";
+import type { PolicyEvent, PolicyRecord } from "./types";
 
 type CoverageFilter = "all" | "coded" | "queued";
+type AppPage = "dashboard" | "projectoverview";
 type NavSection =
   | "map-view"
   | "compare"
@@ -20,6 +24,10 @@ type NavSection =
   | "methodology"
   | "policy-domains"
   | "table-view";
+
+function getAppPageFromPath(pathname: string): AppPage {
+  return pathname.toLowerCase().startsWith("/projectoverview") ? "projectoverview" : "dashboard";
+}
 
 function getActiveSectionFromHash(hash: string): NavSection {
   const normalized = hash.replace(/^#/, "");
@@ -40,12 +48,25 @@ function getActiveSectionFromHash(hash: string): NavSection {
   }
 }
 
+function mergeLiveRecords(currentRecords: PolicyRecord[], incomingRecords: PolicyRecord[]): PolicyRecord[] {
+  const incomingByState = new Map(incomingRecords.map((record) => [record.stateAbbr, record]));
+  return currentRecords.map((record) => incomingByState.get(record.stateAbbr) ?? record);
+}
+
 function App() {
+  const [records, setRecords] = useState(initialPolicyRecords);
+  const [policyEvents, setPolicyEvents] = useState<PolicyEvent[]>([]);
   const [selectedState, setSelectedState] = useState("CA");
   const [coverageFilter, setCoverageFilter] = useState<CoverageFilter>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [compareStates, setCompareStates] = useState<string[]>(["CA", "TX", "FL"]);
   const [isAnalysisDrawerOpen, setIsAnalysisDrawerOpen] = useState(false);
+  const [livePolling, setLivePolling] = useState(true);
+  const [playbackIndex, setPlaybackIndex] = useState(0);
+  const [playbackRunning, setPlaybackRunning] = useState(false);
+  const [currentPage, setCurrentPage] = useState<AppPage>(() =>
+    typeof window === "undefined" ? "dashboard" : getAppPageFromPath(window.location.pathname)
+  );
   const [activeSection, setActiveSection] = useState<NavSection>(() =>
     typeof window === "undefined" ? "map-view" : getActiveSectionFromHash(window.location.hash)
   );
@@ -54,7 +75,7 @@ function App() {
   const normalizedQuery = deferredSearchQuery.trim().toLowerCase();
 
   const filteredRecords = useMemo(() => {
-    return policyRecords.filter((record) => {
+    return records.filter((record) => {
       const matchesCoverage =
         coverageFilter === "all" ? true : record.snapshotStatus === coverageFilter;
       const matchesQuery =
@@ -72,25 +93,107 @@ function App() {
     [filteredRecords]
   );
 
-  const selectedRecord =
-    policyRecords.find((record) => record.stateAbbr === selectedState) ?? policyRecords[0];
+  const selectedRecord = records.find((record) => record.stateAbbr === selectedState) ?? records[0];
 
   const codedRecords = useMemo(
-    () => policyRecords.filter((record) => record.snapshotStatus === "coded"),
-    []
+    () => records.filter((record) => record.snapshotStatus === "coded"),
+    [records]
   );
 
-  const totalCount = policyRecords.length;
-  const codedCount = policyRecords.filter((record) => record.snapshotStatus === "coded").length;
-  const highConfidenceCount = policyRecords.filter((record) => record.confidence >= 0.85).length;
-  const releasedGuidanceCount = policyRecords.filter((record) => record.implementationStage >= 3).length;
+  const totalCount = records.length;
+  const codedCount = records.filter((record) => record.snapshotStatus === "coded").length;
+  const highConfidenceCount = records.filter((record) => record.confidence >= 0.85).length;
+  const releasedGuidanceCount = records.filter((record) => record.implementationStage >= 3).length;
   const dominantStage = getPolicyStageLabel(
     Math.round(
-      policyRecords
+      records
         .filter((record) => record.snapshotStatus === "coded")
         .reduce((sum, record) => sum + record.implementationStage, 0) / Math.max(codedCount, 1)
     )
   );
+  const recentEvents = useMemo(() => {
+    const sourceEvents = policyEvents
+      .filter((event) => event.eventType === "source_added" || event.eventType === "record_created")
+      .slice(0, 4);
+    const routingEvents = policyEvents
+      .filter((event) =>
+        ["approval_route_changed", "review_status_changed", "stage_changed"].includes(event.eventType)
+      )
+      .slice(0, 4);
+    const scoringEvents = policyEvents
+      .filter((event) => ["confidence_changed", "record_updated"].includes(event.eventType))
+      .slice(0, 4);
+
+    return [...sourceEvents, ...routingEvents, ...scoringEvents]
+      .sort((left, right) => new Date(right.occurredAt).getTime() - new Date(left.occurredAt).getTime())
+      .slice(0, 12);
+  }, [policyEvents]);
+  const playbackTimeline = useMemo(() => [...recentEvents].reverse(), [recentEvents]);
+  const safePlaybackIndex = playbackTimeline.length === 0 ? 0 : Math.min(playbackIndex, playbackTimeline.length - 1);
+  const activePlaybackEvent = playbackTimeline[safePlaybackIndex] ?? null;
+  const latestChangedLabel = recentEvents[0]
+    ? new Date(recentEvents[0].occurredAt).toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit"
+      })
+    : "April 4, 2026";
+  const pulseStateIds = useMemo(
+    () =>
+      new Set(
+        policyEvents
+          .filter((event) => ["record_created", "record_updated", "review_status_changed", "stage_changed"].includes(event.eventType))
+          .map((event) => event.stateAbbr)
+          .slice(0, 8)
+      ),
+    [policyEvents]
+  );
+  const confidenceShiftStateIds = useMemo(
+    () =>
+      new Set(
+        policyEvents
+          .filter((event) => event.eventType === "confidence_changed")
+          .map((event) => event.stateAbbr)
+          .slice(0, 8)
+      ),
+    [policyEvents]
+  );
+  const sourceAddedStateIds = useMemo(
+    () =>
+      new Set(
+        policyEvents
+          .filter((event) => event.eventType === "source_added" || event.eventType === "record_created")
+          .map((event) => event.stateAbbr)
+          .slice(0, 8)
+      ),
+    [policyEvents]
+  );
+
+  const refreshLiveData = useEffectEvent(async () => {
+    try {
+      const [recordsResponse, eventsResponse] = await Promise.all([
+        fetch(`/policy-records.json?ts=${Date.now()}`, { cache: "no-store" }),
+        fetch(`/policy-events.json?ts=${Date.now()}`, { cache: "no-store" })
+      ]);
+
+      if (recordsResponse.ok) {
+        const nextRecords = (await recordsResponse.json()) as PolicyRecord[];
+        startTransition(() => {
+          setRecords((current) => mergeLiveRecords(current, nextRecords));
+        });
+      }
+
+      if (eventsResponse.ok) {
+        const nextEvents = (await eventsResponse.json()) as PolicyEvent[];
+        startTransition(() => {
+          setPolicyEvents(nextEvents);
+        });
+      }
+    } catch {
+      // Keep the last-known local snapshot when polling fails.
+    }
+  });
 
   useEffect(() => {
     const fallbackPool = codedRecords.map((record) => record.stateAbbr);
@@ -105,17 +208,68 @@ function App() {
   }, [codedRecords, selectedState]);
 
   useEffect(() => {
-    function handleHashChange() {
+    void refreshLiveData();
+    if (!livePolling) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      void refreshLiveData();
+    }, 15000);
+
+    return () => window.clearInterval(intervalId);
+  }, [livePolling, refreshLiveData]);
+
+  useEffect(() => {
+    if (playbackTimeline.length === 0) {
+      setPlaybackIndex(0);
+      setPlaybackRunning(false);
+      return;
+    }
+
+    setPlaybackIndex((current) => {
+      if (current === 0) {
+        return playbackTimeline.length - 1;
+      }
+
+      return Math.min(current, playbackTimeline.length - 1);
+    });
+  }, [playbackTimeline.length]);
+
+  useEffect(() => {
+    if (!playbackRunning || playbackTimeline.length <= 1) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setPlaybackIndex((current) => (current + 1) % playbackTimeline.length);
+    }, 2200);
+
+    return () => window.clearInterval(intervalId);
+  }, [playbackRunning, playbackTimeline.length]);
+
+  useEffect(() => {
+    function handleLocationChange() {
+      setCurrentPage(getAppPageFromPath(window.location.pathname));
       setActiveSection(getActiveSectionFromHash(window.location.hash));
     }
 
-    window.addEventListener("hashchange", handleHashChange);
-    handleHashChange();
+    window.addEventListener("hashchange", handleLocationChange);
+    window.addEventListener("popstate", handleLocationChange);
+    handleLocationChange();
 
     return () => {
-      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("hashchange", handleLocationChange);
+      window.removeEventListener("popstate", handleLocationChange);
     };
   }, []);
+
+  useEffect(() => {
+    document.title =
+      currentPage === "projectoverview"
+        ? "Project Overview - Academic Sentinel"
+        : "Academic Sentinel: AI in Education Policy Tracker";
+  }, [currentPage]);
 
   function selectState(nextState: string) {
     startTransition(() => {
@@ -123,11 +277,37 @@ function App() {
     });
   }
 
-  function handleNavClick(section: NavSection) {
-    setActiveSection(section);
+  function navigateToDashboard(section: NavSection = "map-view") {
     if (typeof window !== "undefined") {
-      window.location.hash = section;
+      window.history.pushState({}, "", `/#${section}`);
+      setCurrentPage("dashboard");
+      setActiveSection(section);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
+  }
+
+  function navigateToProjectOverview() {
+    if (typeof window !== "undefined") {
+      window.history.pushState({}, "", "/projectoverview");
+      setCurrentPage("projectoverview");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function handleNavClick(section: NavSection) {
+    navigateToDashboard(section);
+  }
+
+  if (currentPage === "projectoverview") {
+    return <ProjectOverviewPage records={records} onOpenDashboard={navigateToDashboard} />;
+  }
+
+  function handleProjectOverviewClick() {
+    navigateToProjectOverview();
+  }
+
+  function handleBrandHomeClick() {
+    navigateToDashboard("map-view");
   }
 
   function changeCompareState(slot: number, nextState: string) {
@@ -217,7 +397,7 @@ function App() {
       <div className="main-shell">
         <NewAnalysisDrawer
           open={isAnalysisDrawerOpen}
-          records={policyRecords}
+          records={records}
           selectedState={selectedState}
           onClose={() => setIsAnalysisDrawerOpen(false)}
           onNavigate={handleNavClick}
@@ -226,7 +406,9 @@ function App() {
 
         <header className="top-nav">
           <div className="top-brand">
-            <h2>Academic Sentinel: AI in Education</h2>
+            <button type="button" className="top-brand-home" onClick={handleBrandHomeClick}>
+              Academic Sentinel: AI in Education
+            </button>
             <nav>
               <a
                 className={activeSection === "map-view" ? "active" : ""}
@@ -263,6 +445,9 @@ function App() {
               >
                 Methodology
               </a>
+              <button type="button" className="top-nav-route-button" onClick={handleProjectOverviewClick}>
+                Project Overview
+              </button>
             </nav>
           </div>
 
@@ -301,8 +486,8 @@ function App() {
               </p>
             </div>
             <div className="header-stamp">
-              <span>Last Updated</span>
-              <strong>April 4, 2026</strong>
+              <span>Last Changed</span>
+              <strong>{latestChangedLabel}</strong>
             </div>
           </section>
 
@@ -355,9 +540,13 @@ function App() {
 
                 <div className="map-canvas">
                   <PolicyTileMap
-                    records={policyRecords}
+                    records={records}
                     selectedState={selectedState}
                     visibleIds={filteredStateIds}
+                    pulseStates={pulseStateIds}
+                    confidenceShiftStates={confidenceShiftStateIds}
+                    sourceAddedStates={sourceAddedStateIds}
+                    playbackState={activePlaybackEvent?.stateAbbr ?? null}
                     onSelect={selectState}
                   />
                 </div>
@@ -401,20 +590,35 @@ function App() {
             </div>
 
             <div className="inspector-column">
-              <div className="inspector-toolbar">
-                <label className="field">
-                  <span>Search scope</span>
+            <div className="inspector-toolbar">
+              <label className="field">
+                <span>Search scope</span>
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     placeholder="CA, Texas, New York..."
-                  />
-                </label>
-              </div>
-
-              <PolicyDetailPanel record={selectedRecord} />
+                />
+              </label>
             </div>
+
+            <LiveActivityRail
+              events={recentEvents}
+              livePolling={livePolling}
+              playbackIndex={safePlaybackIndex}
+              playbackRunning={playbackRunning}
+              onToggleLivePolling={() => setLivePolling((current) => !current)}
+              onTogglePlayback={() => setPlaybackRunning((current) => !current)}
+              onPlaybackIndexChange={setPlaybackIndex}
+              onSelectEvent={(event, index) => {
+                setPlaybackIndex(Math.max(index, 0));
+                setPlaybackRunning(false);
+                selectState(event.stateAbbr);
+              }}
+            />
+
+            <PolicyDetailPanel record={selectedRecord} />
+          </div>
           </section>
 
           <CompareMatrixView
@@ -444,13 +648,13 @@ function App() {
             </div>
           </section>
 
-          <PolicyDomainsSection records={policyRecords} onSelectState={selectState} />
+          <PolicyDomainsSection records={records} onSelectState={selectState} />
 
-          <PolicyStageSection records={policyRecords} onSelectState={selectState} />
+          <PolicyStageSection records={records} onSelectState={selectState} />
 
           <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
 
-          <MethodologySection records={policyRecords} />
+          <MethodologySection records={records} />
 
           <div id="table-view">
             <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />

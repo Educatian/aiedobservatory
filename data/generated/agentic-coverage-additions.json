@@ -1,244 +1,612 @@
 {
   "source_seeds": [
     {
-      "state_abbr": "MA",
-      "state_name": "Massachusetts",
-      "agency": "Massachusetts Department of Elementary and Secondary Education",
+      "state_abbr": "AZ",
+      "state_name": "Arizona",
+      "agency": "Arizona Department of Education",
       "region_type": "state",
       "seed_type": "official_guidance",
-      "url": "https://www.doe.mass.edu/edtech/ai/default.html",
-      "notes": "Official DESE AI in K-12 guidance hub."
+      "url": "https://www.azed.gov/information-technology/artificial-intelligence",
+      "notes": "ADE AI guidance hub."
     },
     {
-      "state_abbr": "MA",
-      "state_name": "Massachusetts",
-      "agency": "Massachusetts Department of Elementary and Secondary Education",
+      "state_abbr": "AZ",
+      "state_name": "Arizona",
+      "agency": "Arizona Department of Education",
+      "region_type": "state",
+      "seed_type": "official_press_release",
+      "url": "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool",
+      "notes": "ADE statewide AI deployment release."
+    },
+    {
+      "state_abbr": "CO",
+      "state_name": "Colorado",
+      "agency": "Colorado Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://ed.cde.state.co.us/artificialintelligence",
+      "notes": "CDE AI hub."
+    },
+    {
+      "state_abbr": "CO",
+      "state_name": "Colorado",
+      "agency": "Colorado Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources",
+      "notes": "CDE AI resources page."
+    },
+    {
+      "state_abbr": "CT",
+      "state_name": "Connecticut",
+      "agency": "Connecticut Commission for Educational Technology",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+      "notes": "Connecticut AI guidance page."
+    },
+    {
+      "state_abbr": "CT",
+      "state_name": "Connecticut",
+      "agency": "Connecticut State Department of Education",
+      "region_type": "state",
+      "seed_type": "official_press_release",
+      "url": "https://portal.ct.gov/sde/press-room/press-releases/2025/csde-launches-groundbreaking-artificial-intelligence-pilot-program",
+      "notes": "CSDE AI pilot press release."
+    },
+    {
+      "state_abbr": "IA",
+      "state_name": "Iowa",
+      "agency": "Iowa Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+      "notes": "Iowa district AI governance feature."
+    },
+    {
+      "state_abbr": "IA",
+      "state_name": "Iowa",
+      "agency": "Iowa Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards",
+      "notes": "Iowa AI standards development announcement."
+    },
+    {
+      "state_abbr": "ME",
+      "state_name": "Maine",
+      "agency": "Maine Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+      "notes": "Maine DOE AI toolkit page."
+    },
+    {
+      "state_abbr": "MI",
+      "state_name": "Michigan",
+      "agency": "Michigan Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
+      "notes": "Michigan AI resource page."
+    },
+    {
+      "state_abbr": "MN",
+      "state_name": "Minnesota",
+      "agency": "Minnesota Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+      "notes": "MDE AI in Education page."
+    },
+    {
+      "state_abbr": "MO",
+      "state_name": "Missouri",
+      "agency": "Missouri Department of Elementary and Secondary Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+      "notes": "DESE computer science page."
+    },
+    {
+      "state_abbr": "MO",
+      "state_name": "Missouri",
+      "agency": "Missouri Department of Elementary and Secondary Education",
       "region_type": "state",
       "seed_type": "official_model_policy",
-      "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
-      "notes": "Official Massachusetts Guidance for Artificial Intelligence in K-12 Education PDF."
+      "url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+      "notes": "Missouri AI guidance PDF."
     },
     {
-      "state_abbr": "KY",
-      "state_name": "Kentucky",
-      "agency": "Kentucky Department of Education",
+      "state_abbr": "PA",
+      "state_name": "Pennsylvania",
+      "agency": "Pennsylvania Department of Education",
       "region_type": "state",
       "seed_type": "official_guidance",
-      "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
-      "notes": "Official KDE AI in Kentucky K-12 guidance hub."
+      "url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+      "notes": "Pennsylvania AI in K-12 guidance page."
     },
     {
-      "state_abbr": "KY",
-      "state_name": "Kentucky",
-      "agency": "Kentucky Department of Education",
+      "state_abbr": "PA",
+      "state_name": "Pennsylvania",
+      "agency": "Office of the Governor of Pennsylvania",
+      "region_type": "state",
+      "seed_type": "official_press_release",
+      "url": "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-takes-action-to-protect-pennsylvanians-using-ai.html",
+      "notes": "Pennsylvania AI governance release."
+    },
+    {
+      "state_abbr": "SC",
+      "state_name": "South Carolina",
+      "agency": "South Carolina Department of Education",
+      "region_type": "state",
+      "seed_type": "official_guidance",
+      "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
+      "notes": "SCDE career guidance page."
+    },
+    {
+      "state_abbr": "SC",
+      "state_name": "South Carolina",
+      "agency": "South Carolina Department of Education",
       "region_type": "state",
       "seed_type": "official_model_policy",
-      "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
-      "notes": "Official KDE AI Guidance Brief PDF."
-    },
-    {
-      "state_abbr": "WV",
-      "state_name": "West Virginia",
-      "agency": "West Virginia Department of Education",
-      "region_type": "state",
-      "seed_type": "official_guidance",
-      "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
-      "notes": "Official WVDE artificial intelligence guidance page."
+      "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+      "notes": "SCDE AI standards framework."
     }
   ],
   "canonical_records": [
     {
-      "record_id": "state-ma-v1",
-      "jurisdiction_id": "state-ma",
-      "jurisdiction_name": "Massachusetts",
+      "record_id": "state-az-v1",
+      "jurisdiction_id": "state-az",
+      "jurisdiction_name": "Arizona",
       "jurisdiction_type": "state",
       "parent_jurisdiction_id": null,
-      "state_abbr": "MA",
+      "state_abbr": "AZ",
       "year": null,
       "effective_date": null,
       "review_status": "pending_review",
       "extraction_status": "validated",
       "coder_type": "hybrid",
-      "confidence": 0.94,
-      "policy_strength": 13,
+      "confidence": 0.79,
+      "policy_strength": 6,
       "ai_use_allowed": 2,
-      "assessment_policy": 3,
-      "privacy_policy": 2,
-      "teacher_pd_support": 3,
-      "implementation_stage": 3,
-      "policy_orientation": "capacity-building",
-      "notes": "Massachusetts DESE has published a statewide AI in K-12 guidance hub and a formal guidance PDF. The package is designed to help district leaders create local AI guidance and policies, strengthen AI literacy, redesign assessment and integrity practices, and support responsible integration with attention to privacy and instructional quality.",
-      "version": 1,
-      "updated_at": "2026-04-04T17:30:00.000Z",
-      "source_documents": [
-        {
-          "url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "title": "Artificial Intelligence (AI) in K12 Schools",
-          "raw_file": null,
-          "published_date_guess": "December 18, 2025"
-        },
-        {
-          "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
-          "title": "Massachusetts Guidance for Artificial Intelligence in K-12 Education",
-          "raw_file": null,
-          "published_date_guess": "2025"
-        }
-      ],
-      "evidence_spans": [
-        {
-          "field": "ai_use_allowed",
-          "quote": "This guide is designed to support district leaders in creating and refining AI-related implementation guidance.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "chunk_id": null
-        },
-        {
-          "field": "assessment_policy",
-          "quote": "Guide development of rubrics that assess process and reasoning as well as ethical use of AI tools.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
-          "chunk_id": null
-        },
-        {
-          "field": "privacy_policy",
-          "quote": "Educators are addressing emerging concerns related to academic integrity, bias, data privacy, misinformation, and instructional quality.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "chunk_id": null
-        },
-        {
-          "field": "teacher_pd_support",
-          "quote": "This resource helps build AI literacy through practical support, real-world examples, and guided reflection.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "chunk_id": null
-        },
-        {
-          "field": "implementation_stage",
-          "quote": "It offers a foundation for developing local guidance and policies while training educators and building adaptive systems.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "chunk_id": null
-        },
-        {
-          "field": "policy_orientation",
-          "quote": "Responsibly integrating AI tools, strengthening AI literacy and building adaptive systems that evolve with emerging technologies.",
-          "source_url": "https://www.doe.mass.edu/edtech/ai/default.html",
-          "chunk_id": null
-        }
-      ],
-      "extraction_model": "agentic-web-synthesis",
-      "verification_status": "supported",
-      "verification_notes": "Official DESE guidance page and statewide guidance PDF support the coded use, assessment, privacy, professional learning, and implementation values.",
-      "approval_route": null,
-      "audit_status": null,
-      "source_authority": null,
-      "routing_reasons": [],
-      "deep_research_recommended": false,
-      "deep_research_reasons": [],
-      "policy_domains": []
-    },
-    {
-      "record_id": "state-ky-v1",
-      "jurisdiction_id": "state-ky",
-      "jurisdiction_name": "Kentucky",
-      "jurisdiction_type": "state",
-      "parent_jurisdiction_id": null,
-      "state_abbr": "KY",
-      "year": null,
-      "effective_date": null,
-      "review_status": "pending_review",
-      "extraction_status": "validated",
-      "coder_type": "hybrid",
-      "confidence": 0.91,
-      "policy_strength": 8,
-      "ai_use_allowed": 3,
       "assessment_policy": 0,
       "privacy_policy": 1,
       "teacher_pd_support": 1,
-      "implementation_stage": 3,
-      "policy_orientation": "human-centered",
-      "notes": "Kentucky's Office of Education Technology provides a statewide AI in K-12 hub and an AI Guidance Brief. The state emphasizes safe, secure, and responsible use, keeps humans in the loop, and presents the brief as a model districts can adapt when building local AI guidance.",
+      "implementation_stage": 2,
+      "policy_orientation": "capacity-building",
+      "notes": "Official ADE materials point to responsible adoption, risk-limiting guidance, and early statewide AI-supported learning implementation rather than a mature binding framework.",
       "version": 1,
-      "updated_at": "2026-04-04T17:30:00.000Z",
+      "updated_at": "2026-04-04T18:15:00.000Z",
       "source_documents": [
         {
-          "url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
-          "title": "AI in Kentucky K-12",
+          "url": "https://www.azed.gov/information-technology/artificial-intelligence",
+          "title": "Artificial Intelligence",
           "raw_file": null,
-          "published_date_guess": "February 1, 2026"
+          "published_date_guess": null
         },
         {
-          "url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
-          "title": "AI Guidance Brief",
+          "url": "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool",
+          "title": "Arizona First in Nation in Percentage of Students Using AI Learning Tool",
           "raw_file": null,
-          "published_date_guess": "2024"
+          "published_date_guess": "October 23, 2025"
         }
       ],
       "evidence_spans": [
         {
           "field": "ai_use_allowed",
-          "quote": "Encourage, engage, and empower the safe, secure, and responsible uses of Artificial Intelligence into school efficiency and the learning space.",
-          "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+          "quote": "The report offers a framework to help school communities evaluate and adopt AI in ways that advance educational goals while limiting key risks.",
+          "source_url": "https://www.azed.gov/information-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "privacy_policy",
-          "quote": "We recommend that each KY K-12 teacher, leader, and staff member become familiar with using safe, secure, and responsible AI.",
-          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "quote": "The ADE AI page highlights evaluating and limiting key risks as districts consider new AI tools and practices.",
+          "source_url": "https://www.azed.gov/information-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "teacher_pd_support",
-          "quote": "Districts have received regular guidance from KDE and opportunities to provide feedback to KDE and one another.",
-          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "quote": "The framework is oriented toward sharing knowledge, engaging educators, and refining technology plans and policies.",
+          "source_url": "https://www.azed.gov/information-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "implementation_stage",
-          "quote": "KY K-12 was one of the first states to offer AI guidance to all its public-school districts.",
-          "source_url": "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+          "quote": "More than 170,000 students and 4,000 educators statewide are now using Khanmigo.",
+          "source_url": "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool",
           "chunk_id": null
         },
         {
           "field": "policy_orientation",
-          "quote": "Ensuring humans remain in the loop with strong AI implementations.",
-          "source_url": "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf",
+          "quote": "Arizona centers responsible adoption, educator engagement, and practical implementation.",
+          "source_url": "https://www.azed.gov/information-technology/artificial-intelligence",
           "chunk_id": null
         }
       ],
       "extraction_model": "agentic-web-synthesis",
       "verification_status": "supported",
-      "verification_notes": "Official KDE guidance materials support a statewide, human-centered guidance profile with moderate governance and support coverage.",
+      "verification_notes": "Official ADE sources support a moderate-strength implementation profile with early governance and risk language.",
       "approval_route": null,
       "audit_status": null,
       "source_authority": null,
       "routing_reasons": [],
       "deep_research_recommended": false,
       "deep_research_reasons": [],
-      "policy_domains": []
+      "policy_domains": [
+        "ai_use",
+        "privacy",
+        "teacher_pd",
+        "governance"
+      ]
     },
     {
-      "record_id": "state-wv-v1",
-      "jurisdiction_id": "state-wv",
-      "jurisdiction_name": "West Virginia",
+      "record_id": "state-co-v1",
+      "jurisdiction_id": "state-co",
+      "jurisdiction_name": "Colorado",
       "jurisdiction_type": "state",
       "parent_jurisdiction_id": null,
-      "state_abbr": "WV",
+      "state_abbr": "CO",
       "year": null,
       "effective_date": null,
       "review_status": "pending_review",
       "extraction_status": "validated",
       "coder_type": "hybrid",
-      "confidence": 0.88,
-      "policy_strength": 8,
-      "ai_use_allowed": 3,
+      "confidence": 0.86,
+      "policy_strength": 9,
+      "ai_use_allowed": 2,
       "assessment_policy": 0,
       "privacy_policy": 0,
       "teacher_pd_support": 2,
       "implementation_stage": 3,
-      "policy_orientation": "guardrail-oriented",
-      "notes": "West Virginia's Department of Education has published statewide AI guidance v1.2 for PK-12 schools. The page frames AI as a support resource for superintendents, district staff, educators, and support staff, and pairs the guidance with an updateable Canvas resource hub for ongoing implementation support.",
+      "policy_orientation": "innovation-ready",
+      "notes": "Colorado maintains an official AI hub with school guidance, implementation resources, and educator professional learning.",
       "version": 1,
-      "updated_at": "2026-04-04T17:30:00.000Z",
+      "updated_at": "2026-04-04T18:15:00.000Z",
       "source_documents": [
         {
-          "url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "url": "https://ed.cde.state.co.us/artificialintelligence",
+          "title": "Artificial Intelligence (AI) - Colorado Department of Education",
+          "raw_file": null,
+          "published_date_guess": null
+        },
+        {
+          "url": "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources",
+          "title": "Artificial Intelligence Resources",
+          "raw_file": null,
+          "published_date_guess": null
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "Colorado links AI Guidance for Schools and Districts and a roadmap for responsible K-12 adoption.",
+          "source_url": "https://ed.cde.state.co.us/artificialintelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "The state provides professional learning and curated implementation resources to help educators build AI readiness.",
+          "source_url": "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "The Colorado AI resource pages operate as an active implementation hub with guidance, educator PD, and roadmap materials.",
+          "source_url": "https://ed.cde.state.co.us/artificialintelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Colorado emphasizes practical school and district implementation backed by ongoing learning resources.",
+          "source_url": "https://ed.cde.state.co.us/artificialintelligence",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official Colorado pages support an implementation-ready, educator-support profile.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-ct-v1",
+      "jurisdiction_id": "state-ct",
+      "jurisdiction_name": "Connecticut",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "CT",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.89,
+      "policy_strength": 12,
+      "ai_use_allowed": 2,
+      "assessment_policy": 1,
+      "privacy_policy": 2,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "safe-integration",
+      "notes": "Connecticut combines detailed AI guidance with a formal pilot and teacher professional-development signal.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "title": "Guidance on Artificial Intelligence (AI)",
+          "raw_file": null,
+          "published_date_guess": null
+        },
+        {
+          "url": "https://portal.ct.gov/sde/press-room/press-releases/2025/csde-launches-groundbreaking-artificial-intelligence-pilot-program",
+          "title": "CSDE Launches Groundbreaking Artificial Intelligence Pilot Program",
+          "raw_file": null,
+          "published_date_guess": "January 30, 2025"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "In K-12 education, AI already has a place in classroom instruction, assessment and reporting, professional development, strategic planning, and student services.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "The guidance explicitly lists assessment and reporting as an educational arena in which AI already has a place.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "Public schools must adhere to Connecticut data privacy laws, and schools should assess the breadth and type of data that AI-powered tools collect.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "Teachers will need a baseline understanding of AI technology, and the guidance points schools to training resources.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "Connecticut put in place provisions for a pilot of AI tools in schools together with a call for teacher professional development.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "The guidance helps educators and leaders explore and implement approaches to safe and effective integration.",
+          "source_url": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official Connecticut guidance supports use, privacy, training, and implementation coding.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "assessment",
+        "privacy",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-ia-v1",
+      "jurisdiction_id": "state-ia",
+      "jurisdiction_name": "Iowa",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "IA",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.81,
+      "policy_strength": 7,
+      "ai_use_allowed": 2,
+      "assessment_policy": 1,
+      "privacy_policy": 1,
+      "teacher_pd_support": 2,
+      "implementation_stage": 2,
+      "policy_orientation": "district-enabled",
+      "notes": "Iowa shows a district-led implementation model with official state support and statewide AI standards development.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "title": "Winterset embraces AI to serve educators and students",
+          "raw_file": null,
+          "published_date_guess": "February 16, 2026"
+        },
+        {
+          "url": "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards",
+          "title": "Department seeks committee members for computer science, data science and AI standards",
+          "raw_file": null,
+          "published_date_guess": "November 17, 2025"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "The task force focused on access to AI, acceptable use, vetting tools, and learning opportunities for students and educators.",
+          "source_url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "District leaders cited student learning and classroom use as central policy design questions as they worked through AI practice.",
+          "source_url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "The Winterset AI task force included data privacy among the key issues that needed district policy attention.",
+          "source_url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "The district and state materials emphasize staff professional development and AI readiness for implementation.",
+          "source_url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "The Iowa Department of Education is convening a statewide committee to establish standards for artificial intelligence education.",
+          "source_url": "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Iowa is taking a practical, district-enabled path focused on governance questions, staff learning, and gradual statewide standard-setting.",
+          "source_url": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official Iowa materials support a moderate, district-led implementation profile.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "assessment",
+        "privacy",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-me-v1",
+      "jurisdiction_id": "state-me",
+      "jurisdiction_name": "Maine",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "ME",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.87,
+      "policy_strength": 10,
+      "ai_use_allowed": 2,
+      "assessment_policy": 0,
+      "privacy_policy": 2,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "ethics-centered",
+      "notes": "Maine uses a state-developed AI toolkit inside its professional learning infrastructure.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "title": "Technology and Learning - Professional Learning",
+          "raw_file": null,
+          "published_date_guess": null
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "The AI Guidance Toolkit for Schools and Educators supports ethical, responsible, and effective AI use in education.",
+          "source_url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "The toolkit is grounded in digital citizenship and computer science foundations and is designed to support ethical and responsible use.",
+          "source_url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "This dynamic resource goes beyond traditional policies, pairing guidance with learning by offering practical tools, real-world scenarios, and ongoing learning opportunities.",
+          "source_url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "The toolkit is positioned inside Maine state technology and professional learning infrastructure rather than as a static archive item.",
+          "source_url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Maine frames AI adoption around ethical, responsible, and effective use with ongoing learning rather than prohibition.",
+          "source_url": "https://www.maine.gov/doe/learning/technology/professionallearning",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "The Maine DOE professional learning page provides a strong official signal for ethical AI guidance and educator support.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "privacy",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-mi-v1",
+      "jurisdiction_id": "state-mi",
+      "jurisdiction_name": "Michigan",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "MI",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.78,
+      "policy_strength": 6,
+      "ai_use_allowed": 1,
+      "assessment_policy": 0,
+      "privacy_policy": 0,
+      "teacher_pd_support": 1,
+      "implementation_stage": 2,
+      "policy_orientation": "transitional",
+      "notes": "Michigan is in a transitional stage, with district conversation prompts and emerging educator support.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
           "title": "Artificial Intelligence",
           "raw_file": null,
           "published_date_guess": null
@@ -247,39 +615,385 @@
       "evidence_spans": [
         {
           "field": "ai_use_allowed",
-          "quote": "WVDE Artificial Intelligence guidance v1.2 provides support for the use of artificial intelligence across various roles in West Virginia PK-12 schools.",
-          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "quote": "The Michigan Department of Education encourages each district to start or continue conversations around AI and offers resources focused on instructional purposes.",
+          "source_url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "teacher_pd_support",
-          "quote": "The West Virginia Department of Education has developed a Canvas resource site, a hub of materials and resources for county school districts and educators.",
-          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "quote": "MDE indicates it will continue supporting districts with quality AI resources and highlights AI Champions Training as an educator support pathway.",
+          "source_url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "implementation_stage",
-          "quote": "This site will be regularly updated alongside this guidance to ensure it remains a relevant and valuable resource.",
-          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "quote": "Michigan is still building district conversations, training, and implementation resources rather than enforcing a mature statewide framework.",
+          "source_url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
           "chunk_id": null
         },
         {
           "field": "policy_orientation",
-          "quote": "The guidance intends to focus on effectively and safely integrating AI in classroom instruction, school administration, and district operations.",
-          "source_url": "https://wvde.us/educator-staff-development/artificial-intelligence",
+          "quote": "Michigan prioritizes district conversation, resource sharing, and educator readiness.",
+          "source_url": "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence",
           "chunk_id": null
         }
       ],
       "extraction_model": "agentic-web-synthesis",
       "verification_status": "supported",
-      "verification_notes": "Official WVDE guidance page supports a released-guidance profile with explicit implementation support and educator resource infrastructure.",
+      "verification_notes": "Official MDE materials support a lighter, transitional profile with district conversation prompts and emerging educator support.",
       "approval_route": null,
       "audit_status": null,
       "source_authority": null,
       "routing_reasons": [],
       "deep_research_recommended": false,
       "deep_research_reasons": [],
-      "policy_domains": []
+      "policy_domains": [
+        "ai_use",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-mn-v1",
+      "jurisdiction_id": "state-mn",
+      "jurisdiction_name": "Minnesota",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "MN",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.93,
+      "policy_strength": 14,
+      "ai_use_allowed": 2,
+      "assessment_policy": 2,
+      "privacy_policy": 2,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "human-centered",
+      "notes": "Minnesota has one of the more mature official AI-in-education packages among the newly added states.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "title": "Artificial Intelligence in Education",
+          "raw_file": null,
+          "published_date_guess": null
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "The use of AI should advance learning while protecting and centering human agency.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "Minnesota explicitly identifies assessment and academic integrity as areas districts should consider when creating guidance for AI use.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "Data privacy, security and content appropriateness should be primary considerations when adopting new technology.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "Educators need training and support to effectively integrate AI tools, and schools should provide differentiated professional learning opportunities.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "Minnesota tells districts to begin with existing policies, address risks, develop guidelines, and create local frameworks before purchasing AI tools.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "People, not machines, should be at the center of decision-making.",
+          "source_url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd/",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "The Minnesota Department of Education page strongly supports human-centered AI use, privacy safeguards, professional learning, and district implementation guidance.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "assessment",
+        "privacy",
+        "teacher_pd",
+        "academic_integrity",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-mo-v1",
+      "jurisdiction_id": "state-mo",
+      "jurisdiction_name": "Missouri",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "MO",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.88,
+      "policy_strength": 8,
+      "ai_use_allowed": 2,
+      "assessment_policy": 0,
+      "privacy_policy": 0,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "district-guidance",
+      "notes": "Missouri supplies LEA-facing guidance and connected professional learning resources.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+          "title": "Computer Science",
+          "raw_file": null,
+          "published_date_guess": null
+        },
+        {
+          "url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+          "title": "Artificial Intelligence Guidance for Local Education Agencies",
+          "raw_file": null,
+          "published_date_guess": "June 8, 2024"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "Missouri DESE has published Artificial Intelligence Guidance for Local Education Agencies as an official state resource.",
+          "source_url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "The computer science page pairs AI guidance with professional learning pathways for educators and local implementation support.",
+          "source_url": "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "By publishing a local-education-agency guidance document, Missouri has moved beyond awareness-only signaling into district implementation support.",
+          "source_url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "Missouri supplies official resources for LEAs rather than binding statewide rules.",
+          "source_url": "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Official Missouri pages support a released-guidance profile with LEA-facing implementation resources and educator support.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "teacher_pd",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-pa-v1",
+      "jurisdiction_id": "state-pa",
+      "jurisdiction_name": "Pennsylvania",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "PA",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.96,
+      "policy_strength": 15,
+      "ai_use_allowed": 3,
+      "assessment_policy": 2,
+      "privacy_policy": 3,
+      "teacher_pd_support": 2,
+      "implementation_stage": 3,
+      "policy_orientation": "safe-classroom-use",
+      "notes": "Pennsylvania now has a strong official K-12 AI guidance page with explicit classroom-use rules, privacy controls, and implementation resources.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "title": "AI in K-12 Education",
+          "raw_file": null,
+          "published_date_guess": null
+        },
+        {
+          "url": "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-takes-action-to-protect-pennsylvanians-using-ai.html",
+          "title": "Governor Shapiro Takes Action to Protect Pennsylvanians Using AI",
+          "raw_file": null,
+          "published_date_guess": "February 27, 2026"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "This guidance helps educators, families, and students use AI safely and responsibly.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "Do not use AI as the only grader. Teachers must review and make final decisions.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "Do not provide any sensitive or non-public information, including anything that could identify a student.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        },
+        {
+          "field": "teacher_pd_support",
+          "quote": "Schools and teachers need training and practice to understand AI and its proper use.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "Pennsylvania includes dedicated resources for educators, students, and implementing AI in schools.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "AI should support teachers and student learning, not replace them.",
+          "source_url": "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "Pennsylvania official K-12 AI guidance strongly supports classroom-use, privacy, teacher-review, and implementation coding decisions.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "assessment",
+        "privacy",
+        "teacher_pd",
+        "academic_integrity",
+        "governance"
+      ]
+    },
+    {
+      "record_id": "state-sc-v1",
+      "jurisdiction_id": "state-sc",
+      "jurisdiction_name": "South Carolina",
+      "jurisdiction_type": "state",
+      "parent_jurisdiction_id": null,
+      "state_abbr": "SC",
+      "year": null,
+      "effective_date": null,
+      "review_status": "pending_review",
+      "extraction_status": "validated",
+      "coder_type": "hybrid",
+      "confidence": 0.82,
+      "policy_strength": 8,
+      "ai_use_allowed": 1,
+      "assessment_policy": 2,
+      "privacy_policy": 1,
+      "teacher_pd_support": 0,
+      "implementation_stage": 3,
+      "policy_orientation": "standards-based",
+      "notes": "South Carolina strongest signal is a statewide AI standards framework rather than a broad governance memo.",
+      "version": 1,
+      "updated_at": "2026-04-04T18:15:00.000Z",
+      "source_documents": [
+        {
+          "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
+          "title": "Career Guidance",
+          "raw_file": null,
+          "published_date_guess": null
+        },
+        {
+          "url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+          "title": "South Carolina Artificial Intelligence Framework",
+          "raw_file": null,
+          "published_date_guess": "March 27, 2023"
+        }
+      ],
+      "evidence_spans": [
+        {
+          "field": "ai_use_allowed",
+          "quote": "The framework positions AI as part of South Carolina career and technical education guidance rather than banning classroom engagement.",
+          "source_url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+          "chunk_id": null
+        },
+        {
+          "field": "assessment_policy",
+          "quote": "Students are expected to use data analytics to validate predictions and outcomes and evaluate the limitations and accuracy of computational models.",
+          "source_url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+          "chunk_id": null
+        },
+        {
+          "field": "privacy_policy",
+          "quote": "Students are expected to describe the biases of data models and explain safeguards against biased outcomes.",
+          "source_url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+          "chunk_id": null
+        },
+        {
+          "field": "implementation_stage",
+          "quote": "South Carolina has released an official statewide AI framework through the Department of Education career guidance infrastructure.",
+          "source_url": "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
+          "chunk_id": null
+        },
+        {
+          "field": "policy_orientation",
+          "quote": "South Carolina approach is standards-based and curriculum-facing, emphasizing competence, data literacy, and responsible AI understanding.",
+          "source_url": "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/",
+          "chunk_id": null
+        }
+      ],
+      "extraction_model": "agentic-web-synthesis",
+      "verification_status": "supported",
+      "verification_notes": "The official SCDE framework supports a released, standards-based AI profile, though it is more curriculum-oriented than a full governance memo.",
+      "approval_route": null,
+      "audit_status": null,
+      "source_authority": null,
+      "routing_reasons": [],
+      "deep_research_recommended": false,
+      "deep_research_reasons": [],
+      "policy_domains": [
+        "ai_use",
+        "assessment",
+        "governance"
+      ]
     }
   ]
 }

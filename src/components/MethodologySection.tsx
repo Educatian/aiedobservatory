@@ -90,7 +90,13 @@ export function MethodologySection({ records }: MethodologySectionProps) {
               selective audit, and deep-research fallback so hard cases can be escalated without
               requiring full manual review on every row.
             </p>
-            <button type="button">Download Codebook PDF</button>
+            <a
+              className="methodology-download-link"
+              href="/downloads/academic-sentinel-codebook.pdf"
+              download="academic-sentinel-codebook.pdf"
+            >
+              Download Codebook PDF
+            </a>
           </div>
         </article>
 

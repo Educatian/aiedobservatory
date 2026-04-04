@@ -1,5 +1,112 @@
 [
   {
+    "review_id": "review-state-az-v1",
+    "record_id": "state-az-v1",
+    "jurisdiction_name": "Arizona",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-co-v1",
+    "record_id": "state-co-v1",
+    "jurisdiction_name": "Colorado",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "weak_source_authority"
+    ],
+    "deep_research_recommended": true,
+    "deep_research_reasons": [
+      "weak_official_source"
+    ],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-ct-v1",
+    "record_id": "state-ct-v1",
+    "jurisdiction_name": "Connecticut",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-ia-v1",
+    "record_id": "state-ia-v1",
+    "jurisdiction_name": "Iowa",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-me-v1",
+    "record_id": "state-me-v1",
+    "jurisdiction_name": "Maine",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-mi-v1",
+    "record_id": "state-mi-v1",
+    "jurisdiction_name": "Michigan",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-mo-v1",
+    "record_id": "state-mo-v1",
+    "jurisdiction_name": "Missouri",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
     "review_id": "review-state-nj-v1",
     "record_id": "state-nj-v1",
     "jurisdiction_name": "New Jersey",
@@ -12,7 +119,22 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T17:00:14.680Z"
+    "created_at": "2026-04-04T21:38:25.570Z"
+  },
+  {
+    "review_id": "review-state-sc-v1",
+    "record_id": "state-sc-v1",
+    "jurisdiction_name": "South Carolina",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-04T21:38:25.570Z"
   },
   {
     "review_id": "review-state-tx-v1",
@@ -27,7 +149,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T17:00:14.680Z"
+    "created_at": "2026-04-04T21:38:25.570Z"
   },
   {
     "review_id": "review-state-va-v1",
@@ -42,7 +164,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T17:00:14.680Z"
+    "created_at": "2026-04-04T21:38:25.570Z"
   },
   {
     "review_id": "review-state-wv-v1",
@@ -57,6 +179,6 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T17:00:14.680Z"
+    "created_at": "2026-04-04T21:38:25.570Z"
   }
 ]

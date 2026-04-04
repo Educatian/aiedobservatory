@@ -54,3 +54,29 @@ export interface PolicyRecord {
   confidence: number;
   evidenceSpans: EvidenceSpan[];
 }
+
+export type PolicyEventType =
+  | "record_created"
+  | "record_updated"
+  | "source_added"
+  | "approval_route_changed"
+  | "review_status_changed"
+  | "confidence_changed"
+  | "stage_changed";
+
+export interface PolicyEvent {
+  id: string;
+  eventType: PolicyEventType;
+  stateAbbr: string;
+  stateName: string;
+  occurredAt: string;
+  title: string;
+  description: string;
+  sourceUrl?: string | null;
+  approvalRoute?: "auto_approve" | "sample_audit" | "human_review" | null;
+  confidence?: number | null;
+  previousValue?: string | number | null;
+  nextValue?: string | number | null;
+  changedFields?: string[];
+  priority?: number;
+}

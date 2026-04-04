@@ -9,6 +9,10 @@ interface PolicyTileMapProps {
   records: PolicyRecord[];
   selectedState: string;
   visibleIds: Set<string>;
+  pulseStates: Set<string>;
+  confidenceShiftStates: Set<string>;
+  sourceAddedStates: Set<string>;
+  playbackState: string | null;
   onSelect: (stateAbbr: string) => void;
 }
 
@@ -116,6 +120,10 @@ export function PolicyTileMap({
   records,
   selectedState,
   visibleIds,
+  pulseStates,
+  confidenceShiftStates,
+  sourceAddedStates,
+  playbackState,
   onSelect
 }: PolicyTileMapProps) {
   const recordsByState = useMemo(
@@ -150,13 +158,11 @@ export function PolicyTileMap({
         }
 
         const record = recordsByState.get(stateAbbr);
-
         if (!record) {
           return null;
         }
 
         const path = pathGenerator(stateFeature as never);
-
         if (!path) {
           return null;
         }
@@ -191,20 +197,24 @@ export function PolicyTileMap({
             {atlasData.stateShapes.map(({ abbr, record, path, centroid }) => {
               const isSelected = selectedState === abbr;
               const isVisible = visibleIds.has(abbr);
+              const isPulsing = pulseStates.has(abbr);
+              const hasConfidenceShift = confidenceShiftStates.has(abbr);
+              const hasSourceAdded = sourceAddedStates.has(abbr);
+              const isPlaybackFocused = playbackState === abbr;
               const band = getPolicyStrengthBand(record.policyStrength);
               const labelEligible =
                 centroid != null &&
                 isVisible &&
-                (isSelected || ["CA", "TX", "FL", "NY", "WA", "NC", "UT"].includes(abbr));
+                (isSelected || ["CA", "TX", "FL", "NY", "WA", "NC", "UT", "PA", "MN"].includes(abbr));
 
               return (
                 <g
                   key={abbr}
-                  className={`map-state-group ${isSelected ? "selected" : ""} ${isVisible ? "" : "muted"}`}
+                  className={`map-state-group ${isSelected ? "selected" : ""} ${isVisible ? "" : "muted"} ${isPulsing ? "pulse" : ""} ${hasConfidenceShift ? "confidence-shift" : ""} ${isPlaybackFocused ? "playback-focus" : ""}`}
                 >
                   <path
                     d={path}
-                    className={`map-state-shape band-${band}`}
+                    className={`map-state-shape band-${band} route-${record.approvalRoute ?? "unknown"}`}
                     style={{
                       fill: getStrengthColor(record.policyStrength, record.snapshotStatus)
                     }}
@@ -220,8 +230,17 @@ export function PolicyTileMap({
                     aria-label={`${record.stateName} ${formatScoreLabel(record)}`}
                     aria-pressed={isSelected}
                   >
-                    <title>{`${record.stateName} • ${formatScoreLabel(record)} • ${record.snapshotStatus === "coded" ? "coded" : "queued"}`}</title>
+                    <title>{`${record.stateName} - ${formatScoreLabel(record)} - ${record.approvalRoute ?? "queued"}`}</title>
                   </path>
+
+                  {hasSourceAdded && centroid ? (
+                    <g className="map-source-beacon" transform={`translate(${centroid[0] + 24}, ${centroid[1] - 18})`}>
+                      <circle r="10" />
+                      <text textAnchor="middle" dy="0.35em">
+                        +
+                      </text>
+                    </g>
+                  ) : null}
 
                   {labelEligible && centroid ? (
                     <g className="map-label" transform={`translate(${centroid[0]}, ${centroid[1]})`}>

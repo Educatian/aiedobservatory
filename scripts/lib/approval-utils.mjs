@@ -36,6 +36,7 @@ function looksOfficialUrl(url) {
     /\.gov\b/.test(url) ||
     /\.edu\b/.test(url) ||
     /\bwvde\.us\b/.test(url) ||
+    /\.state\.[a-z]{2}\.us\b/.test(url) ||
     /\.k12\.[a-z.]+\b/.test(url) ||
     /schools\.[a-z.]+\b/.test(url)
   );

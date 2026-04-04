@@ -1,0 +1,370 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 3 /Kids [6 0 R 8 0 R 10 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2144 >>
+stream
+BT
+/F2 22 Tf
+54 740 Td
+(Policy Coding Codebook) Tj
+ET
+BT
+/F1 11 Tf
+54 702 Td
+(This codebook defines how policy variables should be assigned from official) Tj
+ET
+BT
+/F1 11 Tf
+54 687 Td
+(evidence.) Tj
+ET
+BT
+/F2 14 Tf
+54 660 Td
+(SOURCE HIERARCHY) Tj
+ET
+BT
+/F1 11 Tf
+54 630 Td
+(Rank sources in this order:) Tj
+ET
+BT
+/F1 11 Tf
+60 603 Td
+(" binding law or regulation) Tj
+ET
+BT
+/F1 11 Tf
+60 584 Td
+(" official statewide board or department guidance) Tj
+ET
+BT
+/F1 11 Tf
+60 565 Td
+(" official model policy or implementation framework) Tj
+ET
+BT
+/F1 11 Tf
+60 546 Td
+(" official press release pointing to a primary source) Tj
+ET
+BT
+/F1 11 Tf
+60 527 Td
+(" secondary reporting) Tj
+ET
+BT
+/F1 11 Tf
+54 500 Td
+(Records should not be auto-approved if only levels 4-5 are available.) Tj
+ET
+BT
+/F2 14 Tf
+54 473 Td
+(POLICY STAGE) Tj
+ET
+BT
+/F1 11 Tf
+54 443 Td
+(Allowed values:) Tj
+ET
+BT
+/F1 11 Tf
+60 416 Td
+(" `exploratory`) Tj
+ET
+BT
+/F1 11 Tf
+60 397 Td
+(" `guidance-issued`) Tj
+ET
+BT
+/F1 11 Tf
+60 378 Td
+(" `implementation-active`) Tj
+ET
+BT
+/F1 11 Tf
+60 359 Td
+(" `formalized-policy`) Tj
+ET
+BT
+/F1 11 Tf
+60 340 Td
+(" `legislated-or-regulated`) Tj
+ET
+BT
+/F1 11 Tf
+60 321 Td
+(" `needs-review`) Tj
+ET
+BT
+/F2 12 Tf
+54 294 Td
+(Decision rules) Tj
+ET
+BT
+/F1 11 Tf
+60 268 Td
+(" Use `exploratory` for awareness, planning, or discussion documents without) Tj
+ET
+BT
+/F1 11 Tf
+60 253 Td
+(  concrete implementation instructions.) Tj
+ET
+BT
+/F1 11 Tf
+60 234 Td
+(" Use `guidance-issued` for official recommendations, implementation memos, or) Tj
+ET
+BT
+/F1 11 Tf
+60 219 Td
+(  frameworks.) Tj
+ET
+BT
+/F1 11 Tf
+60 200 Td
+(" Use `implementation-active` when the source describes active deployment,) Tj
+ET
+BT
+/F1 11 Tf
+60 185 Td
+(  operational roll-out, or institutional adoption.) Tj
+ET
+BT
+/F1 11 Tf
+60 166 Td
+(" Use `formalized-policy` for official policy frameworks, model policies, or) Tj
+ET
+BT
+/F1 11 Tf
+60 151 Td
+(  codified administrative rules.) Tj
+ET
+BT
+/F1 11 Tf
+60 132 Td
+(" Use `legislated-or-regulated` when statute, regulation, or binding rule text) Tj
+ET
+BT
+/F1 11 Tf
+60 117 Td
+(  is present.) Tj
+ET
+BT
+/F2 14 Tf
+54 90 Td
+(CONFIDENCE) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1834 >>
+stream
+BT
+/F1 11 Tf
+54 740 Td
+(Confidence should combine:) Tj
+ET
+BT
+/F1 11 Tf
+60 713 Td
+(" source authority) Tj
+ET
+BT
+/F1 11 Tf
+60 694 Td
+(" evidence completeness) Tj
+ET
+BT
+/F1 11 Tf
+60 675 Td
+(" internal consistency) Tj
+ET
+BT
+/F1 11 Tf
+60 656 Td
+(" verifier outcome) Tj
+ET
+BT
+/F2 12 Tf
+54 629 Td
+(Confidence bands) Tj
+ET
+BT
+/F1 11 Tf
+60 603 Td
+(" `high`) Tj
+ET
+BT
+/F1 11 Tf
+54 584 Td
+(At least one strong primary source, direct evidence spans, and no unresolved) Tj
+ET
+BT
+/F1 11 Tf
+54 569 Td
+(conflict.) Tj
+ET
+BT
+/F1 11 Tf
+60 550 Td
+(" `medium`) Tj
+ET
+BT
+/F1 11 Tf
+54 531 Td
+(Partial evidence, weak source authority, or minor ambiguity.) Tj
+ET
+BT
+/F1 11 Tf
+60 512 Td
+(" `low`) Tj
+ET
+BT
+/F1 11 Tf
+54 493 Td
+(Missing citations, conflicting sources, or unclear policy language.) Tj
+ET
+BT
+/F2 14 Tf
+54 466 Td
+(POLICY DOMAINS) Tj
+ET
+BT
+/F1 11 Tf
+54 436 Td
+(Allowed labels:) Tj
+ET
+BT
+/F1 11 Tf
+60 409 Td
+(" `ai_use`) Tj
+ET
+BT
+/F1 11 Tf
+60 390 Td
+(" `assessment`) Tj
+ET
+BT
+/F1 11 Tf
+60 371 Td
+(" `privacy`) Tj
+ET
+BT
+/F1 11 Tf
+60 352 Td
+(" `teacher_pd`) Tj
+ET
+BT
+/F1 11 Tf
+60 333 Td
+(" `academic_integrity`) Tj
+ET
+BT
+/F1 11 Tf
+60 314 Td
+(" `procurement`) Tj
+ET
+BT
+/F1 11 Tf
+60 295 Td
+(" `governance`) Tj
+ET
+BT
+/F1 11 Tf
+60 276 Td
+(" `equity`) Tj
+ET
+BT
+/F1 11 Tf
+54 249 Td
+(Assign only when the source contains explicit policy language or operational) Tj
+ET
+BT
+/F1 11 Tf
+54 234 Td
+(guidance for that domain.) Tj
+ET
+BT
+/F2 14 Tf
+54 207 Td
+(AUTO-APPROVAL EXCLUSIONS) Tj
+ET
+BT
+/F1 11 Tf
+54 177 Td
+(Do not auto-approve when:) Tj
+ET
+BT
+/F1 11 Tf
+60 150 Td
+(" a coded field has no evidence span) Tj
+ET
+BT
+/F1 11 Tf
+60 131 Td
+(" official sources conflict) Tj
+ET
+BT
+/F1 11 Tf
+60 112 Td
+(" only press coverage is available) Tj
+ET
+BT
+/F1 11 Tf
+60 93 Td
+(" the source is outdated and a newer candidate source exists) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 94 >>
+stream
+BT
+/F1 11 Tf
+60 740 Td
+(" policy stage depends on inference rather than explicit text) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000198 00000 n 
+0000000273 00000 n 
+0000002469 00000 n 
+0000002605 00000 n 
+0000004491 00000 n 
+0000004627 00000 n 
+0000004771 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+4908
+%%EOF

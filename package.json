@@ -26,7 +26,9 @@
     "pipeline:validate": "node scripts/validate-policy-records.mjs",
     "pipeline:review-queue": "node scripts/build-review-queue.mjs",
     "pipeline:publish": "node scripts/publish-app-data.mjs",
-    "pipeline:evaluate": "node scripts/evaluate-policy-records.mjs"
+    "pipeline:evaluate": "node scripts/evaluate-policy-records.mjs",
+    "pipeline:events": "node scripts/build-policy-events.mjs",
+    "assets:codebook": "node scripts/generate-codebook-pdf.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",
