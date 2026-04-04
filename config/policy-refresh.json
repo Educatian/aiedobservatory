@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "cadenceDays": 14,
+  "cronSchedule": "17 9 * * *",
+  "runEvaluate": true,
+  "runDeepResearch": false,
+  "steps": [
+    { "id": "crawl", "label": "Refresh source registry", "command": "npm", "args": ["run", "crawl:sources"] },
+    { "id": "chunk", "label": "Rebuild evidence chunks", "command": "npm", "args": ["run", "pipeline:chunk"] },
+    { "id": "extract", "label": "Extract policy records", "command": "npm", "args": ["run", "pipeline:extract:auto"] },
+    { "id": "route", "label": "Route policy records", "command": "npm", "args": ["run", "pipeline:route"] },
+    { "id": "validate", "label": "Validate canonical dataset", "command": "npm", "args": ["run", "pipeline:validate"] },
+    { "id": "review", "label": "Build review queue", "command": "npm", "args": ["run", "pipeline:review-queue"] },
+    { "id": "publish", "label": "Publish app data", "command": "npm", "args": ["run", "pipeline:publish"] },
+    { "id": "events", "label": "Rebuild policy event feed", "command": "npm", "args": ["run", "pipeline:events"] },
+    { "id": "evaluate", "label": "Refresh evaluation metrics", "command": "npm", "args": ["run", "pipeline:evaluate"] }
+  ]
+}

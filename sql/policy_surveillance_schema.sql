@@ -22,6 +22,20 @@ create table if not exists raw_documents (
   checksum text
 );
 
+create table if not exists source_documents (
+  id text primary key,
+  jurisdiction_id text not null,
+  source_registry_id text references source_registry(id),
+  raw_document_id text references raw_documents(id),
+  title text not null,
+  url text not null,
+  document_type text,
+  source_authority text,
+  published_date_guess text,
+  collected_at timestamptz not null default now(),
+  is_primary boolean not null default true
+);
+
 create table if not exists source_chunks (
   id text primary key,
   raw_document_id text not null references raw_documents(id),
@@ -85,4 +99,36 @@ create table if not exists review_queue (
   status text not null default 'open',
   created_at timestamptz not null default now(),
   resolved_at timestamptz
+);
+
+create table if not exists policy_events (
+  id text primary key,
+  policy_record_id text references policy_records(id),
+  jurisdiction_id text not null,
+  state_abbr text not null,
+  event_type text not null,
+  title text not null,
+  description text not null,
+  approval_route text,
+  previous_value text,
+  next_value text,
+  changed_fields jsonb,
+  source_url text,
+  priority integer,
+  occurred_at timestamptz not null default now()
+);
+
+create table if not exists pipeline_runs (
+  id text primary key,
+  workflow_id text not null,
+  trigger_type text not null,
+  cadence_days integer not null default 14,
+  run_status text not null,
+  started_at timestamptz not null default now(),
+  completed_at timestamptz,
+  next_due_at timestamptz,
+  changed_records integer not null default 0,
+  published_records integer not null default 0,
+  failed_step_id text,
+  error_message text
 );

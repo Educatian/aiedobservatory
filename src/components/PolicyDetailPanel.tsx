@@ -170,6 +170,15 @@ export function PolicyDetailPanel({ record }: PolicyDetailPanelProps) {
       </div>
 
       <div className="detail-block">
+        <div className="trust-boundary-row">
+          <span className="trust-boundary-chip primary">Primary evidence layer</span>
+          <span className="trust-boundary-chip provisional">
+            {record.snapshotStatus === "coded" ? "Canonical coded record" : "Provisional queued record"}
+          </span>
+        </div>
+      </div>
+
+      <div className="detail-block">
         <div className="mini-heading">Coding profile</div>
         <ScoreRow
           label="Use"

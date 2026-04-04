@@ -1,3 +1,4 @@
+import { AppIcon } from "./AppIcon";
 import type { PolicyRecord } from "../types";
 import latestEvaluation from "../../data/evaluation/latest-evaluation.json";
 
@@ -106,10 +107,12 @@ export function ProjectOverviewPage({ records, onOpenDashboard }: ProjectOvervie
     <div className="overview-shell">
       <header className="overview-topbar">
         <div className="overview-topbar-brand">
-          <span className="overview-topbar-mark">AS</span>
+          <span className="overview-topbar-mark">
+            <AppIcon className="brand-icon" decorative />
+          </span>
           <div>
-            <strong>Academic Sentinel</strong>
-            <span>Agentic policy surveillance for AI in education</span>
+            <strong>AI Education Policy Observatory</strong>
+            <span>An Agentic Policy Surveillance Framework</span>
           </div>
         </div>
 
@@ -128,12 +131,11 @@ export function ProjectOverviewPage({ records, onOpenDashboard }: ProjectOvervie
         <section className="overview-hero">
           <div className="overview-hero-copy">
             <span className="overview-kicker">Project Overview</span>
-            <h1>AIED Policy Tracker turns fragmented AI-in-education guidance into a research-grade, inspectable policy observatory.</h1>
+            <h1>A policy observatory for AI in education.</h1>
             <p>
-              The project combines policy surveillance, evidence-grounded extraction, and selective
-              review routing so researchers can monitor how states govern AI use, assessment,
-              privacy, professional learning, and implementation readiness across U.S. education
-              systems.
+              The system combines policy surveillance, evidence-grounded extraction, and selective
+              review routing so researchers and leadership teams can monitor how states govern AI
+              use, assessment, privacy, professional learning, and implementation readiness.
             </p>
 
             <div className="overview-hero-actions">
@@ -187,7 +189,7 @@ export function ProjectOverviewPage({ records, onOpenDashboard }: ProjectOvervie
         <section className="overview-section" id="why-it-matters">
           <div className="overview-section-header">
             <span className="overview-kicker">Why This Project Is Needed</span>
-            <h2>AI policy in education is moving faster than conventional monitoring workflows can responsibly track.</h2>
+            <h2>Policy change is outpacing conventional monitoring.</h2>
           </div>
 
           <div className="overview-rationale-grid">

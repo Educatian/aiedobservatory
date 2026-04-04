@@ -1,6 +1,20 @@
-# AIED Policy Atlas
+<p align="center">
+  <img src="./public/app-icon.svg" alt="AI Education Policy Observatory icon" width="112" height="112" />
+</p>
 
-Map-first React/Vite MVP for tracking AI-in-education policy variation across U.S. states.
+# AI Education Policy Observatory
+
+<p align="center">
+  <img alt="Status" src="https://img.shields.io/badge/status-active%20prototype-0b6b8f?style=flat-square" />
+  <img alt="Architecture" src="https://img.shields.io/badge/architecture-agentic%20policy%20surveillance-162839?style=flat-square" />
+  <img alt="Frontend" src="https://img.shields.io/badge/frontend-Vite%20%2B%20React-5cb8fd?style=flat-square" />
+</p>
+
+Evidence-grounded observatory for tracking AI-in-education guidance across U.S. states.
+
+## What it is
+
+This project turns fragmented guidance pages, PDFs, implementation memos, and related policy artifacts into inspectable state-level records for leadership, policy analysis, and longitudinal monitoring.
 
 ## Included in this prototype
 
@@ -11,6 +25,7 @@ Map-first React/Vite MVP for tracking AI-in-education policy variation across U.
 - Crawling and canonical-data scaffolding scripts
 - Architecture, SQL schema, and agent-role docs for a hybrid swarm + RAG pipeline
 - Approval routing, deep research fallback, and evaluation scaffolding
+- Landing page, project overview, live event layer, and branded observatory assets
 
 ## Suggested next steps
 

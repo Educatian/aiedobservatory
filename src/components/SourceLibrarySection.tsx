@@ -204,7 +204,7 @@ export function SourceLibrarySection({ records, onSelectState }: SourceLibrarySe
         <h4>Source Library</h4>
         <p>
           Access the primary guidance documents, implementation frameworks, and evidence pages that
-          inform the current AI policy tracker.
+          inform the current policy observatory.
         </p>
       </div>
 

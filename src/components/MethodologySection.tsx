@@ -1,4 +1,5 @@
 import evaluationSummary from "../../data/evaluation/latest-evaluation.json";
+import refreshState from "../../data/generated/pipeline-run-state.json";
 import type { PolicyRecord } from "../types";
 
 interface MethodologySectionProps {
@@ -18,6 +19,11 @@ export function MethodologySection({ records }: MethodologySectionProps) {
   const humanReviewed = codedRecords.filter((record) => record.auditStatus === "completed").length;
   const citationSupportRate = formatPercent(evaluationSummary.citation_support_rate);
   const approvalRouteAccuracy = formatPercent(evaluationSummary.approval_route_accuracy);
+  const operatorState = refreshState as {
+    cadenceDays?: number;
+    lastStatus?: string;
+    nextDueAt?: string | null;
+  };
   const fieldAccuracyValues = Object.values(evaluationSummary.field_accuracy).filter(
     (value): value is number => typeof value === "number"
   );
@@ -104,8 +110,12 @@ export function MethodologySection({ records }: MethodologySectionProps) {
         <article className="methodology-metric-card">
           <h6>Update Frequency</h6>
           <div>
-            <strong>On Demand</strong>
-            <p>Current coded states: {codedRecords.length} with queued refresh support</p>
+            <strong>Every {operatorState.cadenceDays ?? 14} days</strong>
+            <p>
+              Last pipeline status: {operatorState.lastStatus ?? "idle"}.
+              {" "}
+              Next due: {operatorState.nextDueAt ? new Date(operatorState.nextDueAt).toLocaleDateString("en-US") : "not scheduled yet"}.
+            </p>
           </div>
         </article>
 

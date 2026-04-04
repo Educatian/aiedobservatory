@@ -1,4 +1,9 @@
-import { scoringLabels, formatConfidence, formatScoreLabel, getPolicyStageLabel, getPriorityDomains } from "../data/policyData";
+import {
+  scoringLabels,
+  formatConfidence,
+  getPolicyStageLabel,
+  getPriorityDomains
+} from "../data/policyData";
 import type { PolicyRecord } from "../types";
 
 interface CompareMatrixViewProps {
@@ -28,6 +33,38 @@ function getSupportLabel(value: number): string {
 
 function getBarSegments(value: number, max = 4): number[] {
   return Array.from({ length: max }, (_, index) => (index < value ? 1 : 0));
+}
+
+function getApprovalRouteLabel(route: PolicyRecord["approvalRoute"]): string {
+  switch (route) {
+    case "auto_approve":
+      return "Auto-approved";
+    case "sample_audit":
+      return "Sample audit";
+    case "human_review":
+      return "Human review";
+    default:
+      return "Unrouted";
+  }
+}
+
+function getEvidenceStatus(record: PolicyRecord): {
+  label: string;
+  tone: "stable" | "reviewed" | "provisional";
+} {
+  if (record.snapshotStatus !== "coded") {
+    return { label: "Not yet coded", tone: "provisional" };
+  }
+
+  if (record.approvalRoute === "auto_approve" && record.confidence >= 0.9) {
+    return { label: "Stable evidence base", tone: "stable" };
+  }
+
+  if (record.auditStatus === "completed") {
+    return { label: "Reviewed record", tone: "reviewed" };
+  }
+
+  return { label: "Evidence-limited", tone: "provisional" };
 }
 
 const compareRows: CompareRowDefinition[] = [
@@ -87,7 +124,9 @@ const compareRows: CompareRowDefinition[] = [
     label: "Academic Integrity",
     render: (record) => (
       <div className="compare-integrity">
-        <span className={`compare-dot ${record.assessmentPolicy >= 2 ? "is-strong" : record.assessmentPolicy >= 1 ? "is-mid" : ""}`} />
+        <span
+          className={`compare-dot ${record.assessmentPolicy >= 2 ? "is-strong" : record.assessmentPolicy >= 1 ? "is-mid" : ""}`}
+        />
         <span>{getAcademicIntegrityLabel(record)}</span>
       </div>
     )
@@ -123,6 +162,11 @@ function buildTrend(records: PolicyRecord[]): string {
 function buildVerificationNote(records: PolicyRecord[]): string {
   const strongestConfidence = [...records].sort((left, right) => right.confidence - left.confidence)[0];
   return `${strongestConfidence.stateName} currently has the strongest confidence profile in this comparison set, making it a useful benchmark for further evidence review.`;
+}
+
+function buildRiskNote(records: PolicyRecord[]): string {
+  const mostUncertain = [...records].sort((left, right) => left.confidence - right.confidence)[0];
+  return `${mostUncertain.stateName} remains the least settled case in this set, so it should be interpreted as an evidence-limited benchmark rather than a final statewide reference point.`;
 }
 
 export function CompareMatrixView({
@@ -185,31 +229,43 @@ export function CompareMatrixView({
             </div>
           </div>
 
-          {compareRecords.map((record) => (
-            <div className="compare-region-column" key={record.stateAbbr}>
-              <div className="compare-region-head">
-                <div className="compare-state-avatar">{record.stateAbbr}</div>
-                <h5>{record.stateName}</h5>
-                <p>Region ID: {record.stateAbbr}-{record.year}-EDU</p>
-                <div className="compare-head-meta">
-                  <span>{getPolicyStageLabel(record.implementationStage)}</span>
-                  <span>{getPriorityDomains(record).join(" • ") || "Not coded"}</span>
+          {compareRecords.map((record) => {
+            const evidenceStatus = getEvidenceStatus(record);
+
+            return (
+              <div className="compare-region-column" key={record.stateAbbr}>
+                <div className="compare-region-head">
+                  <div className="compare-state-avatar">{record.stateAbbr}</div>
+                  <h5>{record.stateName}</h5>
+                  <p>Region ID: {record.stateAbbr}-{record.year}-EDU</p>
+                  <div className="compare-head-meta">
+                    <span>{getPolicyStageLabel(record.implementationStage)}</span>
+                    <span>{getPriorityDomains(record).join(" • ") || "Not coded"}</span>
+                  </div>
+                  <div className="compare-status-row">
+                    <span className={`compare-status-chip route-${record.approvalRoute ?? "unrouted"}`}>
+                      {getApprovalRouteLabel(record.approvalRoute)}
+                    </span>
+                    <span className={`compare-status-chip evidence-${evidenceStatus.tone}`}>
+                      {evidenceStatus.label}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="compare-row-list">
+                  {compareRows.map((row) => (
+                    <div className="compare-value-cell" key={`${record.stateAbbr}-${row.label}`}>
+                      {row.render(record)}
+                    </div>
+                  ))}
                 </div>
               </div>
-
-              <div className="compare-row-list">
-                {compareRows.map((row) => (
-                  <div className="compare-value-cell" key={`${record.stateAbbr}-${row.label}`}>
-                    {row.render(record)}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
-      <div className="compare-insights">
+      <div className="compare-insights compare-insights-grid4">
         <article className="compare-insight compare-insight-primary">
           <h5>
             <span className="material-symbols-outlined">psychology</span>
@@ -232,6 +288,14 @@ export function CompareMatrixView({
             Verification Note
           </h5>
           <p>{buildVerificationNote(compareRecords)}</p>
+        </article>
+
+        <article className="compare-insight">
+          <h5>
+            <span className="material-symbols-outlined">warning</span>
+            Uncertainty Signal
+          </h5>
+          <p>{buildRiskNote(compareRecords)}</p>
         </article>
       </div>
     </section>

@@ -80,3 +80,33 @@ export interface PolicyEvent {
   changedFields?: string[];
   priority?: number;
 }
+
+export interface PipelineStepResult {
+  id: string;
+  label: string;
+  command: string;
+  startedAt: string;
+  completedAt: string;
+  ok: boolean;
+  exitCode: number;
+  stdout?: string;
+  stderr?: string;
+}
+
+export interface PipelineRunState {
+  workflowId: string;
+  cadenceDays: number;
+  lastAttemptAt: string | null;
+  lastSuccessfulRunAt: string | null;
+  lastStatus: "idle" | "running" | "success" | "failed";
+  lastTrigger: string | null;
+  lastRunId: string | null;
+  nextDueAt: string | null;
+  stepResults: PipelineStepResult[];
+  lastError:
+    | {
+        stepId: string;
+        message: string;
+      }
+    | null;
+}

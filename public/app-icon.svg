@@ -1,0 +1,50 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="28" x2="220" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFE"/>
+      <stop offset="1" stop-color="#E7F4FD"/>
+    </linearGradient>
+    <linearGradient id="pageLeft" x1="40" y1="92" x2="112" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6ED0FB"/>
+      <stop offset="1" stop-color="#47A9DA"/>
+    </linearGradient>
+    <linearGradient id="pageRight" x1="145" y1="88" x2="218" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2AA6D2"/>
+      <stop offset="1" stop-color="#0C7FA6"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="128" y1="36" x2="128" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6B86A2"/>
+      <stop offset="1" stop-color="#466177"/>
+    </linearGradient>
+    <linearGradient id="path" x1="151" y1="108" x2="155" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B8BB3"/>
+      <stop offset="1" stop-color="#0B617F"/>
+    </linearGradient>
+    <filter id="shadow" x="18" y="16" width="220" height="224" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#123047" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="24" y="24" width="208" height="208" rx="44" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M42 90C69 87 90 88 112 101V191C88 178 65 176 42 181V90Z" fill="url(#pageLeft)"/>
+    <path d="M214 90C187 87 166 88 144 101V191C168 178 191 176 214 181V90Z" fill="url(#pageRight)"/>
+    <path d="M112 101C121 97 130 95 144 101V191C134 186 124 186 112 191V101Z" fill="#E7F4FB"/>
+    <path d="M42 90L32 86V194L42 181V90Z" fill="#A6E1FB"/>
+    <path d="M214 90L224 86V194L214 181V90Z" fill="#68C4EE"/>
+    <path d="M34 193H110" stroke="#75CDED" stroke-width="8" stroke-linecap="round"/>
+    <path d="M146 193H222" stroke="#4BAFD9" stroke-width="8" stroke-linecap="round"/>
+
+    <path d="M111 75L121 56H135L145 75V167C145 181 137 189 128 197C119 189 111 181 111 167V75Z" fill="url(#tower)"/>
+    <path d="M118 41H138V56H118V41Z" fill="#526D86"/>
+    <path d="M116 33H140L148 41H108L116 33Z" fill="#5C7892"/>
+    <path d="M118 33V25H138V33" stroke="#5C7892" stroke-width="6" stroke-linecap="round"/>
+    <rect x="121" y="78" width="14" height="11" rx="2.5" fill="#F2F7FA"/>
+    <rect x="122" y="103" width="12" height="18" rx="3" fill="#F2F7FA"/>
+    <rect x="123" y="132" width="10" height="10" rx="2.5" fill="#F2F7FA"/>
+
+    <path d="M146 109C163 116 171 126 173 141C175 157 168 173 153 191" stroke="url(#path)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M151 189L163 202" stroke="#0B617F" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

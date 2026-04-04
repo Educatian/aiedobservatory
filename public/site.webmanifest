@@ -1,0 +1,17 @@
+{
+  "name": "AI Education Policy Observatory",
+  "short_name": "Policy Observatory",
+  "description": "An agentic policy surveillance framework for tracking AI in education guidance and policy change.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#162839",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

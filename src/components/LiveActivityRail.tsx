@@ -79,6 +79,7 @@ export function LiveActivityRail({
   const recentUpdates = getEventCountLabel(events, "record_updated") + getEventCountLabel(events, "record_created");
   const sourceAdds = getEventCountLabel(events, "source_added");
   const confidenceShifts = getEventCountLabel(events, "confidence_changed");
+  const visibleEvents = events.slice(0, 6);
 
   return (
     <section className="live-rail-card">
@@ -150,7 +151,7 @@ export function LiveActivityRail({
       </div>
 
       <div className="activity-rail-list" role="list">
-        {events.slice(0, 10).map((event, index) => (
+        {visibleEvents.map((event) => (
           <button
             type="button"
             className={`activity-item ${event.id === activeEvent?.id ? "active" : ""}`}

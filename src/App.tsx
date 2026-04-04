@@ -1,21 +1,29 @@
 import { startTransition, useDeferredValue, useEffect, useEffectEvent, useMemo, useState } from "react";
 import { CompareMatrixView } from "./components/CompareMatrixView";
+import { ExecutiveBriefPanel } from "./components/ExecutiveBriefPanel";
+import { ImplementationReadinessSection } from "./components/ImplementationReadinessSection";
+import { AppIcon } from "./components/AppIcon";
+import { LandingPage } from "./components/LandingPage";
 import { LiveActivityRail } from "./components/LiveActivityRail";
+import { LoginModal, type WorkspaceSession } from "./components/LoginModal";
 import { MethodologySection } from "./components/MethodologySection";
 import { NewAnalysisDrawer } from "./components/NewAnalysisDrawer";
+import { OperatorSurface } from "./components/OperatorSurface";
+import { PolicyChangeLog } from "./components/PolicyChangeLog";
 import { PolicyDetailPanel } from "./components/PolicyDetailPanel";
 import { PolicyDomainsSection } from "./components/PolicyDomainsSection";
 import { PolicyStageSection } from "./components/PolicyStageSection";
 import { PolicyTable } from "./components/PolicyTable";
 import { PolicyTileMap } from "./components/PolicyTileMap";
 import { ProjectOverviewPage } from "./components/ProjectOverviewPage";
+import { SecondarySignalsPanel } from "./components/SecondarySignalsPanel";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
-import { getPolicyStageLabel } from "./data/policyData";
-import { policyRecords as initialPolicyRecords } from "./data/policyData";
+import { TrustPanel } from "./components/TrustPanel";
+import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
 import type { PolicyEvent, PolicyRecord } from "./types";
 
 type CoverageFilter = "all" | "coded" | "queued";
-type AppPage = "dashboard" | "projectoverview";
+type AppPage = "landing" | "dashboard" | "projectoverview";
 type NavSection =
   | "map-view"
   | "compare"
@@ -25,8 +33,18 @@ type NavSection =
   | "policy-domains"
   | "table-view";
 
+const WORKSPACE_SESSION_KEY = "academic-sentinel.workspace-session";
+const TEST_WORKSPACE_SESSION: WorkspaceSession = {
+  displayName: "Policy Atlas Workspace",
+  email: "workspace@local.aied-policy-atlas",
+  organization: "AI Education Policy Observatory Lab"
+};
+
 function getAppPageFromPath(pathname: string): AppPage {
-  return pathname.toLowerCase().startsWith("/projectoverview") ? "projectoverview" : "dashboard";
+  const normalized = pathname.toLowerCase();
+  if (normalized.startsWith("/projectoverview")) return "projectoverview";
+  if (normalized.startsWith("/app")) return "dashboard";
+  return "landing";
 }
 
 function getActiveSectionFromHash(hash: string): NavSection {
@@ -53,6 +71,47 @@ function mergeLiveRecords(currentRecords: PolicyRecord[], incomingRecords: Polic
   return currentRecords.map((record) => incomingByState.get(record.stateAbbr) ?? record);
 }
 
+function readWorkspaceSession(): WorkspaceSession | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.localStorage.getItem(WORKSPACE_SESSION_KEY);
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as Partial<WorkspaceSession>;
+    const displayName = parsed.displayName?.trim() ?? "";
+    const email = parsed.email?.trim() ?? "";
+    const organization = parsed.organization?.trim() ?? "";
+
+    if (!displayName || !email || !organization) {
+      return null;
+    }
+
+    if (
+      displayName === "Dr. Sarah Chen" ||
+      displayName === "Sarah Chen" ||
+      organization.toLowerCase() === "sett"
+    ) {
+      return TEST_WORKSPACE_SESSION;
+    }
+
+    return { displayName, email, organization };
+  } catch {
+    return null;
+  }
+}
+
+function getInitials(value: string): string {
+  const initials = value
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+
+  return initials || "AO";
+}
+
 function App() {
   const [records, setRecords] = useState(initialPolicyRecords);
   const [policyEvents, setPolicyEvents] = useState<PolicyEvent[]>([]);
@@ -61,18 +120,27 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [compareStates, setCompareStates] = useState<string[]>(["CA", "TX", "FL"]);
   const [isAnalysisDrawerOpen, setIsAnalysisDrawerOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [livePolling, setLivePolling] = useState(true);
   const [playbackIndex, setPlaybackIndex] = useState(0);
   const [playbackRunning, setPlaybackRunning] = useState(false);
+  const [workspaceSession, setWorkspaceSession] = useState<WorkspaceSession | null>(() =>
+    readWorkspaceSession()
+  );
+  const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
   const [currentPage, setCurrentPage] = useState<AppPage>(() =>
-    typeof window === "undefined" ? "dashboard" : getAppPageFromPath(window.location.pathname)
+    typeof window === "undefined" ? "landing" : getAppPageFromPath(window.location.pathname)
   );
   const [activeSection, setActiveSection] = useState<NavSection>(() =>
     typeof window === "undefined" ? "map-view" : getActiveSectionFromHash(window.location.hash)
   );
   const deferredSearchQuery = useDeferredValue(searchQuery);
-
   const normalizedQuery = deferredSearchQuery.trim().toLowerCase();
+
+  const codedRecords = useMemo(
+    () => records.filter((record) => record.snapshotStatus === "coded"),
+    [records]
+  );
 
   const filteredRecords = useMemo(() => {
     return records.filter((record) => {
@@ -86,7 +154,7 @@ function App() {
 
       return matchesCoverage && matchesQuery;
     });
-  }, [coverageFilter, normalizedQuery]);
+  }, [coverageFilter, normalizedQuery, records]);
 
   const filteredStateIds = useMemo(
     () => new Set(filteredRecords.map((record) => record.stateAbbr)),
@@ -95,22 +163,22 @@ function App() {
 
   const selectedRecord = records.find((record) => record.stateAbbr === selectedState) ?? records[0];
 
-  const codedRecords = useMemo(
-    () => records.filter((record) => record.snapshotStatus === "coded"),
-    [records]
+  const benchmarkRecords = useMemo(
+    () => codedRecords.filter((record) => record.stateAbbr !== selectedRecord.stateAbbr).slice(0, 5),
+    [codedRecords, selectedRecord.stateAbbr]
   );
 
   const totalCount = records.length;
-  const codedCount = records.filter((record) => record.snapshotStatus === "coded").length;
+  const codedCount = codedRecords.length;
   const highConfidenceCount = records.filter((record) => record.confidence >= 0.85).length;
   const releasedGuidanceCount = records.filter((record) => record.implementationStage >= 3).length;
   const dominantStage = getPolicyStageLabel(
     Math.round(
-      records
-        .filter((record) => record.snapshotStatus === "coded")
-        .reduce((sum, record) => sum + record.implementationStage, 0) / Math.max(codedCount, 1)
+      codedRecords.reduce((sum, record) => sum + record.implementationStage, 0) /
+        Math.max(codedCount, 1)
     )
   );
+
   const recentEvents = useMemo(() => {
     const sourceEvents = policyEvents
       .filter((event) => event.eventType === "source_added" || event.eventType === "record_created")
@@ -128,8 +196,10 @@ function App() {
       .sort((left, right) => new Date(right.occurredAt).getTime() - new Date(left.occurredAt).getTime())
       .slice(0, 12);
   }, [policyEvents]);
+
   const playbackTimeline = useMemo(() => [...recentEvents].reverse(), [recentEvents]);
-  const safePlaybackIndex = playbackTimeline.length === 0 ? 0 : Math.min(playbackIndex, playbackTimeline.length - 1);
+  const safePlaybackIndex =
+    playbackTimeline.length === 0 ? 0 : Math.min(playbackIndex, playbackTimeline.length - 1);
   const activePlaybackEvent = playbackTimeline[safePlaybackIndex] ?? null;
   const latestChangedLabel = recentEvents[0]
     ? new Date(recentEvents[0].occurredAt).toLocaleString("en-US", {
@@ -139,16 +209,22 @@ function App() {
         minute: "2-digit"
       })
     : "April 4, 2026";
+
   const pulseStateIds = useMemo(
     () =>
       new Set(
         policyEvents
-          .filter((event) => ["record_created", "record_updated", "review_status_changed", "stage_changed"].includes(event.eventType))
+          .filter((event) =>
+            ["record_created", "record_updated", "review_status_changed", "stage_changed"].includes(
+              event.eventType
+            )
+          )
           .map((event) => event.stateAbbr)
           .slice(0, 8)
       ),
     [policyEvents]
   );
+
   const confidenceShiftStateIds = useMemo(
     () =>
       new Set(
@@ -159,6 +235,7 @@ function App() {
       ),
     [policyEvents]
   );
+
   const sourceAddedStateIds = useMemo(
     () =>
       new Set(
@@ -191,7 +268,7 @@ function App() {
         });
       }
     } catch {
-      // Keep the last-known local snapshot when polling fails.
+      // Keep local fallback snapshot.
     }
   });
 
@@ -209,9 +286,7 @@ function App() {
 
   useEffect(() => {
     void refreshLiveData();
-    if (!livePolling) {
-      return undefined;
-    }
+    if (!livePolling) return undefined;
 
     const intervalId = window.setInterval(() => {
       void refreshLiveData();
@@ -219,34 +294,6 @@ function App() {
 
     return () => window.clearInterval(intervalId);
   }, [livePolling, refreshLiveData]);
-
-  useEffect(() => {
-    if (playbackTimeline.length === 0) {
-      setPlaybackIndex(0);
-      setPlaybackRunning(false);
-      return;
-    }
-
-    setPlaybackIndex((current) => {
-      if (current === 0) {
-        return playbackTimeline.length - 1;
-      }
-
-      return Math.min(current, playbackTimeline.length - 1);
-    });
-  }, [playbackTimeline.length]);
-
-  useEffect(() => {
-    if (!playbackRunning || playbackTimeline.length <= 1) {
-      return undefined;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setPlaybackIndex((current) => (current + 1) % playbackTimeline.length);
-    }, 2200);
-
-    return () => window.clearInterval(intervalId);
-  }, [playbackRunning, playbackTimeline.length]);
 
   useEffect(() => {
     function handleLocationChange() {
@@ -265,10 +312,19 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (!workspaceSession && currentPage === "dashboard" && typeof window !== "undefined") {
+      window.history.replaceState({}, "", "/");
+      setCurrentPage("landing");
+    }
+  }, [currentPage, workspaceSession]);
+
+  useEffect(() => {
     document.title =
       currentPage === "projectoverview"
-        ? "Project Overview - Academic Sentinel"
-        : "Academic Sentinel: AI in Education Policy Tracker";
+        ? "Project Overview - AI Education Policy Observatory"
+        : currentPage === "landing"
+          ? "AI Education Policy Observatory"
+          : "AI Education Policy Observatory | Workspace";
   }, [currentPage]);
 
   function selectState(nextState: string) {
@@ -277,13 +333,23 @@ function App() {
     });
   }
 
-  function navigateToDashboard(section: NavSection = "map-view") {
+  function openDashboard(section: NavSection = "map-view") {
     if (typeof window !== "undefined") {
-      window.history.pushState({}, "", `/#${section}`);
+      window.history.pushState({}, "", `/app#${section}`);
       setCurrentPage("dashboard");
       setActiveSection(section);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+  }
+
+  function navigateToDashboard(section: NavSection = "map-view") {
+    if (!workspaceSession && typeof window !== "undefined") {
+      setPendingDashboardSection(section);
+      setIsLoginModalOpen(true);
+      return;
+    }
+
+    openDashboard(section);
   }
 
   function navigateToProjectOverview() {
@@ -294,44 +360,94 @@ function App() {
     }
   }
 
-  function handleNavClick(section: NavSection) {
-    navigateToDashboard(section);
+  function navigateToLanding() {
+    if (typeof window !== "undefined") {
+      window.history.pushState({}, "", "/");
+      setCurrentPage("landing");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
-  if (currentPage === "projectoverview") {
-    return <ProjectOverviewPage records={records} onOpenDashboard={navigateToDashboard} />;
+  function handleWorkspaceLogin(session: WorkspaceSession) {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(WORKSPACE_SESSION_KEY, JSON.stringify(session));
+    }
+
+    setWorkspaceSession(session);
+    setIsLoginModalOpen(false);
+    openDashboard(pendingDashboardSection);
   }
 
-  function handleProjectOverviewClick() {
-    navigateToProjectOverview();
+  function handleSkipTesting() {
+    handleWorkspaceLogin(TEST_WORKSPACE_SESSION);
   }
 
-  function handleBrandHomeClick() {
-    navigateToDashboard("map-view");
+  function handleWorkspaceLogout() {
+    if (typeof window !== "undefined") {
+      window.localStorage.removeItem(WORKSPACE_SESSION_KEY);
+    }
+
+    setWorkspaceSession(null);
+    setIsAnalysisDrawerOpen(false);
+    navigateToLanding();
   }
 
   function changeCompareState(slot: number, nextState: string) {
     setCompareStates((current) => {
       const next = [...current];
       const existingIndex = next.findIndex((state, index) => state === nextState && index !== slot);
-
       if (existingIndex >= 0) {
         next[existingIndex] = next[slot];
       }
-
       next[slot] = nextState;
       return next;
     });
+  }
+
+  if (currentPage === "landing") {
+    return (
+      <>
+        <LandingPage
+          isAuthenticated={Boolean(workspaceSession)}
+          onOpenLogin={() => setIsLoginModalOpen(true)}
+          onOpenDashboard={() => navigateToDashboard("map-view")}
+          onOpenProjectOverview={navigateToProjectOverview}
+          onSkipTesting={handleSkipTesting}
+        />
+        <LoginModal
+          open={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
+          onSubmit={handleWorkspaceLogin}
+          onSkipTesting={handleSkipTesting}
+        />
+      </>
+    );
+  }
+
+  if (currentPage === "projectoverview") {
+    return (
+      <>
+        <ProjectOverviewPage records={records} onOpenDashboard={navigateToDashboard} />
+        <LoginModal
+          open={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
+          onSubmit={handleWorkspaceLogin}
+          onSkipTesting={handleSkipTesting}
+        />
+      </>
+    );
   }
 
   return (
     <div className="sentinel-shell">
       <aside className="side-nav">
         <div className="side-brand">
-          <div className="brand-mark">AS</div>
+          <div className="brand-mark">
+            <AppIcon className="brand-icon" decorative />
+          </div>
           <div>
-            <h1>AI Policy Tracker</h1>
-            <p>The Academic Sentinel</p>
+            <h1>AI Education Policy Observatory</h1>
+            <p>An Agentic Policy Surveillance Framework</p>
           </div>
         </div>
 
@@ -342,55 +458,37 @@ function App() {
 
         <nav className="side-links" aria-label="Core filters">
           <p>Core Filters</p>
-          <a
-            className={activeSection === "map-view" ? "active" : ""}
-            href="#map-view"
-            onClick={() => handleNavClick("map-view")}
-          >
+          <a className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
             <span className="material-symbols-outlined">public</span>
             Geography
           </a>
-          <a
-            className={activeSection === "policy-domains" ? "active" : ""}
-            href="#policy-domains"
-            onClick={() => handleNavClick("policy-domains")}
-          >
+          <a className={activeSection === "policy-domains" ? "active" : ""} href="#policy-domains" onClick={() => navigateToDashboard("policy-domains")}>
             <span className="material-symbols-outlined">domain</span>
             Policy Domains
           </a>
-          <a
-            className={activeSection === "policy-stage" ? "active" : ""}
-            href="#policy-stage"
-            onClick={() => handleNavClick("policy-stage")}
-          >
+          <a className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
             <span className="material-symbols-outlined">step</span>
             Policy Stage
           </a>
-          <a
-            className={activeSection === "table-view" ? "active" : ""}
-            href="#table-view"
-            onClick={() => handleNavClick("table-view")}
-          >
+          <a className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
             <span className="material-symbols-outlined">verified</span>
             Confidence
           </a>
-          <a
-            className={activeSection === "table-view" ? "active" : ""}
-            href="#table-view"
-            onClick={() => handleNavClick("table-view")}
-          >
+          <a className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
             <span className="material-symbols-outlined">schedule</span>
             Time
           </a>
         </nav>
 
         <div className="side-profile">
-          <div className="profile-avatar">SC</div>
+          <div className="profile-avatar">{getInitials(workspaceSession?.displayName ?? "AS")}</div>
           <div>
-            <strong>Dr. Sarah Chen</strong>
-            <span>Senior Policy Analyst</span>
+            <strong>{workspaceSession?.displayName ?? "Research Workspace"}</strong>
+            <span>{workspaceSession?.organization ?? "Local session access"}</span>
           </div>
-          <span className="material-symbols-outlined">settings</span>
+          <button type="button" className="icon-button" onClick={handleWorkspaceLogout} aria-label="Log out">
+            <span className="material-symbols-outlined">logout</span>
+          </button>
         </div>
       </aside>
 
@@ -400,52 +498,39 @@ function App() {
           records={records}
           selectedState={selectedState}
           onClose={() => setIsAnalysisDrawerOpen(false)}
-          onNavigate={handleNavClick}
+          onNavigate={navigateToDashboard}
           onSelectState={selectState}
+        />
+
+        <LoginModal
+          open={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
+          onSubmit={handleWorkspaceLogin}
+          onSkipTesting={handleSkipTesting}
         />
 
         <header className="top-nav">
           <div className="top-brand">
-            <button type="button" className="top-brand-home" onClick={handleBrandHomeClick}>
-              Academic Sentinel: AI in Education
+            <button type="button" className="top-brand-home" onClick={() => navigateToDashboard("map-view")}>
+              AI Education Policy Observatory
             </button>
             <nav>
-              <a
-                className={activeSection === "map-view" ? "active" : ""}
-                href="#map-view"
-                onClick={() => handleNavClick("map-view")}
-              >
+              <a className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
                 Map View
               </a>
-              <a
-                className={activeSection === "compare" ? "active" : ""}
-                href="#compare"
-                onClick={() => handleNavClick("compare")}
-              >
+              <a className={activeSection === "compare" ? "active" : ""} href="#compare" onClick={() => navigateToDashboard("compare")}>
                 Compare Regions
               </a>
-              <a
-                className={activeSection === "policy-stage" ? "active" : ""}
-                href="#policy-stage"
-                onClick={() => handleNavClick("policy-stage")}
-              >
+              <a className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
                 Policy Timeline
               </a>
-              <a
-                className={activeSection === "source-library" ? "active" : ""}
-                href="#source-library"
-                onClick={() => handleNavClick("source-library")}
-              >
+              <a className={activeSection === "source-library" ? "active" : ""} href="#source-library" onClick={() => navigateToDashboard("source-library")}>
                 Source Library
               </a>
-              <a
-                className={activeSection === "methodology" ? "active" : ""}
-                href="#methodology"
-                onClick={() => handleNavClick("methodology")}
-              >
+              <a className={activeSection === "methodology" ? "active" : ""} href="#methodology" onClick={() => navigateToDashboard("methodology")}>
                 Methodology
               </a>
-              <button type="button" className="top-nav-route-button" onClick={handleProjectOverviewClick}>
+              <button type="button" className="top-nav-route-button" onClick={navigateToProjectOverview}>
                 Project Overview
               </button>
             </nav>
@@ -472,6 +557,12 @@ function App() {
               <span className="material-symbols-outlined">download</span>
               Export Data
             </button>
+            {workspaceSession ? (
+              <button type="button" className="workspace-chip" onClick={handleWorkspaceLogout}>
+                <span className="workspace-avatar">{getInitials(workspaceSession.displayName)}</span>
+                {workspaceSession.displayName}
+              </button>
+            ) : null}
           </div>
         </header>
 
@@ -479,7 +570,7 @@ function App() {
           <section className="page-header">
             <div>
               <span className="page-kicker">Map View</span>
-              <h3>AI in Education Policy Tracker</h3>
+              <h3>AI Education Policy Observatory</h3>
               <p>
                 Mapping state, district, and school-level AI policy variation across the United States
                 with a benchmarked research-dashboard shell.
@@ -510,17 +601,22 @@ function App() {
             </div>
           </section>
 
+          <section className="leadership-overview-band">
+            <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
+            <TrustPanel record={selectedRecord} events={policyEvents} />
+          </section>
+
+          <OperatorSurface records={records} />
+
+          <SecondarySignalsPanel record={selectedRecord} />
+
           <section className="dashboard-grid" id="map-view">
             <div className="map-column">
               <div className="map-card">
                 <div className="map-overlay">
                   <div className="view-toggle">
                     <button type="button" className="active">State</button>
-                    <button
-                      type="button"
-                      className="is-soon"
-                      aria-label="District view is in development"
-                    >
+                    <button type="button" className="is-soon" aria-label="District view is in development">
                       District
                       <span className="view-toggle-hint" role="tooltip">
                         District view is in development
@@ -590,36 +686,49 @@ function App() {
             </div>
 
             <div className="inspector-column">
-            <div className="inspector-toolbar">
-              <label className="field">
-                <span>Search scope</span>
+              <div className="inspector-toolbar">
+                <label className="field">
+                  <span>Search scope</span>
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                     placeholder="CA, Texas, New York..."
-                />
-              </label>
+                  />
+                </label>
+              </div>
+
+              <LiveActivityRail
+                events={recentEvents}
+                livePolling={livePolling}
+                playbackIndex={safePlaybackIndex}
+                playbackRunning={playbackRunning}
+                onToggleLivePolling={() => setLivePolling((current) => !current)}
+                onTogglePlayback={() => setPlaybackRunning((current) => !current)}
+                onPlaybackIndexChange={setPlaybackIndex}
+                onSelectEvent={(event, index) => {
+                  setPlaybackIndex(Math.max(index, 0));
+                  setPlaybackRunning(false);
+                  selectState(event.stateAbbr);
+                }}
+              />
+
+              <PolicyChangeLog
+                stateAbbr={selectedRecord.stateAbbr}
+                stateName={selectedRecord.stateName}
+                events={policyEvents}
+                maxItems={4}
+              />
+
+              <PolicyDetailPanel record={selectedRecord} />
             </div>
-
-            <LiveActivityRail
-              events={recentEvents}
-              livePolling={livePolling}
-              playbackIndex={safePlaybackIndex}
-              playbackRunning={playbackRunning}
-              onToggleLivePolling={() => setLivePolling((current) => !current)}
-              onTogglePlayback={() => setPlaybackRunning((current) => !current)}
-              onPlaybackIndexChange={setPlaybackIndex}
-              onSelectEvent={(event, index) => {
-                setPlaybackIndex(Math.max(index, 0));
-                setPlaybackRunning(false);
-                selectState(event.stateAbbr);
-              }}
-            />
-
-            <PolicyDetailPanel record={selectedRecord} />
-          </div>
           </section>
+
+          <ImplementationReadinessSection
+            records={records}
+            selectedState={selectedState}
+            onSelectState={selectState}
+          />
 
           <CompareMatrixView
             records={codedRecords}
@@ -649,11 +758,8 @@ function App() {
           </section>
 
           <PolicyDomainsSection records={records} onSelectState={selectState} />
-
           <PolicyStageSection records={records} onSelectState={selectState} />
-
           <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
-
           <MethodologySection records={records} />
 
           <div id="table-view">

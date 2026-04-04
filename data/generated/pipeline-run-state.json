@@ -1,0 +1,12 @@
+{
+  "workflowId": "biweekly-policy-refresh",
+  "cadenceDays": 14,
+  "lastAttemptAt": null,
+  "lastSuccessfulRunAt": null,
+  "lastStatus": "idle",
+  "lastTrigger": null,
+  "lastRunId": null,
+  "nextDueAt": null,
+  "stepResults": [],
+  "lastError": null
+}
