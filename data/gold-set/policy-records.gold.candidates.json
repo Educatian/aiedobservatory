@@ -1,0 +1,192 @@
+{
+  "generated_at": "2026-04-04",
+  "source": "data/canonical/policy-records.json",
+  "selection_goal": "Calibration-ready gold-set candidate pool spanning approval routes, source authority levels, implementation stages, and hard-case policy profiles.",
+  "selection_notes": [
+    "Candidates are selected to balance auto_approve, sample_audit, and human_review cases.",
+    "At least one binding-law case, one secondary-reporting case, and one pending hard-case record are included.",
+    "The pool mixes high-strength guidance states with weaker or governance-only records to support calibration."
+  ],
+  "candidates": [
+    {
+      "state_abbr": "PA",
+      "jurisdiction_id": "state-pa",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "binding_law_or_regulation",
+      "why_selected": "Binding-law anchor with strong confidence and high policy strength; useful as the clearest high-authority baseline."
+    },
+    {
+      "state_abbr": "CA",
+      "jurisdiction_id": "state-ca",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "official_guidance",
+      "why_selected": "High-confidence official guidance case with dense evidence spans across all major domains."
+    },
+    {
+      "state_abbr": "MA",
+      "jurisdiction_id": "state-ma",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "official_guidance",
+      "why_selected": "Strong statewide guidance profile that helps calibrate upper-mid evidence cases below binding law."
+    },
+    {
+      "state_abbr": "MN",
+      "jurisdiction_id": "state-mn",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "official_guidance",
+      "why_selected": "High-strength approved guidance with broad domain coverage and fewer source documents than California, useful for density comparison."
+    },
+    {
+      "state_abbr": "KY",
+      "jurisdiction_id": "state-ky",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "official_guidance",
+      "why_selected": "Moderate-strength auto-approved guidance record that prevents the gold set from clustering only around top-strength states."
+    },
+    {
+      "state_abbr": "RI",
+      "jurisdiction_id": "state-ri",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "auto_approve",
+      "source_authority": "official_guidance",
+      "why_selected": "Compact approved case already present in the seed gold set; useful for continuity and evaluator regression checks."
+    },
+    {
+      "state_abbr": "CT",
+      "jurisdiction_id": "state-ct",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Balanced sample-audit case with multi-domain support, including assessment and privacy."
+    },
+    {
+      "state_abbr": "CO",
+      "jurisdiction_id": "state-co",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Implementation-heavy guidance case with lighter evidence density; useful for testing teacher PD and governance coding."
+    },
+    {
+      "state_abbr": "ME",
+      "jurisdiction_id": "state-me",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Single-source but still substantial approved record that helps test robustness under thinner document packages."
+    },
+    {
+      "state_abbr": "VA",
+      "jurisdiction_id": "state-va",
+      "priority": "core",
+      "case_type": "hard_case",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Deep-research-informed case with partial domain coverage and strong teacher support; useful for calibration after escalation."
+    },
+    {
+      "state_abbr": "NJ",
+      "jurisdiction_id": "state-nj",
+      "priority": "core",
+      "case_type": "hard_case",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Low-strength emerging policy profile already in the seed gold set; valuable as a provisional statewide case."
+    },
+    {
+      "state_abbr": "SC",
+      "jurisdiction_id": "state-sc",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "sample_audit",
+      "source_authority": "official_guidance",
+      "why_selected": "Mid-confidence sample-audit record with assessment and privacy signals but lower overall strength."
+    },
+    {
+      "state_abbr": "NC",
+      "jurisdiction_id": "state-nc",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Highest-strength reviewed case with operationalized implementation stage; ideal benchmark for a strong human-reviewed record."
+    },
+    {
+      "state_abbr": "OH",
+      "jurisdiction_id": "state-oh",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Human-reviewed strong case with broad domain coverage and dense evidence support."
+    },
+    {
+      "state_abbr": "UT",
+      "jurisdiction_id": "state-ut",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Human-reviewed case with the richest document package in the current corpus; useful for source-count calibration."
+    },
+    {
+      "state_abbr": "WA",
+      "jurisdiction_id": "state-wa",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Human-reviewed case built from a single public release; useful for testing whether dense evidence can offset smaller source packages."
+    },
+    {
+      "state_abbr": "DE",
+      "jurisdiction_id": "state-de",
+      "priority": "core",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Human-reviewed comprehensive guidance hub with many linked documents; valuable for high-coverage verification."
+    },
+    {
+      "state_abbr": "OR",
+      "jurisdiction_id": "state-or",
+      "priority": "expansion",
+      "case_type": "routine",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Reviewed, mid-to-high strength guidance case that adds variation without collapsing into the strongest cluster."
+    },
+    {
+      "state_abbr": "GA",
+      "jurisdiction_id": "state-ga",
+      "priority": "core",
+      "case_type": "hard_case",
+      "route_bucket": "human_review",
+      "source_authority": "secondary_reporting",
+      "why_selected": "Only secondary-reporting case in the current approved set; important boundary case for authority-sensitive calibration."
+    },
+    {
+      "state_abbr": "TX",
+      "jurisdiction_id": "state-tx",
+      "priority": "core",
+      "case_type": "hard_case",
+      "route_bucket": "human_review",
+      "source_authority": "official_guidance",
+      "why_selected": "Pending low-confidence governance-only case; necessary negative control for avoiding inflated synthesis confidence."
+    }
+  ]
+}

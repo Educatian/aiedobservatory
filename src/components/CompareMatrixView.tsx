@@ -5,9 +5,10 @@ import {
   getPriorityDomains
 } from "../data/policyData";
 import {
+  buildConfirmedEvidenceNote,
+  buildConfirmedPattern,
   buildInterpretiveBoundary,
-  buildPatternSummary,
-  buildRobustnessSummary,
+  buildProvisionalInterpretation,
   buildStructuredSynthesis,
   getRobustnessLabel
 } from "../lib/policySynthesis";
@@ -246,7 +247,7 @@ export function CompareMatrixView({
         </div>
       </div>
 
-      <div className="compare-insights compare-insights-grid4">
+      <div className="compare-insights compare-insights-grid5">
         <article className="compare-insight compare-insight-primary">
           <h5>
             <span className="material-symbols-outlined">psychology</span>
@@ -258,17 +259,25 @@ export function CompareMatrixView({
         <article className="compare-insight">
           <h5>
             <span className="material-symbols-outlined">trending_up</span>
-            Pattern Summary
+            Confirmed Pattern
           </h5>
-          <p>{buildPatternSummary(compareRecords)}</p>
+          <p>{buildConfirmedPattern(compareRecords)}</p>
         </article>
 
         <article className="compare-insight">
           <h5>
             <span className="material-symbols-outlined">verified_user</span>
-            Evidence Robustness
+            Confirmed Evidence
           </h5>
-          <p>{buildRobustnessSummary(compareRecords)}</p>
+          <p>{buildConfirmedEvidenceNote(compareRecords)}</p>
+        </article>
+
+        <article className="compare-insight">
+          <h5>
+            <span className="material-symbols-outlined">analytics</span>
+            Provisional Interpretation
+          </h5>
+          <p>{buildProvisionalInterpretation(compareRecords)}</p>
         </article>
 
         <article className="compare-insight">

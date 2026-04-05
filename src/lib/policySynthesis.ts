@@ -1,22 +1,8 @@
+import { synthesisCalibration } from "../config/synthesisCalibration";
 import { getPolicyStageLabel, getPriorityDomains } from "../data/policyData";
 import type { PolicyRecord } from "../types";
 
 type RobustnessBand = "strong" | "moderate" | "limited";
-
-const authorityWeights: Record<string, number> = {
-  binding_law_or_regulation: 1,
-  official_guidance: 0.9,
-  official_model_policy: 0.82,
-  official_press_release: 0.58,
-  secondary_reporting: 0.35
-};
-
-const routeWeights: Record<string, number> = {
-  auto_approve: 1,
-  sample_audit: 0.72,
-  human_review: 0.45,
-  unrouted: 0.35
-};
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
@@ -24,21 +10,25 @@ function clamp(value: number, min: number, max: number) {
 
 function getAuthorityWeight(record: PolicyRecord) {
   if (!record.sourceAuthority) return 0.45;
-  return authorityWeights[record.sourceAuthority] ?? 0.45;
+  return synthesisCalibration.authorityWeights[record.sourceAuthority] ?? 0.45;
 }
 
 function getRouteWeight(record: PolicyRecord) {
-  if (!record.approvalRoute) return routeWeights.unrouted;
-  return routeWeights[record.approvalRoute] ?? routeWeights.unrouted;
+  if (!record.approvalRoute) return synthesisCalibration.routeWeights.unrouted;
+  return synthesisCalibration.routeWeights[record.approvalRoute] ?? synthesisCalibration.routeWeights.unrouted;
 }
 
 export function getRobustnessScore(record: PolicyRecord): number {
-  const confidenceComponent = clamp(record.confidence, 0, 1) * 0.45;
-  const evidenceComponent = (Math.min(record.evidenceSpans.length, 5) / 5) * 0.2;
-  const sourceComponent = (Math.min(record.sourceDocuments.length, 4) / 4) * 0.1;
-  const authorityComponent = getAuthorityWeight(record) * 0.15;
-  const routeComponent = getRouteWeight(record) * 0.1;
-  const auditBonus = record.auditStatus === "completed" ? 0.04 : 0;
+  const confidenceComponent =
+    clamp(record.confidence, 0, 1) * synthesisCalibration.weights.confidence;
+  const evidenceComponent =
+    (Math.min(record.evidenceSpans.length, 5) / 5) * synthesisCalibration.weights.evidenceSpanCoverage;
+  const sourceComponent =
+    (Math.min(record.sourceDocuments.length, 4) / 4) * synthesisCalibration.weights.sourceDocumentCoverage;
+  const authorityComponent =
+    getAuthorityWeight(record) * synthesisCalibration.weights.sourceAuthority;
+  const routeComponent = getRouteWeight(record) * synthesisCalibration.weights.approvalRoute;
+  const auditBonus = record.auditStatus === "completed" ? synthesisCalibration.auditBonus : 0;
 
   return clamp(
     confidenceComponent + evidenceComponent + sourceComponent + authorityComponent + routeComponent + auditBonus,
@@ -49,8 +39,8 @@ export function getRobustnessScore(record: PolicyRecord): number {
 
 export function getRobustnessBand(record: PolicyRecord): RobustnessBand {
   const score = getRobustnessScore(record);
-  if (score >= 0.82) return "strong";
-  if (score >= 0.65) return "moderate";
+  if (score >= synthesisCalibration.thresholds.strong) return "strong";
+  if (score >= synthesisCalibration.thresholds.moderate) return "moderate";
   return "limited";
 }
 
@@ -110,16 +100,16 @@ export function buildStructuredSynthesis(records: PolicyRecord[]): string {
   return `Across ${records.length} compared states, ${leader.stateName} currently leads on policy strength (${leader.policyStrength}/16), while ${lagger.stateName} remains the least developed case in this set. This comparison is anchored by ${moderateOrBetter} record(s) with moderate or strong evidence support.`;
 }
 
-export function buildPatternSummary(records: PolicyRecord[]): string {
+export function buildConfirmedPattern(records: PolicyRecord[]): string {
   if (records.length === 0) return "";
 
   const dominantDomain = formatDomain(getWeightedDomain(records));
   const stagePattern = getStagePattern(records);
 
-  return `Weighted by evidence robustness, ${dominantDomain} is the most consistent area of policy strength across the selected states. ${stagePattern}`;
+  return `Within the current comparison set, ${dominantDomain} is the most consistently represented policy domain once evidence robustness is taken into account. ${stagePattern}`;
 }
 
-export function buildRobustnessSummary(records: PolicyRecord[]): string {
+export function buildConfirmedEvidenceNote(records: PolicyRecord[]): string {
   if (records.length === 0) return "";
 
   const strongest = [...records].sort((left, right) => getRobustnessScore(right) - getRobustnessScore(left))[0];
@@ -127,6 +117,19 @@ export function buildRobustnessSummary(records: PolicyRecord[]): string {
   const moderateCount = records.filter((record) => getRobustnessBand(record) === "moderate").length;
 
   return `${strongest.stateName} is the most robust benchmark in this comparison set. Overall, ${strongCount} record(s) are strong and ${moderateCount} record(s) are moderate on evidence quality, source authority, and routing status.`;
+}
+
+export function buildProvisionalInterpretation(records: PolicyRecord[]): string {
+  if (records.length === 0) return "";
+
+  const dominantDomain = formatDomain(getWeightedDomain(records));
+  const operationalCount = records.filter((record) => record.implementationStage >= 3).length;
+  const dominantInterpretation =
+    operationalCount >= Math.ceil(records.length / 2)
+      ? "This may indicate that the selected states are beginning to translate guidance into implementation structures."
+      : "This may indicate that the selected states are still stabilizing early governance signals rather than institutionalized implementation.";
+
+  return `Taken together, the comparison suggests that ${dominantDomain} is currently the clearest shared policy anchor. ${dominantInterpretation}`;
 }
 
 export function buildInterpretiveBoundary(records: PolicyRecord[]): string {

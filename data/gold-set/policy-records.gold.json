@@ -10,17 +10,25 @@
     "policy_domains": [
       "ai_use",
       "assessment",
+      "academic_integrity",
       "privacy",
-      "teacher_pd"
+      "teacher_pd",
+      "governance"
     ],
     "approval_route": "auto_approve",
     "required_evidence_fields": [
       "ai_use_allowed",
       "assessment_policy",
       "privacy_policy",
-      "teacher_pd_support"
+      "teacher_pd_support",
+      "implementation_stage"
     ],
-    "notes": "Seed gold example based on manually reviewed California guidance."
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
+      "https://www.cde.ca.gov/nr/el/le/yr26ltr0109.asp"
+    ],
+    "notes": "Updated gold record aligned to the current California canonical guidance package."
   },
   {
     "jurisdiction_id": "state-nj",
@@ -52,23 +60,28 @@
   {
     "jurisdiction_id": "state-ri",
     "state_abbr": "RI",
-    "ai_use_allowed": 2,
-    "assessment_policy": 2,
-    "privacy_policy": 2,
-    "teacher_pd_support": 2,
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 3,
     "implementation_stage": 3,
     "policy_domains": [
       "ai_use",
-      "assessment",
-      "privacy",
-      "teacher_pd"
+      "teacher_pd",
+      "governance"
     ],
     "approval_route": "auto_approve",
     "required_evidence_fields": [
       "ai_use_allowed",
-      "privacy_policy"
+      "teacher_pd_support",
+      "implementation_stage"
     ],
-    "notes": "Seed gold example to validate evaluation plumbing."
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
+      "https://ride.ri.gov/students-families/AI"
+    ],
+    "notes": "Updated gold record aligned to the current Rhode Island canonical guidance profile."
   },
   {
     "jurisdiction_id": "state-tx",
@@ -119,5 +132,336 @@
       "https://www.doe.virginia.gov/home/showpublisheddocument/51991/638406435372930000"
     ],
     "notes": "Deep-research-reviewed hard case. Official Virginia sources support guided AI integration and strong statewide educator-support activity."
+  },
+  {
+    "jurisdiction_id": "state-ct",
+    "state_abbr": "CT",
+    "ai_use_allowed": 2,
+    "assessment_policy": 1,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.89,
+    "evidence_urls": [
+      "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
+      "https://portal.ct.gov/sde/press-room/press-releases/2025/csde-launches-groundbreaking-artificial-intelligence-pilot-program"
+    ],
+    "notes": "Expanded gold candidate. Connecticut combines official AI guidance with pilot-oriented implementation language and teacher-support signals."
+  },
+  {
+    "jurisdiction_id": "state-de",
+    "state_abbr": "DE",
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
+      "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
+      "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/implementing-ai/"
+    ],
+    "notes": "Expanded gold candidate. Delaware is a dense multi-document guidance hub and a strong reviewed benchmark for broad domain coverage."
+  },
+  {
+    "jurisdiction_id": "state-ga",
+    "state_abbr": "GA",
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting"
+    ],
+    "notes": "Expanded gold candidate. Georgia is retained as an authority-boundary case because the current record relies on secondary-reporting-style access patterns."
+  },
+  {
+    "jurisdiction_id": "state-ma",
+    "state_abbr": "MA",
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 2,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.94,
+    "evidence_urls": [
+      "https://www.doe.mass.edu/edtech/ai/default.html",
+      "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf"
+    ],
+    "notes": "Expanded gold candidate. Massachusetts is a strong official-guidance case with clear assessment redesign and district guidance language."
+  },
+  {
+    "jurisdiction_id": "state-mn",
+    "state_abbr": "MN",
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "academic_integrity",
+      "governance"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support"
+    ],
+    "review_confidence": 0.93,
+    "evidence_urls": [
+      "https://education.mn.gov/MDE/dse/tech/AI/AIEd/"
+    ],
+    "notes": "Expanded gold candidate. Minnesota is a mature official AI guidance package with moderate-to-strong coverage across core policy domains."
+  },
+  {
+    "jurisdiction_id": "state-nc",
+    "state_abbr": "NC",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 4,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "local://ncdpi-generative-ai-guidebook",
+      "https://www.dpi.nc.gov/news/press-releases/2024/01/16/ncdpi-releases-guidance-use-artificial-intelligence-schools"
+    ],
+    "notes": "Expanded gold candidate. North Carolina is an operationalized, high-strength reviewed case with explicit implementation and assessment adaptation guidance."
+  },
+  {
+    "jurisdiction_id": "state-oh",
+    "state_abbr": "OH",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://education.ohio.gov/Topics/AI-in-Ohio-s-Education",
+      "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US"
+    ],
+    "notes": "Expanded gold candidate. Ohio is a strong reviewed benchmark with explicit model policy language and broad domain coverage."
+  },
+  {
+    "jurisdiction_id": "state-or",
+    "state_abbr": "OR",
+    "ai_use_allowed": 3,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+      "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
+      "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf"
+    ],
+    "notes": "Expanded gold candidate. Oregon is useful as a reviewed case with strong PD signals but lighter assessment and privacy specificity."
+  },
+  {
+    "jurisdiction_id": "state-pa",
+    "state_abbr": "PA",
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "academic_integrity",
+      "governance"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.96,
+    "evidence_urls": [
+      "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
+      "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-takes-action-to-protect-pennsylvanians-using-ai.html"
+    ],
+    "notes": "Expanded gold candidate. Pennsylvania provides the clearest current binding-law-or-regulation anchor in the approved public set."
+  },
+  {
+    "jurisdiction_id": "state-ut",
+    "state_abbr": "UT",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "local://utah-aiframework-pdf",
+      "https://schools.utah.gov/informationtechnology/artificialintelligence/index.php",
+      "https://schools.utah.gov/informationtechnology/artificialintelligence/_artificialintelligence/AIFramework.pdf"
+    ],
+    "notes": "Expanded gold candidate. Utah is a reviewed, guardrail-heavy framework case with unusually rich source packaging."
+  },
+  {
+    "jurisdiction_id": "state-wa",
+    "state_abbr": "WA",
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "academic_integrity",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "human_review",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools"
+    ],
+    "notes": "Expanded gold candidate. Washington is a reviewed single-release guidance case useful for testing whether smaller source packages can still support robust coding."
   }
 ]

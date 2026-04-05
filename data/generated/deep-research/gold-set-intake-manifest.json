@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-04-04",
+  "purpose": "Google Deep Research intake plan for gold-set evidence packet assembly.",
+  "instructions": [
+    "Use Deep Research for source discovery and evidence packet assembly only.",
+    "Do not finalize numeric gold labels from Deep Research output alone.",
+    "Prioritize official state education sources, board documents, official guidance PDFs, and model policies.",
+    "Mark secondary or indirect sources as weaker evidence, not primary authority."
+  ],
+  "batches": [
+    {
+      "batch_id": "core-high-authority",
+      "recommended_order": 1,
+      "states": [
+        {
+          "state_abbr": "PA",
+          "jurisdiction_id": "state-pa",
+          "case_type": "binding_anchor",
+          "why_now": "Primary high-authority baseline for calibration."
+        },
+        {
+          "state_abbr": "CA",
+          "jurisdiction_id": "state-ca",
+          "case_type": "official_guidance_anchor",
+          "why_now": "Dense evidence package and broad domain coverage."
+        },
+        {
+          "state_abbr": "NC",
+          "jurisdiction_id": "state-nc",
+          "case_type": "operationalized_reviewed_anchor",
+          "why_now": "High-strength reviewed implementation case."
+        },
+        {
+          "state_abbr": "UT",
+          "jurisdiction_id": "state-ut",
+          "case_type": "rich_source_package_anchor",
+          "why_now": "Useful for calibration against large multi-document guidance bundles."
+        }
+      ]
+    },
+    {
+      "batch_id": "core-reviewed-guidance",
+      "recommended_order": 2,
+      "states": [
+        {
+          "state_abbr": "DE",
+          "jurisdiction_id": "state-de",
+          "case_type": "reviewed_guidance_hub",
+          "why_now": "High-coverage official guidance hub."
+        },
+        {
+          "state_abbr": "OH",
+          "jurisdiction_id": "state-oh",
+          "case_type": "reviewed_model_policy_case",
+          "why_now": "Broad domain coverage and explicit model policy language."
+        },
+        {
+          "state_abbr": "WA",
+          "jurisdiction_id": "state-wa",
+          "case_type": "single_release_reviewed_case",
+          "why_now": "Useful for testing smaller source packages with strong evidence spans."
+        },
+        {
+          "state_abbr": "MA",
+          "jurisdiction_id": "state-ma",
+          "case_type": "strong_official_guidance_case",
+          "why_now": "Upper-mid guidance benchmark below binding-law authority."
+        }
+      ]
+    },
+    {
+      "batch_id": "sample-audit-balance",
+      "recommended_order": 3,
+      "states": [
+        {
+          "state_abbr": "CT",
+          "jurisdiction_id": "state-ct",
+          "case_type": "balanced_sample_audit_case",
+          "why_now": "Good multi-domain sample-audit benchmark."
+        },
+        {
+          "state_abbr": "VA",
+          "jurisdiction_id": "state-va",
+          "case_type": "deep_research_sample_audit_case",
+          "why_now": "Useful for calibration after escalation-assisted evidence recovery."
+        },
+        {
+          "state_abbr": "NJ",
+          "jurisdiction_id": "state-nj",
+          "case_type": "emerging_policy_case",
+          "why_now": "Low-strength provisional statewide case already in seed gold."
+        },
+        {
+          "state_abbr": "MN",
+          "jurisdiction_id": "state-mn",
+          "case_type": "mature_auto_approve_case",
+          "why_now": "Strong but lighter-document approved guidance case."
+        }
+      ]
+    },
+    {
+      "batch_id": "boundary-and-hard-cases",
+      "recommended_order": 4,
+      "states": [
+        {
+          "state_abbr": "GA",
+          "jurisdiction_id": "state-ga",
+          "case_type": "authority_boundary_case",
+          "why_now": "Secondary-reporting boundary case for source-authority sensitivity."
+        },
+        {
+          "state_abbr": "TX",
+          "jurisdiction_id": "state-tx",
+          "case_type": "negative_control_case",
+          "why_now": "Low-confidence governance-only case to avoid inflated synthesis confidence."
+        },
+        {
+          "state_abbr": "OR",
+          "jurisdiction_id": "state-or",
+          "case_type": "mixed-specificity_case",
+          "why_now": "Strong PD support with lighter assessment/privacy specificity."
+        },
+        {
+          "state_abbr": "RI",
+          "jurisdiction_id": "state-ri",
+          "case_type": "compact_official_guidance_case",
+          "why_now": "Useful compact case for regression checks."
+        }
+      ]
+    }
+  ],
+  "copy_paste_prompt_file": "docs/GOOGLE_DEEP_RESEARCH_GOLDSET_PROMPTS.md"
+}

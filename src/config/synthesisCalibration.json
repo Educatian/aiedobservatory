@@ -1,0 +1,27 @@
+{
+  "weights": {
+    "confidence": 0.45,
+    "evidenceSpanCoverage": 0.2,
+    "sourceDocumentCoverage": 0.1,
+    "sourceAuthority": 0.15,
+    "approvalRoute": 0.1
+  },
+  "auditBonus": 0.04,
+  "thresholds": {
+    "strong": 0.82,
+    "moderate": 0.65
+  },
+  "authorityWeights": {
+    "binding_law_or_regulation": 1,
+    "official_guidance": 0.9,
+    "official_model_policy": 0.82,
+    "official_press_release": 0.58,
+    "secondary_reporting": 0.35
+  },
+  "routeWeights": {
+    "auto_approve": 1,
+    "sample_audit": 0.72,
+    "human_review": 0.45,
+    "unrouted": 0.35
+  }
+}

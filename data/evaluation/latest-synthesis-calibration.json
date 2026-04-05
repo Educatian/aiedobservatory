@@ -1,0 +1,435 @@
+{
+  "generated_at": "2026-04-05T00:40:12.902Z",
+  "calibration_source": "src/config/synthesisCalibration.json",
+  "matched_gold_records": 16,
+  "thresholds": {
+    "strong": 0.82,
+    "moderate": 0.65
+  },
+  "weights": {
+    "confidence": 0.45,
+    "evidenceSpanCoverage": 0.2,
+    "sourceDocumentCoverage": 0.1,
+    "sourceAuthority": 0.15,
+    "approvalRoute": 0.1
+  },
+  "summary_by_band": {
+    "strong": {
+      "record_count": 12,
+      "avg_robustness_score": 0.919,
+      "field_accuracy": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "avg_field_accuracy": 1,
+      "stage_accuracy": 1,
+      "domain_accuracy": 1,
+      "citation_support_rate": 1,
+      "avg_source_document_count": 2.833,
+      "avg_evidence_span_count": 6.333
+    },
+    "moderate": {
+      "record_count": 3,
+      "avg_robustness_score": 0.746,
+      "field_accuracy": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "avg_field_accuracy": 1,
+      "stage_accuracy": 1,
+      "domain_accuracy": 1,
+      "citation_support_rate": 1,
+      "avg_source_document_count": 1.667,
+      "avg_evidence_span_count": 3
+    },
+    "limited": {
+      "record_count": 1,
+      "avg_robustness_score": 0.531,
+      "field_accuracy": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "avg_field_accuracy": 1,
+      "stage_accuracy": 1,
+      "domain_accuracy": 1,
+      "citation_support_rate": 1,
+      "avg_source_document_count": 2,
+      "avg_evidence_span_count": 1
+    }
+  },
+  "monotonicity_check": {
+    "ordered_bands_present": [
+      "strong",
+      "moderate",
+      "limited"
+    ],
+    "field_accuracy_descends_with_band_strength": true
+  },
+  "recommendations": [
+    "Current robustness ordering is directionally consistent with gold-set field accuracy.",
+    "Use this report together with gold-set growth before changing thresholds."
+  ],
+  "results": [
+    {
+      "jurisdiction_id": "state-ca",
+      "state_abbr": "CA",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.935,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 7
+    },
+    {
+      "jurisdiction_id": "state-nj",
+      "state_abbr": "NJ",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.79,
+      "robustness_score": 0.733,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 3
+    },
+    {
+      "jurisdiction_id": "state-ri",
+      "state_abbr": "RI",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.895,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 4
+    },
+    {
+      "jurisdiction_id": "state-tx",
+      "state_abbr": "TX",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 0.58,
+      "robustness_score": 0.531,
+      "robustness_band": "limited",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 1
+    },
+    {
+      "jurisdiction_id": "state-va",
+      "state_abbr": "VA",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.88,
+      "robustness_score": 0.773,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 3
+    },
+    {
+      "jurisdiction_id": "state-ct",
+      "state_abbr": "CT",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.89,
+      "robustness_score": 0.858,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-de",
+      "state_abbr": "DE",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.97,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 7,
+      "evidence_span_count": 7
+    },
+    {
+      "jurisdiction_id": "state-ga",
+      "state_abbr": "GA",
+      "approval_route": "human_review",
+      "source_authority": "secondary_reporting",
+      "confidence": 1,
+      "robustness_score": 0.733,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 1,
+      "evidence_span_count": 3
+    },
+    {
+      "jurisdiction_id": "state-ma",
+      "state_abbr": "MA",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 0.94,
+      "robustness_score": 0.908,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-mn",
+      "state_abbr": "MN",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 0.93,
+      "robustness_score": 0.879,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 1,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-nc",
+      "state_abbr": "NC",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.92,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 9
+    },
+    {
+      "jurisdiction_id": "state-oh",
+      "state_abbr": "OH",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.92,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-or",
+      "state_abbr": "OR",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.945,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 8
+    },
+    {
+      "jurisdiction_id": "state-pa",
+      "state_abbr": "PA",
+      "approval_route": "auto_approve",
+      "source_authority": "binding_law_or_regulation",
+      "confidence": 0.96,
+      "robustness_score": 0.932,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-ut",
+      "state_abbr": "UT",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.97,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 8,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-wa",
+      "state_abbr": "WA",
+      "approval_route": "human_review",
+      "source_authority": "official_guidance",
+      "confidence": 1,
+      "robustness_score": 0.895,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 1,
+      "evidence_span_count": 6
+    }
+  ]
+}

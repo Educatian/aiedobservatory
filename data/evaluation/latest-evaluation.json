@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-04-04T16:59:57.546Z",
-  "gold_record_count": 5,
-  "matched_record_count": 5,
+  "generated_at": "2026-04-05T00:36:02.093Z",
+  "gold_record_count": 16,
+  "matched_record_count": 16,
   "gold_coverage_rate": 1,
   "field_accuracy": {
-    "ai_use_allowed": 0.8,
-    "assessment_policy": 0.8,
-    "privacy_policy": 0.8,
-    "teacher_pd_support": 0.8,
+    "ai_use_allowed": 1,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
     "implementation_stage": 1
   },
   "stage_accuracy": 1,
-  "domain_accuracy": 0.6,
+  "domain_accuracy": 1,
   "approval_route_accuracy": 1,
-  "citation_support_rate": 0.923,
-  "missing_required_citation_rate": 0.077,
+  "citation_support_rate": 1,
+  "missing_required_citation_rate": 0,
   "supported_positive_rate": 1,
   "unsupported_positive_rate": 0,
   "positive_field_precision": 1,
-  "review_queue_rate": 0.267,
-  "review_queue_count": 4,
+  "review_queue_rate": 0.48,
+  "review_queue_count": 12,
   "approval_route_distribution": {
-    "auto_approve": 4,
-    "human_review": 8,
-    "sample_audit": 3
+    "sample_audit": 11,
+    "auto_approve": 6,
+    "human_review": 8
   },
   "deep_research_recommended_rate": 0,
   "packet_backed_subset": {
@@ -53,7 +53,7 @@
         "implementation_stage": 1
       },
       "stage_match": 1,
-      "domain_match": 0,
+      "domain_match": 1,
       "predicted_approval_route": "auto_approve",
       "gold_approval_route": "auto_approve",
       "approval_route_match": 1
@@ -80,14 +80,14 @@
       "state_abbr": "RI",
       "source_packet": null,
       "field_scores": {
-        "ai_use_allowed": 0,
-        "assessment_policy": 0,
-        "privacy_policy": 0,
-        "teacher_pd_support": 0,
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
         "implementation_stage": 1
       },
       "stage_match": 1,
-      "domain_match": 0,
+      "domain_match": 1,
       "predicted_approval_route": "auto_approve",
       "gold_approval_route": "auto_approve",
       "approval_route_match": 1
@@ -124,6 +124,193 @@
       "domain_match": 1,
       "predicted_approval_route": "sample_audit",
       "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ct",
+      "state_abbr": "CT",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-de",
+      "state_abbr": "DE",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ga",
+      "state_abbr": "GA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ma",
+      "state_abbr": "MA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "auto_approve",
+      "gold_approval_route": "auto_approve",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-mn",
+      "state_abbr": "MN",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "auto_approve",
+      "gold_approval_route": "auto_approve",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-nc",
+      "state_abbr": "NC",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-oh",
+      "state_abbr": "OH",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-or",
+      "state_abbr": "OR",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-pa",
+      "state_abbr": "PA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "auto_approve",
+      "gold_approval_route": "auto_approve",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ut",
+      "state_abbr": "UT",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-wa",
+      "state_abbr": "WA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "human_review",
+      "gold_approval_route": "human_review",
       "approval_route_match": 1
     }
   ]

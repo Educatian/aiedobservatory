@@ -73,7 +73,7 @@ export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBrief
       </div>
 
       <div className="detail-inline-meta">
-        <p>{buildExecutiveEvidenceStatement(record)}</p>
+        <p>Confirmed evidence and provisional interpretation are shown separately in this brief.</p>
       </div>
 
       <div className="detail-highlight leadership-highlight">
@@ -122,7 +122,12 @@ export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBrief
       </div>
 
       <div className="leadership-subsection">
-        <div className="mini-heading">Leadership signal</div>
+        <div className="mini-heading">Confirmed evidence statement</div>
+        <p className="detail-note leadership-note">{buildExecutiveEvidenceStatement(record)}</p>
+      </div>
+
+      <div className="leadership-subsection">
+        <div className="mini-heading">Provisional interpretation</div>
         <p className="detail-note leadership-note">
           {record.policyOrientation}. {interpretiveNote}
         </p>

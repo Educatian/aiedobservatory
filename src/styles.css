@@ -4985,6 +4985,10 @@ tbody td {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.compare-insights-grid5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 @media (max-width: 1280px) {
   .top-search {
     display: none;
@@ -5103,7 +5107,8 @@ tbody td {
   }
 
   .leadership-readiness-grid,
-  .compare-insights-grid4 {
+  .compare-insights-grid4,
+  .compare-insights-grid5 {
     grid-template-columns: 1fr;
   }
 }

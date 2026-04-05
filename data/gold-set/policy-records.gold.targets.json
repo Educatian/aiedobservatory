@@ -1,0 +1,34 @@
+{
+  "target_range": {
+    "min_records": 20,
+    "max_records": 50
+  },
+  "coverage_targets": {
+    "source_authority": {
+      "binding_law_or_regulation": 4,
+      "official_guidance": 8,
+      "official_model_policy": 3,
+      "official_press_release": 3,
+      "secondary_reporting": 2
+    },
+    "approval_route": {
+      "auto_approve": 6,
+      "sample_audit": 8,
+      "human_review": 6
+    },
+    "implementation_stage": {
+      "early_or_transitional": 8,
+      "operational_or_higher": 12
+    },
+    "case_type": {
+      "routine": 12,
+      "hard_case": 8
+    }
+  },
+  "selection_rules": [
+    "Do not oversample only strong states.",
+    "Include at least one low-evidence or conflict-prone case in each calibration round.",
+    "Prefer official sources when establishing gold labels.",
+    "Track whether each gold record is packet-backed or seed-reviewed."
+  ]
+}
