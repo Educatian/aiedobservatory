@@ -4,6 +4,13 @@ import {
   getPolicyStageLabel,
   getPriorityDomains
 } from "../data/policyData";
+import {
+  buildInterpretiveBoundary,
+  buildPatternSummary,
+  buildRobustnessSummary,
+  buildStructuredSynthesis,
+  getRobustnessLabel
+} from "../lib/policySynthesis";
 import type { PolicyRecord } from "../types";
 
 interface CompareMatrixViewProps {
@@ -56,7 +63,9 @@ function getEvidenceStatus(record: PolicyRecord): {
     return { label: "Not yet coded", tone: "provisional" };
   }
 
-  if (record.approvalRoute === "auto_approve" && record.confidence >= 0.9) {
+  const robustnessLabel = getRobustnessLabel(record);
+
+  if (robustnessLabel === "Strong evidence base") {
     return { label: "Stable evidence base", tone: "stable" };
   }
 
@@ -141,34 +150,6 @@ const compareRows: CompareRowDefinition[] = [
     )
   }
 ];
-
-function buildSynthesis(records: PolicyRecord[]): string {
-  const leader = [...records].sort((left, right) => right.policyStrength - left.policyStrength)[0];
-  const lagger = [...records].sort((left, right) => left.policyStrength - right.policyStrength)[0];
-
-  return `${leader.stateName} currently leads on overall structure, while ${lagger.stateName} still shows more uneven guidance maturity across the compared dimensions.`;
-}
-
-function buildTrend(records: PolicyRecord[]): string {
-  const domainCounts = new Map<string, number>();
-  records.flatMap((record) => getPriorityDomains(record)).forEach((domain) => {
-    domainCounts.set(domain, (domainCounts.get(domain) ?? 0) + 1);
-  });
-
-  const dominant = [...domainCounts.entries()].sort((left, right) => right[1] - left[1])[0]?.[0] ?? "Teacher PD";
-  return `${dominant} appears most often among the strongest coded domains, suggesting convergence around that policy area across the selected states.`;
-}
-
-function buildVerificationNote(records: PolicyRecord[]): string {
-  const strongestConfidence = [...records].sort((left, right) => right.confidence - left.confidence)[0];
-  return `${strongestConfidence.stateName} currently has the strongest confidence profile in this comparison set, making it a useful benchmark for further evidence review.`;
-}
-
-function buildRiskNote(records: PolicyRecord[]): string {
-  const mostUncertain = [...records].sort((left, right) => left.confidence - right.confidence)[0];
-  return `${mostUncertain.stateName} remains the least settled case in this set, so it should be interpreted as an evidence-limited benchmark rather than a final statewide reference point.`;
-}
-
 export function CompareMatrixView({
   records,
   compareStates,
@@ -269,33 +250,33 @@ export function CompareMatrixView({
         <article className="compare-insight compare-insight-primary">
           <h5>
             <span className="material-symbols-outlined">psychology</span>
-            Analytical Synthesis
+            Structured Synthesis
           </h5>
-          <p>{buildSynthesis(compareRecords)}</p>
+          <p>{buildStructuredSynthesis(compareRecords)}</p>
         </article>
 
         <article className="compare-insight">
           <h5>
             <span className="material-symbols-outlined">trending_up</span>
-            Convergence Trend
+            Pattern Summary
           </h5>
-          <p>{buildTrend(compareRecords)}</p>
+          <p>{buildPatternSummary(compareRecords)}</p>
         </article>
 
         <article className="compare-insight">
           <h5>
             <span className="material-symbols-outlined">verified_user</span>
-            Verification Note
+            Evidence Robustness
           </h5>
-          <p>{buildVerificationNote(compareRecords)}</p>
+          <p>{buildRobustnessSummary(compareRecords)}</p>
         </article>
 
         <article className="compare-insight">
           <h5>
             <span className="material-symbols-outlined">warning</span>
-            Uncertainty Signal
+            Interpretive Boundary
           </h5>
-          <p>{buildRiskNote(compareRecords)}</p>
+          <p>{buildInterpretiveBoundary(compareRecords)}</p>
         </article>
       </div>
     </section>

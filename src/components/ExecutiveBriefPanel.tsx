@@ -1,22 +1,17 @@
 import {
-  formatConfidence,
   formatScoreLabel,
-  getPolicyStageLabel,
   getPriorityDomains
 } from "../data/policyData";
+import {
+  buildExecutiveEvidenceStatement,
+  buildExecutiveInterpretation,
+  getRobustnessLabel
+} from "../lib/policySynthesis";
 import type { PolicyRecord } from "../types";
 
 interface ExecutiveBriefPanelProps {
   record: PolicyRecord;
   benchmarkRecords?: PolicyRecord[];
-}
-
-function getCoverageLabel(record: PolicyRecord): string {
-  const evidenceCount = record.evidenceSpans.length;
-  if (evidenceCount >= 5) return "Substantial";
-  if (evidenceCount >= 3) return "Moderate";
-  if (evidenceCount >= 1) return "Limited";
-  return "Not yet coded";
 }
 
 function getUncertaintyLabel(record: PolicyRecord): string {
@@ -55,23 +50,12 @@ function getDimensionBarWidth(value: number): string {
   return `${Math.min(Math.max(value, 0), 4) * 25}%`;
 }
 
-function getBenchmarkLabel(record: PolicyRecord, benchmarkRecords?: PolicyRecord[]): string {
-  if (!benchmarkRecords || benchmarkRecords.length === 0) {
-    return "No benchmark set attached";
-  }
-
-  const strongerPeers = benchmarkRecords.filter((peer) => peer.policyStrength > record.policyStrength).length;
-  return strongerPeers === 0
-    ? "Leads the current benchmark set"
-    : `${strongerPeers} peers score higher on policy strength`;
-}
-
 export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBriefPanelProps) {
   const readinessDimensions = getReadinessDimensions(record);
   const priorityDomains = getPriorityDomains(record);
-  const coverageLabel = getCoverageLabel(record);
   const uncertaintyLabel = getUncertaintyLabel(record);
-  const benchmarkLabel = getBenchmarkLabel(record, benchmarkRecords);
+  const evidenceLabel = getRobustnessLabel(record);
+  const interpretiveNote = buildExecutiveInterpretation(record, benchmarkRecords);
 
   return (
     <section
@@ -89,10 +73,7 @@ export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBrief
       </div>
 
       <div className="detail-inline-meta">
-        <p>
-          {record.stateName} is currently coded as {getPolicyStageLabel(record.implementationStage).toLowerCase()} with{" "}
-          {formatConfidence(record.confidence)} confidence and a {coverageLabel.toLowerCase()} evidence base.
-        </p>
+        <p>{buildExecutiveEvidenceStatement(record)}</p>
       </div>
 
       <div className="detail-highlight leadership-highlight">
@@ -101,12 +82,12 @@ export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBrief
           <strong>{formatScoreLabel(record)}</strong>
         </div>
         <div>
-          <span className="detail-label">Uncertainty</span>
-          <strong>{uncertaintyLabel}</strong>
+          <span className="detail-label">Evidence basis</span>
+          <strong>{evidenceLabel}</strong>
         </div>
         <div>
-          <span className="detail-label">Benchmark</span>
-          <strong>{benchmarkLabel}</strong>
+          <span className="detail-label">Uncertainty</span>
+          <strong>{uncertaintyLabel}</strong>
         </div>
       </div>
 
@@ -143,8 +124,7 @@ export function ExecutiveBriefPanel({ record, benchmarkRecords }: ExecutiveBrief
       <div className="leadership-subsection">
         <div className="mini-heading">Leadership signal</div>
         <p className="detail-note leadership-note">
-          {record.policyOrientation}. This record is best treated as a policy signal for implementation planning,
-          not as a final legal determination, when evidence coverage remains limited.
+          {record.policyOrientation}. {interpretiveNote}
         </p>
       </div>
     </section>
