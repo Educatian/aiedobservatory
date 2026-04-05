@@ -12,7 +12,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.695Z"
   },
   {
     "review_id": "review-state-co-v1",
@@ -22,14 +22,12 @@
     "priority": "low",
     "reason": "Selected for sampling audit",
     "routing_reasons": [
-      "weak_source_authority"
+      "mid_confidence_sampling"
     ],
-    "deep_research_recommended": true,
-    "deep_research_reasons": [
-      "weak_official_source"
-    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-ct-v1",
@@ -44,7 +42,24 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-fl-v1",
+    "record_id": "state-fl-v1",
+    "jurisdiction_name": "Florida",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "weak_source_authority"
+    ],
+    "deep_research_recommended": true,
+    "deep_research_reasons": [
+      "weak_official_source"
+    ],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-ia-v1",
@@ -59,7 +74,52 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-il-v1",
+    "record_id": "state-il-v1",
+    "jurisdiction_name": "Illinois",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-la-v1",
+    "record_id": "state-la-v1",
+    "jurisdiction_name": "Louisiana",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-md-v1",
+    "record_id": "state-md-v1",
+    "jurisdiction_name": "Maryland",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-me-v1",
@@ -74,7 +134,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-mi-v1",
@@ -89,7 +149,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-mo-v1",
@@ -104,7 +164,37 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-ne-v1",
+    "record_id": "state-ne-v1",
+    "jurisdiction_name": "Nebraska",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-nh-v1",
+    "record_id": "state-nh-v1",
+    "jurisdiction_name": "New Hampshire",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-nj-v1",
@@ -119,7 +209,37 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-nm-v1",
+    "record_id": "state-nm-v1",
+    "jurisdiction_name": "New Mexico",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-ny-v1",
+    "record_id": "state-ny-v1",
+    "jurisdiction_name": "New York",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-sc-v1",
@@ -134,7 +254,22 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-tn-v1",
+    "record_id": "state-tn-v1",
+    "jurisdiction_name": "Tennessee",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-tx-v1",
@@ -149,7 +284,7 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-va-v1",
@@ -164,7 +299,22 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
+  },
+  {
+    "review_id": "review-state-wi-v1",
+    "record_id": "state-wi-v1",
+    "jurisdiction_name": "Wisconsin",
+    "queue_type": "sample_audit",
+    "priority": "low",
+    "reason": "Selected for sampling audit",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": [],
+    "status": "open",
+    "created_at": "2026-04-05T01:13:35.696Z"
   },
   {
     "review_id": "review-state-wv-v1",
@@ -179,6 +329,6 @@
     "deep_research_recommended": false,
     "deep_research_reasons": [],
     "status": "open",
-    "created_at": "2026-04-04T21:38:25.570Z"
+    "created_at": "2026-04-05T01:13:35.696Z"
   }
 ]

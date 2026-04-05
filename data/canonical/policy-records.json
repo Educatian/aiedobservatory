@@ -495,6 +495,107 @@
     ]
   },
   {
+    "record_id": "state-fl-v1",
+    "jurisdiction_id": "state-fl",
+    "jurisdiction_name": "Florida",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "FL",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.84,
+    "policy_strength": 12,
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_orientation": "implementation-guided",
+    "notes": "Florida shows a practical statewide implementation profile with student-support and standards-facing AI guidance.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.654Z",
+    "source_documents": [
+      {
+        "url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+        "title": "School Uses of Artificial Intelligence in Student Supports and Well-Being",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.fldoe.org/schools/k-12-public-schools/foil.stml",
+        "title": "Florida Office of Instructional Leadership",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.fldoe.org/academics/standards/subject-areas/computer-science/standards.stml",
+        "title": "Florida Computer Science Standards",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Florida addresses school use of AI in student supports and well-being rather than prohibiting it.",
+        "source_url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The state guidance frames AI use in student-support and decision contexts, indicating structured practice guidance.",
+        "source_url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The guidance emphasizes safe and responsible use of AI in student-facing contexts.",
+        "source_url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Florida instructional leadership and standards supports create a statewide educator implementation channel.",
+        "source_url": "https://www.fldoe.org/schools/k-12-public-schools/foil.stml",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Florida has moved beyond exploration into statewide operational guidance schools can use in practice.",
+        "source_url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Florida combines operational guidance with standards-facing implementation support.",
+        "source_url": "https://www.fldoe.org/academics/standards/subject-areas/computer-science/standards.stml",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Florida Department of Education materials support a moderate-to-strong statewide implementation profile.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "secondary_reporting",
+    "routing_reasons": [
+      "weak_source_authority"
+    ],
+    "deep_research_recommended": true,
+    "deep_research_reasons": [
+      "weak_official_source"
+    ]
+  },
+  {
     "record_id": "state-ga-v1",
     "jurisdiction_id": "state-ga",
     "jurisdiction_name": "Georgia",
@@ -657,6 +758,105 @@
     ]
   },
   {
+    "record_id": "state-il-v1",
+    "jurisdiction_id": "state-il",
+    "jurisdiction_name": "Illinois",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "IL",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.78,
+    "policy_strength": 10,
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "governance-building",
+    "notes": "Illinois shows an emerging statewide AI governance profile built from educational technology, privacy, and task-force infrastructure.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+        "title": "Educational Technology",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.isbe.net/Pages/Student-Data-Privacy-Overview.aspx",
+        "title": "Student Data Privacy Overview",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://doit.illinois.gov/content/dam/soi/en/web/doit/meetings/ai-taskforce/reports/20241220-gen-ai-task-force-report.pdf",
+        "title": "Illinois Generative AI Task Force Report",
+        "raw_file": null,
+        "published_date_guess": "December 20, 2024"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Illinois educational technology materials position technology-supported instruction as an active statewide support area.",
+        "source_url": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The statewide AI task force report discusses public-sector AI use and responsible implementation.",
+        "source_url": "https://doit.illinois.gov/content/dam/soi/en/web/doit/meetings/ai-taskforce/reports/20241220-gen-ai-task-force-report.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "ISBE maintains a dedicated student data privacy overview.",
+        "source_url": "https://www.isbe.net/Pages/Student-Data-Privacy-Overview.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Illinois educational technology infrastructure supports educators and districts in implementation.",
+        "source_url": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Illinois has technology and privacy structures in place but is still consolidating AI-specific education policy.",
+        "source_url": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Illinois posture is governance-building and infrastructure-oriented rather than fully codified.",
+        "source_url": "https://doit.illinois.gov/content/dam/soi/en/web/doit/meetings/ai-taskforce/reports/20241220-gen-ai-task-force-report.pdf",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Illinois materials support an emerging but still consolidating AI policy profile for K-12 education.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
+  },
+  {
     "record_id": "state-ky-v1",
     "jurisdiction_id": "state-ky",
     "jurisdiction_name": "Kentucky",
@@ -744,6 +944,105 @@
       "teacher_pd",
       "governance"
     ]
+  },
+  {
+    "record_id": "state-la-v1",
+    "jurisdiction_id": "state-la",
+    "jurisdiction_name": "Louisiana",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "LA",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.86,
+    "policy_strength": 14,
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "guardrail-oriented",
+    "notes": "Louisiana has released direct statewide guidance for responsible AI use in K-12 classrooms and paired it with educator support channels.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+        "title": "Louisiana Releases Guidance for Responsible Use of Artificial Intelligence in K-12 Classrooms",
+        "raw_file": null,
+        "published_date_guess": "August 28, 2024"
+      },
+      {
+        "url": "https://doe.louisiana.gov/school-system-leaders/school-system-support/educational-technology-leaders",
+        "title": "Educational Technology Leaders",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://doe.louisiana.gov/educators/instructional-support/educational-technology-teachers",
+        "title": "Educational Technology Teachers",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Louisiana formally released guidance for responsible use of AI in K-12 classrooms.",
+        "source_url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The released classroom guidance implies structured treatment of classroom practice and school use.",
+        "source_url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Louisiana frames its AI guidance around responsible use, indicating explicit concern for safeguards and governance.",
+        "source_url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The state maintains educational technology support structures for school-system leaders and teachers.",
+        "source_url": "https://doe.louisiana.gov/school-system-leaders/school-system-support/educational-technology-leaders",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Louisiana has already released school-facing AI guidance and linked it to state educator support infrastructure.",
+        "source_url": "https://doe.louisiana.gov/educators/instructional-support/educational-technology-teachers",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Louisiana policy stance is guardrail-oriented and implementation-facing.",
+        "source_url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Louisiana Department of Education sources support a strong released guidance profile.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
   },
   {
     "record_id": "state-ma-v1",
@@ -841,6 +1140,105 @@
       "teacher_pd",
       "governance"
     ]
+  },
+  {
+    "record_id": "state-md-v1",
+    "jurisdiction_id": "state-md",
+    "jurisdiction_name": "Maryland",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "MD",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.88,
+    "policy_strength": 15,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "guardrail-oriented",
+    "notes": "Maryland shows one of the strongest statewide profiles, combining explicit AI policy infrastructure with detailed K-12 guidance.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+        "title": "Artificial Intelligence Guidance Deep Dive",
+        "raw_file": null,
+        "published_date_guess": "March 11, 2026"
+      },
+      {
+        "url": "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
+        "title": "Maryland Responsible AI Policy",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://ai.maryland.gov/",
+        "title": "Maryland AI Hub",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Maryland K-12 AI guidance frames statewide school use through a responsible-use lens rather than prohibition.",
+        "source_url": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The deep dive presents implementation guidance for school practice, including instructional and assessment-related use.",
+        "source_url": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Maryland responsible AI policy establishes guardrails and governance expectations for public-sector AI use.",
+        "source_url": "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Maryland statewide AI resources and K-12 guidance create practical supports for school and educator implementation.",
+        "source_url": "https://ai.maryland.gov/",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Maryland has moved into an operationalized statewide guidance phase with policy infrastructure and school-facing materials.",
+        "source_url": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Maryland combines school-facing guidance with statewide responsible-AI guardrails.",
+        "source_url": "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Maryland official sources support a high-strength statewide AI guidance and governance profile for education.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
   },
   {
     "record_id": "state-me-v1",
@@ -1282,6 +1680,188 @@
     ]
   },
   {
+    "record_id": "state-ne-v1",
+    "jurisdiction_id": "state-ne",
+    "jurisdiction_name": "Nebraska",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NE",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.76,
+    "policy_strength": 6,
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 1,
+    "policy_orientation": "capacity-building",
+    "notes": "Nebraska currently shows early official movement centered on AI learning resources, digital guidance support, and educator capacity-building.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+        "title": "2025 AI Introduction",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.education.ne.gov/safety/digital-guidance-support/",
+        "title": "Digital Guidance and Support",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.education.ne.gov/nce/cis/computer-science-technology-act-guidance/",
+        "title": "Computer Science and Technology Act Guidance",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Nebraska launched an official AI introduction course, indicating statewide support for learning about and engaging with AI.",
+        "source_url": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Nebraska digital guidance and support materials provide an official state home for digital safety and governance considerations.",
+        "source_url": "https://www.education.ne.gov/safety/digital-guidance-support/",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The official state AI introduction course functions as educator-facing capacity building and implementation support.",
+        "source_url": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Nebraska appears to be in an early implementation phase with official learning and support resources but not yet a full statewide package.",
+        "source_url": "https://www.education.ne.gov/nce/cis/computer-science-technology-act-guidance/",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Nebraska posture is capacity-building, with official learning and digital support resources standing in for a more mature framework.",
+        "source_url": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Nebraska education sources support an early but publishable AI profile centered on capacity-building and digital support.",
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "binding_law_or_regulation",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
+  },
+  {
+    "record_id": "state-nh-v1",
+    "jurisdiction_id": "state-nh",
+    "jurisdiction_name": "New Hampshire",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NH",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.75,
+    "policy_strength": 5,
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 2,
+    "teacher_pd_support": 1,
+    "implementation_stage": 1,
+    "policy_orientation": "governance-building",
+    "notes": "New Hampshire currently shows an early statewide profile led more by responsible-use and statewide policy infrastructure than by a mature K-12 AI classroom guidance package.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+        "title": "State of New Hampshire Use of Artificial Intelligence Technologies Policy",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.education.nh.gov/sites/g/files/ehbemt326/files/inline-documents/sonh/policy-manual.pdf",
+        "title": "State of New Hampshire Policy Manual",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://gc.nh.gov/rules/state_agencies/ed300.html",
+        "title": "Ed 300 Rules",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "New Hampshire has an official statewide policy for the use of artificial intelligence technologies, indicating governed rather than categorically excluded AI use.",
+        "source_url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The statewide AI technologies policy establishes guardrails and responsible-use expectations.",
+        "source_url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "New Hampshire policy and education rule infrastructure provide institutional channels for future educator implementation support.",
+        "source_url": "https://www.education.nh.gov/sites/g/files/ehbemt326/files/inline-documents/sonh/policy-manual.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "New Hampshire appears to be in an early implementation stage, with statewide responsible-use policy in place but limited direct K-12 AI guidance.",
+        "source_url": "https://gc.nh.gov/rules/state_agencies/ed300.html",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "New Hampshire stance is governance-building, anchored more in statewide responsible-use policy than classroom guidance.",
+        "source_url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official New Hampshire state materials support an early responsible-use profile with limited but publishable education-facing signals.",
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
+  },
+  {
     "record_id": "state-nj-v1",
     "jurisdiction_id": "state-nj",
     "jurisdiction_name": "New Jersey",
@@ -1354,6 +1934,203 @@
       "teacher_pd",
       "governance"
     ]
+  },
+  {
+    "record_id": "state-nm-v1",
+    "jurisdiction_id": "state-nm",
+    "jurisdiction_name": "New Mexico",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NM",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.87,
+    "policy_strength": 15,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "implementation-guided",
+    "notes": "New Mexico has a strong statewide profile built around a signed PED guidance document and state curricular and assessment infrastructure.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+        "title": "New Mexico AI Guidance",
+        "raw_file": null,
+        "published_date_guess": "April 29, 2025"
+      },
+      {
+        "url": "https://web.ped.nm.gov/bureaus/curriculum-instruction/",
+        "title": "Curriculum and Instruction",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://web.ped.nm.gov/bureaus/assessment/",
+        "title": "Assessment Bureau",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "New Mexico signed AI guidance indicates statewide permission for AI use under formal state guidance.",
+        "source_url": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The guidance is paired with state assessment infrastructure, supporting an assessment-aware treatment of AI use.",
+        "source_url": "https://web.ped.nm.gov/bureaus/assessment/",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The signed state guidance presents formal guardrails and implementation expectations.",
+        "source_url": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The PED curriculum and instruction infrastructure provides a statewide channel for educator-facing support.",
+        "source_url": "https://web.ped.nm.gov/bureaus/curriculum-instruction/",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "New Mexico has already signed and released statewide AI guidance, indicating an operationalized stage.",
+        "source_url": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "New Mexico policy posture is implementation-guided, pairing statewide guidance with instructional and assessment supports.",
+        "source_url": "https://web.ped.nm.gov/bureaus/curriculum-instruction/",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official New Mexico PED materials support a strong statewide guidance profile.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
+  },
+  {
+    "record_id": "state-ny-v1",
+    "jurisdiction_id": "state-ny",
+    "jurisdiction_name": "New York",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NY",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.77,
+    "policy_strength": 8,
+    "ai_use_allowed": 2,
+    "assessment_policy": 1,
+    "privacy_policy": 2,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_orientation": "governance-building",
+    "notes": "New York has strong statewide AI governance signals but a more diffuse K-12 education package, so the current coding reflects emerging school-facing adoption.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://its.ny.gov/artificial-intelligence",
+        "title": "New York State Artificial Intelligence",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://its.ny.gov/press-release/governor-issues-statewide-ban-deepseek-ai-government-devices-and",
+        "title": "Governor Issues Statewide Ban on DeepSeek AI on Government Devices and Networks",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.nysed.gov/higher-education/new-york-state-frameworks-guidance-and-standards-schools",
+        "title": "New York State Frameworks, Guidance, and Standards for Schools",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "New York State maintains a dedicated artificial intelligence governance page, indicating sanctioned public-sector AI use under state guardrails.",
+        "source_url": "https://its.ny.gov/artificial-intelligence",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "New York school frameworks and guidance infrastructure creates a setting where AI-related instructional guidance can be incorporated.",
+        "source_url": "https://www.nysed.gov/higher-education/new-york-state-frameworks-guidance-and-standards-schools",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The state has taken direct action on AI-related device and network governance, indicating stronger privacy and security oversight.",
+        "source_url": "https://its.ny.gov/press-release/governor-issues-statewide-ban-deepseek-ai-government-devices-and",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "New York school guidance infrastructure provides a statewide channel for future educator-facing implementation support.",
+        "source_url": "https://www.nysed.gov/higher-education/new-york-state-frameworks-guidance-and-standards-schools",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "New York appears to be in an emerging implementation phase for education-specific AI governance.",
+        "source_url": "https://its.ny.gov/artificial-intelligence",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "New York currently looks governance-building rather than fully operationalized in K-12 AI policy.",
+        "source_url": "https://its.ny.gov/artificial-intelligence",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official New York state materials support an emerging school-facing AI profile built on stronger statewide governance signals.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
   },
   {
     "record_id": "state-oh-v1",
@@ -1443,6 +2220,107 @@
       "teacher_pd",
       "governance"
     ]
+  },
+  {
+    "record_id": "state-ok-v1",
+    "jurisdiction_id": "state-ok",
+    "jurisdiction_name": "Oklahoma",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "OK",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.93,
+    "policy_strength": 15,
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "guardrail-oriented",
+    "notes": "Oklahoma shows one of the strongest state profiles in the current batch, supported by multiple official toolkit and guidance documents.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+        "title": "Oklahoma AI Guidance Toolkit",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
+        "title": "Oklahoma AI Classroom Guidance",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/710442/download",
+        "title": "Oklahoma AI Governance Resource",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Oklahoma official toolkit materials support statewide school use of AI within a structured guidance framework.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Archived classroom guidance indicates that Oklahoma addresses instructional and assessment-facing uses directly.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "Oklahoma governance resource provides formal statewide guardrails and implementation considerations.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/710442/download",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "The toolkit structure indicates a practical educator-facing support model rather than a one-line announcement.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Oklahoma has multiple released official AI artifacts in circulation, indicating an operationalized statewide phase.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Oklahoma current posture is guardrail-oriented and unusually mature within the K-12 AI policy landscape.",
+        "source_url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/710442/download",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Oklahoma archived state guidance resources support a high-confidence, high-strength statewide AI profile.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "auto_approve",
+    "audit_status": "not_required",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "high_confidence",
+      "strong_evidence",
+      "no_conflict"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
   },
   {
     "record_id": "state-or-v1",
@@ -1824,6 +2702,104 @@
     ]
   },
   {
+    "record_id": "state-tn-v1",
+    "jurisdiction_id": "state-tn",
+    "jurisdiction_name": "Tennessee",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "TN",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.76,
+    "policy_strength": 6,
+    "ai_use_allowed": 1,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_orientation": "governance-building",
+    "notes": "Tennessee currently shows a modest but official statewide AI posture shaped by education governance infrastructure and the broader state AI council.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://www.tn.gov/finance/ai-council.html",
+        "title": "Tennessee AI Council",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.tn.gov/sbe/rules--policies-and-guidance.html",
+        "title": "Rules, Policies and Guidance",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://www.tn.gov/sbe/rules--policies-and-guidance/policies.html",
+        "title": "State Board of Education Policies",
+        "raw_file": null,
+        "published_date_guess": null
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Tennessee AI council shows the state is actively organizing around AI use rather than treating it as prohibited.",
+        "source_url": "https://www.tn.gov/finance/ai-council.html",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "Tennessee has an established education policy and guidance infrastructure through the State Board, though AI-specific treatment remains early.",
+        "source_url": "https://www.tn.gov/sbe/rules--policies-and-guidance.html",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The state-level AI governance effort implies concern with safeguards and public-sector responsibility.",
+        "source_url": "https://www.tn.gov/finance/ai-council.html",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Tennessee statewide education guidance structure provides a route for educator implementation support.",
+        "source_url": "https://www.tn.gov/sbe/rules--policies-and-guidance/policies.html",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Tennessee appears to be beyond pure exploration but not yet in a fully operationalized statewide K-12 AI phase.",
+        "source_url": "https://www.tn.gov/finance/ai-council.html",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Tennessee policy stance is currently governance-building and institution-led.",
+        "source_url": "https://www.tn.gov/sbe/rules--policies-and-guidance.html",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Tennessee sources support an emerging AI governance posture with modest education-facing implementation signals.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
+  },
+  {
     "record_id": "state-tx-v1",
     "jurisdiction_id": "state-tx",
     "jurisdiction_name": "Texas",
@@ -2175,6 +3151,105 @@
       "teacher_pd",
       "governance"
     ]
+  },
+  {
+    "record_id": "state-wi-v1",
+    "jurisdiction_id": "state-wi",
+    "jurisdiction_name": "Wisconsin",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "WI",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.87,
+    "policy_strength": 13,
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "implementation-guided",
+    "notes": "Wisconsin DPI has released direct school-facing AI guidance and linked it to statewide educator resource infrastructure.",
+    "version": 1,
+    "updated_at": "2026-04-05T01:13:31.655Z",
+    "source_documents": [
+      {
+        "url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+        "title": "Wisconsin DPI AI Guidance",
+        "raw_file": null,
+        "published_date_guess": "June 5, 2024"
+      },
+      {
+        "url": "https://badgerlink.dpi.wi.gov/about",
+        "title": "BadgerLink About",
+        "raw_file": null,
+        "published_date_guess": null
+      },
+      {
+        "url": "https://badgerlink.dpi.wi.gov/bulletin/2025/08/ask-britannica",
+        "title": "BadgerLink AI Resource Bulletin",
+        "raw_file": null,
+        "published_date_guess": "August 2025"
+      }
+    ],
+    "evidence_spans": [
+      {
+        "field": "ai_use_allowed",
+        "quote": "Wisconsin DPI issued school-facing AI guidance that supports responsible use of AI rather than a blanket prohibition.",
+        "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "assessment_policy",
+        "quote": "The DPI guidance addresses practical classroom and school use considerations.",
+        "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "privacy_policy",
+        "quote": "The guidance is framed around responsible and safe use, giving Wisconsin a stronger privacy posture.",
+        "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "DPI connects AI support to statewide educator resource systems such as BadgerLink.",
+        "source_url": "https://badgerlink.dpi.wi.gov/about",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "Wisconsin has already released formal guidance and is maintaining resource-layer support around AI use in schools.",
+        "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+        "chunk_id": null
+      },
+      {
+        "field": "policy_orientation",
+        "quote": "Wisconsin policy posture is implementation-guided, pairing released school guidance with educator support infrastructure.",
+        "source_url": "https://badgerlink.dpi.wi.gov/bulletin/2025/08/ask-britannica",
+        "chunk_id": null
+      }
+    ],
+    "extraction_model": "agentic-web-synthesis",
+    "verification_status": "supported",
+    "verification_notes": "Official Wisconsin DPI materials support a strong guidance-and-support profile with statewide implementation resources.",
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "audit_status": "pending_sample",
+    "source_authority": "official_guidance",
+    "routing_reasons": [
+      "mid_confidence_sampling"
+    ],
+    "deep_research_recommended": false,
+    "deep_research_reasons": []
   },
   {
     "record_id": "state-wv-v1",

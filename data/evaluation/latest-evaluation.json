@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-05T00:36:02.093Z",
-  "gold_record_count": 16,
-  "matched_record_count": 16,
+  "generated_at": "2026-04-05T01:14:29.109Z",
+  "gold_record_count": 35,
+  "matched_record_count": 35,
   "gold_coverage_rate": 1,
   "field_accuracy": {
     "ai_use_allowed": 1,
@@ -18,14 +18,14 @@
   "supported_positive_rate": 1,
   "unsupported_positive_rate": 0,
   "positive_field_precision": 1,
-  "review_queue_rate": 0.48,
-  "review_queue_count": 12,
+  "review_queue_rate": 0.611,
+  "review_queue_count": 22,
   "approval_route_distribution": {
-    "sample_audit": 11,
-    "auto_approve": 6,
+    "sample_audit": 21,
+    "auto_approve": 7,
     "human_review": 8
   },
-  "deep_research_recommended_rate": 0,
+  "deep_research_recommended_rate": 0.028,
   "packet_backed_subset": {
     "gold_record_count": 3,
     "matched_record_count": 3,
@@ -311,6 +311,329 @@
       "domain_match": 1,
       "predicted_approval_route": "human_review",
       "gold_approval_route": "human_review",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-az",
+      "state_abbr": "AZ",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-co",
+      "state_abbr": "CO",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-fl",
+      "state_abbr": "FL",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ia",
+      "state_abbr": "IA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-il",
+      "state_abbr": "IL",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ky",
+      "state_abbr": "KY",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "auto_approve",
+      "gold_approval_route": "auto_approve",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-la",
+      "state_abbr": "LA",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-md",
+      "state_abbr": "MD",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-mi",
+      "state_abbr": "MI",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-mo",
+      "state_abbr": "MO",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ne",
+      "state_abbr": "NE",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-nh",
+      "state_abbr": "NH",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-nm",
+      "state_abbr": "NM",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ny",
+      "state_abbr": "NY",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-ok",
+      "state_abbr": "OK",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "auto_approve",
+      "gold_approval_route": "auto_approve",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-sc",
+      "state_abbr": "SC",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-tn",
+      "state_abbr": "TN",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-wi",
+      "state_abbr": "WI",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
+      "approval_route_match": 1
+    },
+    {
+      "jurisdiction_id": "state-wv",
+      "state_abbr": "WV",
+      "source_packet": null,
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "stage_match": 1,
+      "domain_match": 1,
+      "predicted_approval_route": "sample_audit",
+      "gold_approval_route": "sample_audit",
       "approval_route_match": 1
     }
   ]

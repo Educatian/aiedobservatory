@@ -1,5 +1,819 @@
 [
   {
+    "id": "il-confidence-changed-2026-04-05T01:10:31.655Z-na-0.78",
+    "eventType": "confidence_changed",
+    "stateAbbr": "IL",
+    "stateName": "Illinois",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Illinois confidence recalculated",
+    "description": "Confidence is currently 78% based on the latest evidence package.",
+    "sourceUrl": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.78,
+    "previousValue": null,
+    "nextValue": 0.78,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "la-confidence-changed-2026-04-05T01:10:31.655Z-na-0.86",
+    "eventType": "confidence_changed",
+    "stateAbbr": "LA",
+    "stateName": "Louisiana",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Louisiana confidence recalculated",
+    "description": "Confidence is currently 86% based on the latest evidence package.",
+    "sourceUrl": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.86,
+    "previousValue": null,
+    "nextValue": 0.86,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "md-confidence-changed-2026-04-05T01:10:31.655Z-na-0.88",
+    "eventType": "confidence_changed",
+    "stateAbbr": "MD",
+    "stateName": "Maryland",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Maryland confidence recalculated",
+    "description": "Confidence is currently 88% based on the latest evidence package.",
+    "sourceUrl": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.88,
+    "previousValue": null,
+    "nextValue": 0.88,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "ne-confidence-changed-2026-04-05T01:10:31.655Z-na-0.76",
+    "eventType": "confidence_changed",
+    "stateAbbr": "NE",
+    "stateName": "Nebraska",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Nebraska confidence recalculated",
+    "description": "Confidence is currently 76% based on the latest evidence package.",
+    "sourceUrl": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 0.76,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "nh-confidence-changed-2026-04-05T01:10:31.655Z-na-0.75",
+    "eventType": "confidence_changed",
+    "stateAbbr": "NH",
+    "stateName": "New Hampshire",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "New Hampshire confidence recalculated",
+    "description": "Confidence is currently 75% based on the latest evidence package.",
+    "sourceUrl": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.75,
+    "previousValue": null,
+    "nextValue": 0.75,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "nm-confidence-changed-2026-04-05T01:10:31.655Z-na-0.87",
+    "eventType": "confidence_changed",
+    "stateAbbr": "NM",
+    "stateName": "New Mexico",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "New Mexico confidence recalculated",
+    "description": "Confidence is currently 87% based on the latest evidence package.",
+    "sourceUrl": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 0.87,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "ny-confidence-changed-2026-04-05T01:10:31.655Z-na-0.77",
+    "eventType": "confidence_changed",
+    "stateAbbr": "NY",
+    "stateName": "New York",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "New York confidence recalculated",
+    "description": "Confidence is currently 77% based on the latest evidence package.",
+    "sourceUrl": "https://its.ny.gov/artificial-intelligence",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.77,
+    "previousValue": null,
+    "nextValue": 0.77,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "ok-confidence-changed-2026-04-05T01:10:31.655Z-na-0.93",
+    "eventType": "confidence_changed",
+    "stateAbbr": "OK",
+    "stateName": "Oklahoma",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Oklahoma confidence recalculated",
+    "description": "Confidence is currently 93% based on the latest evidence package.",
+    "sourceUrl": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+    "approvalRoute": "auto_approve",
+    "confidence": 0.93,
+    "previousValue": null,
+    "nextValue": 0.93,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "tn-confidence-changed-2026-04-05T01:10:31.655Z-na-0.76",
+    "eventType": "confidence_changed",
+    "stateAbbr": "TN",
+    "stateName": "Tennessee",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Tennessee confidence recalculated",
+    "description": "Confidence is currently 76% based on the latest evidence package.",
+    "sourceUrl": "https://www.tn.gov/finance/ai-council.html",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 0.76,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "wi-confidence-changed-2026-04-05T01:10:31.655Z-na-0.87",
+    "eventType": "confidence_changed",
+    "stateAbbr": "WI",
+    "stateName": "Wisconsin",
+    "occurredAt": "2026-04-05T01:10:31.655Z",
+    "title": "Wisconsin confidence recalculated",
+    "description": "Confidence is currently 87% based on the latest evidence package.",
+    "sourceUrl": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 0.87,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "fl-confidence-changed-2026-04-05T01:10:31.654Z-na-0.84",
+    "eventType": "confidence_changed",
+    "stateAbbr": "FL",
+    "stateName": "Florida",
+    "occurredAt": "2026-04-05T01:10:31.654Z",
+    "title": "Florida confidence recalculated",
+    "description": "Confidence is currently 84% based on the latest evidence package.",
+    "sourceUrl": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.84,
+    "previousValue": null,
+    "nextValue": 0.84,
+    "changedFields": [
+      "confidence"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "il-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "IL",
+    "stateName": "Illinois",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Illinois routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.78,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "la-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "LA",
+    "stateName": "Louisiana",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Louisiana routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.86,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "md-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "MD",
+    "stateName": "Maryland",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Maryland routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.88,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "ne-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "NE",
+    "stateName": "Nebraska",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Nebraska routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "nh-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "NH",
+    "stateName": "New Hampshire",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "New Hampshire routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.75,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "nm-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "NM",
+    "stateName": "New Mexico",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "New Mexico routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "ny-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "NY",
+    "stateName": "New York",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "New York routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://its.ny.gov/artificial-intelligence",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.77,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "ok-approval-route-changed-2026-04-05T01:07:31.655Z-na-auto-approve",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "OK",
+    "stateName": "Oklahoma",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Oklahoma routed to auto_approve",
+    "description": "Approval routing classified the state as auto approve.",
+    "sourceUrl": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+    "approvalRoute": "auto_approve",
+    "confidence": 0.93,
+    "previousValue": null,
+    "nextValue": "auto_approve",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "tn-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "TN",
+    "stateName": "Tennessee",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Tennessee routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://www.tn.gov/finance/ai-council.html",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "wi-approval-route-changed-2026-04-05T01:07:31.655Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "WI",
+    "stateName": "Wisconsin",
+    "occurredAt": "2026-04-05T01:07:31.655Z",
+    "title": "Wisconsin routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "fl-approval-route-changed-2026-04-05T01:07:31.654Z-na-sample-audit",
+    "eventType": "approval_route_changed",
+    "stateAbbr": "FL",
+    "stateName": "Florida",
+    "occurredAt": "2026-04-05T01:07:31.654Z",
+    "title": "Florida routed to sample_audit",
+    "description": "Approval routing classified the state as sample audit.",
+    "sourceUrl": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.84,
+    "previousValue": null,
+    "nextValue": "sample_audit",
+    "changedFields": [
+      "approval_route",
+      "audit_status"
+    ],
+    "priority": 3
+  },
+  {
+    "id": "il-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "IL",
+    "stateName": "Illinois",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Illinois",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.78,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "la-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "LA",
+    "stateName": "Louisiana",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Louisiana",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.86,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "md-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "MD",
+    "stateName": "Maryland",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Maryland",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.88,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "ne-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "NE",
+    "stateName": "Nebraska",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Nebraska",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "nh-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "NH",
+    "stateName": "New Hampshire",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for New Hampshire",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.75,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "nm-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "NM",
+    "stateName": "New Mexico",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for New Mexico",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "ny-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "NY",
+    "stateName": "New York",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for New York",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://its.ny.gov/artificial-intelligence",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.77,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "ok-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "OK",
+    "stateName": "Oklahoma",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Oklahoma",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+    "approvalRoute": "auto_approve",
+    "confidence": 0.93,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "tn-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "TN",
+    "stateName": "Tennessee",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Tennessee",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://www.tn.gov/finance/ai-council.html",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "wi-source-added-2026-04-05T01:04:31.655Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "WI",
+    "stateName": "Wisconsin",
+    "occurredAt": "2026-04-05T01:04:31.655Z",
+    "title": "Source package attached for Wisconsin",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "fl-source-added-2026-04-05T01:04:31.654Z-na-3",
+    "eventType": "source_added",
+    "stateAbbr": "FL",
+    "stateName": "Florida",
+    "occurredAt": "2026-04-05T01:04:31.654Z",
+    "title": "Source package attached for Florida",
+    "description": "3 official source documents linked into the canonical record.",
+    "sourceUrl": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.84,
+    "previousValue": null,
+    "nextValue": 3,
+    "changedFields": [
+      "source_documents"
+    ],
+    "priority": 4
+  },
+  {
+    "id": "il-record-updated-2026-04-05T01:01:31.655Z-na-10",
+    "eventType": "record_updated",
+    "stateAbbr": "IL",
+    "stateName": "Illinois",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Illinois coded snapshot refreshed",
+    "description": "Policy strength now 10/16 with 6 coded domains.",
+    "sourceUrl": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.78,
+    "previousValue": null,
+    "nextValue": 10,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "la-record-updated-2026-04-05T01:01:31.655Z-na-14",
+    "eventType": "record_updated",
+    "stateAbbr": "LA",
+    "stateName": "Louisiana",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Louisiana coded snapshot refreshed",
+    "description": "Policy strength now 14/16 with 6 coded domains.",
+    "sourceUrl": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.86,
+    "previousValue": null,
+    "nextValue": 14,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "md-record-updated-2026-04-05T01:01:31.655Z-na-15",
+    "eventType": "record_updated",
+    "stateAbbr": "MD",
+    "stateName": "Maryland",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Maryland coded snapshot refreshed",
+    "description": "Policy strength now 15/16 with 6 coded domains.",
+    "sourceUrl": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.88,
+    "previousValue": null,
+    "nextValue": 15,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "ne-record-updated-2026-04-05T01:01:31.655Z-na-6",
+    "eventType": "record_updated",
+    "stateAbbr": "NE",
+    "stateName": "Nebraska",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Nebraska coded snapshot refreshed",
+    "description": "Policy strength now 6/16 with 4 coded domains.",
+    "sourceUrl": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 6,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "nh-record-updated-2026-04-05T01:01:31.655Z-na-5",
+    "eventType": "record_updated",
+    "stateAbbr": "NH",
+    "stateName": "New Hampshire",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "New Hampshire coded snapshot refreshed",
+    "description": "Policy strength now 5/16 with 4 coded domains.",
+    "sourceUrl": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.75,
+    "previousValue": null,
+    "nextValue": 5,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "nm-record-updated-2026-04-05T01:01:31.655Z-na-15",
+    "eventType": "record_updated",
+    "stateAbbr": "NM",
+    "stateName": "New Mexico",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "New Mexico coded snapshot refreshed",
+    "description": "Policy strength now 15/16 with 6 coded domains.",
+    "sourceUrl": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 15,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "ny-record-updated-2026-04-05T01:01:31.655Z-na-8",
+    "eventType": "record_updated",
+    "stateAbbr": "NY",
+    "stateName": "New York",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "New York coded snapshot refreshed",
+    "description": "Policy strength now 8/16 with 5 coded domains.",
+    "sourceUrl": "https://its.ny.gov/artificial-intelligence",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.77,
+    "previousValue": null,
+    "nextValue": 8,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "ok-record-updated-2026-04-05T01:01:31.655Z-na-15",
+    "eventType": "record_updated",
+    "stateAbbr": "OK",
+    "stateName": "Oklahoma",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Oklahoma coded snapshot refreshed",
+    "description": "Policy strength now 15/16 with 6 coded domains.",
+    "sourceUrl": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+    "approvalRoute": "auto_approve",
+    "confidence": 0.93,
+    "previousValue": null,
+    "nextValue": 15,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "tn-record-updated-2026-04-05T01:01:31.655Z-na-6",
+    "eventType": "record_updated",
+    "stateAbbr": "TN",
+    "stateName": "Tennessee",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Tennessee coded snapshot refreshed",
+    "description": "Policy strength now 6/16 with 5 coded domains.",
+    "sourceUrl": "https://www.tn.gov/finance/ai-council.html",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.76,
+    "previousValue": null,
+    "nextValue": 6,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "wi-record-updated-2026-04-05T01:01:31.655Z-na-13",
+    "eventType": "record_updated",
+    "stateAbbr": "WI",
+    "stateName": "Wisconsin",
+    "occurredAt": "2026-04-05T01:01:31.655Z",
+    "title": "Wisconsin coded snapshot refreshed",
+    "description": "Policy strength now 13/16 with 6 coded domains.",
+    "sourceUrl": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.87,
+    "previousValue": null,
+    "nextValue": 13,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "fl-record-updated-2026-04-05T01:01:31.654Z-na-12",
+    "eventType": "record_updated",
+    "stateAbbr": "FL",
+    "stateName": "Florida",
+    "occurredAt": "2026-04-05T01:01:31.654Z",
+    "title": "Florida coded snapshot refreshed",
+    "description": "Policy strength now 12/16 with 6 coded domains.",
+    "sourceUrl": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+    "approvalRoute": "sample_audit",
+    "confidence": 0.84,
+    "previousValue": null,
+    "nextValue": 12,
+    "changedFields": [
+      "policy_strength",
+      "policy_domains"
+    ],
+    "priority": 1
+  },
+  {
     "id": "nj-confidence-changed-2026-04-04T21:35:25.590Z-na-0.79",
     "eventType": "confidence_changed",
     "stateAbbr": "NJ",
@@ -120,204 +934,6 @@
     "confidence": 0.58,
     "previousValue": null,
     "nextValue": 0.58,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "ut-confidence-changed-2026-04-04T21:35:25.590Z-na-1",
-    "eventType": "confidence_changed",
-    "stateAbbr": "UT",
-    "stateName": "Utah",
-    "occurredAt": "2026-04-04T21:35:25.590Z",
-    "title": "Utah confidence recalculated",
-    "description": "Confidence is currently 100% based on the latest evidence package.",
-    "sourceUrl": "local://utah-aiframework-pdf",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "va-confidence-changed-2026-04-04T21:35:25.590Z-na-0.88",
-    "eventType": "confidence_changed",
-    "stateAbbr": "VA",
-    "stateName": "Virginia",
-    "occurredAt": "2026-04-04T21:35:25.590Z",
-    "title": "Virginia confidence recalculated",
-    "description": "Confidence is currently 88% based on the latest evidence package.",
-    "sourceUrl": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 0.88,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "wa-confidence-changed-2026-04-04T21:35:25.590Z-na-1",
-    "eventType": "confidence_changed",
-    "stateAbbr": "WA",
-    "stateName": "Washington",
-    "occurredAt": "2026-04-04T21:35:25.590Z",
-    "title": "Washington confidence recalculated",
-    "description": "Confidence is currently 100% based on the latest evidence package.",
-    "sourceUrl": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "wv-confidence-changed-2026-04-04T21:35:25.590Z-na-0.88",
-    "eventType": "confidence_changed",
-    "stateAbbr": "WV",
-    "stateName": "West Virginia",
-    "occurredAt": "2026-04-04T21:35:25.590Z",
-    "title": "West Virginia confidence recalculated",
-    "description": "Confidence is currently 88% based on the latest evidence package.",
-    "sourceUrl": "https://wvde.us/educator-staff-development/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 0.88,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "az-confidence-changed-2026-04-04T21:35:25.589Z-na-0.79",
-    "eventType": "confidence_changed",
-    "stateAbbr": "AZ",
-    "stateName": "Arizona",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Arizona confidence recalculated",
-    "description": "Confidence is currently 79% based on the latest evidence package.",
-    "sourceUrl": "https://www.azed.gov/information-technology/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.79,
-    "previousValue": null,
-    "nextValue": 0.79,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "ca-confidence-changed-2026-04-04T21:35:25.589Z-na-1",
-    "eventType": "confidence_changed",
-    "stateAbbr": "CA",
-    "stateName": "California",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "California confidence recalculated",
-    "description": "Confidence is currently 100% based on the latest evidence package.",
-    "sourceUrl": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
-    "approvalRoute": "auto_approve",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "co-confidence-changed-2026-04-04T21:35:25.589Z-na-0.86",
-    "eventType": "confidence_changed",
-    "stateAbbr": "CO",
-    "stateName": "Colorado",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Colorado confidence recalculated",
-    "description": "Confidence is currently 86% based on the latest evidence package.",
-    "sourceUrl": "https://ed.cde.state.co.us/artificialintelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.86,
-    "previousValue": null,
-    "nextValue": 0.86,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "ct-confidence-changed-2026-04-04T21:35:25.589Z-na-0.89",
-    "eventType": "confidence_changed",
-    "stateAbbr": "CT",
-    "stateName": "Connecticut",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Connecticut confidence recalculated",
-    "description": "Confidence is currently 89% based on the latest evidence package.",
-    "sourceUrl": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.89,
-    "previousValue": null,
-    "nextValue": 0.89,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "de-confidence-changed-2026-04-04T21:35:25.589Z-na-1",
-    "eventType": "confidence_changed",
-    "stateAbbr": "DE",
-    "stateName": "Delaware",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Delaware confidence recalculated",
-    "description": "Confidence is currently 100% based on the latest evidence package.",
-    "sourceUrl": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "ga-confidence-changed-2026-04-04T21:35:25.589Z-na-1",
-    "eventType": "confidence_changed",
-    "stateAbbr": "GA",
-    "stateName": "Georgia",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Georgia confidence recalculated",
-    "description": "Confidence is currently 100% based on the latest evidence package.",
-    "sourceUrl": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "confidence"
-    ],
-    "priority": 2
-  },
-  {
-    "id": "ia-confidence-changed-2026-04-04T21:35:25.589Z-na-0.81",
-    "eventType": "confidence_changed",
-    "stateAbbr": "IA",
-    "stateName": "Iowa",
-    "occurredAt": "2026-04-04T21:35:25.589Z",
-    "title": "Iowa confidence recalculated",
-    "description": "Confidence is currently 81% based on the latest evidence package.",
-    "sourceUrl": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.81,
-    "previousValue": null,
-    "nextValue": 0.81,
     "changedFields": [
       "confidence"
     ],
@@ -457,215 +1073,6 @@
     "priority": 3
   },
   {
-    "id": "ut-approval-route-changed-2026-04-04T21:32:25.590Z-na-human-review",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "UT",
-    "stateName": "Utah",
-    "occurredAt": "2026-04-04T21:32:25.590Z",
-    "title": "Utah routed to human_review",
-    "description": "Approval routing classified the state as human review.",
-    "sourceUrl": "local://utah-aiframework-pdf",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": "human_review",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "va-approval-route-changed-2026-04-04T21:32:25.590Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "VA",
-    "stateName": "Virginia",
-    "occurredAt": "2026-04-04T21:32:25.590Z",
-    "title": "Virginia routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "wa-approval-route-changed-2026-04-04T21:32:25.590Z-na-human-review",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "WA",
-    "stateName": "Washington",
-    "occurredAt": "2026-04-04T21:32:25.590Z",
-    "title": "Washington routed to human_review",
-    "description": "Approval routing classified the state as human review.",
-    "sourceUrl": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": "human_review",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "wv-approval-route-changed-2026-04-04T21:32:25.590Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "WV",
-    "stateName": "West Virginia",
-    "occurredAt": "2026-04-04T21:32:25.590Z",
-    "title": "West Virginia routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://wvde.us/educator-staff-development/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "az-approval-route-changed-2026-04-04T21:32:25.589Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "AZ",
-    "stateName": "Arizona",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Arizona routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://www.azed.gov/information-technology/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.79,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "ca-approval-route-changed-2026-04-04T21:32:25.589Z-na-auto-approve",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "CA",
-    "stateName": "California",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "California routed to auto_approve",
-    "description": "Approval routing classified the state as auto approve.",
-    "sourceUrl": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
-    "approvalRoute": "auto_approve",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": "auto_approve",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "co-approval-route-changed-2026-04-04T21:32:25.589Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "CO",
-    "stateName": "Colorado",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Colorado routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://ed.cde.state.co.us/artificialintelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.86,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "ct-approval-route-changed-2026-04-04T21:32:25.589Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "CT",
-    "stateName": "Connecticut",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Connecticut routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.89,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "de-approval-route-changed-2026-04-04T21:32:25.589Z-na-human-review",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "DE",
-    "stateName": "Delaware",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Delaware routed to human_review",
-    "description": "Approval routing classified the state as human review.",
-    "sourceUrl": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": "human_review",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "ga-approval-route-changed-2026-04-04T21:32:25.589Z-na-human-review",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "GA",
-    "stateName": "Georgia",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Georgia routed to human_review",
-    "description": "Approval routing classified the state as human review.",
-    "sourceUrl": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": "human_review",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
-    "id": "ia-approval-route-changed-2026-04-04T21:32:25.589Z-na-sample-audit",
-    "eventType": "approval_route_changed",
-    "stateAbbr": "IA",
-    "stateName": "Iowa",
-    "occurredAt": "2026-04-04T21:32:25.589Z",
-    "title": "Iowa routed to sample_audit",
-    "description": "Approval routing classified the state as sample audit.",
-    "sourceUrl": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.81,
-    "previousValue": null,
-    "nextValue": "sample_audit",
-    "changedFields": [
-      "approval_route",
-      "audit_status"
-    ],
-    "priority": 3
-  },
-  {
     "id": "nj-source-added-2026-04-04T21:29:25.590Z-na-2",
     "eventType": "source_added",
     "stateAbbr": "NJ",
@@ -784,204 +1191,6 @@
     "sourceUrl": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
     "approvalRoute": "human_review",
     "confidence": 0.58,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "ut-source-added-2026-04-04T21:29:25.590Z-na-8",
-    "eventType": "source_added",
-    "stateAbbr": "UT",
-    "stateName": "Utah",
-    "occurredAt": "2026-04-04T21:29:25.590Z",
-    "title": "Source package attached for Utah",
-    "description": "8 official source documents linked into the canonical record.",
-    "sourceUrl": "local://utah-aiframework-pdf",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 8,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "va-source-added-2026-04-04T21:29:25.590Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "VA",
-    "stateName": "Virginia",
-    "occurredAt": "2026-04-04T21:29:25.590Z",
-    "title": "Source package attached for Virginia",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "wa-source-added-2026-04-04T21:29:25.590Z-na-1",
-    "eventType": "source_added",
-    "stateAbbr": "WA",
-    "stateName": "Washington",
-    "occurredAt": "2026-04-04T21:29:25.590Z",
-    "title": "Source package attached for Washington",
-    "description": "1 official source document linked into the canonical record.",
-    "sourceUrl": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "wv-source-added-2026-04-04T21:29:25.590Z-na-1",
-    "eventType": "source_added",
-    "stateAbbr": "WV",
-    "stateName": "West Virginia",
-    "occurredAt": "2026-04-04T21:29:25.590Z",
-    "title": "Source package attached for West Virginia",
-    "description": "1 official source document linked into the canonical record.",
-    "sourceUrl": "https://wvde.us/educator-staff-development/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "az-source-added-2026-04-04T21:29:25.589Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "AZ",
-    "stateName": "Arizona",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Arizona",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://www.azed.gov/information-technology/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.79,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "ca-source-added-2026-04-04T21:29:25.589Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "CA",
-    "stateName": "California",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for California",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
-    "approvalRoute": "auto_approve",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "co-source-added-2026-04-04T21:29:25.589Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "CO",
-    "stateName": "Colorado",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Colorado",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://ed.cde.state.co.us/artificialintelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.86,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "ct-source-added-2026-04-04T21:29:25.589Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "CT",
-    "stateName": "Connecticut",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Connecticut",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.89,
-    "previousValue": null,
-    "nextValue": 2,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "de-source-added-2026-04-04T21:29:25.589Z-na-7",
-    "eventType": "source_added",
-    "stateAbbr": "DE",
-    "stateName": "Delaware",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Delaware",
-    "description": "7 official source documents linked into the canonical record.",
-    "sourceUrl": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 7,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "ga-source-added-2026-04-04T21:29:25.589Z-na-1",
-    "eventType": "source_added",
-    "stateAbbr": "GA",
-    "stateName": "Georgia",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Georgia",
-    "description": "1 official source document linked into the canonical record.",
-    "sourceUrl": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 1,
-    "changedFields": [
-      "source_documents"
-    ],
-    "priority": 4
-  },
-  {
-    "id": "ia-source-added-2026-04-04T21:29:25.589Z-na-2",
-    "eventType": "source_added",
-    "stateAbbr": "IA",
-    "stateName": "Iowa",
-    "occurredAt": "2026-04-04T21:29:25.589Z",
-    "title": "Source package attached for Iowa",
-    "description": "2 official source documents linked into the canonical record.",
-    "sourceUrl": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.81,
     "previousValue": null,
     "nextValue": 2,
     "changedFields": [
@@ -1116,215 +1325,6 @@
     "confidence": 0.58,
     "previousValue": null,
     "nextValue": 1,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "ut-record-updated-2026-04-04T21:26:25.590Z-na-15",
-    "eventType": "record_updated",
-    "stateAbbr": "UT",
-    "stateName": "Utah",
-    "occurredAt": "2026-04-04T21:26:25.590Z",
-    "title": "Utah coded snapshot refreshed",
-    "description": "Policy strength now 15/16 with 6 coded domains.",
-    "sourceUrl": "local://utah-aiframework-pdf",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 15,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "va-record-updated-2026-04-04T21:26:25.590Z-na-8",
-    "eventType": "record_updated",
-    "stateAbbr": "VA",
-    "stateName": "Virginia",
-    "occurredAt": "2026-04-04T21:26:25.590Z",
-    "title": "Virginia coded snapshot refreshed",
-    "description": "Policy strength now 8/16 with 3 coded domains.",
-    "sourceUrl": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 8,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "wa-record-updated-2026-04-04T21:26:25.590Z-na-12",
-    "eventType": "record_updated",
-    "stateAbbr": "WA",
-    "stateName": "Washington",
-    "occurredAt": "2026-04-04T21:26:25.590Z",
-    "title": "Washington coded snapshot refreshed",
-    "description": "Policy strength now 12/16 with 6 coded domains.",
-    "sourceUrl": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 12,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "wv-record-updated-2026-04-04T21:26:25.590Z-na-8",
-    "eventType": "record_updated",
-    "stateAbbr": "WV",
-    "stateName": "West Virginia",
-    "occurredAt": "2026-04-04T21:26:25.590Z",
-    "title": "West Virginia coded snapshot refreshed",
-    "description": "Policy strength now 8/16 with 3 coded domains.",
-    "sourceUrl": "https://wvde.us/educator-staff-development/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.88,
-    "previousValue": null,
-    "nextValue": 8,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "az-record-updated-2026-04-04T21:26:25.589Z-na-6",
-    "eventType": "record_updated",
-    "stateAbbr": "AZ",
-    "stateName": "Arizona",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Arizona coded snapshot refreshed",
-    "description": "Policy strength now 6/16 with 4 coded domains.",
-    "sourceUrl": "https://www.azed.gov/information-technology/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.79,
-    "previousValue": null,
-    "nextValue": 6,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "ca-record-updated-2026-04-04T21:26:25.589Z-na-14",
-    "eventType": "record_updated",
-    "stateAbbr": "CA",
-    "stateName": "California",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "California coded snapshot refreshed",
-    "description": "Policy strength now 14/16 with 6 coded domains.",
-    "sourceUrl": "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
-    "approvalRoute": "auto_approve",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 14,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "co-record-updated-2026-04-04T21:26:25.589Z-na-9",
-    "eventType": "record_updated",
-    "stateAbbr": "CO",
-    "stateName": "Colorado",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Colorado coded snapshot refreshed",
-    "description": "Policy strength now 9/16 with 3 coded domains.",
-    "sourceUrl": "https://ed.cde.state.co.us/artificialintelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.86,
-    "previousValue": null,
-    "nextValue": 9,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "ct-record-updated-2026-04-04T21:26:25.589Z-na-12",
-    "eventType": "record_updated",
-    "stateAbbr": "CT",
-    "stateName": "Connecticut",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Connecticut coded snapshot refreshed",
-    "description": "Policy strength now 12/16 with 5 coded domains.",
-    "sourceUrl": "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.89,
-    "previousValue": null,
-    "nextValue": 12,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "de-record-updated-2026-04-04T21:26:25.589Z-na-14",
-    "eventType": "record_updated",
-    "stateAbbr": "DE",
-    "stateName": "Delaware",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Delaware coded snapshot refreshed",
-    "description": "Policy strength now 14/16 with 6 coded domains.",
-    "sourceUrl": "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 14,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "ga-record-updated-2026-04-04T21:26:25.589Z-na-7",
-    "eventType": "record_updated",
-    "stateAbbr": "GA",
-    "stateName": "Georgia",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Georgia coded snapshot refreshed",
-    "description": "Policy strength now 7/16 with 3 coded domains.",
-    "sourceUrl": "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting",
-    "approvalRoute": "human_review",
-    "confidence": 1,
-    "previousValue": null,
-    "nextValue": 7,
-    "changedFields": [
-      "policy_strength",
-      "policy_domains"
-    ],
-    "priority": 1
-  },
-  {
-    "id": "ia-record-updated-2026-04-04T21:26:25.589Z-na-7",
-    "eventType": "record_updated",
-    "stateAbbr": "IA",
-    "stateName": "Iowa",
-    "occurredAt": "2026-04-04T21:26:25.589Z",
-    "title": "Iowa coded snapshot refreshed",
-    "description": "Policy strength now 7/16 with 5 coded domains.",
-    "sourceUrl": "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
-    "approvalRoute": "sample_audit",
-    "confidence": 0.81,
-    "previousValue": null,
-    "nextValue": 7,
     "changedFields": [
       "policy_strength",
       "policy_domains"

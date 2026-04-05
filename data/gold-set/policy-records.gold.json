@@ -463,5 +463,566 @@
       "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools"
     ],
     "notes": "Expanded gold candidate. Washington is a reviewed single-release guidance case useful for testing whether smaller source packages can still support robust coding."
+  },
+  {
+    "jurisdiction_id": "state-az",
+    "state_abbr": "AZ",
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.79,
+    "evidence_urls": [
+      "https://www.azed.gov/information-technology/artificial-intelligence",
+      "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Arizona source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-co",
+    "state_abbr": "CO",
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.86,
+    "evidence_urls": [
+      "https://ed.cde.state.co.us/artificialintelligence",
+      "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Colorado source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-fl",
+    "state_abbr": "FL",
+    "ai_use_allowed": 2,
+    "assessment_policy": 3,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.84,
+    "evidence_urls": [
+      "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+      "https://www.fldoe.org/schools/k-12-public-schools/foil.stml",
+      "https://www.fldoe.org/academics/standards/subject-areas/computer-science/standards.stml"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Florida source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-ia",
+    "state_abbr": "IA",
+    "ai_use_allowed": 2,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.81,
+    "evidence_urls": [
+      "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
+      "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Iowa source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-il",
+    "state_abbr": "IL",
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.78,
+    "evidence_urls": [
+      "https://www.isbe.net/Pages/Educational-Technology.aspx",
+      "https://www.isbe.net/Pages/Student-Data-Privacy-Overview.aspx",
+      "https://doit.illinois.gov/content/dam/soi/en/web/doit/meetings/ai-taskforce/reports/20241220-gen-ai-task-force-report.pdf"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Illinois source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-ky",
+    "state_abbr": "KY",
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
+      "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Kentucky source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-la",
+    "state_abbr": "LA",
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.86,
+    "evidence_urls": [
+      "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+      "https://doe.louisiana.gov/school-system-leaders/school-system-support/educational-technology-leaders",
+      "https://doe.louisiana.gov/educators/instructional-support/educational-technology-teachers"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Louisiana source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-md",
+    "state_abbr": "MD",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.88,
+    "evidence_urls": [
+      "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+      "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
+      "https://ai.maryland.gov/"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Maryland source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-mi",
+    "state_abbr": "MI",
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.78,
+    "evidence_urls": [
+      "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Michigan source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-mo",
+    "state_abbr": "MO",
+    "ai_use_allowed": 2,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.88,
+    "evidence_urls": [
+      "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
+      "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Missouri source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-ne",
+    "state_abbr": "NE",
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 1,
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.76,
+    "evidence_urls": [
+      "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+      "https://www.education.ne.gov/safety/digital-guidance-support/",
+      "https://www.education.ne.gov/nce/cis/computer-science-technology-act-guidance/"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Nebraska source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-nh",
+    "state_abbr": "NH",
+    "ai_use_allowed": 1,
+    "assessment_policy": 0,
+    "privacy_policy": 2,
+    "teacher_pd_support": 1,
+    "implementation_stage": 1,
+    "policy_domains": [
+      "ai_use",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.75,
+    "evidence_urls": [
+      "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+      "https://www.education.nh.gov/sites/g/files/ehbemt326/files/inline-documents/sonh/policy-manual.pdf",
+      "https://gc.nh.gov/rules/state_agencies/ed300.html"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current New Hampshire source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-nm",
+    "state_abbr": "NM",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.87,
+    "evidence_urls": [
+      "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+      "https://web.ped.nm.gov/bureaus/curriculum-instruction/",
+      "https://web.ped.nm.gov/bureaus/assessment/"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current New Mexico source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-ny",
+    "state_abbr": "NY",
+    "ai_use_allowed": 2,
+    "assessment_policy": 1,
+    "privacy_policy": 2,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.77,
+    "evidence_urls": [
+      "https://its.ny.gov/artificial-intelligence",
+      "https://its.ny.gov/press-release/governor-issues-statewide-ban-deepseek-ai-government-devices-and",
+      "https://www.nysed.gov/higher-education/new-york-state-frameworks-guidance-and-standards-schools"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current New York source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-ok",
+    "state_abbr": "OK",
+    "ai_use_allowed": 3,
+    "assessment_policy": 3,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "auto_approve",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 1,
+    "evidence_urls": [
+      "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+      "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
+      "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/710442/download"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Oklahoma source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-sc",
+    "state_abbr": "SC",
+    "ai_use_allowed": 1,
+    "assessment_policy": 2,
+    "privacy_policy": 1,
+    "teacher_pd_support": 0,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "governance",
+      "academic_integrity",
+      "privacy"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.82,
+    "evidence_urls": [
+      "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
+      "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current South Carolina source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-tn",
+    "state_abbr": "TN",
+    "ai_use_allowed": 1,
+    "assessment_policy": 1,
+    "privacy_policy": 1,
+    "teacher_pd_support": 1,
+    "implementation_stage": 2,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.76,
+    "evidence_urls": [
+      "https://www.tn.gov/finance/ai-council.html",
+      "https://www.tn.gov/sbe/rules--policies-and-guidance.html",
+      "https://www.tn.gov/sbe/rules--policies-and-guidance/policies.html"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Tennessee source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-wi",
+    "state_abbr": "WI",
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "assessment",
+      "privacy",
+      "teacher_pd",
+      "governance",
+      "academic_integrity"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "assessment_policy",
+      "privacy_policy",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.87,
+    "evidence_urls": [
+      "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+      "https://badgerlink.dpi.wi.gov/about",
+      "https://badgerlink.dpi.wi.gov/bulletin/2025/08/ask-britannica"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current Wisconsin source package for synthesis calibration and field-level evaluation."
+  },
+  {
+    "jurisdiction_id": "state-wv",
+    "state_abbr": "WV",
+    "ai_use_allowed": 3,
+    "assessment_policy": 0,
+    "privacy_policy": 0,
+    "teacher_pd_support": 2,
+    "implementation_stage": 3,
+    "policy_domains": [
+      "ai_use",
+      "teacher_pd",
+      "governance"
+    ],
+    "approval_route": "sample_audit",
+    "required_evidence_fields": [
+      "ai_use_allowed",
+      "teacher_pd_support",
+      "implementation_stage"
+    ],
+    "review_confidence": 0.88,
+    "evidence_urls": [
+      "https://wvde.us/educator-staff-development/artificial-intelligence"
+    ],
+    "notes": "Canonical-aligned gold record expanded from the current West Virginia source package for synthesis calibration and field-level evaluation."
   }
 ]

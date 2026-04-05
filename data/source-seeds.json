@@ -81,6 +81,24 @@
     "notes": "Delaware Department of Education generative AI guidance page."
   },
   {
+    "state_abbr": "FL",
+    "state_name": "Florida",
+    "agency": "Florida Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.fldoe.org/file/7506/SUAISSWA.pdf",
+    "notes": "Florida AI guidance for student supports and well-being."
+  },
+  {
+    "state_abbr": "FL",
+    "state_name": "Florida",
+    "agency": "Florida Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.fldoe.org/schools/k-12-public-schools/foil.stml",
+    "notes": "Florida instructional leadership support page."
+  },
+  {
     "state_abbr": "GA",
     "state_name": "Georgia",
     "agency": "Georgia Department of Education",
@@ -108,6 +126,24 @@
     "notes": "Iowa AI standards development announcement."
   },
   {
+    "state_abbr": "IL",
+    "state_name": "Illinois",
+    "agency": "Illinois State Board of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.isbe.net/Pages/Educational-Technology.aspx",
+    "notes": "ISBE educational technology hub."
+  },
+  {
+    "state_abbr": "IL",
+    "state_name": "Illinois",
+    "agency": "Illinois State Board of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.isbe.net/Pages/Student-Data-Privacy-Overview.aspx",
+    "notes": "ISBE student data privacy overview."
+  },
+  {
     "state_abbr": "KY",
     "state_name": "Kentucky",
     "agency": "Kentucky Department of Education",
@@ -126,6 +162,15 @@
     "notes": "Official KDE AI Guidance Brief PDF."
   },
   {
+    "state_abbr": "LA",
+    "state_name": "Louisiana",
+    "agency": "Louisiana Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://doe.louisiana.gov/about/news-releases/release/2024/08/28/louisiana-releases-guidance-for-responsible-use-of-artificial-intelligence-in-k-12-classrooms",
+    "notes": "Louisiana AI classroom guidance release."
+  },
+  {
     "state_abbr": "MA",
     "state_name": "Massachusetts",
     "agency": "Massachusetts Department of Elementary and Secondary Education",
@@ -142,6 +187,24 @@
     "seed_type": "official_model_policy",
     "url": "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf",
     "notes": "Official Massachusetts Guidance for Artificial Intelligence in K-12 Education PDF."
+  },
+  {
+    "state_abbr": "MD",
+    "state_name": "Maryland",
+    "agency": "Maryland State Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://marylandpublicschools.org/stateboard/documents/edutransformcommittee/2026/0311/artificial-intelligence-guidance-deep-dive-a.pdf",
+    "notes": "Maryland AI guidance deep dive."
+  },
+  {
+    "state_abbr": "MD",
+    "state_name": "Maryland",
+    "agency": "Maryland Department of Information Technology",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
+    "notes": "Maryland responsible AI policy."
   },
   {
     "state_abbr": "ME",
@@ -207,6 +270,33 @@
     "notes": "Release announcing the NCDPI AI guidebook."
   },
   {
+    "state_abbr": "NE",
+    "state_name": "Nebraska",
+    "agency": "Nebraska Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://canvas.education.ne.gov/courses/2025-ai-introduction",
+    "notes": "Nebraska AI introduction course."
+  },
+  {
+    "state_abbr": "NE",
+    "state_name": "Nebraska",
+    "agency": "Nebraska Department of Education",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.education.ne.gov/safety/digital-guidance-support/",
+    "notes": "Nebraska digital guidance support page."
+  },
+  {
+    "state_abbr": "NH",
+    "state_name": "New Hampshire",
+    "agency": "State of New Hampshire",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf",
+    "notes": "New Hampshire AI technologies policy."
+  },
+  {
     "state_abbr": "NJ",
     "state_name": "New Jersey",
     "agency": "New Jersey Department of Education",
@@ -216,6 +306,24 @@
     "notes": "NJDOE artificial intelligence guidance page."
   },
   {
+    "state_abbr": "NM",
+    "state_name": "New Mexico",
+    "agency": "New Mexico Public Education Department",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://web.ped.nm.gov/wp-content/uploads/2025/05/NM-AI-Guidance-Signed-4-29-2025.pdf",
+    "notes": "New Mexico signed AI guidance."
+  },
+  {
+    "state_abbr": "NY",
+    "state_name": "New York",
+    "agency": "New York State Office of Information Technology Services",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://its.ny.gov/artificial-intelligence",
+    "notes": "New York state AI guidance page."
+  },
+  {
     "state_abbr": "OH",
     "state_name": "Ohio",
     "agency": "Ohio Department of Education and Workforce",
@@ -223,6 +331,24 @@
     "seed_type": "official_guidance",
     "url": "https://education.ohio.gov/Topics/AI-in-Ohio-s-Education",
     "notes": "ODEW AI in Ohio's Education hub with model policy and implementation resources."
+  },
+  {
+    "state_abbr": "OK",
+    "state_name": "Oklahoma",
+    "agency": "Oklahoma State Government Publications",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/693898/download",
+    "notes": "Oklahoma AI toolkit archive."
+  },
+  {
+    "state_abbr": "OK",
+    "state_name": "Oklahoma",
+    "agency": "Oklahoma State Government Publications",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
+    "notes": "Oklahoma classroom guidance archive."
   },
   {
     "state_abbr": "OR",
@@ -279,6 +405,15 @@
     "notes": "SCDE AI standards framework."
   },
   {
+    "state_abbr": "TN",
+    "state_name": "Tennessee",
+    "agency": "Tennessee Department of Finance and Administration",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://www.tn.gov/finance/ai-council.html",
+    "notes": "Tennessee AI council page."
+  },
+  {
     "state_abbr": "TX",
     "state_name": "Texas",
     "agency": "Texas Education Agency",
@@ -322,6 +457,15 @@
     "seed_type": "press_release",
     "url": "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools",
     "notes": "Official OSPI release announcing state AI guidance."
+  },
+  {
+    "state_abbr": "WI",
+    "state_name": "Wisconsin",
+    "agency": "Wisconsin Department of Public Instruction",
+    "region_type": "state",
+    "seed_type": "official_guidance",
+    "url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf",
+    "notes": "Wisconsin DPI AI guidance PDF."
   },
   {
     "state_abbr": "WV",

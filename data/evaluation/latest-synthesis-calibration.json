@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-05T00:40:12.902Z",
+  "generated_at": "2026-04-05T01:14:29.110Z",
   "calibration_source": "src/config/synthesisCalibration.json",
-  "matched_gold_records": 16,
+  "matched_gold_records": 35,
   "thresholds": {
     "strong": 0.82,
     "moderate": 0.65
@@ -15,8 +15,8 @@
   },
   "summary_by_band": {
     "strong": {
-      "record_count": 12,
-      "avg_robustness_score": 0.919,
+      "record_count": 24,
+      "avg_robustness_score": 0.888,
       "field_accuracy": {
         "ai_use_allowed": 1,
         "assessment_policy": 1,
@@ -28,12 +28,12 @@
       "stage_accuracy": 1,
       "domain_accuracy": 1,
       "citation_support_rate": 1,
-      "avg_source_document_count": 2.833,
-      "avg_evidence_span_count": 6.333
+      "avg_source_document_count": 2.792,
+      "avg_evidence_span_count": 6.042
     },
     "moderate": {
-      "record_count": 3,
-      "avg_robustness_score": 0.746,
+      "record_count": 10,
+      "avg_robustness_score": 0.78,
       "field_accuracy": {
         "ai_use_allowed": 1,
         "assessment_policy": 1,
@@ -45,8 +45,8 @@
       "stage_accuracy": 1,
       "domain_accuracy": 1,
       "citation_support_rate": 1,
-      "avg_source_document_count": 1.667,
-      "avg_evidence_span_count": 3
+      "avg_source_document_count": 1.9,
+      "avg_evidence_span_count": 4.1
     },
     "limited": {
       "record_count": 1,
@@ -430,6 +430,424 @@
       "citation_support_rate": 1,
       "source_document_count": 1,
       "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-az",
+      "state_abbr": "AZ",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.79,
+      "robustness_score": 0.813,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-co",
+      "state_abbr": "CO",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.86,
+      "robustness_score": 0.804,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 4
+    },
+    {
+      "jurisdiction_id": "state-fl",
+      "state_abbr": "FL",
+      "approval_route": "sample_audit",
+      "source_authority": "secondary_reporting",
+      "confidence": 0.84,
+      "robustness_score": 0.777,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-ia",
+      "state_abbr": "IA",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.81,
+      "robustness_score": 0.822,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-il",
+      "state_abbr": "IL",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.78,
+      "robustness_score": 0.833,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-ky",
+      "state_abbr": "KY",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 0.91,
+      "robustness_score": 0.895,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-la",
+      "state_abbr": "LA",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.86,
+      "robustness_score": 0.869,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-md",
+      "state_abbr": "MD",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.88,
+      "robustness_score": 0.878,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-mi",
+      "state_abbr": "MI",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.78,
+      "robustness_score": 0.743,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 1,
+      "evidence_span_count": 4
+    },
+    {
+      "jurisdiction_id": "state-mo",
+      "state_abbr": "MO",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.88,
+      "robustness_score": 0.813,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 4
+    },
+    {
+      "jurisdiction_id": "state-ne",
+      "state_abbr": "NE",
+      "approval_route": "sample_audit",
+      "source_authority": "binding_law_or_regulation",
+      "confidence": 0.76,
+      "robustness_score": 0.839,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-nh",
+      "state_abbr": "NH",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.75,
+      "robustness_score": 0.82,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-nm",
+      "state_abbr": "NM",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.87,
+      "robustness_score": 0.874,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-ny",
+      "state_abbr": "NY",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.77,
+      "robustness_score": 0.828,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-ok",
+      "state_abbr": "OK",
+      "approval_route": "auto_approve",
+      "source_authority": "official_guidance",
+      "confidence": 0.93,
+      "robustness_score": 0.928,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-sc",
+      "state_abbr": "SC",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.82,
+      "robustness_score": 0.826,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 2,
+      "evidence_span_count": 5
+    },
+    {
+      "jurisdiction_id": "state-tn",
+      "state_abbr": "TN",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.76,
+      "robustness_score": 0.824,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-wi",
+      "state_abbr": "WI",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.87,
+      "robustness_score": 0.874,
+      "robustness_band": "strong",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 3,
+      "evidence_span_count": 6
+    },
+    {
+      "jurisdiction_id": "state-wv",
+      "state_abbr": "WV",
+      "approval_route": "sample_audit",
+      "source_authority": "official_guidance",
+      "confidence": 0.88,
+      "robustness_score": 0.788,
+      "robustness_band": "moderate",
+      "field_scores": {
+        "ai_use_allowed": 1,
+        "assessment_policy": 1,
+        "privacy_policy": 1,
+        "teacher_pd_support": 1,
+        "implementation_stage": 1
+      },
+      "field_accuracy": 1,
+      "stage_match": 1,
+      "domain_match": 1,
+      "citation_support_rate": 1,
+      "source_document_count": 1,
+      "evidence_span_count": 4
     }
   ]
 }

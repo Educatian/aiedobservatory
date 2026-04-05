@@ -13,6 +13,7 @@
     { "id": "review", "label": "Build review queue", "command": "npm", "args": ["run", "pipeline:review-queue"] },
     { "id": "publish", "label": "Publish app data", "command": "npm", "args": ["run", "pipeline:publish"] },
     { "id": "events", "label": "Rebuild policy event feed", "command": "npm", "args": ["run", "pipeline:events"] },
-    { "id": "evaluate", "label": "Refresh evaluation metrics", "command": "npm", "args": ["run", "pipeline:evaluate"] }
+    { "id": "evaluate", "label": "Refresh evaluation metrics", "command": "npm", "args": ["run", "pipeline:evaluate"] },
+    { "id": "evaluate_synthesis", "label": "Refresh synthesis calibration metrics", "command": "npm", "args": ["run", "pipeline:evaluate:synthesis"] }
   ]
 }
