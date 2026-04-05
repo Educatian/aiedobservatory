@@ -28,7 +28,8 @@
       "https://www.cde.ca.gov/ci/pl/aiincalifornia.asp",
       "https://www.cde.ca.gov/nr/el/le/yr26ltr0109.asp"
     ],
-    "notes": "Updated gold record aligned to the current California canonical guidance package."
+    "notes": "Updated gold record aligned to the current California canonical guidance package.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-nj",
@@ -55,7 +56,8 @@
       "https://www.nj.gov/education/innovation/ai/",
       "https://www.nj.gov/education/news/2025/NewJerseyDepartmentofEducationAnnouncesGrantAwardstoSupportArtificialIntelligenceInnovationinEducation.pdf"
     ],
-    "notes": "Deep-research-reviewed hard case. Official New Jersey sources support an emerging, grant-backed AI posture rather than a full statewide formal policy."
+    "notes": "Deep-research-reviewed hard case. Official New Jersey sources support an emerging, grant-backed AI posture rather than a full statewide formal policy.",
+    "gold_label_method": "packet_backed_review"
   },
   {
     "jurisdiction_id": "state-ri",
@@ -81,7 +83,8 @@
       "https://ride.ri.gov/press-releases/rhode-island-department-education-releases-guidance-responsible-use-artificial-intelligence-schools",
       "https://ride.ri.gov/students-families/AI"
     ],
-    "notes": "Updated gold record aligned to the current Rhode Island canonical guidance profile."
+    "notes": "Updated gold record aligned to the current Rhode Island canonical guidance profile.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-tx",
@@ -104,7 +107,8 @@
       "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
       "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training"
     ],
-    "notes": "Deep-research-reviewed hard case. Official Texas sources support governance-only AI training requirements, not a mature statewide classroom policy."
+    "notes": "Deep-research-reviewed hard case. Official Texas sources support governance-only AI training requirements, not a mature statewide classroom policy.",
+    "gold_label_method": "packet_backed_review"
   },
   {
     "jurisdiction_id": "state-va",
@@ -131,7 +135,8 @@
       "https://www.doe.virginia.gov/programs-services/school-operations-support-services/technology-in-education",
       "https://www.doe.virginia.gov/home/showpublisheddocument/51991/638406435372930000"
     ],
-    "notes": "Deep-research-reviewed hard case. Official Virginia sources support guided AI integration and strong statewide educator-support activity."
+    "notes": "Deep-research-reviewed hard case. Official Virginia sources support guided AI integration and strong statewide educator-support activity.",
+    "gold_label_method": "packet_backed_review"
   },
   {
     "jurisdiction_id": "state-ct",
@@ -161,7 +166,8 @@
       "https://portal.ct.gov/das/ctedtech/commission-for-educational-technology/initiatives/artificial-intelligence",
       "https://portal.ct.gov/sde/press-room/press-releases/2025/csde-launches-groundbreaking-artificial-intelligence-pilot-program"
     ],
-    "notes": "Expanded gold candidate. Connecticut combines official AI guidance with pilot-oriented implementation language and teacher-support signals."
+    "notes": "Expanded gold candidate. Connecticut combines official AI guidance with pilot-oriented implementation language and teacher-support signals.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-de",
@@ -193,7 +199,8 @@
       "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/classroom-management-for-generative-ai/",
       "https://education.delaware.gov/educators/academic-support/standards-and-instruction/digital-de/instructional-resources/ai-in-delaware-education/generative-ai/implementing-ai/"
     ],
-    "notes": "Expanded gold candidate. Delaware is a dense multi-document guidance hub and a strong reviewed benchmark for broad domain coverage."
+    "notes": "Expanded gold candidate. Delaware is a dense multi-document guidance hub and a strong reviewed benchmark for broad domain coverage.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-ga",
@@ -218,7 +225,8 @@
     "evidence_urls": [
       "https://login.community.gadoe.org/documents/leveraging-ai-in-the-k-12-setting"
     ],
-    "notes": "Expanded gold candidate. Georgia is retained as an authority-boundary case because the current record relies on secondary-reporting-style access patterns."
+    "notes": "Expanded gold candidate. Georgia is retained as an authority-boundary case because the current record relies on secondary-reporting-style access patterns.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-ma",
@@ -249,7 +257,8 @@
       "https://www.doe.mass.edu/edtech/ai/default.html",
       "https://www.doe.mass.edu/edtech/ai/ai-guidance.pdf"
     ],
-    "notes": "Expanded gold candidate. Massachusetts is a strong official-guidance case with clear assessment redesign and district guidance language."
+    "notes": "Expanded gold candidate. Massachusetts is a strong official-guidance case with clear assessment redesign and district guidance language.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-mn",
@@ -278,7 +287,8 @@
     "evidence_urls": [
       "https://education.mn.gov/MDE/dse/tech/AI/AIEd/"
     ],
-    "notes": "Expanded gold candidate. Minnesota is a mature official AI guidance package with moderate-to-strong coverage across core policy domains."
+    "notes": "Expanded gold candidate. Minnesota is a mature official AI guidance package with moderate-to-strong coverage across core policy domains.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-nc",
@@ -309,7 +319,8 @@
       "local://ncdpi-generative-ai-guidebook",
       "https://www.dpi.nc.gov/news/press-releases/2024/01/16/ncdpi-releases-guidance-use-artificial-intelligence-schools"
     ],
-    "notes": "Expanded gold candidate. North Carolina is an operationalized, high-strength reviewed case with explicit implementation and assessment adaptation guidance."
+    "notes": "Expanded gold candidate. North Carolina is an operationalized, high-strength reviewed case with explicit implementation and assessment adaptation guidance.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-oh",
@@ -340,7 +351,8 @@
       "https://education.ohio.gov/Topics/AI-in-Ohio-s-Education",
       "https://education.ohio.gov/getattachment/Topics/AI-in-Ohio-s-Education/Model-Policy/AI-In-Education-Model-Policy.pdf.aspx?lang=en-US"
     ],
-    "notes": "Expanded gold candidate. Ohio is a strong reviewed benchmark with explicit model policy language and broad domain coverage."
+    "notes": "Expanded gold candidate. Ohio is a strong reviewed benchmark with explicit model policy language and broad domain coverage.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-or",
@@ -369,7 +381,8 @@
       "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
       "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf"
     ],
-    "notes": "Expanded gold candidate. Oregon is useful as a reviewed case with strong PD signals but lighter assessment and privacy specificity."
+    "notes": "Expanded gold candidate. Oregon is useful as a reviewed case with strong PD signals but lighter assessment and privacy specificity.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-pa",
@@ -400,7 +413,8 @@
       "https://www.pa.gov/agencies/education/ai-digital-media-literacy/ai-in-k-12-education",
       "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-takes-action-to-protect-pennsylvanians-using-ai.html"
     ],
-    "notes": "Expanded gold candidate. Pennsylvania provides the clearest current binding-law-or-regulation anchor in the approved public set."
+    "notes": "Expanded gold candidate. Pennsylvania provides the clearest current binding-law-or-regulation anchor in the approved public set.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-ut",
@@ -432,7 +446,8 @@
       "https://schools.utah.gov/informationtechnology/artificialintelligence/index.php",
       "https://schools.utah.gov/informationtechnology/artificialintelligence/_artificialintelligence/AIFramework.pdf"
     ],
-    "notes": "Expanded gold candidate. Utah is a reviewed, guardrail-heavy framework case with unusually rich source packaging."
+    "notes": "Expanded gold candidate. Utah is a reviewed, guardrail-heavy framework case with unusually rich source packaging.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-wa",
@@ -462,7 +477,8 @@
     "evidence_urls": [
       "https://ospi.k12.wa.us/about-ospi/news-center/news-releases/superintendent-reykdal-introduces-guidance-integration-human-centered-ai-washingtons-public-schools"
     ],
-    "notes": "Expanded gold candidate. Washington is a reviewed single-release guidance case useful for testing whether smaller source packages can still support robust coding."
+    "notes": "Expanded gold candidate. Washington is a reviewed single-release guidance case useful for testing whether smaller source packages can still support robust coding.",
+    "gold_label_method": "independent_review"
   },
   {
     "jurisdiction_id": "state-az",
@@ -490,7 +506,8 @@
       "https://www.azed.gov/information-technology/artificial-intelligence",
       "https://www.azed.gov/communications/arizona-first-nation-percentage-students-using-ai-learning-tool"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Arizona source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Arizona source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-co",
@@ -516,7 +533,8 @@
       "https://ed.cde.state.co.us/artificialintelligence",
       "https://www.cde.state.co.us/onlinelearning/artificial-intelligence-resources"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Colorado source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Colorado source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-fl",
@@ -548,7 +566,8 @@
       "https://www.fldoe.org/schools/k-12-public-schools/foil.stml",
       "https://www.fldoe.org/academics/standards/subject-areas/computer-science/standards.stml"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Florida source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Florida source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-ia",
@@ -578,7 +597,8 @@
       "https://educate.iowa.gov/headline-story/2026-02-16/winterset-embraces-ai-serve-educators-and-students",
       "https://educate.iowa.gov/headline-story/2025-11-17/department-seeks-committee-members-computer-science-data-science-and-ai-standards"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Iowa source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Iowa source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-il",
@@ -610,7 +630,8 @@
       "https://www.isbe.net/Pages/Student-Data-Privacy-Overview.aspx",
       "https://doit.illinois.gov/content/dam/soi/en/web/doit/meetings/ai-taskforce/reports/20241220-gen-ai-task-force-report.pdf"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Illinois source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Illinois source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-ky",
@@ -638,7 +659,8 @@
       "https://www.education.ky.gov/districts/tech/Pages/A.I.-in-Kentucky-Education.aspx",
       "https://www.education.ky.gov/districts/tech/Documents/AI%20Guidance%20Brief.pdf"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Kentucky source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Kentucky source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-la",
@@ -670,7 +692,8 @@
       "https://doe.louisiana.gov/school-system-leaders/school-system-support/educational-technology-leaders",
       "https://doe.louisiana.gov/educators/instructional-support/educational-technology-teachers"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Louisiana source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Louisiana source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-md",
@@ -702,7 +725,8 @@
       "https://doit.maryland.gov/policies/ai/Pages/maryland-responsible-ai-policy.aspx",
       "https://ai.maryland.gov/"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Maryland source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Maryland source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-mi",
@@ -727,7 +751,8 @@
     "evidence_urls": [
       "https://www.michigan.gov/mde/services/academic-standards/educational-technology/artificial-intelligence"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Michigan source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Michigan source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-mo",
@@ -753,7 +778,8 @@
       "https://dese.mo.gov/college-career-readiness/curriculum/computer-science",
       "https://dese.mo.gov/media/pdf/artificial-intelligence-guidance-local-education-agencies"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Missouri source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Missouri source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-ne",
@@ -782,7 +808,8 @@
       "https://www.education.ne.gov/safety/digital-guidance-support/",
       "https://www.education.ne.gov/nce/cis/computer-science-technology-act-guidance/"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Nebraska source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Nebraska source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-nh",
@@ -811,7 +838,8 @@
       "https://www.education.nh.gov/sites/g/files/ehbemt326/files/inline-documents/sonh/policy-manual.pdf",
       "https://gc.nh.gov/rules/state_agencies/ed300.html"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current New Hampshire source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current New Hampshire source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-nm",
@@ -843,7 +871,8 @@
       "https://web.ped.nm.gov/bureaus/curriculum-instruction/",
       "https://web.ped.nm.gov/bureaus/assessment/"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current New Mexico source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current New Mexico source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-ny",
@@ -874,7 +903,8 @@
       "https://its.ny.gov/press-release/governor-issues-statewide-ban-deepseek-ai-government-devices-and",
       "https://www.nysed.gov/higher-education/new-york-state-frameworks-guidance-and-standards-schools"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current New York source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current New York source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-ok",
@@ -906,7 +936,8 @@
       "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/716070/download",
       "https://digitalprairie.ok.gov/digital/api/collection/stgovpub/id/710442/download"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Oklahoma source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Oklahoma source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-sc",
@@ -935,7 +966,8 @@
       "https://www.ed.sc.gov/instruction/career-and-technical-education/career-guidance/",
       "https://www.ed.sc.gov/instruction/career-and-technical-education/03-27-2023-south-carolina-artificial-intelligence-framework-reformattedv1pdf/"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current South Carolina source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current South Carolina source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-tn",
@@ -966,7 +998,8 @@
       "https://www.tn.gov/sbe/rules--policies-and-guidance.html",
       "https://www.tn.gov/sbe/rules--policies-and-guidance/policies.html"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Tennessee source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Tennessee source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-wi",
@@ -998,7 +1031,8 @@
       "https://badgerlink.dpi.wi.gov/about",
       "https://badgerlink.dpi.wi.gov/bulletin/2025/08/ask-britannica"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current Wisconsin source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current Wisconsin source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   },
   {
     "jurisdiction_id": "state-wv",
@@ -1023,6 +1057,7 @@
     "evidence_urls": [
       "https://wvde.us/educator-staff-development/artificial-intelligence"
     ],
-    "notes": "Canonical-aligned gold record expanded from the current West Virginia source package for synthesis calibration and field-level evaluation."
+    "notes": "Canonical-aligned gold record expanded from the current West Virginia source package for synthesis calibration and field-level evaluation.",
+    "gold_label_method": "canonical_aligned"
   }
 ]

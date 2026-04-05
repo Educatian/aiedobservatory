@@ -46,6 +46,31 @@ function eventPriority(eventType) {
   }
 }
 
+export function isLegacySyntheticEvent(event) {
+  const title = String(event?.title ?? "");
+  const description = String(event?.description ?? "");
+
+  return (
+    title.includes("coded snapshot refreshed") ||
+    title.startsWith("Source package attached for ") ||
+    description.startsWith("Approval routing classified the state as ") ||
+    description.includes("based on the latest evidence package.")
+  );
+}
+
+function sanitizePolicyEvents(events) {
+  const seenIds = new Set();
+
+  return events
+    .filter(Boolean)
+    .filter((event) => !isLegacySyntheticEvent(event))
+    .filter((event) => {
+      if (!event?.id || seenIds.has(event.id)) return false;
+      seenIds.add(event.id);
+      return true;
+    });
+}
+
 export function buildPolicyEvent({
   eventType,
   stateAbbr,
@@ -92,21 +117,24 @@ export async function readPolicyEvents(projectRoot) {
   }
 
   const raw = await readFile(eventsPath, "utf8");
-  return raw
+  return sanitizePolicyEvents(
+    raw
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(Boolean)
     .map((line) => JSON.parse(line))
-    .sort((left, right) => new Date(right.occurredAt).getTime() - new Date(left.occurredAt).getTime());
+  ).sort((left, right) => new Date(right.occurredAt).getTime() - new Date(left.occurredAt).getTime());
 }
 
 export async function appendPolicyEvents(projectRoot, events) {
-  const normalizedEvents = events
+  const normalizedEvents = sanitizePolicyEvents(
+    events
     .filter(Boolean)
     .map((event) => ({
       ...event,
       occurredAt: normalizeDate(event.occurredAt)
-    }));
+    }))
+  );
 
   if (normalizedEvents.length === 0) {
     return [];
@@ -144,12 +172,14 @@ export async function replacePolicyEvents(projectRoot, events) {
   await mkdir(path.dirname(eventsPath), { recursive: true });
   await mkdir(path.dirname(publicPath), { recursive: true });
 
-  const sorted = [...events]
+  const sorted = sanitizePolicyEvents(
+    [...events]
     .filter(Boolean)
     .map((event) => ({
       ...event,
       occurredAt: normalizeDate(event.occurredAt)
     }))
+  )
     .sort((left, right) => new Date(right.occurredAt).getTime() - new Date(left.occurredAt).getTime());
 
   const jsonl = sorted.map((event) => JSON.stringify(event)).join("\n");

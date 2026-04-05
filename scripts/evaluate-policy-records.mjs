@@ -35,6 +35,15 @@ function average(items, getter) {
     : Number((items.reduce((sum, item) => sum + getter(item), 0) / items.length).toFixed(3));
 }
 
+function inferGoldLabelMethod(goldRecord) {
+  if (goldRecord.gold_label_method) return goldRecord.gold_label_method;
+  if (goldRecord.source_packet) return "packet_backed_review";
+  if (String(goldRecord.notes ?? "").toLowerCase().includes("canonical-aligned gold record")) {
+    return "canonical_aligned";
+  }
+  return "independent_review";
+}
+
 function summarizeFieldAccuracy(results) {
   return Object.fromEntries(
     FIELDS.map((field) => [field, average(results, (item) => item.field_scores[field] ?? 0)])
@@ -62,6 +71,7 @@ async function main() {
   for (const goldRecord of gold) {
     const predicted = canonicalMap.get(goldRecord.jurisdiction_id);
     if (!predicted) continue;
+    const goldLabelMethod = inferGoldLabelMethod(goldRecord);
 
     const fieldScores = {};
     for (const field of FIELDS) {
@@ -96,6 +106,7 @@ async function main() {
     results.push({
       jurisdiction_id: goldRecord.jurisdiction_id,
       state_abbr: goldRecord.state_abbr,
+      gold_label_method: goldLabelMethod,
       source_packet: goldRecord.source_packet ?? null,
       field_scores: fieldScores,
       stage_match: stageMatch,
@@ -106,6 +117,8 @@ async function main() {
     });
   }
 
+  const independentResults = results.filter((item) => item.gold_label_method !== "canonical_aligned");
+  const canonicalAlignedResults = results.filter((item) => item.gold_label_method === "canonical_aligned");
   const packetBackedResults = results.filter((item) => item.source_packet);
   const reviewQueueCount = canonical.filter(
     (record) =>
@@ -119,16 +132,49 @@ async function main() {
     return accumulator;
   }, {});
 
+  const goldMethodDistribution = gold.reduce((accumulator, goldRecord) => {
+    const method = inferGoldLabelMethod(goldRecord);
+    accumulator[method] = (accumulator[method] ?? 0) + 1;
+    return accumulator;
+  }, {});
+
+  const metricsBase = independentResults.length > 0 ? independentResults : results;
+  const metricsScope =
+    independentResults.length > 0 ? "independent_gold_subset" : "all_gold_records";
+
   const summary = {
     generated_at: new Date().toISOString(),
     gold_record_count: gold.length,
     matched_record_count: results.length,
     gold_coverage_rate: rate(results.length, gold.length),
-    field_accuracy: summarizeFieldAccuracy(results),
-    stage_accuracy: average(results, (item) => item.stage_match),
-    domain_accuracy: average(results, (item) => item.domain_match),
-    approval_route_accuracy: average(results, (item) => item.approval_route_match),
-    citation_support_rate: rate(citationSupportHits, citationSupportTotal),
+    metrics_scope: metricsScope,
+    gold_label_method_distribution: goldMethodDistribution,
+    field_accuracy: summarizeFieldAccuracy(metricsBase),
+    stage_accuracy: average(metricsBase, (item) => item.stage_match),
+    domain_accuracy: average(metricsBase, (item) => item.domain_match),
+    approval_route_accuracy: average(metricsBase, (item) => item.approval_route_match),
+    citation_support_rate:
+      metricsBase === results
+        ? rate(citationSupportHits, citationSupportTotal)
+        : rate(
+            metricsBase.reduce((sum, item) => {
+              const goldRecord = gold.find((entry) => entry.jurisdiction_id === item.jurisdiction_id);
+              const required = (goldRecord?.required_evidence_fields ?? []).length;
+              return sum + required;
+            }, 0) === 0
+              ? 0
+              : metricsBase.reduce((sum, item) => {
+                  const goldRecord = gold.find((entry) => entry.jurisdiction_id === item.jurisdiction_id);
+                  const predicted = canonicalMap.get(item.jurisdiction_id);
+                  const required = new Set((goldRecord?.required_evidence_fields ?? []).filter(Boolean));
+                  const evidence = new Set((predicted?.evidence_spans ?? []).map((span) => span.field));
+                  return sum + [...required].filter((field) => evidence.has(field)).length;
+                }, 0),
+            metricsBase.reduce((sum, item) => {
+              const goldRecord = gold.find((entry) => entry.jurisdiction_id === item.jurisdiction_id);
+              return sum + (goldRecord?.required_evidence_fields ?? []).filter(Boolean).length;
+            }, 0)
+          ),
     missing_required_citation_rate:
       citationSupportTotal === 0 ? null : Number((1 - citationSupportHits / citationSupportTotal).toFixed(3)),
     supported_positive_rate: rate(supportedPositiveHits, supportedPositiveTotal),
@@ -144,6 +190,22 @@ async function main() {
       canonical.filter((record) => record.deep_research_recommended === true).length,
       canonical.length
     ),
+    independent_subset: {
+      gold_record_count: gold.filter((item) => inferGoldLabelMethod(item) !== "canonical_aligned").length,
+      matched_record_count: independentResults.length,
+      field_accuracy: summarizeFieldAccuracy(independentResults),
+      stage_accuracy: average(independentResults, (item) => item.stage_match),
+      domain_accuracy: average(independentResults, (item) => item.domain_match),
+      approval_route_accuracy: average(independentResults, (item) => item.approval_route_match)
+    },
+    canonical_aligned_subset: {
+      gold_record_count: gold.filter((item) => inferGoldLabelMethod(item) === "canonical_aligned").length,
+      matched_record_count: canonicalAlignedResults.length,
+      field_accuracy: summarizeFieldAccuracy(canonicalAlignedResults),
+      stage_accuracy: average(canonicalAlignedResults, (item) => item.stage_match),
+      domain_accuracy: average(canonicalAlignedResults, (item) => item.domain_match),
+      approval_route_accuracy: average(canonicalAlignedResults, (item) => item.approval_route_match)
+    },
     packet_backed_subset: {
       gold_record_count: gold.filter((item) => item.source_packet).length,
       matched_record_count: packetBackedResults.length,
@@ -152,6 +214,13 @@ async function main() {
       domain_accuracy: average(packetBackedResults, (item) => item.domain_match),
       approval_route_accuracy: average(packetBackedResults, (item) => item.approval_route_match)
     },
+    warnings:
+      canonicalAlignedResults.length > 0
+        ? [
+            "Primary metrics are reported against the independent gold subset.",
+            "Canonical-aligned gold records are retained for calibration coverage but should not be used as the sole quality claim."
+          ]
+        : [],
     results
   };
 

@@ -1,7 +1,10 @@
 {
-  "generated_at": "2026-04-05T01:14:29.110Z",
+  "generated_at": "2026-04-05T20:54:22.771Z",
   "calibration_source": "src/config/synthesisCalibration.json",
-  "matched_gold_records": 35,
+  "matched_gold_records": 16,
+  "total_matched_gold_records": 35,
+  "metrics_scope": "independent_gold_subset",
+  "excluded_canonical_aligned_records": 19,
   "thresholds": {
     "strong": 0.82,
     "moderate": 0.65
@@ -15,8 +18,8 @@
   },
   "summary_by_band": {
     "strong": {
-      "record_count": 24,
-      "avg_robustness_score": 0.888,
+      "record_count": 12,
+      "avg_robustness_score": 0.919,
       "field_accuracy": {
         "ai_use_allowed": 1,
         "assessment_policy": 1,
@@ -28,12 +31,12 @@
       "stage_accuracy": 1,
       "domain_accuracy": 1,
       "citation_support_rate": 1,
-      "avg_source_document_count": 2.792,
-      "avg_evidence_span_count": 6.042
+      "avg_source_document_count": 2.833,
+      "avg_evidence_span_count": 6.333
     },
     "moderate": {
-      "record_count": 10,
-      "avg_robustness_score": 0.78,
+      "record_count": 3,
+      "avg_robustness_score": 0.746,
       "field_accuracy": {
         "ai_use_allowed": 1,
         "assessment_policy": 1,
@@ -45,8 +48,8 @@
       "stage_accuracy": 1,
       "domain_accuracy": 1,
       "citation_support_rate": 1,
-      "avg_source_document_count": 1.9,
-      "avg_evidence_span_count": 4.1
+      "avg_source_document_count": 1.667,
+      "avg_evidence_span_count": 3
     },
     "limited": {
       "record_count": 1,
@@ -76,12 +79,14 @@
   },
   "recommendations": [
     "Current robustness ordering is directionally consistent with gold-set field accuracy.",
-    "Use this report together with gold-set growth before changing thresholds."
+    "Use this report together with gold-set growth before changing thresholds.",
+    "Canonical-aligned gold records were excluded from calibration metrics to reduce leakage."
   ],
   "results": [
     {
       "jurisdiction_id": "state-ca",
       "state_abbr": "CA",
+      "gold_label_method": "independent_review",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -104,6 +109,7 @@
     {
       "jurisdiction_id": "state-nj",
       "state_abbr": "NJ",
+      "gold_label_method": "packet_backed_review",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.79,
@@ -126,6 +132,7 @@
     {
       "jurisdiction_id": "state-ri",
       "state_abbr": "RI",
+      "gold_label_method": "independent_review",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -148,6 +155,7 @@
     {
       "jurisdiction_id": "state-tx",
       "state_abbr": "TX",
+      "gold_label_method": "packet_backed_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 0.58,
@@ -170,6 +178,7 @@
     {
       "jurisdiction_id": "state-va",
       "state_abbr": "VA",
+      "gold_label_method": "packet_backed_review",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.88,
@@ -192,6 +201,7 @@
     {
       "jurisdiction_id": "state-ct",
       "state_abbr": "CT",
+      "gold_label_method": "independent_review",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.89,
@@ -214,6 +224,7 @@
     {
       "jurisdiction_id": "state-de",
       "state_abbr": "DE",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -236,6 +247,7 @@
     {
       "jurisdiction_id": "state-ga",
       "state_abbr": "GA",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "secondary_reporting",
       "confidence": 1,
@@ -258,6 +270,7 @@
     {
       "jurisdiction_id": "state-ma",
       "state_abbr": "MA",
+      "gold_label_method": "independent_review",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 0.94,
@@ -280,6 +293,7 @@
     {
       "jurisdiction_id": "state-mn",
       "state_abbr": "MN",
+      "gold_label_method": "independent_review",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 0.93,
@@ -302,6 +316,7 @@
     {
       "jurisdiction_id": "state-nc",
       "state_abbr": "NC",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -324,6 +339,7 @@
     {
       "jurisdiction_id": "state-oh",
       "state_abbr": "OH",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -346,6 +362,7 @@
     {
       "jurisdiction_id": "state-or",
       "state_abbr": "OR",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -368,6 +385,7 @@
     {
       "jurisdiction_id": "state-pa",
       "state_abbr": "PA",
+      "gold_label_method": "independent_review",
       "approval_route": "auto_approve",
       "source_authority": "binding_law_or_regulation",
       "confidence": 0.96,
@@ -390,6 +408,7 @@
     {
       "jurisdiction_id": "state-ut",
       "state_abbr": "UT",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -412,6 +431,7 @@
     {
       "jurisdiction_id": "state-wa",
       "state_abbr": "WA",
+      "gold_label_method": "independent_review",
       "approval_route": "human_review",
       "source_authority": "official_guidance",
       "confidence": 1,
@@ -434,6 +454,7 @@
     {
       "jurisdiction_id": "state-az",
       "state_abbr": "AZ",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.79,
@@ -456,6 +477,7 @@
     {
       "jurisdiction_id": "state-co",
       "state_abbr": "CO",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.86,
@@ -478,6 +500,7 @@
     {
       "jurisdiction_id": "state-fl",
       "state_abbr": "FL",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "secondary_reporting",
       "confidence": 0.84,
@@ -500,6 +523,7 @@
     {
       "jurisdiction_id": "state-ia",
       "state_abbr": "IA",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.81,
@@ -522,6 +546,7 @@
     {
       "jurisdiction_id": "state-il",
       "state_abbr": "IL",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.78,
@@ -544,6 +569,7 @@
     {
       "jurisdiction_id": "state-ky",
       "state_abbr": "KY",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 0.91,
@@ -566,6 +592,7 @@
     {
       "jurisdiction_id": "state-la",
       "state_abbr": "LA",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.86,
@@ -588,6 +615,7 @@
     {
       "jurisdiction_id": "state-md",
       "state_abbr": "MD",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.88,
@@ -610,6 +638,7 @@
     {
       "jurisdiction_id": "state-mi",
       "state_abbr": "MI",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.78,
@@ -632,6 +661,7 @@
     {
       "jurisdiction_id": "state-mo",
       "state_abbr": "MO",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.88,
@@ -654,6 +684,7 @@
     {
       "jurisdiction_id": "state-ne",
       "state_abbr": "NE",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "binding_law_or_regulation",
       "confidence": 0.76,
@@ -676,6 +707,7 @@
     {
       "jurisdiction_id": "state-nh",
       "state_abbr": "NH",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.75,
@@ -698,6 +730,7 @@
     {
       "jurisdiction_id": "state-nm",
       "state_abbr": "NM",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.87,
@@ -720,6 +753,7 @@
     {
       "jurisdiction_id": "state-ny",
       "state_abbr": "NY",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.77,
@@ -742,6 +776,7 @@
     {
       "jurisdiction_id": "state-ok",
       "state_abbr": "OK",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "auto_approve",
       "source_authority": "official_guidance",
       "confidence": 0.93,
@@ -764,6 +799,7 @@
     {
       "jurisdiction_id": "state-sc",
       "state_abbr": "SC",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.82,
@@ -786,6 +822,7 @@
     {
       "jurisdiction_id": "state-tn",
       "state_abbr": "TN",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.76,
@@ -808,6 +845,7 @@
     {
       "jurisdiction_id": "state-wi",
       "state_abbr": "WI",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.87,
@@ -830,6 +868,7 @@
     {
       "jurisdiction_id": "state-wv",
       "state_abbr": "WV",
+      "gold_label_method": "canonical_aligned",
       "approval_route": "sample_audit",
       "source_authority": "official_guidance",
       "confidence": 0.88,

@@ -27,6 +27,9 @@ async function main() {
   const sourceSeeds = JSON.parse(seedsRaw);
   const existingStates = new Set(canonicalRecords.map((record) => record.state_abbr));
   const existingSeedUrls = new Set(sourceSeeds.map((seed) => seed.url));
+  const newSeedCandidates = (additions.source_seeds ?? []).filter(
+    (seed) => !existingSeedUrls.has(seed.url)
+  );
 
   const canonicalByState = new Map(
     canonicalRecords.map((record) => [record.state_abbr, record])
@@ -40,7 +43,7 @@ async function main() {
   const mergedCanonical = [...canonicalByState.values()].sort(sortByState);
   const mergedSeeds = [...sourceSeeds];
 
-  for (const seed of additions.source_seeds ?? []) {
+  for (const seed of newSeedCandidates) {
     if (existingSeedUrls.has(seed.url)) continue;
     mergedSeeds.push(seed);
     existingSeedUrls.add(seed.url);
@@ -70,8 +73,7 @@ async function main() {
       })
     );
 
-  const newSeedEvents = (additions.source_seeds ?? [])
-    .filter((seed) => !existingSeedUrls.has(seed.url))
+  const newSeedEvents = newSeedCandidates
     .map((seed) =>
       buildPolicyEvent({
         eventType: "source_added",

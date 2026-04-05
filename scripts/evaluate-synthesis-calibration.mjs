@@ -82,6 +82,15 @@ function makeMap(items) {
   return new Map(items.map((item) => [item.jurisdiction_id, item]));
 }
 
+function inferGoldLabelMethod(goldRecord) {
+  if (goldRecord.gold_label_method) return goldRecord.gold_label_method;
+  if (goldRecord.source_packet) return "packet_backed_review";
+  if (String(goldRecord.notes ?? "").toLowerCase().includes("canonical-aligned gold record")) {
+    return "canonical_aligned";
+  }
+  return "independent_review";
+}
+
 async function main() {
   const [canonicalRaw, goldRaw, calibrationRaw] = await Promise.all([
     readFile(canonicalPath, "utf8"),
@@ -99,6 +108,7 @@ async function main() {
   for (const goldRecord of gold) {
     const predicted = canonicalMap.get(goldRecord.jurisdiction_id);
     if (!predicted) continue;
+    const goldLabelMethod = inferGoldLabelMethod(goldRecord);
 
     const fieldScores = Object.fromEntries(
       FIELDS.map((field) => [field, predicted[field] === goldRecord[field] ? 1 : 0])
@@ -112,6 +122,7 @@ async function main() {
     results.push({
       jurisdiction_id: goldRecord.jurisdiction_id,
       state_abbr: goldRecord.state_abbr,
+      gold_label_method: goldLabelMethod,
       approval_route: predicted.approval_route ?? null,
       source_authority: predicted.source_authority ?? null,
       confidence: Number(predicted.confidence ?? 0),
@@ -134,10 +145,13 @@ async function main() {
     });
   }
 
+  const independentResults = results.filter((item) => item.gold_label_method !== "canonical_aligned");
+  const metricsBase = independentResults.length > 0 ? independentResults : results;
+
   const grouped = {
-    strong: results.filter((item) => item.robustness_band === "strong"),
-    moderate: results.filter((item) => item.robustness_band === "moderate"),
-    limited: results.filter((item) => item.robustness_band === "limited")
+    strong: metricsBase.filter((item) => item.robustness_band === "strong"),
+    moderate: metricsBase.filter((item) => item.robustness_band === "moderate"),
+    limited: metricsBase.filter((item) => item.robustness_band === "limited")
   };
 
   const summaryByBand = Object.fromEntries(
@@ -171,7 +185,10 @@ async function main() {
   const summary = {
     generated_at: new Date().toISOString(),
     calibration_source: "src/config/synthesisCalibration.json",
-    matched_gold_records: results.length,
+    matched_gold_records: metricsBase.length,
+    total_matched_gold_records: results.length,
+    metrics_scope: independentResults.length > 0 ? "independent_gold_subset" : "all_gold_records",
+    excluded_canonical_aligned_records: results.length - metricsBase.length,
     thresholds: calibration.thresholds,
     weights: calibration.weights,
     summary_by_band: summaryByBand,
@@ -183,7 +200,10 @@ async function main() {
       monotonicFieldAccuracy
         ? "Current robustness ordering is directionally consistent with gold-set field accuracy."
         : "Current robustness ordering is not monotonic; review weights or thresholds.",
-      "Use this report together with gold-set growth before changing thresholds."
+      "Use this report together with gold-set growth before changing thresholds.",
+      independentResults.length > 0
+        ? "Canonical-aligned gold records were excluded from calibration metrics to reduce leakage."
+        : "No canonical-aligned gold records were excluded."
     ],
     results
   };

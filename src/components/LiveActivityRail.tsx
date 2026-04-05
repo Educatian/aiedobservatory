@@ -68,7 +68,10 @@ export function LiveActivityRail({
             <h4>Update activity</h4>
           </div>
         </div>
-        <p className="live-empty">No policy events have been generated yet.</p>
+        <p className="live-empty">
+          No runtime events have been recorded yet. The live rail will repopulate after the next
+          routed refresh or source update.
+        </p>
       </section>
     );
   }
@@ -87,7 +90,7 @@ export function LiveActivityRail({
         <div>
           <span className="page-kicker">Live Surveillance</span>
           <h4>Update activity</h4>
-          <p>Polling canonical events and mapping recent state-level change signals.</p>
+          <p>Reading the runtime event log and mapping recent state-level change signals.</p>
         </div>
 
         <button

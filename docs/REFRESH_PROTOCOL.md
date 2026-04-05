@@ -77,3 +77,9 @@ The refresh protocol exists to support:
 - periodic reevaluation of synthesis robustness
 
 It should be treated as part of the research design, not just deployment plumbing.
+
+## Evaluation boundary
+
+Primary quality claims should come from the `independent_gold_subset` reported in `data/evaluation/latest-evaluation.json`.
+
+Canonical-aligned gold records may still be retained for coverage, regression checks, and synthesis calibration support, but they should not be used as the sole evidence of system quality.
