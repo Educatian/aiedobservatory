@@ -35,7 +35,7 @@ type NavSection =
 
 const WORKSPACE_SESSION_KEY = "academic-sentinel.workspace-session";
 const TEST_WORKSPACE_SESSION: WorkspaceSession = {
-  displayName: "Policy Atlas Workspace",
+  displayName: "Observatory Access",
   email: "workspace@local.aied-policy-atlas",
   organization: "AI Education Policy Observatory Lab"
 };
@@ -110,6 +110,16 @@ function getInitials(value: string): string {
     .join("");
 
   return initials || "AO";
+}
+
+function isLocalWorkspaceSession(session: WorkspaceSession | null): boolean {
+  return Boolean(session?.email.endsWith("@local.aied-policy-atlas"));
+}
+
+function getWorkspaceLabel(session: WorkspaceSession | null): string {
+  if (!session) return "Research Workspace";
+  if (isLocalWorkspaceSession(session)) return "Observatory Access";
+  return session.displayName;
 }
 
 function App() {
@@ -483,7 +493,7 @@ function App() {
         <div className="side-profile">
           <div className="profile-avatar">{getInitials(workspaceSession?.displayName ?? "AS")}</div>
           <div>
-            <strong>{workspaceSession?.displayName ?? "Research Workspace"}</strong>
+            <strong>{getWorkspaceLabel(workspaceSession)}</strong>
             <span>{workspaceSession?.organization ?? "Local session access"}</span>
           </div>
           <button type="button" className="icon-button" onClick={handleWorkspaceLogout} aria-label="Log out">
@@ -560,7 +570,7 @@ function App() {
             {workspaceSession ? (
               <button type="button" className="workspace-chip" onClick={handleWorkspaceLogout}>
                 <span className="workspace-avatar">{getInitials(workspaceSession.displayName)}</span>
-                {workspaceSession.displayName}
+                {getWorkspaceLabel(workspaceSession)}
               </button>
             ) : null}
           </div>

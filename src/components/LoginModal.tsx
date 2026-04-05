@@ -58,7 +58,7 @@ export function LoginModal({ open, onClose, onSubmit, onSkipTesting }: LoginModa
             <input
               value={displayName}
               onChange={(event) => setDisplayName(event.target.value)}
-              placeholder="Policy Atlas Workspace"
+              placeholder="Research access"
               type="text"
             />
           </label>
