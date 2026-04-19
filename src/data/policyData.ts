@@ -346,7 +346,28 @@ export const policyRecords: PolicyRecord[] = stateTiles.map((tile) => {
       deepResearchReasons: canonicalMatch.deep_research_reasons ?? [],
       lastUpdated: canonicalMatch.updated_at?.slice(0, 10) ?? "2026-04-04",
       confidence: canonicalMatch.confidence ?? 0.1,
-      evidenceSpans: canonicalMatch.evidence_spans ?? []
+      evidenceSpans: canonicalMatch.evidence_spans ?? [],
+      teacherGuidance: canonicalMatch.teacher_guidance
+        ? {
+            summary: canonicalMatch.teacher_guidance.summary ?? "",
+            allowedUses: canonicalMatch.teacher_guidance.allowed_uses ?? [],
+            prohibitedUses: canonicalMatch.teacher_guidance.prohibited_uses ?? [],
+            ageRestrictions: (canonicalMatch.teacher_guidance.age_restrictions ?? []).map((r: any) => ({
+              category: r.category,
+              description: r.description,
+              sourceQuote: r.source_quote ?? undefined,
+              sourceUrl: r.source_url ?? undefined
+            })),
+            usageRestrictions: (canonicalMatch.teacher_guidance.usage_restrictions ?? []).map((r: any) => ({
+              category: r.category,
+              description: r.description,
+              sourceQuote: r.source_quote ?? undefined,
+              sourceUrl: r.source_url ?? undefined
+            })),
+            contactResource: canonicalMatch.teacher_guidance.contact_resource ?? undefined,
+            lastReviewed: canonicalMatch.teacher_guidance.last_reviewed ?? undefined
+          }
+        : undefined
     };
   }
 

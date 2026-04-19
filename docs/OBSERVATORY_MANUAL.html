@@ -1,0 +1,2069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The AI Education Policy Observatory — A Reader's Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500;1,8..60,600&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --paper:       #ffffff;
+  --paper-alt:   #f5f4fa;
+  --rule:        #c4bfe8;
+  --rule-soft:   #ececf3;
+  --ink:         #000000;
+  --ink-soft:    #1a1333;
+  --muted:       #5b5280;
+  --accent:      #6d28d9;
+  --accent-2:    #a78bfa;
+  --accent-soft: #ece6fb;
+  --mark:        #d4c6f8;
+  --warn:        oklch(0.52 0.15 25);
+  --code-bg:     #0a0a0a;
+  --code-ink:    #f5f5f5;
+  --code-accent: oklch(0.78 0.12 290);
+  --measure:     68ch;
+  --page:        880px;
+}
+
+* { box-sizing: border-box; }
+html { background: #f0f0f0; -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font: 17px/1.55 "Source Serif 4", Georgia, serif;
+  color: var(--ink);
+  font-variation-settings: "opsz" 14;
+}
+
+.page {
+  max-width: var(--page);
+  margin: 0 auto;
+  background: var(--paper);
+  background-image: radial-gradient(rgba(0,0,0,0.012) 1px, transparent 1px);
+  background-size: 3px 3px;
+  padding: 72px 80px 96px;
+  box-shadow: 0 0 0 1px var(--rule), 0 30px 80px rgba(30, 16, 72, 0.06);
+  min-height: 100vh;
+}
+
+/* ═════ COVER ═════ */
+.cover { margin-bottom: 88px; }
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 600 12px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 80px;
+}
+.cover-top .mark { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); }
+.cover-top .mark svg { display: block; }
+
+.cover h1 {
+  font: 500 clamp(44px, 6vw, 72px)/0.98 "Source Serif 4", serif;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+  max-width: 14ch;
+  color: var(--ink);
+}
+.cover h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+.cover .deck {
+  font: 400 20px/1.4 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  margin: 0 0 72px;
+  max-width: 38ch;
+}
+
+.cover-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--ink);
+  margin: 0;
+}
+.cover-meta > div { margin: 0; }
+.cover-meta dt {
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.cover-meta dd { font: 500 14px/1.35 "Inter Tight", sans-serif; margin: 0; color: var(--ink-soft); }
+
+/* ═════ TOC ═════ */
+.toc { margin: 96px 0 120px; }
+.toc h2 {
+  font: 600 11px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+}
+.toc .part-label {
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 18px 0 8px;
+  padding-top: 14px;
+  border-top: 1px dotted var(--rule);
+  break-inside: avoid;
+  break-after: avoid-column;
+}
+.toc ol {
+  column-count: 2;
+  column-gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toc li {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: baseline;
+  gap: 10px;
+  font: 400 14px/1.4 "Inter Tight", sans-serif;
+  padding: 9px 0;
+  border-bottom: 1px dotted var(--rule);
+  break-inside: avoid;
+}
+.toc li .n { color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+.toc li .t { color: var(--ink); }
+.toc li .p { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; }
+.toc li.appendix .n { color: var(--accent); font-style: italic; font-family: "Source Serif 4", serif; font-size: 16px; }
+
+/* ═════ CHAPTER ═════ */
+.chapter { margin: 88px 0; }
+.chapter-header {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  border-top: 2px solid var(--ink);
+  padding-top: 28px;
+  margin-bottom: 36px;
+}
+.chapter-header .num {
+  font: italic 500 72px/0.9 "Source Serif 4", serif;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.chapter-header h2 {
+  font: 500 40px/1.05 "Source Serif 4", serif;
+  letter-spacing: -0.015em;
+  max-width: 20ch;
+  margin: 4px 0 8px;
+  color: var(--ink);
+}
+.chapter-header .tagline {
+  font: 400 13px/1.4 "Inter Tight", sans-serif;
+  color: var(--muted);
+  grid-column: 2;
+}
+
+.chapter p, .chapter ul, .chapter ol, .chapter h3, .chapter h4,
+.chapter .callout, .chapter .pullquote, .chapter .pullquote-wide,
+.chapter .prompt, .chapter table, .chapter .grid, .chapter .stages,
+.chapter .compare, .chapter pre, .chapter hr.fleuron, .chapter .figure {
+  max-width: var(--measure);
+}
+
+.chapter p { margin: 0 0 1.1em; text-wrap: pretty; }
+.chapter .lead {
+  font: 400 21px/1.5 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  margin: 0 0 1.4em;
+  text-wrap: balance;
+  max-width: 52ch;
+}
+.chapter > p:first-of-type::first-letter {
+  font: 500 64px/0.9 "Source Serif 4", serif;
+  color: var(--accent);
+  float: left;
+  padding: 4px 10px 0 0;
+  margin-top: 4px;
+}
+
+.chapter h3 {
+  font: 500 22px/1.3 "Source Serif 4", serif;
+  color: var(--ink);
+  margin: 2em 0 0.6em;
+  letter-spacing: -0.005em;
+}
+.chapter h3::before { content: "§ "; color: var(--accent); font-style: italic; }
+.chapter h4 {
+  font: 600 12px/1.3 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 1.6em 0 0.6em;
+}
+.chapter ul, .chapter ol { padding-left: 22px; margin: 0 0 1.1em; }
+.chapter li { margin-bottom: 0.35em; }
+
+.chapter a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* ═════ CALLOUT ═════ */
+.callout {
+  padding: 20px 24px 20px 28px;
+  border-left: 3px solid var(--accent);
+  background: var(--paper-alt);
+  margin: 1.4em 0;
+}
+.callout .label {
+  display: inline-block;
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.callout p { margin: 0; }
+.callout p + p { margin-top: 0.8em; }
+.callout.warn { border-left-color: var(--warn); }
+.callout.warn .label { color: var(--warn); }
+
+/* ═════ PULLQUOTE ═════ */
+.pullquote {
+  float: right;
+  width: 22ch;
+  margin: 0.2em 0 0.8em 28px;
+  font: italic 400 26px/1.25 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+}
+.pullquote-wide {
+  font: italic 400 28px/1.3 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  margin: 1.6em 0;
+  padding: 0 0 0 16px;
+  border-left: 2px solid var(--accent);
+  max-width: 48ch;
+}
+.pullquote-wide em { color: var(--accent); font-style: italic; }
+
+/* ═════ PROMPT BLOCK ═════ */
+.prompt {
+  position: relative;
+  font: 500 13px/1.55 "JetBrains Mono", monospace;
+  background: #fafcfa;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink);
+  padding: 28px 20px 18px;
+  margin: 1.4em 0;
+  color: var(--ink-soft);
+}
+.prompt::before {
+  content: "PROMPT";
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  background: var(--paper);
+  padding: 0 8px;
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.prompt .label { font-weight: 600; color: var(--accent); }
+
+/* ═════ TABLE ═════ */
+.chapter table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font: 400 13px/1.45 "Inter Tight", sans-serif;
+}
+.chapter th {
+  font: 600 11px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--ink);
+}
+.chapter th.num, .chapter td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.chapter td {
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+.chapter tr:last-child td { border-bottom: 1px solid var(--ink); }
+
+/* ═════ GRID ═════ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 1.4em 0;
+}
+.cell { background: var(--paper); padding: 20px 22px; }
+.cell h5 { font: 500 15px/1.3 "Source Serif 4", serif; margin: 0 0 8px; color: var(--ink); }
+.cell .tag {
+  display: inline-block;
+  font: italic 500 15px/1 "Source Serif 4", serif;
+  color: var(--accent);
+  margin-right: 6px;
+}
+.cell ul { margin: 0 0 10px; padding-left: 18px; font-size: 13px; }
+.cell ul li { font-family: "Inter Tight", sans-serif; color: var(--ink-soft); margin-bottom: 2px; }
+.cell .good {
+  font: italic 400 13px/1.4 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule-soft);
+}
+.cell .bad {
+  font: italic 400 13px/1.4 "Source Serif 4", serif;
+  color: var(--mark-ink, var(--ink));
+  background: var(--mark);
+  margin-top: 8px;
+  padding: 8px 10px 8px 10px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+/* ═════ REFERENCES ═════ */
+ol.references {
+  list-style: none;
+  counter-reset: ref;
+  margin: 1.4em 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+ol.references > li {
+  counter-increment: ref;
+  position: relative;
+  padding: 18px 0 18px 46px;
+  border-bottom: 1px solid var(--rule);
+}
+ol.references > li::before {
+  content: counter(ref, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font: 500 11px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+ol.references > li > p {
+  margin: 0 0 6px;
+  font: 400 14.5px/1.55 "Source Serif 4", serif;
+  color: var(--ink);
+}
+ol.references > li > p.ref-note {
+  font: italic 400 13px/1.5 "Source Serif 4", serif;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+ol.references .ref-note .tag {
+  display: inline-block;
+  font: 500 9.5px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 7px;
+  margin-right: 8px;
+  vertical-align: 1px;
+  font-style: normal;
+}
+
+/* ═════ STAGES ═════ */
+.stages { margin: 1.4em 0; display: grid; gap: 0; }
+.stage {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.stage:last-child { border-bottom: 1px solid var(--rule); }
+.stage .label {
+  font: 600 11px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.stage .label .num {
+  font: italic 500 28px/1 "Source Serif 4", serif;
+  color: var(--accent);
+  margin-left: 6px;
+  vertical-align: -4px;
+}
+.stage h4 {
+  font: 500 17px/1.3 "Source Serif 4", serif;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+.stage p { font: 400 14px/1.5 "Inter Tight", sans-serif; color: var(--ink-soft); margin: 0; }
+.stage code {
+  font: 500 12px/1 "JetBrains Mono", monospace;
+  background: var(--paper-alt);
+  padding: 1px 5px;
+  border-radius: 2px;
+  color: var(--ink-soft);
+}
+
+/* ═════ COMPARE ═════ */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.4em 0; }
+.compare .col { padding: 16px 18px; }
+.compare .col h5 {
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+}
+.compare .col blockquote {
+  font: italic 400 14px/1.5 "Source Serif 4", serif;
+  margin: 0;
+  color: var(--ink-soft);
+}
+.compare .weak { background: var(--paper-alt); opacity: 0.78; border: 1px solid var(--rule); }
+.compare .weak h5 { color: var(--muted); }
+.compare .strong { background: #fafcfa; border: 1px solid var(--ink); }
+.compare .strong h5 { color: var(--accent); }
+
+/* ═════ CODE BLOCK ═════ */
+.chapter pre {
+  position: relative;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  font: 500 12.5px/1.6 "JetBrains Mono", monospace;
+  padding: 32px 22px 22px;
+  margin: 1.4em 0;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+.chapter pre::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  letter-spacing: 0.16em;
+  color: var(--code-accent);
+  text-transform: uppercase;
+}
+.chapter pre .c { color: #8a7a9c; font-style: italic; }
+.chapter pre .k { color: #b89aea; }
+.chapter pre .s { color: #d0b8f0; }
+.chapter pre .n { color: #e0a0a0; }
+
+/* ═════ FLEURON ═════ */
+hr.fleuron { border: 0; text-align: center; margin: 2.4em auto; height: 1em; }
+hr.fleuron::before { content: "❦"; color: var(--accent); font: 400 22px/1 "Source Serif 4", serif; }
+
+/* ═════ MARGINAL + HIGHLIGHT ═════ */
+.marginal {
+  display: inline-block;
+  font: italic 400 11px/1.4 "Source Serif 4", serif;
+  color: var(--muted);
+  max-width: 18ch;
+  vertical-align: top;
+  margin: 0 0 0 8px;
+}
+.hl {
+  background: linear-gradient(transparent 55%, var(--mark) 55%);
+  padding: 0 2px;
+}
+
+/* ═════ FIGURE (SVG diagrams) ═════ */
+.figure {
+  margin: 1.8em 0;
+  padding: 24px 24px 18px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.figure .fig-num {
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: block;
+}
+.figure svg { display: block; width: 100%; height: auto; max-width: 100%; }
+.figure figcaption {
+  font: italic 400 13px/1.5 "Source Serif 4", serif;
+  color: var(--muted);
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+}
+.figure .legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+  font: 500 11px/1 "Inter Tight", sans-serif;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.figure .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.figure .legend i {
+  width: 12px; height: 12px; border-radius: 2px;
+  display: inline-block;
+  font-style: normal;
+}
+
+/* SVG text defaults */
+.figure svg text { font-family: "Inter Tight", sans-serif; fill: var(--ink-soft); }
+.figure svg .svg-label { font-size: 11px; font-weight: 500; }
+.figure svg .svg-micro { font-size: 9px; fill: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.figure svg .svg-accent { fill: var(--accent); }
+.figure svg .svg-serif { font-family: "Source Serif 4", serif; font-style: italic; }
+.figure svg line, .figure svg path.stroke { stroke: var(--ink); stroke-width: 1; fill: none; }
+.figure svg .rule-soft { stroke: var(--rule); stroke-width: 1; fill: none; }
+
+/* ═════ APPENDIX / PART INTRO ═════ */
+.appendix-intro, .part-intro {
+  border-top: 3px double var(--ink);
+  margin-top: 100px;
+  padding-top: 28px;
+}
+.appendix-intro .eyebrow, .part-intro .eyebrow {
+  font: 600 11px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.appendix-intro h2, .part-intro h2 {
+  font: italic 500 48px/1.05 "Source Serif 4", serif;
+  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 22ch;
+  color: var(--ink);
+}
+.chapter.appendix .chapter-header .num { font-style: italic; }
+
+/* ═════ COLOPHON ═════ */
+.colophon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 120px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+.colophon h5 {
+  font: 600 10px/1 "Inter Tight", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.colophon p { font: 400 12px/1.5 "Inter Tight", sans-serif; color: var(--muted); margin: 0; }
+
+/* ═════ RESPONSIVE ═════ */
+@media (max-width: 760px) {
+  .page { padding: 48px 28px; }
+  .cover h1 { font-size: 40px; }
+  .cover-meta { grid-template-columns: repeat(2, 1fr); gap: 18px 0; }
+  .chapter-header { grid-template-columns: 1fr; gap: 8px; }
+  .chapter-header .num { font-size: 48px; }
+  .chapter-header h2 { font-size: 28px; }
+  .chapter-header .tagline { grid-column: 1; }
+  .toc ol { column-count: 1; }
+  .grid, .compare { grid-template-columns: 1fr; }
+  .stage { grid-template-columns: 1fr; gap: 4px; }
+  .stage .label .num { display: inline-block; font-size: 20px; margin-left: 10px; }
+  .colophon { grid-template-columns: 1fr; gap: 28px; }
+  .pullquote { float: none; width: auto; margin: 1.4em 0; }
+}
+
+/* ═════ PRINT ═════ */
+@media print {
+  html { background: white; }
+  .page { box-shadow: none; max-width: none; padding: 0; background: white; }
+  section.chapter { page-break-inside: auto; }
+  .chapter-header { page-break-after: avoid; }
+  pre, .prompt, .callout, .stage, .compare, .grid, .figure { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ═══════════════════ COVER ═══════════════════ -->
+<header class="cover">
+  <div class="cover-top">
+    <span class="mark">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+        <rect x="0" y="0" width="14" height="14" fill="none" stroke="currentColor"/>
+        <rect x="3" y="3" width="8" height="8" fill="currentColor"/>
+      </svg>
+      AIED Policy Observatory
+    </span>
+    <span>No. 01 · Edition April 2026</span>
+  </div>
+
+  <h1>The AI Education Policy <em>Observatory</em></h1>
+  <p class="deck">A reader's manual, research framework, and evaluation codebook for the dashboard.</p>
+
+  <dl class="cover-meta">
+    <div><dt>Document type</dt><dd>Tutorial + methodology</dd></div>
+    <div><dt>Primary scope</dt><dd>K–12 AI policy, 51 US jurisdictions</dd></div>
+    <div><dt>Audience</dt><dd>Researchers, reviewers, analysts</dd></div>
+    <div><dt>Version date</dt><dd>19 April 2026</dd></div>
+  </dl>
+</header>
+
+<!-- ═══════════════════ TOC ═══════════════════ -->
+<nav class="toc" aria-label="Table of contents">
+  <h2>Table of Contents</h2>
+  <div class="part-label">Part One · Reader's manual</div>
+  <ol>
+    <li><span class="n">01</span><span class="t">Reading the dashboard</span><span class="p">§1</span></li>
+    <li><span class="n">02</span><span class="t">The choropleth map</span><span class="p">§2</span></li>
+    <li><span class="n">03</span><span class="t">Inspecting a state record</span><span class="p">§3</span></li>
+    <li><span class="n">04</span><span class="t">Comparing regions</span><span class="p">§4</span></li>
+    <li><span class="n">05</span><span class="t">The policy timeline</span><span class="p">§5</span></li>
+    <li><span class="n">06</span><span class="t">Teacher mode</span><span class="p">§6</span></li>
+  </ol>
+  <div class="part-label">Part Two · Research framework</div>
+  <ol>
+    <li><span class="n">07</span><span class="t">The research design</span><span class="p">§7</span></li>
+    <li><span class="n">08</span><span class="t">System architecture</span><span class="p">§8</span></li>
+    <li><span class="n">09</span><span class="t">The analytic coding system</span><span class="p">§9</span></li>
+    <li><span class="n">10</span><span class="t">Evaluation and ablations</span><span class="p">§10</span></li>
+  </ol>
+  <div class="part-label">Part Three · Scoring methodology</div>
+  <ol>
+    <li><span class="n">11</span><span class="t">What is being measured</span><span class="p">§11</span></li>
+    <li><span class="n">12</span><span class="t">How sources are graded</span><span class="p">§12</span></li>
+    <li><span class="n">13</span><span class="t">Confidence and evidence</span><span class="p">§13</span></li>
+    <li><span class="n">14</span><span class="t">Approval routing</span><span class="p">§14</span></li>
+    <li><span class="n">15</span><span class="t">Synthesis weights</span><span class="p">§15</span></li>
+    <li><span class="n">16</span><span class="t">Known limitations</span><span class="p">§16</span></li>
+  </ol>
+  <div class="part-label">Part Four · Appendices</div>
+  <ol>
+    <li class="appendix"><span class="n">A</span><span class="t">Pipeline command reference</span><span class="p">app.</span></li>
+    <li class="appendix"><span class="n">B</span><span class="t">Reviewer checklist</span><span class="p">app.</span></li>
+    <li class="appendix"><span class="n">C</span><span class="t">Code reference index</span><span class="p">app.</span></li>
+    <li class="appendix"><span class="n">D</span><span class="t">References &amp; informing literatures</span><span class="p">app.</span></li>
+  </ol>
+</nav>
+
+<!-- ═══════════════════ PART ONE — READER'S MANUAL ═══════════════════ -->
+
+<!-- ────── 01 ────── -->
+<section class="chapter" id="s1">
+  <div class="chapter-header">
+    <div class="num">01</div>
+    <div>
+      <h2>Reading the dashboard</h2>
+      <div class="tagline">What each surface tells you at a glance.</div>
+    </div>
+  </div>
+
+  <p class="lead">The Observatory lays out four working surfaces — a left rail for navigation, a top bar for document-wide controls, a central map workspace, and an inspector panel that expands the currently selected record.</p>
+
+  <p>The layout is deliberately flat. There are no modal dialogs for routine reading; instead, panels expand in place so a reviewer can keep both the spatial context of a state and the textual context of its policy record visible at the same time. This chapter walks around the frame before later chapters go under the hood.</p>
+
+  <h3>1.1 The sidebar</h3>
+  <p>The left rail collapses to a 3.5 rem icon strip at any viewport narrower than a desktop-class window. It holds the analysis entry-point ("New Analysis"), navigation between geography, policy domains, and methodology pages, and the user's workspace profile.</p>
+
+  <h3>1.2 The top bar</h3>
+  <p>The top bar contains the section switch (Map View, Compare Regions, Policy Timeline, Source Library, Methodology), a search field, a teacher-mode toggle, and notifications. At narrower widths, the less-critical affordances fold away in order: history and notifications first, then teacher-mode, then the export label.</p>
+
+  <div class="callout">
+    <span class="label">Orientation</span>
+    <p>A freshly loaded dashboard defaults to Map View with the national aggregate selected. Click any state to open the float inspector on the right; click again to collapse it.</p>
+  </div>
+
+  <h3>1.3 The inspector</h3>
+  <p>The float inspector is a 22 rem column pinned to the right of the map. It surfaces the selected record's five scored dimensions, its source documents, a confidence readout, and — when present — a teacher-guidance annotation. Chapter 03 unpacks the full record view.</p>
+</section>
+
+<!-- ────── 02 ────── -->
+<section class="chapter" id="s2">
+  <div class="chapter-header">
+    <div class="num">02</div>
+    <div>
+      <h2>The choropleth map</h2>
+      <div class="tagline">State vs. district modes, colour bands, beacons.</div>
+    </div>
+  </div>
+
+  <p>The map is a <span class="hl">d3-geo Albers USA projection</span> rendered as inline SVG. Each state is a single path coloured by its <code>policyStrength</code> band; each county is rendered only when the user toggles District view. The map is the primary entry point for every other surface.</p>
+
+  <h3>2.1 Colour bands</h3>
+  <p>Four colour bands map a numerical score range to a single tile. Queued states — ones that have been scaffolded but not yet scored — fall into a neutral grey.</p>
+
+  <table>
+    <tr><th>Band</th><th>Range</th><th>Meaning</th></tr>
+    <tr><td>High</td><td class="num">13 – 16</td><td>Strong formal guidance across most dimensions</td></tr>
+    <tr><td>Emerging</td><td class="num">8 – 12</td><td>Substantive guidance on some dimensions</td></tr>
+    <tr><td>Minimal</td><td class="num">1 – 7</td><td>Light mentions; no formal policy</td></tr>
+    <tr><td>Uncoded</td><td class="num">0</td><td>No extractable evidence yet</td></tr>
+  </table>
+
+  <h3>2.2 Interactive cues</h3>
+  <p>Three ephemeral cues overlay the map during live playback: a <em>pulse</em> ring on newly updated states, a small "+" beacon when a source has just been ingested, and a thin outline shift when confidence crosses a band threshold.</p>
+
+  <h3>2.3 District view</h3>
+  <p>Toggling District view swaps the state atlas for <code>us-atlas/counties-10m.json</code> (3 231 counties). District-level policy data is not yet coded — counties are coloured by their parent state record. A banner at the top of the map makes this explicit.</p>
+
+  <div class="callout warn">
+    <span class="label">Caveat</span>
+    <p>Do not read district shading as district-level policy evidence. Two counties in the same state will always show the identical band, regardless of local district practice.</p>
+  </div>
+</section>
+
+<!-- ────── 03 ────── -->
+<section class="chapter" id="s3">
+  <div class="chapter-header">
+    <div class="num">03</div>
+    <div>
+      <h2>Inspecting a state record</h2>
+      <div class="tagline">Float inspector, source drawer, evidence spans.</div>
+    </div>
+  </div>
+
+  <p>Selecting a state opens a record in the inspector. The inspector is the single surface where extraction, evidence, and routing all become visible together; most reviewer workflows begin here.</p>
+
+  <h3>3.1 Anatomy of a record</h3>
+  <p>A <code>PolicyRecord</code> carries identity metadata, five scored dimensions, derived scores, supporting prose, the list of source documents, and routing outcomes. The inspector arranges these into four stacked bands from top to bottom.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">i</span> Identity band</h5>
+      <ul>
+        <li>State name, abbreviation, year</li>
+        <li>Last updated (ISO 8601)</li>
+        <li>Snapshot status (coded / queued)</li>
+      </ul>
+      <div class="good">When you first open a record, read this band to confirm you are looking at the expected snapshot.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">ii</span> Score band</h5>
+      <ul>
+        <li>Five dimension readouts (0–3 or 0–4)</li>
+        <li><code>policyStrength</code> out of 16</li>
+        <li>Confidence as a percentage</li>
+      </ul>
+      <div class="good">Chapter 11 defines each dimension; chapter 13 defines confidence.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">iii</span> Evidence band</h5>
+      <ul>
+        <li>Evidence spans grouped by dimension</li>
+        <li>Direct quote + source URL + optional chunk ID</li>
+      </ul>
+      <div class="good">Every non-zero score should surface at least one span here.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">iv</span> Routing band</h5>
+      <ul>
+        <li>Source authority label</li>
+        <li>Approval route + audit status</li>
+        <li>Deep-research flags</li>
+      </ul>
+      <div class="good">Use this band to triage whether a record needs your review.</div>
+    </div>
+  </div>
+
+  <h3>3.2 The source drawer</h3>
+  <p>Below the score band, the <em>source drawer</em> lists every crawled document attached to the record. Each entry shows its inferred authority level, its publication date guess, and a link out to the original page. Multiple sources of the same level stack in discovery order.</p>
+
+  <hr class="fleuron"/>
+
+  <p>A record can be complete and still unrouted — extraction, evidence, and routing are three separate steps, each of which can fail independently. The inspector surfaces all three so a reviewer can see exactly which stage needs attention.</p>
+</section>
+
+<!-- ────── 04 ────── -->
+<section class="chapter" id="s4">
+  <div class="chapter-header">
+    <div class="num">04</div>
+    <div>
+      <h2>Comparing regions</h2>
+      <div class="tagline">Multi-state compare view and delta readings.</div>
+    </div>
+  </div>
+
+  <p>Compare view accepts up to four state selections and renders their dimension scores side by side. It is the primary surface for cross-jurisdictional questions — <em>does Utah score higher on teacher PD than Washington, and why?</em> — and is where confidence becomes load-bearing.</p>
+
+  <h3>4.1 What the columns mean</h3>
+  <p>Each selected state becomes a column. Rows are the five scored dimensions plus <code>policyStrength</code>, confidence, source authority, and approval route. Cells are coloured by dimension band, not by absolute rank, so that "minimal" is visibly minimal regardless of which state it belongs to.</p>
+
+  <h3>4.2 Reading the deltas</h3>
+  <p>The right-most column of each pair shows the delta against a reference state (by default, the first selected). A positive delta means the compared state scores higher on that dimension; a muted delta means the gap is smaller than one confidence band.</p>
+
+  <div class="pullquote">A delta smaller than one confidence band should be read as noise, not signal.</div>
+
+  <p>This is the single most common reading error: a two-point difference in <code>policyStrength</code> between two low-confidence records is not meaningful. The compare view therefore displays confidence next to every cell.</p>
+</section>
+
+<!-- ────── 05 ────── -->
+<section class="chapter" id="s5">
+  <div class="chapter-header">
+    <div class="num">05</div>
+    <div>
+      <h2>The policy timeline</h2>
+      <div class="tagline">Snapshot dates, playback, confidence shifts.</div>
+    </div>
+  </div>
+
+  <p>The Observatory stores records as year-tagged snapshots rather than a single living document. The timeline view orders those snapshots chronologically and lets the reader scrub through them, watching the national map recolour as policies are issued, amended, or retired.</p>
+
+  <h3>5.1 Playback mechanics</h3>
+  <p>Playback advances the timeline at a fixed interval. Each tick emits three kinds of visual events: a pulse on states whose <code>policyStrength</code> band changed, a beacon on states that gained a new source document, and an outline shift on states whose confidence crossed 0.75 or 0.90. These thresholds mirror the approval-routing boundaries described in chapter 14.</p>
+
+  <h3>5.2 Reading a confidence shift</h3>
+  <p>Confidence shifts are the timeline's most informative event. A single-year jump from 0.4 to 0.8 usually indicates a reviewer added evidence spans to previously weakly-scored dimensions, not that the underlying policy changed. The source drawer is the only place to confirm which interpretation applies.</p>
+
+  <div class="callout">
+    <span class="label">Reading tip</span>
+    <p>If the map changes colour during playback but no beacon appears, the scoring rubric was revised — not the sources. Check the version history in the colophon of the affected snapshot.</p>
+  </div>
+</section>
+
+<!-- ────── 06 ────── -->
+<section class="chapter" id="s6">
+  <div class="chapter-header">
+    <div class="num">06</div>
+    <div>
+      <h2>Teacher mode</h2>
+      <div class="tagline">Classroom-oriented framing and guidance surfaces.</div>
+    </div>
+  </div>
+
+  <p>Teacher mode re-skins the inspector to emphasise classroom-relevant extracts from the source documents: permitted-use language, assessment disclosure rules, and the prose inside <code>teacherGuidance</code> annotations. Scoring dimensions remain present but visually recede.</p>
+
+  <h3>6.1 What it changes</h3>
+  <p>The five-dimension readout moves from the top of the inspector to a collapsed drawer. In its place appears a plain-language summary drawn from <code>teacherGuidance.summary</code> (if coded) or, as a fallback, the first two evidence spans attached to <code>aiUseAllowed</code> and <code>assessmentPolicy</code>.</p>
+
+  <h3>6.2 What it does not change</h3>
+  <p>The underlying data is identical; teacher mode is a rendering, not a filter. A state with no scored <code>teacherGuidance</code> will show the fallback extract rather than a curated summary. The approval route and audit status remain visible in a compact strip at the bottom.</p>
+
+  <div class="callout warn">
+    <span class="label">Not for policy decisions</span>
+    <p>Teacher mode is designed for classroom orientation, not for policy comparison. Do not cite teacher-mode extracts in analytical work — cite the underlying record and its evidence spans directly.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════ PART TWO — RESEARCH FRAMEWORK ═══════════════════ -->
+<div class="part-intro">
+  <div class="eyebrow">Part Two</div>
+  <h2>Research framework</h2>
+</div>
+
+<!-- ────── 07 ────── -->
+<section class="chapter" id="s7">
+  <div class="chapter-header">
+    <div class="num">07</div>
+    <div>
+      <h2>The research design</h2>
+      <div class="tagline">Agentic policy surveillance: questions, conditions, ablations.</div>
+    </div>
+  </div>
+
+  <p class="lead">The Observatory is framed as an <em>agentic policy surveillance</em> study rather than a dashboard project. The central claim: a multi-agent, retrieval-grounded pipeline can produce policy surveillance records with limited human intervention while preserving evidence traceability and measurable quality.</p>
+
+  <p>This framing has practical consequences for every surface the reader sees. Scores are not opinions; they are outputs of a pipeline that has been experimentally compared against simpler baselines. Confidence is not rhetorical; it is defined by field coverage and evaluated against a gold set. Human review is not a default; it is an escalation path triggered by explicit thresholds.</p>
+
+  <h3>7.1 Research questions</h3>
+  <ol>
+    <li>Can a multi-agent pipeline build policy records with acceptable field-level accuracy?</li>
+    <li>Does retrieval-grounded verification reduce unsupported coding decisions?</li>
+    <li>Does a deep-research fallback improve source coverage and citation support?</li>
+    <li>How much human effort is still required after automated verification and escalation?</li>
+  </ol>
+
+  <h3>7.2 Experimental conditions</h3>
+  <p>Five conditions are compared along a ladder of pipeline complexity. Each adds one component to the previous; ablations (§10.3) remove them one at a time.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 7·1 — Experimental ladder</span>
+    <svg viewBox="0 0 620 310" role="img" aria-label="Five experimental conditions arranged as a staircase of added pipeline components">
+      <!-- horizontal baseline -->
+      <line x1="10" y1="280" x2="610" y2="280" stroke="#000" stroke-width="1"/>
+
+      <!-- 5 vertical stages, from short to tall -->
+      <!-- Baseline A -->
+      <rect x="40" y="230" width="90" height="50" fill="#ece6fb" stroke="#000"/>
+      <text x="85" y="258" text-anchor="middle" class="svg-label">Baseline A</text>
+      <text x="85" y="272" text-anchor="middle" class="svg-micro">single-pass</text>
+      <text x="85" y="300" text-anchor="middle" class="svg-micro">crawl → extract</text>
+
+      <!-- Baseline B -->
+      <rect x="150" y="200" width="90" height="80" fill="#dcd0f7" stroke="#000"/>
+      <text x="195" y="228" text-anchor="middle" class="svg-label">Baseline B</text>
+      <text x="195" y="242" text-anchor="middle" class="svg-micro">+ chunking</text>
+      <text x="195" y="300" text-anchor="middle" class="svg-micro">+ RAG</text>
+
+      <!-- Baseline C -->
+      <rect x="260" y="170" width="90" height="110" fill="#c5b2ef" stroke="#000"/>
+      <text x="305" y="198" text-anchor="middle" class="svg-label">Baseline C</text>
+      <text x="305" y="212" text-anchor="middle" class="svg-micro">+ verifier</text>
+      <text x="305" y="300" text-anchor="middle" class="svg-micro">+ verification</text>
+
+      <!-- Experiment D -->
+      <rect x="370" y="130" width="90" height="150" fill="#9f7dea" stroke="#000"/>
+      <text x="415" y="158" text-anchor="middle" class="svg-label" fill="#fff">Experiment D</text>
+      <text x="415" y="172" text-anchor="middle" class="svg-micro" fill="#fff">+ deep research</text>
+      <text x="415" y="300" text-anchor="middle" class="svg-micro">+ escalation</text>
+
+      <!-- Experiment E -->
+      <rect x="480" y="90" width="90" height="190" fill="#6d28d9" stroke="#000"/>
+      <text x="525" y="118" text-anchor="middle" class="svg-label" fill="#fff">Experiment E</text>
+      <text x="525" y="132" text-anchor="middle" class="svg-micro" fill="#fff">+ selective audit</text>
+      <text x="525" y="146" text-anchor="middle" class="svg-micro" fill="#fff">+ human review</text>
+      <text x="525" y="300" text-anchor="middle" class="svg-micro">+ sampling</text>
+
+      <!-- vertical y-label -->
+      <text x="18" y="90" class="svg-micro">complexity ↑</text>
+    </svg>
+    <figcaption>Each added component is evaluated against the prior condition on field-level F1, citation support, and reviewer burden.</figcaption>
+  </figure>
+
+  <h3>7.3 Human-on-the-loop, not in-the-loop</h3>
+  <p>The target operating model separates three human roles. <em>Operations</em> is mostly agentic — humans are not required on every record. <em>Evaluation</em> is mandatory — humans produce gold labels and audit samples. <em>Escalation</em> is conditional — it triggers only when confidence thresholds, source conflicts, or citation gaps fire.</p>
+
+  <div class="pullquote-wide">
+    This is <em>human-on-the-loop</em>, not human-in-the-loop. The reviewer is an escalation path, not a bottleneck.
+  </div>
+</section>
+
+<!-- ────── 08 ────── -->
+<section class="chapter" id="s8">
+  <div class="chapter-header">
+    <div class="num">08</div>
+    <div>
+      <h2>System architecture</h2>
+      <div class="tagline">Agent roles, runtime layers, pipeline flow.</div>
+    </div>
+  </div>
+
+  <p>The architecture is structured around a single principle: <span class="hl">the app should never read raw crawler output or unchecked LLM output directly</span>. Every field shown in the dashboard has passed through extraction, verification, routing, and publication layers — each of which leaves an audit trail.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 8·1 — Pipeline flow</span>
+    <svg viewBox="0 0 680 260" role="img" aria-label="Pipeline flow from official sources to published dataset with routing branches">
+      <!-- row of 4 main nodes -->
+      <g>
+        <rect x="20"  y="60" width="110" height="50" fill="#ece6fb" stroke="#000"/>
+        <text x="75"  y="82" text-anchor="middle" class="svg-label">Sources</text>
+        <text x="75"  y="98" text-anchor="middle" class="svg-micro">seeds + raw</text>
+
+        <rect x="160" y="60" width="110" height="50" fill="#ece6fb" stroke="#000"/>
+        <text x="215" y="82" text-anchor="middle" class="svg-label">Evidence</text>
+        <text x="215" y="98" text-anchor="middle" class="svg-micro">chunks + RAG</text>
+
+        <rect x="300" y="60" width="110" height="50" fill="#ece6fb" stroke="#000"/>
+        <text x="355" y="82" text-anchor="middle" class="svg-label">Extract + verify</text>
+        <text x="355" y="98" text-anchor="middle" class="svg-micro">scored record</text>
+
+        <!-- decision diamond -->
+        <polygon points="470,85 510,45 550,85 510,125" fill="#f5f4fa" stroke="#000"/>
+        <text x="510" y="82" text-anchor="middle" class="svg-label">route?</text>
+        <text x="510" y="98" text-anchor="middle" class="svg-micro">confidence</text>
+
+        <rect x="580" y="60" width="90" height="50" fill="#6d28d9" stroke="#000"/>
+        <text x="625" y="82" text-anchor="middle" class="svg-label" fill="#fff">Publish</text>
+        <text x="625" y="98" text-anchor="middle" class="svg-micro" fill="#fff">canonical</text>
+      </g>
+
+      <!-- connecting arrows -->
+      <path d="M130 85 L160 85" stroke="#000" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+      <path d="M270 85 L300 85" stroke="#000" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+      <path d="M410 85 L470 85" stroke="#000" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+      <path d="M550 85 L580 85" stroke="#000" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+      <!-- branch to audit -->
+      <path d="M510 125 L510 170 L400 170" stroke="#6d28d9" stroke-width="1" stroke-dasharray="3 3" fill="none" marker-end="url(#arrow)"/>
+      <rect x="280" y="150" width="120" height="44" fill="#fff" stroke="#6d28d9" stroke-width="1"/>
+      <text x="340" y="170" text-anchor="middle" class="svg-label svg-accent">Sample audit</text>
+      <text x="340" y="184" text-anchor="middle" class="svg-micro">mid confidence</text>
+
+      <!-- branch to deep research + human -->
+      <path d="M510 125 L510 215 L180 215" stroke="#6d28d9" stroke-width="1" stroke-dasharray="3 3" fill="none" marker-end="url(#arrow)"/>
+      <rect x="60" y="195" width="120" height="44" fill="#fff" stroke="#6d28d9" stroke-width="1"/>
+      <text x="120" y="215" text-anchor="middle" class="svg-label svg-accent">Deep research</text>
+      <text x="120" y="229" text-anchor="middle" class="svg-micro">+ human review</text>
+
+      <!-- return path to publish -->
+      <path d="M400 172 L582 110" stroke="#000" stroke-width="0.5" stroke-dasharray="2 2" fill="none"/>
+      <path d="M180 217 L582 112" stroke="#000" stroke-width="0.5" stroke-dasharray="2 2" fill="none"/>
+
+      <!-- arrow marker -->
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+        </marker>
+      </defs>
+
+      <!-- annotations -->
+      <text x="20"  y="35" class="svg-micro">Collection</text>
+      <text x="160" y="35" class="svg-micro">Evidence</text>
+      <text x="300" y="35" class="svg-micro">Canonical</text>
+      <text x="580" y="35" class="svg-micro">Presentation</text>
+    </svg>
+    <figcaption>Four runtime layers. Dashed branches show mid-confidence and low-confidence escalation paths; both return to the canonical record before publication.</figcaption>
+  </figure>
+
+  <h3>8.1 Runtime layers</h3>
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">I</span> Collection layer</h5>
+      <ul>
+        <li><code>data/source-seeds.json</code></li>
+        <li><code>data/generated/raw/*.html</code></li>
+        <li><code>data/generated/policy-source-manifest.json</code></li>
+      </ul>
+      <div class="good">Only layer that touches the open web.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">II</span> Evidence layer</h5>
+      <ul>
+        <li><code>data/generated/chunks.jsonl</code></li>
+        <li><code>retrieval-index.json</code></li>
+        <li>Future: <code>embeddings/</code></li>
+      </ul>
+      <div class="good">RAG retrieval — evidence, never a source of truth.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">III</span> Canonical layer</h5>
+      <ul>
+        <li><code>policy-records.json</code></li>
+        <li><code>review-queue.json</code></li>
+        <li><code>policy-records.schema.json</code></li>
+      </ul>
+      <div class="good">The only layer the app is permitted to read.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">IV</span> Presentation layer</h5>
+      <ul>
+        <li>React dashboard (<code>src/</code>)</li>
+        <li>Validated records only</li>
+      </ul>
+      <div class="good">Failures here are render bugs, not data bugs.</div>
+    </div>
+  </div>
+
+  <h3>8.2 Agent roles</h3>
+  <table>
+    <tr><th>Role</th><th>Goal</th><th>Failure mode</th></tr>
+    <tr><td>scout</td><td>Finds or updates official source URLs</td><td>Stale seeds; missed new publications</td></tr>
+    <tr><td>retriever</td><td>Fetches HTML or PDF, normalises text</td><td>Fetch errors, paywalls, malformed HTML</td></tr>
+    <tr><td>extractor</td><td>Produces structured JSON from evidence</td><td>Hallucinated fields, over-fire on keywords</td></tr>
+    <tr><td>verifier</td><td>Checks spans, contradictions, gaps</td><td>Under-flagging weak evidence</td></tr>
+    <tr><td>deep_research</td><td>Escalates unresolved jurisdictions</td><td>High cost; slow turnaround</td></tr>
+    <tr><td>publisher</td><td>Writes canonical records, diffs versions</td><td>Non-atomic writes; missed diffs</td></tr>
+  </table>
+
+  <h3>8.3 Design constraints</h3>
+  <ul>
+    <li>Every coded field must trace back to one or more evidence spans.</li>
+    <li>Every record must be versioned; updates are additive, not destructive.</li>
+    <li>Parent–child jurisdiction relationships must be explicit.</li>
+    <li>Human reviewers must not be required for every record in routine operation.</li>
+  </ul>
+</section>
+
+<!-- ────── 09 ────── -->
+<section class="chapter" id="s9">
+  <div class="chapter-header">
+    <div class="num">09</div>
+    <div>
+      <h2>The analytic coding system</h2>
+      <div class="tagline">Stages, domains, and auto-approval exclusions.</div>
+    </div>
+  </div>
+
+  <p>The coding system formalises how a reviewer should translate a primary document into a <code>PolicyRecord</code>. It is deliberately narrow: six policy-stage values, eight domain labels, three confidence bands, and an explicit list of auto-approval exclusions. The canonical reference is <code>docs/CODEBOOK.md</code>.</p>
+
+  <h3>9.1 Policy stage</h3>
+  <p>Every record is assigned exactly one policy stage. Stages are ordered by increasing implementation maturity and anchor the <code>implementationStage</code> dimension introduced in chapter 11.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 9·1 — Policy-stage lifecycle</span>
+    <svg viewBox="0 0 620 130" role="img" aria-label="Six policy stages arranged from exploratory to legislated with a needs-review side branch">
+      <!-- main line -->
+      <line x1="30" y1="60" x2="590" y2="60" stroke="#000" stroke-width="1"/>
+
+      <!-- 5 main stage dots -->
+      <g>
+        <circle cx="50"  cy="60" r="7" fill="#ece6fb" stroke="#000"/>
+        <text x="50"  y="40" text-anchor="middle" class="svg-micro">stage 0</text>
+        <text x="50"  y="85" text-anchor="middle" class="svg-label">exploratory</text>
+
+        <circle cx="170" cy="60" r="7" fill="#dcd0f7" stroke="#000"/>
+        <text x="170" y="40" text-anchor="middle" class="svg-micro">stage 1</text>
+        <text x="170" y="85" text-anchor="middle" class="svg-label">guidance-issued</text>
+
+        <circle cx="290" cy="60" r="7" fill="#c5b2ef" stroke="#000"/>
+        <text x="290" y="40" text-anchor="middle" class="svg-micro">stage 2</text>
+        <text x="290" y="85" text-anchor="middle" class="svg-label">implementation-active</text>
+
+        <circle cx="410" cy="60" r="7" fill="#9f7dea" stroke="#000"/>
+        <text x="410" y="40" text-anchor="middle" class="svg-micro">stage 3</text>
+        <text x="410" y="85" text-anchor="middle" class="svg-label">formalized-policy</text>
+
+        <circle cx="530" cy="60" r="7" fill="#6d28d9" stroke="#000"/>
+        <text x="530" y="40" text-anchor="middle" class="svg-micro">stage 4</text>
+        <text x="530" y="85" text-anchor="middle" class="svg-label">legislated</text>
+      </g>
+
+      <!-- needs-review side branch -->
+      <path d="M290 60 Q 290 110 350 110" stroke="#b91c1c" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+      <circle cx="360" cy="110" r="6" fill="#fff" stroke="#b91c1c"/>
+      <text x="420" y="114" class="svg-label" fill="#b91c1c">needs-review</text>
+    </svg>
+    <figcaption>Stage is assigned by decision rules in <code>docs/CODEBOOK.md</code>. Any record where stage depends on inference rather than explicit text is diverted to <em>needs-review</em>.</figcaption>
+  </figure>
+
+  <h3>9.2 Policy domains</h3>
+  <p>Up to eight domain labels can be attached to a single record. Labels are assigned <em>only</em> when the source contains explicit policy language or operational guidance for that domain — not when the domain is merely implied.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">1</span> ai_use</h5>
+      <ul><li>Permitted use, prohibitions, conditions</li></ul>
+      <div class="good">Cornerstone domain — almost every record has this.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">2</span> assessment</h5>
+      <ul><li>Rules on AI in student evaluation</li></ul>
+      <div class="good">Overlaps with <em>academic_integrity</em>; tag both when both apply.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">3</span> privacy</h5>
+      <ul><li>Student data, vendor posture, FERPA alignment</li></ul>
+      <div class="good">Requires an explicit privacy clause, not a general policy statement.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">4</span> teacher_pd</h5>
+      <ul><li>Training pathways, professional learning</li></ul>
+      <div class="good">Do not confuse with general PD unrelated to AI.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">5</span> academic_integrity</h5>
+      <ul><li>Disclosure, attribution, cheating policy</li></ul>
+      <div class="good">Often the earliest domain to appear in new policies.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">6</span> procurement</h5>
+      <ul><li>Vendor approval, technology purchasing</li></ul>
+      <div class="good">Rarely present in state-level documents.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">7</span> governance</h5>
+      <ul><li>Decision rights, oversight committees</li></ul>
+      <div class="good">Governance language alone does not imply policy stage.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">8</span> equity</h5>
+      <ul><li>Access, language, disability, outcomes</li></ul>
+      <div class="good">Expect under-counting — equity is often implicit.</div>
+    </div>
+  </div>
+
+  <h3>9.3 Auto-approval exclusions</h3>
+  <p>Five conditions disqualify a record from auto-approval, regardless of confidence.</p>
+  <div class="callout warn">
+    <span class="label">Do not auto-approve when</span>
+    <p>· a coded field has no evidence span<br>· official sources conflict with one another<br>· only press coverage is available<br>· a newer candidate source exists and the current record is stale<br>· the policy stage depends on inference rather than explicit text</p>
+  </div>
+</section>
+
+<!-- ────── 10 ────── -->
+<section class="chapter" id="s10">
+  <div class="chapter-header">
+    <div class="num">10</div>
+    <div>
+      <h2>Evaluation and ablations</h2>
+      <div class="tagline">Gold set, metrics, and the ablation design.</div>
+    </div>
+  </div>
+
+  <p>Evaluation is the half of the Observatory that makes the other half accountable. The pipeline's outputs are graded against a hand-labelled gold set, broken down by record quality, evidence quality, operational quality, and update quality. A reader who wants to know <em>how good is this?</em> should start here.</p>
+
+  <h3>10.1 Datasets</h3>
+  <table>
+    <tr><th>Dataset</th><th class="num">Size</th><th>Purpose</th></tr>
+    <tr><td>Development set</td><td class="num">10 – 20</td><td>Tune prompts, thresholds, conflict rules</td></tr>
+    <tr><td>Gold set</td><td class="num">20 – 50</td><td>Held-out human labels for evaluation and calibration</td></tr>
+    <tr><td>Refresh set</td><td class="num">rolling</td><td>Test change-detection over time</td></tr>
+  </table>
+
+  <p>The gold set carries, per jurisdiction: field labels, evidence spans, source-authority judgement, policy-stage label, and policy-domain labels. It is the reference against which every run is scored.</p>
+
+  <h3>10.2 Metrics</h3>
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">α</span> Record quality</h5>
+      <ul>
+        <li>field-level precision</li>
+        <li>field-level recall</li>
+        <li>field-level F1</li>
+        <li>policy-stage accuracy</li>
+        <li>policy-domain accuracy</li>
+      </ul>
+      <div class="good">The headline RQ1 metric is field-level F1.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">β</span> Evidence quality</h5>
+      <ul>
+        <li>citation support rate</li>
+        <li>evidence span precision</li>
+        <li>unsupported claim rate</li>
+        <li>source authority match rate</li>
+      </ul>
+      <div class="good">RQ2: does verification reduce unsupported claims?</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">γ</span> Operational quality</h5>
+      <ul>
+        <li>auto-approval rate</li>
+        <li>sample-audit rate</li>
+        <li>human-review rate</li>
+        <li>correction rate after audit</li>
+        <li>mean time to publish</li>
+      </ul>
+      <div class="good">RQ4: how much human effort is still required?</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">δ</span> Update quality</h5>
+      <ul>
+        <li>change-detection recall</li>
+        <li>change-detection precision</li>
+        <li>temporal diff accuracy</li>
+      </ul>
+      <div class="good">Applies only to the refresh set.</div>
+    </div>
+  </div>
+
+  <h3>10.3 Ablations</h3>
+  <p>Four ablations isolate the contribution of each added component. Each removes one layer from Experiment E and re-runs the evaluation on the same gold set.</p>
+  <div class="stages">
+    <div class="stage">
+      <div class="label">Ablation<span class="num">i</span></div>
+      <div><h4>Remove the verifier</h4><p>Measures the rise in unsupported-claim rate; quantifies what the verification layer actually catches.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Ablation<span class="num">ii</span></div>
+      <div><h4>Remove deep research</h4><p>Measures the drop in source coverage on flagged jurisdictions; quantifies escalation value.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Ablation<span class="num">iii</span></div>
+      <div><h4>Remove sampling audit</h4><p>Measures hidden error rate among mid-confidence auto-publishes.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Ablation<span class="num">iv</span></div>
+      <div><h4>Single-agent extraction</h4><p>Replaces the multi-agent workflow with a single prompt; isolates the benefit of role decomposition.</p></div>
+    </div>
+  </div>
+
+  <h3>10.4 Reporting bundle</h3>
+  <p>Every evaluation run emits a bundle containing run metadata, model and prompt versions, source-coverage summary, the four metric families, audit-burden counts, and a top-<em>k</em> list of failure modes. The bundle is the only artefact permitted to claim progress against the baseline.</p>
+</section>
+
+<!-- ═══════════════════ PART THREE — SCORING METHODOLOGY ═══════════════════ -->
+<div class="part-intro">
+  <div class="eyebrow">Part Three</div>
+  <h2>Scoring methodology</h2>
+</div>
+
+<!-- ────── 11 ────── -->
+<section class="chapter" id="s11">
+  <div class="chapter-header">
+    <div class="num">11</div>
+    <div>
+      <h2>What is being measured</h2>
+      <div class="tagline">Five dimensions, score ranges, policy_strength.</div>
+    </div>
+  </div>
+
+  <p class="lead">The Observatory encodes each state's AI education policy as five small integer scores. The sum of those five scores is the state's <code>policyStrength</code>, bounded on 0–16.</p>
+
+  <p>Keeping the rubric this compact is a deliberate trade-off. Fine-grained rubrics are more expressive but impossible to audit at 51-state scale; coarse rubrics are auditable but miss nuance. Five integer-valued dimensions is the point at which a single reviewer can re-score a record in under ten minutes while still producing a usable spread.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 11·1 — Scoring rubric matrix</span>
+    <svg viewBox="0 0 640 240" role="img" aria-label="Five dimensions by five score values, cells shaded by intensity">
+      <!-- column headers -->
+      <g>
+        <text x="220" y="28" text-anchor="middle" class="svg-micro">0 · no evidence</text>
+        <text x="300" y="28" text-anchor="middle" class="svg-micro">1 · light</text>
+        <text x="380" y="28" text-anchor="middle" class="svg-micro">2 · moderate</text>
+        <text x="460" y="28" text-anchor="middle" class="svg-micro">3 · strong</text>
+        <text x="540" y="28" text-anchor="middle" class="svg-micro">4 · operational</text>
+      </g>
+
+      <!-- rows -->
+      <g font-family="Inter Tight" font-size="11">
+        <!-- aiUseAllowed -->
+        <text x="10" y="68" class="svg-label">aiUseAllowed</text>
+        <rect x="180" y="50" width="70" height="28" fill="#f5f4fa" stroke="#c4bfe8"/>
+        <rect x="260" y="50" width="70" height="28" fill="#dcd0f7" stroke="#c4bfe8"/>
+        <rect x="340" y="50" width="70" height="28" fill="#b9a0ef" stroke="#c4bfe8"/>
+        <rect x="420" y="50" width="70" height="28" fill="#6d28d9" stroke="#c4bfe8"/>
+        <rect x="500" y="50" width="70" height="28" fill="#eeeeee" stroke="#c4bfe8"/>
+        <text x="535" y="68" text-anchor="middle" class="svg-micro">—</text>
+
+        <!-- assessmentPolicy -->
+        <text x="10" y="102" class="svg-label">assessmentPolicy</text>
+        <rect x="180" y="84" width="70" height="28" fill="#f5f4fa" stroke="#c4bfe8"/>
+        <rect x="260" y="84" width="70" height="28" fill="#dcd0f7" stroke="#c4bfe8"/>
+        <rect x="340" y="84" width="70" height="28" fill="#b9a0ef" stroke="#c4bfe8"/>
+        <rect x="420" y="84" width="70" height="28" fill="#6d28d9" stroke="#c4bfe8"/>
+        <rect x="500" y="84" width="70" height="28" fill="#eeeeee" stroke="#c4bfe8"/>
+        <text x="535" y="102" text-anchor="middle" class="svg-micro">—</text>
+
+        <!-- privacyPolicy -->
+        <text x="10" y="136" class="svg-label">privacyPolicy</text>
+        <rect x="180" y="118" width="70" height="28" fill="#f5f4fa" stroke="#c4bfe8"/>
+        <rect x="260" y="118" width="70" height="28" fill="#dcd0f7" stroke="#c4bfe8"/>
+        <rect x="340" y="118" width="70" height="28" fill="#b9a0ef" stroke="#c4bfe8"/>
+        <rect x="420" y="118" width="70" height="28" fill="#6d28d9" stroke="#c4bfe8"/>
+        <rect x="500" y="118" width="70" height="28" fill="#eeeeee" stroke="#c4bfe8"/>
+        <text x="535" y="136" text-anchor="middle" class="svg-micro">—</text>
+
+        <!-- teacherPdSupport -->
+        <text x="10" y="170" class="svg-label">teacherPdSupport</text>
+        <rect x="180" y="152" width="70" height="28" fill="#f5f4fa" stroke="#c4bfe8"/>
+        <rect x="260" y="152" width="70" height="28" fill="#dcd0f7" stroke="#c4bfe8"/>
+        <rect x="340" y="152" width="70" height="28" fill="#b9a0ef" stroke="#c4bfe8"/>
+        <rect x="420" y="152" width="70" height="28" fill="#6d28d9" stroke="#c4bfe8"/>
+        <rect x="500" y="152" width="70" height="28" fill="#eeeeee" stroke="#c4bfe8"/>
+        <text x="535" y="170" text-anchor="middle" class="svg-micro">—</text>
+
+        <!-- implementationStage -->
+        <text x="10" y="204" class="svg-label">implementationStage</text>
+        <rect x="180" y="186" width="70" height="28" fill="#f5f4fa" stroke="#c4bfe8"/>
+        <rect x="260" y="186" width="70" height="28" fill="#dcd0f7" stroke="#c4bfe8"/>
+        <rect x="340" y="186" width="70" height="28" fill="#b9a0ef" stroke="#c4bfe8"/>
+        <rect x="420" y="186" width="70" height="28" fill="#8b5cf6" stroke="#c4bfe8"/>
+        <rect x="500" y="186" width="70" height="28" fill="#6d28d9" stroke="#c4bfe8"/>
+      </g>
+    </svg>
+    <figcaption>Four of the five dimensions cap at 3; <code>implementationStage</code> alone extends to 4. Cells darken with score intensity.</figcaption>
+  </figure>
+
+  <h3>11.1 The five dimensions</h3>
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">1</span> aiUseAllowed</h5>
+      <ul><li>Range 0–3</li><li>Is AI use in classrooms permitted and under what conditions?</li></ul>
+      <div class="good">3 when integration is explicit, human-centred, and tied to professional learning.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">2</span> assessmentPolicy</h5>
+      <ul><li>Range 0–3</li><li>Rules on AI in assessment and academic integrity</li></ul>
+      <div class="good">3 when disclosure requirements or standardized assessment positions are stated.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">3</span> privacyPolicy</h5>
+      <ul><li>Range 0–3</li><li>Student-data privacy and vendor posture</li></ul>
+      <div class="good">3 when the guidance references data-privacy law or vendor-level policy.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">4</span> teacherPdSupport</h5>
+      <ul><li>Range 0–3</li><li>Professional development and training for educators</li></ul>
+      <div class="good">3 when implementation recommendations or formal educator pathways exist.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">5</span> implementationStage</h5>
+      <ul><li>Range 0–4 <span class="marginal">— note the wider scale</span></li><li>Where the policy sits on the life-cycle</li></ul>
+      <div class="good">4 when the policy is fully operational; 3 when guidance is released; 2 at framework stage.</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">Σ</span> policyStrength</h5>
+      <ul><li>Range 0–16 (sum of the above)</li><li>The single headline score on the map</li></ul>
+      <div class="good">Use the breakdown, not the sum, when asking why one state scores higher than another.</div>
+    </div>
+  </div>
+
+  <h3>11.2 The formula</h3>
+  <pre data-lang="JS">
+<span class="c">// scripts/lib/policy-extraction-utils.mjs:33–40</span>
+<span class="k">export function</span> computePolicyStrength(record) {
+  <span class="k">return</span> (
+    (record.ai_use_allowed        ?? <span class="n">0</span>) +
+    (record.assessment_policy     ?? <span class="n">0</span>) +
+    (record.privacy_policy        ?? <span class="n">0</span>) +
+    (record.teacher_pd_support    ?? <span class="n">0</span>) +
+    (record.implementation_stage  ?? <span class="n">0</span>)
+  );
+}
+</pre>
+
+  <h3>11.3 Score labels</h3>
+  <table>
+    <tr><th>Value</th><th>Label</th></tr>
+    <tr><td class="num">0</td><td>No coded evidence yet</td></tr>
+    <tr><td class="num">1</td><td>Light mention</td></tr>
+    <tr><td class="num">2</td><td>Moderate guidance</td></tr>
+    <tr><td class="num">3</td><td>Strong formal guidance</td></tr>
+    <tr><td class="num">4</td><td>Full operational system</td></tr>
+  </table>
+</section>
+
+<!-- ────── 12 ────── -->
+<section class="chapter" id="s12">
+  <div class="chapter-header">
+    <div class="num">12</div>
+    <div>
+      <h2>How sources are graded</h2>
+      <div class="tagline">Authority hierarchy and URL classification.</div>
+    </div>
+  </div>
+
+  <p>Every source document is assigned an <em>authority level</em> before any scoring happens. Authority is not a judgement of the document's contents — it is a structural claim about where the document came from. A primary statute and a newspaper article about that statute convey the same facts, but only the statute can underwrite an auto-approval.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 12·1 — Source authority pyramid</span>
+    <svg viewBox="0 0 560 300" role="img" aria-label="Five-level source authority pyramid, narrowing toward the top">
+      <!-- pyramid bars -->
+      <g>
+        <!-- Rank 5 — narrowest, top -->
+        <polygon points="220,30 340,30 330,60 230,60" fill="#6d28d9" stroke="#000"/>
+        <text x="280" y="50" text-anchor="middle" class="svg-label" fill="#fff">binding_law_or_regulation</text>
+        <text x="355" y="50" class="svg-micro svg-accent">rank 5 · weight 1.00</text>
+
+        <!-- Rank 4 -->
+        <polygon points="195,65 365,65 355,100 205,100" fill="#8b5cf6" stroke="#000"/>
+        <text x="280" y="88" text-anchor="middle" class="svg-label" fill="#fff">official_guidance</text>
+        <text x="380" y="88" class="svg-micro svg-accent">rank 4 · 0.90</text>
+
+        <!-- Rank 3 -->
+        <polygon points="170,105 390,105 380,140 180,140" fill="#a78bfa" stroke="#000"/>
+        <text x="280" y="127" text-anchor="middle" class="svg-label" fill="#fff">official_model_policy</text>
+        <text x="400" y="127" class="svg-micro svg-accent">rank 3 · 0.82</text>
+
+        <!-- divider: strong primary boundary -->
+        <line x1="40" y1="148" x2="520" y2="148" stroke="#6d28d9" stroke-dasharray="4 3" stroke-width="1"/>
+        <text x="40" y="160" class="svg-micro svg-accent">↑ strong primary (auto-approval eligible)</text>
+
+        <!-- Rank 2 -->
+        <polygon points="140,168 420,168 410,205 150,205" fill="#c5b2ef" stroke="#000"/>
+        <text x="280" y="190" text-anchor="middle" class="svg-label">official_press_release</text>
+        <text x="430" y="190" class="svg-micro">rank 2 · 0.58</text>
+
+        <!-- Rank 1 -->
+        <polygon points="110,210 450,210 440,250 120,250" fill="#ece6fb" stroke="#000"/>
+        <text x="280" y="233" text-anchor="middle" class="svg-label">secondary_reporting</text>
+        <text x="460" y="233" class="svg-micro">rank 1 · 0.35</text>
+
+        <!-- Rank 0 base -->
+        <polygon points="80,255 480,255 470,285 90,285" fill="#fff" stroke="#000"/>
+        <text x="280" y="275" text-anchor="middle" class="svg-label" fill="#5b5280">unknown</text>
+        <text x="490" y="275" class="svg-micro">rank 0 · —</text>
+      </g>
+    </svg>
+    <figcaption>Only the top three levels (binding law, official guidance, official model policy) count as <em>strong primary</em> sources. Press releases and secondary reporting can appear in a record but cannot underwrite auto-approval.</figcaption>
+  </figure>
+
+  <h3>12.1 How classification works</h3>
+  <p>Levels are inferred from two signals: whether the URL matches an "official" pattern, and whether the title contains level-indicating keywords. A binding-law match must have <em>both</em> — a regex hit on "statute|bill|act|regulation|administrative code|rule" <em>and</em> an official domain.</p>
+
+  <h4>Official URL definition</h4>
+  <pre data-lang="JS">
+<span class="c">// scripts/lib/approval-utils.mjs:33–42</span>
+<span class="k">function</span> looksOfficialUrl(url) {
+  <span class="k">return</span> (
+    url.startsWith(<span class="s">"local://"</span>) ||
+    <span class="s">/\.gov\b/</span>.test(url) ||
+    <span class="s">/\.edu\b/</span>.test(url) ||
+    <span class="s">/\bwvde\.us\b/</span>.test(url) ||
+    <span class="s">/\.state\.[a-z]{2}\.us\b/</span>.test(url) ||
+    <span class="s">/\.k12\.[a-z.]+\b/</span>.test(url) ||
+    <span class="s">/schools\.[a-z.]+\b/</span>.test(url)
+  );
+}
+</pre>
+
+  <h3>12.2 Weak vs. strong sources</h3>
+  <div class="compare">
+    <div class="col weak">
+      <h5>Weak</h5>
+      <blockquote>"A state education office has reportedly issued new AI guidance for districts, according to a local news summary."</blockquote>
+    </div>
+    <div class="col strong">
+      <h5>Strong</h5>
+      <blockquote>"The Department shall adopt guidance for the use of generative AI in instruction and assessment, effective July 1."</blockquote>
+    </div>
+  </div>
+
+  <p>The weak example would classify as <code>secondary_reporting</code>; the strong example as <code>binding_law_or_regulation</code> provided the URL sits on a <code>.gov</code> domain.</p>
+</section>
+
+<!-- ────── 13 ────── -->
+<section class="chapter" id="s13">
+  <div class="chapter-header">
+    <div class="num">13</div>
+    <div>
+      <h2>Confidence and evidence</h2>
+      <div class="tagline">Field coverage, evidence spans, dedupe rules.</div>
+    </div>
+  </div>
+
+  <p>Confidence is defined narrowly: it is the proportion of the five scored fields that received a non-zero score. It is not a statistical confidence interval, and it does not reflect the reviewer's subjective certainty.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 13·1 — Confidence step function</span>
+    <svg viewBox="0 0 620 200" role="img" aria-label="Confidence as a step function of field coverage with routing thresholds overlaid">
+      <!-- axes -->
+      <line x1="50" y1="160" x2="590" y2="160" stroke="#000"/>
+      <line x1="50" y1="30"  x2="50"  y2="160" stroke="#000"/>
+
+      <!-- threshold lines -->
+      <line x1="50" y1="62"  x2="590" y2="62" stroke="#6d28d9" stroke-dasharray="3 3"/>
+      <text x="595" y="66" class="svg-micro svg-accent">0.90 · auto-approve</text>
+
+      <line x1="50" y1="92"  x2="590" y2="92" stroke="#6d28d9" stroke-dasharray="3 3" opacity="0.5"/>
+      <text x="595" y="96" class="svg-micro">0.75 · sample-audit</text>
+
+      <!-- step bars -->
+      <g>
+        <rect x="70"  y="156" width="90" height="4"   fill="#ece6fb" stroke="#000"/><text x="115" y="175" text-anchor="middle" class="svg-micro">0.0 · 0/5</text>
+        <rect x="170" y="134" width="90" height="26"  fill="#dcd0f7" stroke="#000"/><text x="215" y="175" text-anchor="middle" class="svg-micro">0.2 · 1/5</text>
+        <rect x="270" y="108" width="90" height="52"  fill="#c5b2ef" stroke="#000"/><text x="315" y="175" text-anchor="middle" class="svg-micro">0.4 · 2/5</text>
+        <rect x="370" y="82"  width="90" height="78"  fill="#a78bfa" stroke="#000"/><text x="415" y="175" text-anchor="middle" class="svg-micro">0.6 · 3/5</text>
+        <rect x="470" y="56"  width="60" height="104" fill="#8b5cf6" stroke="#000"/><text x="500" y="175" text-anchor="middle" class="svg-micro">0.8 · 4/5</text>
+        <rect x="540" y="30"  width="50" height="130" fill="#6d28d9" stroke="#000"/><text x="565" y="175" text-anchor="middle" class="svg-micro">1.0 · 5/5</text>
+      </g>
+
+      <!-- y label -->
+      <text x="10" y="40" class="svg-micro">confidence</text>
+      <text x="300" y="195" text-anchor="middle" class="svg-micro">fields with score &gt; 0</text>
+    </svg>
+    <figcaption>Confidence takes six discrete values. Records reach the auto-approval threshold only at 5/5 coverage; 4/5 falls into the sample-audit band.</figcaption>
+  </figure>
+
+  <h3>13.1 The formula</h3>
+  <pre data-lang="JS">
+<span class="c">// scripts/extract-policy-records.mjs:117–122</span>
+record.confidence = Number(
+  (
+    [aiUse, assessment, privacy, teacherPd, implementation]
+      .filter((field) =&gt; field.score &gt; <span class="n">0</span>).length / <span class="n">5</span>
+  ).toFixed(<span class="n">2</span>)
+);
+</pre>
+
+  <p>Because the denominator is always five, confidence takes one of six discrete values: 0.0, 0.2, 0.4, 0.6, 0.8, or 1.0. Any record whose confidence appears between these values was produced by a hand-edit to the canonical file and should be spot-checked.</p>
+
+  <h3>13.2 Evidence spans</h3>
+  <p>Every non-zero score is supposed to be accompanied by at least one evidence span — a direct quote from a source document, attached to the dimension it supports.</p>
+
+  <div class="prompt">
+    <span class="label">interface</span> EvidenceSpan {<br>
+    &nbsp;&nbsp;<span class="label">field:</span> string;       <span class="c">// which dimension this supports</span><br>
+    &nbsp;&nbsp;<span class="label">quote:</span> string;       <span class="c">// verbatim text from the source</span><br>
+    &nbsp;&nbsp;<span class="label">sourceUrl:</span> string;   <span class="c">// URL of the document</span><br>
+    &nbsp;&nbsp;<span class="label">chunkId?:</span> string | null;<br>
+    }
+  </div>
+
+  <h3>13.3 Deduplication</h3>
+  <p>Evidence spans are deduplicated using the composite key <code>field:quote:source_url</code>. Identical quotes on different URLs are kept; identical quotes on the same URL are not. Per-field, only the three highest-scoring spans survive into the canonical record.</p>
+
+  <div class="pullquote-wide">
+    <em>Confidence</em> measures coverage, not certainty. A record can be highly confident and still wrong.
+  </div>
+</section>
+
+<!-- ────── 14 ────── -->
+<section class="chapter" id="s14">
+  <div class="chapter-header">
+    <div class="num">14</div>
+    <div>
+      <h2>Approval routing</h2>
+      <div class="tagline">Auto-approve, sample audit, human review.</div>
+    </div>
+  </div>
+
+  <p>Once a record has been extracted and scored, the routing step decides whether it can be published without further review, whether it should be sampled into an audit queue, or whether it needs a human reviewer to re-read the sources.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 14·1 — Routing decision tree</span>
+    <svg viewBox="0 0 640 360" role="img" aria-label="Routing decision tree from extracted record to one of three approval outcomes">
+      <!-- root -->
+      <rect x="240" y="20" width="160" height="40" fill="#fff" stroke="#000"/>
+      <text x="320" y="45" text-anchor="middle" class="svg-label">Record extracted</text>
+
+      <!-- first decision -->
+      <polygon points="320,90 380,130 320,170 260,130" fill="#f5f4fa" stroke="#000"/>
+      <text x="320" y="128" text-anchor="middle" class="svg-label">manual review</text>
+      <text x="320" y="142" text-anchor="middle" class="svg-micro">already completed?</text>
+      <line x1="320" y1="60" x2="320" y2="90" stroke="#000"/>
+
+      <!-- branch: yes → completed -->
+      <path d="M380 130 L500 130" stroke="#000"/>
+      <text x="440" y="124" text-anchor="middle" class="svg-micro svg-accent">yes</text>
+      <rect x="500" y="110" width="120" height="40" fill="#6d28d9" stroke="#000"/>
+      <text x="560" y="134" text-anchor="middle" class="svg-label" fill="#fff">completed</text>
+
+      <!-- no → next decision -->
+      <line x1="320" y1="170" x2="320" y2="195" stroke="#000"/>
+      <polygon points="320,195 430,235 320,275 210,235" fill="#f5f4fa" stroke="#000"/>
+      <text x="320" y="228" text-anchor="middle" class="svg-label">confidence ≥ 0.90</text>
+      <text x="320" y="244" text-anchor="middle" class="svg-micro">+ strong primary</text>
+      <text x="320" y="258" text-anchor="middle" class="svg-micro">+ every field cited</text>
+
+      <!-- auto approve -->
+      <path d="M430 235 L500 235" stroke="#000"/>
+      <text x="465" y="229" text-anchor="middle" class="svg-micro svg-accent">yes</text>
+      <rect x="500" y="215" width="120" height="40" fill="#8b5cf6" stroke="#000"/>
+      <text x="560" y="239" text-anchor="middle" class="svg-label" fill="#fff">auto_approve</text>
+
+      <!-- no → sample audit decision -->
+      <line x1="320" y1="275" x2="320" y2="300" stroke="#000"/>
+      <polygon points="320,300 430,330 320,360 210,330" fill="#f5f4fa" stroke="#000"/>
+      <text x="320" y="328" text-anchor="middle" class="svg-label">0.75 ≤ conf ≤ 0.89</text>
+      <text x="320" y="344" text-anchor="middle" class="svg-micro">+ no conflict</text>
+
+      <path d="M430 330 L500 330" stroke="#000"/>
+      <text x="465" y="324" text-anchor="middle" class="svg-micro svg-accent">yes</text>
+      <rect x="500" y="310" width="120" height="40" fill="#a78bfa" stroke="#000"/>
+      <text x="560" y="334" text-anchor="middle" class="svg-label" fill="#fff">sample_audit</text>
+
+      <!-- no → human review -->
+      <path d="M210 330 L30 330 L30 220" stroke="#000"/>
+      <text x="60" y="324" class="svg-micro svg-accent">no</text>
+      <rect x="20" y="180" width="120" height="40" fill="#ece6fb" stroke="#000"/>
+      <text x="80" y="204" text-anchor="middle" class="svg-label">human_review</text>
+    </svg>
+    <figcaption>Four terminal outcomes: completed, auto_approve, sample_audit, human_review. Every record flagged for manual review skips the two score-based branches.</figcaption>
+  </figure>
+
+  <h3>14.1 The decision tree</h3>
+  <div class="stages">
+    <div class="stage">
+      <div class="label">Route<span class="num">I</span></div>
+      <div>
+        <h4>auto_approve</h4>
+        <p>All of: <code>confidence ≥ 0.90</code>, authority ∈ <code>{binding_law_or_regulation, official_guidance, official_model_policy}</code>, every scored field has at least one evidence span, no unresolved conflict, authority ∉ forbidden set.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="label">Route<span class="num">II</span></div>
+      <div>
+        <h4>sample_audit</h4>
+        <p>All of: <code>0.75 ≤ confidence ≤ 0.89</code>, at least four of the five scored fields have an evidence span, no unresolved conflict.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="label">Route<span class="num">III</span></div>
+      <div>
+        <h4>human_review</h4>
+        <p>Everything else, including every record with <code>confidence &lt; 0.75</code>, every record flagged by a conflict keyword, and every record whose strongest source is press coverage or secondary reporting.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="label">Route<span class="num">IV</span></div>
+      <div>
+        <h4>completed</h4>
+        <p>Terminal state. Assigned once a human reviewer has signed off; the record is exempt from re-routing until its next extraction run.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>14.2 Deep-research flags</h3>
+  <p>In parallel with routing, the pipeline flags records for deep research when any of four conditions hold: weak source authority, missing citation on a scored field, source-conflict keywords in the verification notes, or an <code>extraction_status</code> of <code>not_extracted</code>. These flags are advisory — they do not change the route but do appear in the reviewer's triage queue.</p>
+</section>
+
+<!-- ────── 15 ────── -->
+<section class="chapter" id="s15">
+  <div class="chapter-header">
+    <div class="num">15</div>
+    <div>
+      <h2>Synthesis weights</h2>
+      <div class="tagline">Calibration coefficients and quality bands.</div>
+    </div>
+  </div>
+
+  <p>The synthesis layer combines five signals into a single "policy quality" readout used by compare and timeline views. The weights live in <code>src/config/synthesisCalibration.json</code> and can be re-tuned without redeploying the extractor.</p>
+
+  <figure class="figure">
+    <span class="fig-num">Figure 15·1 — Synthesis signal weights</span>
+    <svg viewBox="0 0 620 220" role="img" aria-label="Horizontal stacked bar showing the five synthesis signal weights summing to 1.00">
+      <g>
+        <!-- stacked bar -->
+        <rect x="30" y="60" width="252" height="44" fill="#6d28d9" stroke="#000"/>
+        <rect x="282" y="60" width="112" height="44" fill="#8b5cf6" stroke="#000"/>
+        <rect x="394" y="60" width="84" height="44" fill="#a78bfa" stroke="#000"/>
+        <rect x="478" y="60" width="56" height="44" fill="#c5b2ef" stroke="#000"/>
+        <rect x="534" y="60" width="56" height="44" fill="#dcd0f7" stroke="#000"/>
+
+        <!-- ticks -->
+        <line x1="30" y1="110" x2="590" y2="110" stroke="#000" stroke-width="0.5"/>
+        <text x="30"  y="125" class="svg-micro">0.00</text>
+        <text x="170" y="125" class="svg-micro">0.25</text>
+        <text x="310" y="125" class="svg-micro">0.50</text>
+        <text x="450" y="125" class="svg-micro">0.75</text>
+        <text x="590" y="125" text-anchor="end" class="svg-micro">1.00</text>
+
+        <!-- labels -->
+        <text x="30"  y="50" class="svg-label">confidence · 0.45</text>
+        <text x="282" y="50" class="svg-label">evidence · 0.20</text>
+        <text x="394" y="50" class="svg-label" fill="#5b5280">authority · 0.15</text>
+        <text x="478" y="50" class="svg-label" fill="#5b5280">docs · 0.10</text>
+        <text x="534" y="50" class="svg-label" fill="#5b5280">route · 0.10</text>
+
+        <!-- threshold markers -->
+        <line x1="498" y1="150" x2="498" y2="190" stroke="#6d28d9" stroke-width="1"/>
+        <text x="498" y="145" text-anchor="middle" class="svg-micro svg-accent">strong 0.82</text>
+        <line x1="393" y1="150" x2="393" y2="190" stroke="#6d28d9" stroke-dasharray="3 3" opacity="0.5"/>
+        <text x="393" y="145" text-anchor="middle" class="svg-micro">moderate 0.65</text>
+
+        <text x="30" y="175" class="svg-label">quality bands:</text>
+        <rect x="140" y="163" width="100" height="16" fill="#ece6fb" stroke="#c4bfe8"/>
+        <text x="190" y="175" text-anchor="middle" class="svg-micro">weak</text>
+        <rect x="240" y="163" width="153" height="16" fill="#c5b2ef" stroke="#c4bfe8"/>
+        <text x="316" y="175" text-anchor="middle" class="svg-micro">moderate</text>
+        <rect x="393" y="163" width="197" height="16" fill="#6d28d9" stroke="#c4bfe8"/>
+        <text x="491" y="175" text-anchor="middle" class="svg-micro" fill="#fff">strong</text>
+      </g>
+    </svg>
+    <figcaption>Confidence alone accounts for 45 %; the four structural signals together contribute 55 %. The <code>auditBonus</code> of +0.04 is applied on top when a human reviewer has signed off.</figcaption>
+  </figure>
+
+  <h3>15.1 Signal weights</h3>
+  <table>
+    <tr><th>Signal</th><th class="num">Weight</th><th>What it measures</th></tr>
+    <tr><td>confidence</td><td class="num">0.45</td><td>Field coverage (§13.1)</td></tr>
+    <tr><td>evidenceSpanCoverage</td><td class="num">0.20</td><td>Breadth of evidence spans</td></tr>
+    <tr><td>sourceAuthority</td><td class="num">0.15</td><td>Authority level of strongest source</td></tr>
+    <tr><td>sourceDocumentCoverage</td><td class="num">0.10</td><td>Number of attached sources</td></tr>
+    <tr><td>approvalRoute</td><td class="num">0.10</td><td>Routing outcome (§14.1)</td></tr>
+  </table>
+
+  <h3>15.2 Quality bands</h3>
+  <table>
+    <tr><th>Band</th><th class="num">Threshold</th></tr>
+    <tr><td>Strong</td><td class="num">≥ 0.82</td></tr>
+    <tr><td>Moderate</td><td class="num">≥ 0.65</td></tr>
+    <tr><td>Weak</td><td class="num">&lt; 0.65</td></tr>
+  </table>
+
+  <h3>15.3 Authority sub-weights</h3>
+  <table>
+    <tr><th>Authority level</th><th class="num">Weight</th></tr>
+    <tr><td>binding_law_or_regulation</td><td class="num">1.00</td></tr>
+    <tr><td>official_guidance</td><td class="num">0.90</td></tr>
+    <tr><td>official_model_policy</td><td class="num">0.82</td></tr>
+    <tr><td>official_press_release</td><td class="num">0.58</td></tr>
+    <tr><td>secondary_reporting</td><td class="num">0.35</td></tr>
+  </table>
+
+  <div class="callout">
+    <span class="label">Calibration note</span>
+    <p>The confidence weight dominates deliberately. Changes to the other four signals move the synthesis score by small amounts; changes to field coverage move it sharply. This keeps the synthesis view a proxy for data completeness rather than for editorial strength.</p>
+  </div>
+</section>
+
+<!-- ────── 16 ────── -->
+<section class="chapter" id="s16">
+  <div class="chapter-header">
+    <div class="num">16</div>
+    <div>
+      <h2>Known limitations</h2>
+      <div class="tagline">Keyword fragility, missing district data, single snapshot.</div>
+    </div>
+  </div>
+
+  <p>The Observatory is a working instrument, not a finished artefact. This chapter lists the limits a reader should carry into every use of the dashboard; subsequent editions will close each as the data infrastructure matures.</p>
+
+  <h3>16.1 Keyword extraction is brittle</h3>
+  <p>The default extractor matches on English keyword co-occurrence. It misses policies written in plain administrative language and over-fires on documents that use its keywords metaphorically. The LLM extraction path (<code>pipeline:gemini</code>) compensates partially but requires independent sampling.</p>
+
+  <h3>16.2 No academic evidence layer inside the rubric</h3>
+  <p>The rubric grades policies against primary sources only. Although the project is anchored to peer-reviewed work on policy surveillance, legal epidemiology, and structured extraction (see Appendix D), those citations frame the project; they are not attached to individual scores. A future edition may add a <code>references.json</code> layer that binds specific literature to each dimension.</p>
+
+  <h3>16.3 No sub-state granularity</h3>
+  <p>All records are <code>regionType: "state"</code>. The district view is a visual placeholder — counties inherit their parent state's record without modification. Any analysis at district granularity is out of scope until scored district records exist.</p>
+
+  <h3>16.4 Single-snapshot timeline</h3>
+  <p>The <code>year</code> field exists on every record, but the UI only renders one snapshot at a time. Retrospective comparison across years requires walking the canonical file directly.</p>
+
+  <h3>16.5 Domain-spoofing edge cases</h3>
+  <p>Source classification relies on URL-domain patterns. Non-standard official domains — territorial governments, tribal education offices, and bilingual press sites — may mis-classify as <code>secondary_reporting</code>. The reviewer checklist in Appendix B catches most of these manually.</p>
+</section>
+
+<!-- ═══════════════════ APPENDICES ═══════════════════ -->
+<div class="appendix-intro">
+  <div class="eyebrow">Part Four</div>
+  <h2>Appendices &amp; operational references</h2>
+</div>
+
+<!-- ────── A ────── -->
+<section class="chapter appendix" id="appA">
+  <div class="chapter-header">
+    <div class="num">A</div>
+    <div>
+      <h2>Pipeline command reference</h2>
+      <div class="tagline">The eight stages from crawl to publish.</div>
+    </div>
+  </div>
+
+  <p>Every published record moves through eight scripted stages. Each stage has an <code>npm</code> entry-point and a well-defined input and output; a reviewer can re-run a single stage without re-running the others.</p>
+
+  <div class="stages">
+    <div class="stage">
+      <div class="label">Stage<span class="num">I</span></div>
+      <div><h4>Crawl</h4><p><code>npm run crawl:sources</code> · seeds → <code>data/generated/raw/*.html</code> + <code>policy-source-manifest.json</code>.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">II</span></div>
+      <div><h4>Scaffold</h4><p><code>npm run pipeline:scaffold</code> · manifest → <code>policy-records.json</code> with empty score fields.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">III</span></div>
+      <div><h4>Chunk</h4><p><code>npm run pipeline:chunk</code> · HTML → <code>chunks.jsonl</code> + <code>retrieval-index.json</code>.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">IV</span></div>
+      <div><h4>Extract</h4><p><code>npm run pipeline:extract</code> (keyword rules) or <code>pipeline:gemini</code> (LLM) · chunks → scored records.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">V</span></div>
+      <div><h4>Validate</h4><p><code>npm run pipeline:validate</code> · schema check against <code>policy-records.schema.json</code>.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">VI</span></div>
+      <div><h4>Route</h4><p><code>npm run route-policy-records</code> · records → records with <code>approvalRoute</code>, <code>auditStatus</code>, and deep-research flags.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">VII</span></div>
+      <div><h4>Review</h4><p><code>npm run build-review-queue</code> · audit and human-review items routed to reviewers.</p></div>
+    </div>
+    <div class="stage">
+      <div class="label">Stage<span class="num">VIII</span></div>
+      <div><h4>Publish</h4><p><code>npm run publish-app-data</code> · canonical file → <code>dist/policy-records.json</code> (app-ready).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ────── B ────── -->
+<section class="chapter appendix" id="appB">
+  <div class="chapter-header">
+    <div class="num">B</div>
+    <div>
+      <h2>Reviewer checklist</h2>
+      <div class="tagline">Conditions for auto-approval.</div>
+    </div>
+  </div>
+
+  <p>Before a record is auto-approved, every item below must be true. A single failure routes the record to <code>sample_audit</code> or <code>human_review</code> depending on confidence.</p>
+
+  <div class="prompt">
+    <span class="label">checklist:</span><br>
+    <span class="label">·</span> at least one source at STRONG_PRIMARY level<br>
+    <span class="label">·</span> every scored field has ≥ 1 evidence span<br>
+    <span class="label">·</span> every quote is verbatim from its source<br>
+    <span class="label">·</span> confidence ≥ 0.90<br>
+    <span class="label">·</span> verification_notes contains no conflict keyword<br>
+    <span class="label">·</span> review_status ≠ "needs_revision"<br>
+    <span class="label">·</span> sourceAuthority ∉ {press_release, secondary_reporting}
+  </div>
+
+  <p>If any box is unchecked, record the reason in <code>routingReasons</code> and return the record to the queue. The reviewer checklist is designed to be re-runnable: a re-extract that fixes one reason can clear the record without re-reviewing the others.</p>
+</section>
+
+<!-- ────── C ────── -->
+<section class="chapter appendix" id="appC">
+  <div class="chapter-header">
+    <div class="num">C</div>
+    <div>
+      <h2>Code reference index</h2>
+      <div class="tagline">File-and-line pointers to every rule in this document.</div>
+    </div>
+  </div>
+
+  <p>Every threshold, weight, and enum cited in this manual is anchored to a specific file and line in the repository. When the numbers move, this table is where to look first.</p>
+
+  <table>
+    <tr><th>Topic</th><th>File : line</th></tr>
+    <tr><td>PolicyRecord type</td><td>src/types.ts : 43–76</td></tr>
+    <tr><td>EvidenceSpan type</td><td>src/types.ts : 22–27</td></tr>
+    <tr><td>Keyword scoring rules</td><td>scripts/extract-policy-records.mjs : 53–89</td></tr>
+    <tr><td>Confidence formula</td><td>scripts/extract-policy-records.mjs : 117–122</td></tr>
+    <tr><td>policyStrength formula</td><td>scripts/lib/policy-extraction-utils.mjs : 33–40</td></tr>
+    <tr><td>Evidence dedupe</td><td>scripts/lib/policy-extraction-utils.mjs : 58–66</td></tr>
+    <tr><td>Authority hierarchy</td><td>scripts/lib/approval-utils.mjs : 4–17</td></tr>
+    <tr><td>Official URL predicate</td><td>scripts/lib/approval-utils.mjs : 33–42</td></tr>
+    <tr><td>Source classification</td><td>scripts/lib/approval-utils.mjs : 45–78</td></tr>
+    <tr><td>Conflict detection</td><td>scripts/lib/approval-utils.mjs : 117–126</td></tr>
+    <tr><td>Approval routing</td><td>scripts/lib/approval-utils.mjs : 128–224</td></tr>
+    <tr><td>policyStrength bands</td><td>src/data/policyData.ts : 402–407</td></tr>
+    <tr><td>Colour mapping</td><td>src/data/policyData.ts : 409–417</td></tr>
+    <tr><td>Implementation-stage labels</td><td>src/data/policyData.ts : 427–433</td></tr>
+    <tr><td>Score labels</td><td>src/data/policyData.ts : 448–454</td></tr>
+    <tr><td>Synthesis weights</td><td>src/config/synthesisCalibration.json</td></tr>
+    <tr><td>Seed URL list</td><td>data/source-seeds.json</td></tr>
+    <tr><td>Canonical schema</td><td>data/canonical/policy-records.schema.json</td></tr>
+    <tr><td>Codebook</td><td>docs/CODEBOOK.md</td></tr>
+    <tr><td>Research design</td><td>docs/RESEARCH_DESIGN.md</td></tr>
+    <tr><td>Evaluation plan</td><td>docs/EVALUATION_PLAN.md</td></tr>
+    <tr><td>Architecture</td><td>docs/ARCHITECTURE.md</td></tr>
+    <tr><td>Synthesis protocol</td><td>docs/SCIENTIFIC_SYNTHESIS_PROTOCOL.md</td></tr>
+    <tr><td>Deep research spec</td><td>docs/DEEP_RESEARCH.md</td></tr>
+    <tr><td>Refresh protocol</td><td>docs/REFRESH_PROTOCOL.md</td></tr>
+  </table>
+</section>
+
+<!-- ────── D ────── -->
+<section class="chapter appendix" id="appD">
+  <div class="chapter-header">
+    <div class="num">D</div>
+    <div>
+      <h2>References &amp; informing literatures</h2>
+      <div class="tagline">Primary sources, internal methodology docs, and the literatures this project draws from.</div>
+    </div>
+  </div>
+
+  <p>A note on what this appendix is, and what it is not. The Observatory does not cite academic papers <em>inside</em> its scoring pipeline — every numerical value in a record is grounded in a primary policy document, not in the pedagogy or privacy literature. The project is, however, anchored to a compact set of peer-reviewed work on policy surveillance, legal epidemiology, AI-in-education governance, and structured information extraction; those citations frame the project's design and are the same list surfaced on the public project-overview page. This appendix therefore does four things: it names the <em>primary source authorities</em> the rubric trusts, it enumerates the <em>internal methodology documents</em> that govern the project, it lists the <em>cited literatures</em> that anchor the project's framing, and it calls out the gaps where citations are still missing.</p>
+
+  <h3>D.1 Primary source authorities</h3>
+  <p>All 479 crawled seeds (see <code>data/source-seeds.json</code>) resolve to one of the following categories. Each individual URL functions as a reference in its own right; the full list is machine-readable in the seed file.</p>
+  <ul>
+    <li>U.S. state departments of education (51 jurisdictions, including DC)</li>
+    <li>State boards of education and standards bodies</li>
+    <li>State statutes, administrative codes, and legislative bill pages</li>
+    <li>State-issued model policies and implementation frameworks</li>
+    <li>Agency press releases that point to a primary source</li>
+  </ul>
+
+  <h3>D.2 Internal methodology documents</h3>
+  <p>These are the project's own authoritative references. Where the present manual and an internal document disagree, the internal document wins.</p>
+  <table>
+    <tr><th>Document</th><th>Scope</th></tr>
+    <tr><td><code>docs/RESEARCH_DESIGN.md</code></td><td>Research questions, experimental conditions, metrics families</td></tr>
+    <tr><td><code>docs/EVALUATION_PLAN.md</code></td><td>Gold set, primary metrics, reporting bundle</td></tr>
+    <tr><td><code>docs/ARCHITECTURE.md</code></td><td>Runtime layers, agent roles, design constraints</td></tr>
+    <tr><td><code>docs/CODEBOOK.md</code></td><td>Policy stage enum, domains, auto-approval exclusions</td></tr>
+    <tr><td><code>docs/SCIENTIFIC_SYNTHESIS_PROTOCOL.md</code></td><td>Narrative discipline for synthesis outputs</td></tr>
+    <tr><td><code>docs/DEEP_RESEARCH.md</code></td><td>Escalation agent spec, trigger conditions, output contract</td></tr>
+    <tr><td><code>docs/REFRESH_PROTOCOL.md</code></td><td>Biweekly refresh cadence and operational safeguards</td></tr>
+    <tr><td><code>docs/IMPLEMENTATION_PLAN.md</code></td><td>Four-phase deployment roadmap</td></tr>
+    <tr><td><code>docs/GEMINI.md</code></td><td>LLM extraction path</td></tr>
+    <tr><td><code>docs/DATA_SOURCES_AND_EVALUATION.md</code></td><td>Full methodology reference (Korean)</td></tr>
+  </table>
+
+  <h3>D.3 Cited literatures</h3>
+  <p>The following six works anchor the project's design. They appear on the public project-overview page under <em>Academic Grounding</em> and are the same references surfaced in <code>src/components/ProjectOverviewPage.tsx</code>. Each is listed in APA form with a one-line note on how it maps to the Observatory's architecture.</p>
+
+  <ol class="references">
+    <li>
+      <p>Kavanagh, M. M., Meier, B. M., Pillinger, M., Huffstetler, H., &amp; Burris, S. (2020). Global policy surveillance: Creating and using comparative national data on health law and policy. <em>American Journal of Public Health, 110</em>(12), 1805–1810.</p>
+      <p class="ref-note"><span class="tag">policy surveillance</span> Establishes why laws and policies should be converted into structured, comparable, longitudinal datasets — the coding scheme in §9 is a simplified policy-surveillance codebook.</p>
+    </li>
+    <li>
+      <p>Poirier, M. J. P., Viens, A. M., Penney, T. L., Van Katwyk, S. R., Astbury, C. C., Lin, G., Nanyangwe-Moyo, T., &amp; Hoffman, S. J. (2022). Principles and methods of global legal epidemiology. <em>Journal of Epidemiology &amp; Community Health, 76</em>(9), 828–832.</p>
+      <p class="ref-note"><span class="tag">legal epidemiology</span> Motivates formal inclusion rules, repeatable coding procedures, and cross-jurisdiction comparison — the discipline behind §9's analytic coding and §11's rubric.</p>
+    </li>
+    <li>
+      <p>Ramanathan, T., Hulkower, R., Holbrook, J., &amp; Penn, M. (2017). Legal epidemiology: The science of law. <em>Journal of Law, Medicine &amp; Ethics, 45</em>(S1), 69–72.</p>
+      <p class="ref-note"><span class="tag">legal epidemiology</span> Frames law and policy as measurable interventions — the conceptual basis for turning AI-in-education governance into an analyzable dataset.</p>
+    </li>
+    <li>
+      <p>Ifenthaler, D., Majumdar, R., Gorissen, P., Judge, M., Mishra, S., Raffaghelli, J., &amp; Shimada, A. (2024). Artificial intelligence in education: Implications for policymakers, researchers, and practitioners. <em>Technology, Knowledge and Learning, 29</em>, 1693–1710.</p>
+      <p class="ref-note"><span class="tag">AI-in-education governance</span> Establishes AI in education as a governance problem — underwrites the domain list in §11.2 (AI use, assessment, privacy, teacher PD, implementation).</p>
+    </li>
+    <li>
+      <p>Dagdelen, J., Dunn, A., Lee, S., Walker, N., Rosen, A. S., Ceder, G., Persson, K. A., &amp; Jain, A. (2024). Structured information extraction from scientific text with large language models. <em>Nature Communications, 15</em>, 1418.</p>
+      <p class="ref-note"><span class="tag">structured extraction</span> Evidence that LLMs can produce useful structured records from unstructured text when the output schema is well designed — informs the evidence layer (§8.1) and citation-support metric (§10.2β).</p>
+    </li>
+    <li>
+      <p>C R, C., Kulkarni, S., Sagi, S. R. A. V., Pandey, S., Yalavarthy, R., Chakraborty, D., &amp; Upadhyay, P. D. (2024). LeGen: Complex information extraction from legal sentences using generative models. In <em>Proceedings of the Natural Legal Language Processing Workshop 2024</em> (pp. 1–17).</p>
+      <p class="ref-note"><span class="tag">legal text extraction</span> Demonstrates why legal and policy text needs specialised extraction workflows rather than keyword collection — informs the LLM extraction path (<code>pipeline:gemini</code>) and confidence routing in §14.</p>
+    </li>
+  </ol>
+
+  <h3>D.4 Coverage map of the cited literature</h3>
+  <p>The four framings below are what each citation actually carries. The map is useful because no single paper covers every decision the Observatory makes — multi-agent role decomposition and human-on-the-loop auditing, in particular, remain framings without a named citation in the current edition.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <h5><span class="tag">i</span> Policy surveillance</h5>
+      <ul>
+        <li>Jurisdiction-level comparable observations</li>
+        <li>Standardised coding, reproducibility</li>
+        <li>Temporal policy tracking</li>
+      </ul>
+      <div class="good">Cited: Kavanagh et al. (2020); Poirier et al. (2022); Ramanathan et al. (2017).</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">ii</span> AI-in-education governance</h5>
+      <ul>
+        <li>Assessment, privacy, teacher support</li>
+        <li>Oversight and accountability</li>
+        <li>Domain-level coding targets</li>
+      </ul>
+      <div class="good">Cited: Ifenthaler et al. (2024).</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">iii</span> Structured / legal IE</h5>
+      <ul>
+        <li>Schema-constrained LLM extraction</li>
+        <li>Evidence-span grounding</li>
+        <li>Legal-text specialisation</li>
+      </ul>
+      <div class="good">Cited: Dagdelen et al. (2024); C R et al. (2024).</div>
+    </div>
+    <div class="cell">
+      <h5><span class="tag">iv</span> Multi-agent &amp; human-on-the-loop</h5>
+      <ul>
+        <li>Role decomposition (scout, extractor, verifier)</li>
+        <li>Confidence-triggered escalation</li>
+        <li>Selective audit sampling</li>
+      </ul>
+      <div class="bad">Not yet cited. Shapes §8.2 agent roles and §14 routing logic but currently rests on engineering practice rather than named prior work.</div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="label">Honest disclosure</span>
+    <p>The six citations above are the project's anchoring literature, not a claim of derivative authorship. Specific design choices — the five-dimension rubric, the five-level source authority, the six agent roles, the confidence step function — are engineering decisions calibrated against the project's own gold set, not translations of any single paper. The multi-agent and human-oversight framings (cell iv above) remain un-cited in the current edition and should be closed in a future revision.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════ COLOPHON ═══════════════════ -->
+<footer class="colophon">
+  <div>
+    <h5>Colophon</h5>
+    <p>Set in Source Serif 4 and Inter Tight, with JetBrains Mono for code. Rendered as a single self-contained HTML document; no build step. The page grid and design tokens follow the Observatory monograph system, edition April 2026.</p>
+  </div>
+  <div>
+    <h5>Citation</h5>
+    <p>AIED Policy Observatory Lab. <em>The AI Education Policy Observatory — A Reader's Manual, Research Framework, and Evaluation Codebook.</em> No. 01, April 2026. Version 2026-04-19. Internal working document.</p>
+  </div>
+  <div>
+    <h5>License</h5>
+    <p>Documentation text is released for internal review. Underlying source documents retain their original licenses; consult <code>data/source-seeds.json</code> for per-URL provenance.</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

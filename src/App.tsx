@@ -18,6 +18,7 @@ import { PolicyTileMap } from "./components/PolicyTileMap";
 import { ProjectOverviewPage } from "./components/ProjectOverviewPage";
 import { SecondarySignalsPanel } from "./components/SecondarySignalsPanel";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
+import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
 import { TrustPanel } from "./components/TrustPanel";
 import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
 import type { PolicyEvent, PolicyRecord } from "./types";
@@ -137,6 +138,10 @@ function App() {
   const [workspaceSession, setWorkspaceSession] = useState<WorkspaceSession | null>(() =>
     readWorkspaceSession()
   );
+  const [teacherMode, setTeacherMode] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
+  const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
   const [currentPage, setCurrentPage] = useState<AppPage>(() =>
     typeof window === "undefined" ? "landing" : getAppPageFromPath(window.location.pathname)
@@ -449,17 +454,29 @@ function App() {
   }
 
   return (
-    <div className="sentinel-shell">
+    <div className={`sentinel-shell${sidebarCollapsed ? " sidebar-collapsed" : ""}`}>
       <aside className="side-nav">
         <div className="side-brand">
           <div className="brand-mark">
             <AppIcon className="brand-icon" decorative />
           </div>
-          <div>
+          <div className="side-brand-text">
             <h1>AI Education Policy Observatory</h1>
             <p>An Agentic Policy Surveillance Framework</p>
           </div>
         </div>
+
+        <button
+          type="button"
+          className="sidebar-toggle-btn"
+          onClick={() => setSidebarCollapsed(v => !v)}
+          aria-label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          <span className="material-symbols-outlined">
+            {sidebarCollapsed ? "chevron_right" : "chevron_left"}
+          </span>
+          <span className="sidebar-toggle-label">Collapse</span>
+        </button>
 
         <button className="side-cta" type="button" onClick={() => setIsAnalysisDrawerOpen(true)}>
           <span className="material-symbols-outlined">add_circle</span>
@@ -468,23 +485,23 @@ function App() {
 
         <nav className="side-links" aria-label="Core filters">
           <p>Core Filters</p>
-          <a className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
+          <a title="Geography" className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
             <span className="material-symbols-outlined">public</span>
             Geography
           </a>
-          <a className={activeSection === "policy-domains" ? "active" : ""} href="#policy-domains" onClick={() => navigateToDashboard("policy-domains")}>
+          <a title="Policy Domains" className={activeSection === "policy-domains" ? "active" : ""} href="#policy-domains" onClick={() => navigateToDashboard("policy-domains")}>
             <span className="material-symbols-outlined">domain</span>
             Policy Domains
           </a>
-          <a className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
+          <a title="Policy Stage" className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
             <span className="material-symbols-outlined">step</span>
             Policy Stage
           </a>
-          <a className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
+          <a title="Confidence" className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
             <span className="material-symbols-outlined">verified</span>
             Confidence
           </a>
-          <a className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
+          <a title="Timeline" className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
             <span className="material-symbols-outlined">schedule</span>
             Time
           </a>
@@ -540,9 +557,6 @@ function App() {
               <a className={activeSection === "methodology" ? "active" : ""} href="#methodology" onClick={() => navigateToDashboard("methodology")}>
                 Methodology
               </a>
-              <button type="button" className="top-nav-route-button" onClick={navigateToProjectOverview}>
-                Project Overview
-              </button>
             </nav>
           </div>
 
@@ -556,6 +570,16 @@ function App() {
                 placeholder="Search policies..."
               />
             </label>
+
+            <button
+              type="button"
+              className={`teacher-mode-toggle ${teacherMode ? "on" : "off"}`}
+              onClick={() => setTeacherMode((v) => !v)}
+              aria-pressed={teacherMode}
+            >
+              <span className="material-symbols-outlined">school</span>
+              Teacher Mode
+            </button>
 
             <button type="button" className="icon-button" aria-label="History">
               <span className="material-symbols-outlined">history</span>
@@ -576,206 +600,165 @@ function App() {
           </div>
         </header>
 
-        <main className="content-shell">
-          <section className="page-header">
-            <div>
-              <span className="page-kicker">Map View</span>
-              <h3>AI Education Policy Observatory</h3>
-              <p>
-                Mapping state, district, and school-level AI policy variation across the United States
-                with a benchmarked research-dashboard shell.
-              </p>
+        {/* ── MAP WORKSPACE — grid: inspector left | map right ── */}
+        <div className="map-workspace">
+
+          {/* LEFT: inspector panel */}
+          <div className="float-inspector">
+            <div className="float-header">
+              <div className="dash-state-line">
+                <span className="dash-state-name">{selectedRecord.stateName}</span>
+                <span className="dash-state-abbr">{selectedRecord.stateAbbr}</span>
+                <span className="dash-live-dot" aria-hidden="true" />
+                <span className="dash-updated">{latestChangedLabel}</span>
+              </div>
+
+              <div className="dash-mini-stats">
+                <div><span>States</span><strong>{totalCount}</strong></div>
+                <div><span>Coded</span><strong>{codedCount}</strong></div>
+                <div><span>Guidance</span><strong>{releasedGuidanceCount}</strong></div>
+                <div><span>Stage</span><strong>{dominantStage}</strong></div>
+              </div>
+
+              <div className="inspector-tabs" role="tablist">
+                <button
+                  role="tab"
+                  aria-selected={inspectorTab === "brief"}
+                  className={inspectorTab === "brief" ? "active" : ""}
+                  onClick={() => setInspectorTab("brief")}
+                >Brief</button>
+                <button
+                  role="tab"
+                  aria-selected={inspectorTab === "activity"}
+                  className={inspectorTab === "activity" ? "active" : ""}
+                  onClick={() => setInspectorTab("activity")}
+                >Activity</button>
+                <button
+                  role="tab"
+                  aria-selected={inspectorTab === "log"}
+                  className={inspectorTab === "log" ? "active" : ""}
+                  onClick={() => setInspectorTab("log")}
+                >Details</button>
+              </div>
             </div>
-            <div className="header-stamp">
-              <span>Last Changed</span>
-              <strong>{latestChangedLabel}</strong>
-            </div>
-          </section>
 
-          <section className="hero-metrics">
-            <div>
-              <span>States + DC</span>
-              <strong>{totalCount}</strong>
-            </div>
-            <div>
-              <span>High confidence</span>
-              <strong>{highConfidenceCount}</strong>
-            </div>
-            <div>
-              <span>Released guidance</span>
-              <strong>{releasedGuidanceCount}</strong>
-            </div>
-            <div>
-              <span>Typical stage</span>
-              <strong>{dominantStage}</strong>
-            </div>
-          </section>
+            <div className="float-body">
+              {inspectorTab === "brief" && (
+                <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
+              )}
 
-          <section className="leadership-overview-band">
-            <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
-            <TrustPanel record={selectedRecord} events={policyEvents} />
-          </section>
+              {inspectorTab === "activity" && (
+                <LiveActivityRail
+                  events={recentEvents}
+                  livePolling={livePolling}
+                  playbackIndex={safePlaybackIndex}
+                  playbackRunning={playbackRunning}
+                  onToggleLivePolling={() => setLivePolling((current) => !current)}
+                  onTogglePlayback={() => setPlaybackRunning((current) => !current)}
+                  onPlaybackIndexChange={setPlaybackIndex}
+                  onSelectEvent={(event, index) => {
+                    setPlaybackIndex(Math.max(index, 0));
+                    setPlaybackRunning(false);
+                    selectState(event.stateAbbr);
+                  }}
+                />
+              )}
 
-          <OperatorSurface records={records} />
-
-          <SecondarySignalsPanel record={selectedRecord} />
-
-          <section className="dashboard-grid" id="map-view">
-            <div className="map-column">
-              <div className="map-card">
-                <div className="map-overlay">
-                  <div className="view-toggle">
-                    <button type="button" className="active">State</button>
-                    <button type="button" className="is-soon" aria-label="District view is in development">
-                      District
-                      <span className="view-toggle-hint" role="tooltip">
-                        District view is in development
-                      </span>
-                    </button>
-                  </div>
-
-                  <div className="legend-card" aria-label="Policy strength legend">
-                    <p>Policy Strength</p>
-                    <div className="legend-scale" />
-                    <div className="legend-labels">
-                      <span>Weak</span>
-                      <span>Robust</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="map-canvas">
-                  <PolicyTileMap
-                    records={records}
-                    selectedState={selectedState}
-                    visibleIds={filteredStateIds}
-                    pulseStates={pulseStateIds}
-                    confidenceShiftStates={confidenceShiftStateIds}
-                    sourceAddedStates={sourceAddedStateIds}
-                    playbackState={activePlaybackEvent?.stateAbbr ?? null}
-                    onSelect={selectState}
+              {inspectorTab === "log" && (
+                <>
+                  <PolicyChangeLog
+                    stateAbbr={selectedRecord.stateAbbr}
+                    stateName={selectedRecord.stateName}
+                    events={policyEvents}
+                    maxItems={5}
                   />
-                </div>
-              </div>
-
-              <div className="summary-row">
-                <article className="summary-card">
-                  <h4>Policy Distribution</h4>
-                  <div className="mini-bars" aria-hidden="true">
-                    <span style={{ height: "28%" }} />
-                    <span style={{ height: "58%" }} />
-                    <span style={{ height: "86%" }} />
-                    <span style={{ height: "44%" }} />
-                  </div>
-                  <p>Current coding suggests a center of gravity around emerging state guidance.</p>
-                </article>
-
-                <article className="summary-card">
-                  <h4>Coverage Filter</h4>
-                  <label className="field">
-                    <span>Snapshot coverage</span>
-                    <select
-                      value={coverageFilter}
-                      onChange={(event) => setCoverageFilter(event.target.value as CoverageFilter)}
-                    >
-                      <option value="all">All states</option>
-                      <option value="coded">Coded only</option>
-                      <option value="queued">Queued only</option>
-                    </select>
-                  </label>
-                </article>
-
-                <article className="summary-card">
-                  <h4>Research Note</h4>
-                  <p>
-                    Current coded states skew toward released guidance, with confidence and domain mix
-                    now exposed directly in the inspector and table.
-                  </p>
-                </article>
-              </div>
+                  {teacherMode ? (
+                    <TeacherGuidancePanel record={selectedRecord} />
+                  ) : (
+                    <PolicyDetailPanel record={selectedRecord} />
+                  )}
+                </>
+              )}
             </div>
-
-            <div className="inspector-column">
-              <div className="inspector-toolbar">
-                <label className="field">
-                  <span>Search scope</span>
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(event) => setSearchQuery(event.target.value)}
-                    placeholder="CA, Texas, New York..."
-                  />
-                </label>
-              </div>
-
-              <LiveActivityRail
-                events={recentEvents}
-                livePolling={livePolling}
-                playbackIndex={safePlaybackIndex}
-                playbackRunning={playbackRunning}
-                onToggleLivePolling={() => setLivePolling((current) => !current)}
-                onTogglePlayback={() => setPlaybackRunning((current) => !current)}
-                onPlaybackIndexChange={setPlaybackIndex}
-                onSelectEvent={(event, index) => {
-                  setPlaybackIndex(Math.max(index, 0));
-                  setPlaybackRunning(false);
-                  selectState(event.stateAbbr);
-                }}
-              />
-
-              <PolicyChangeLog
-                stateAbbr={selectedRecord.stateAbbr}
-                stateName={selectedRecord.stateName}
-                events={policyEvents}
-                maxItems={4}
-              />
-
-              <PolicyDetailPanel record={selectedRecord} />
-            </div>
-          </section>
-
-          <ImplementationReadinessSection
-            records={records}
-            selectedState={selectedState}
-            onSelectState={selectState}
-          />
-
-          <CompareMatrixView
-            records={codedRecords}
-            compareStates={compareStates}
-            onChangeState={changeCompareState}
-          />
-
-          <section className="schema-strip">
-            <div>
-              <span className="page-kicker">Schema Notes</span>
-              <h4>Canonical fields behind the comparison</h4>
-            </div>
-            <div className="schema-list">
-              <span>`region_id`</span>
-              <span>`state_abbr`</span>
-              <span>`region_type`</span>
-              <span>`year`</span>
-              <span>`ai_use_allowed`</span>
-              <span>`assessment_policy`</span>
-              <span>`privacy_policy`</span>
-              <span>`teacher_pd_support`</span>
-              <span>`implementation_stage`</span>
-              <span>`policy_strength`</span>
-              <span>`confidence`</span>
-              <span>`approval_route`</span>
-            </div>
-          </section>
-
-          <PolicyDomainsSection records={records} onSelectState={selectState} />
-          <PolicyStageSection records={records} onSelectState={selectState} />
-          <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
-          <MethodologySection records={records} />
-
-          <div id="table-view">
-            <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />
           </div>
-        </main>
+
+          {/* RIGHT: map ground — map fills this column */}
+          <div className="map-ground">
+            <PolicyTileMap
+              records={records}
+              selectedState={selectedState}
+              visibleIds={filteredStateIds}
+              pulseStates={pulseStateIds}
+              confidenceShiftStates={confidenceShiftStateIds}
+              sourceAddedStates={sourceAddedStateIds}
+              playbackState={activePlaybackEvent?.stateAbbr ?? null}
+              viewMode={viewMode}
+              onSelect={selectState}
+            />
+
+            {/* Map controls — legend + view toggle */}
+            <div className="float-map-controls">
+              <div className="view-toggle">
+                <button
+                  type="button"
+                  className={viewMode === "state" ? "active" : ""}
+                  onClick={() => setViewMode("state")}
+                >State</button>
+                <button
+                  type="button"
+                  className={viewMode === "district" ? "active" : ""}
+                  onClick={() => setViewMode("district")}
+                >District</button>
+              </div>
+              <div className="legend-card" aria-label="Policy strength legend">
+                <p>Policy Strength</p>
+                <div className="legend-scale" />
+                <div className="legend-labels">
+                  <span>Weak</span>
+                  <span>Robust</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Section overlay — shown for non-map nav sections */}
+            {activeSection !== "map-view" && (
+              <div className="section-overlay">
+                <div className="section-overlay-body">
+                  {activeSection === "compare" && (
+                    <CompareMatrixView
+                      records={codedRecords}
+                      compareStates={compareStates}
+                      onChangeState={changeCompareState}
+                    />
+                  )}
+                  {activeSection === "policy-stage" && (
+                    <>
+                      <ImplementationReadinessSection
+                        records={records}
+                        selectedState={selectedState}
+                        onSelectState={selectState}
+                      />
+                      <PolicyStageSection records={records} onSelectState={selectState} />
+                    </>
+                  )}
+                  {activeSection === "policy-domains" && (
+                    <PolicyDomainsSection records={records} onSelectState={selectState} />
+                  )}
+                  {activeSection === "source-library" && (
+                    <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
+                  )}
+                  {activeSection === "methodology" && (
+                    <MethodologySection records={records} />
+                  )}
+                  {activeSection === "table-view" && (
+                    <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+        </div>
       </div>
     </div>
   );

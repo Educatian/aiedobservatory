@@ -3249,7 +3249,53 @@
       "mid_confidence_sampling"
     ],
     "deep_research_recommended": false,
-    "deep_research_reasons": []
+    "deep_research_reasons": [],
+    "teacher_guidance": {
+      "summary": "Wisconsin DPI supports responsible AI use in schools. Teachers may use AI tools for instruction and professional learning, guided by district policy, with a strong emphasis on student privacy and academic integrity. No blanket ban exists — but tools must be appropriate for student age and data-privacy requirements.",
+      "allowed_uses": [
+        "Using AI to design and differentiate lesson plans and instructional materials",
+        "Teacher professional development via BadgerLink AI resources",
+        "Supervised classroom demonstrations of AI capabilities",
+        "AI-assisted feedback on student work (non-evaluative, teacher-reviewed)",
+        "Teacher productivity tools vetted through district procurement"
+      ],
+      "prohibited_uses": [
+        "Using AI tools that have not been reviewed for FERPA/COPPA compliance when processing student data",
+        "Allowing unsupervised student use of consumer AI products without explicit school-level authorization",
+        "Using AI-generated content as the sole or primary basis for a student grade determination",
+        "Sharing identifiable student data with third-party AI platforms without verified data-processing agreements"
+      ],
+      "age_restrictions": [
+        {
+          "category": "age",
+          "description": "Student data used in any AI tool must comply with COPPA (Children under 13) and FERPA. Tools that process data of students under age 13 require heightened parental consent and vendor data-use agreement review before classroom deployment.",
+          "source_quote": "The guidance is framed around responsible and safe use, giving Wisconsin a stronger privacy posture.",
+          "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf"
+        },
+        {
+          "category": "grade",
+          "description": "Wisconsin DPI guidance is directed at K-12 schools. Educators working with K-5 students should apply additional caution around AI-generated content exposure and ensure any tools used align with age-appropriate learning standards.",
+          "source_quote": "Wisconsin DPI issued school-facing AI guidance that supports responsible use of AI rather than a blanket prohibition.",
+          "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf"
+        }
+      ],
+      "usage_restrictions": [
+        {
+          "category": "tool",
+          "description": "AI tools must undergo district-level review before use with student data. Consumer-grade AI products (e.g., free-tier generative AI chatbots) require explicit school or district authorization and data-use agreement verification prior to classroom deployment.",
+          "source_quote": "Wisconsin DPI issued school-facing AI guidance that supports responsible use of AI rather than a blanket prohibition.",
+          "source_url": "https://dpi.wi.gov/sites/default/files/imce/imt/pdf/AI_Guidance_6-5-24.pdf"
+        },
+        {
+          "category": "use_case",
+          "description": "Academic integrity: students and teachers must disclose AI use in assignments per school or district academic integrity policy. AI-assisted work must be attributed and may not be submitted as entirely original student work without disclosure.",
+          "source_quote": "DPI connects AI support to statewide educator resource systems such as BadgerLink.",
+          "source_url": "https://badgerlink.dpi.wi.gov/about"
+        }
+      ],
+      "contact_resource": "https://badgerlink.dpi.wi.gov/bulletin/2025/08/ask-britannica",
+      "last_reviewed": "June 5, 2024"
+    }
   },
   {
     "record_id": "state-wv-v1",

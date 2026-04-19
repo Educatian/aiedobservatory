@@ -1,5 +1,24 @@
 export type SnapshotStatus = "coded" | "queued";
 
+export type RestrictionCategory = "age" | "grade" | "subject" | "tool" | "use_case";
+
+export interface TeacherRestriction {
+  category: RestrictionCategory;
+  description: string;
+  sourceQuote?: string;
+  sourceUrl?: string;
+}
+
+export interface TeacherGuidanceInfo {
+  summary: string;
+  allowedUses: string[];
+  prohibitedUses: string[];
+  ageRestrictions: TeacherRestriction[];
+  usageRestrictions: TeacherRestriction[];
+  contactResource?: string;
+  lastReviewed?: string;
+}
+
 export interface EvidenceSpan {
   field: string;
   quote: string;
@@ -53,6 +72,7 @@ export interface PolicyRecord {
   lastUpdated: string;
   confidence: number;
   evidenceSpans: EvidenceSpan[];
+  teacherGuidance?: TeacherGuidanceInfo;
 }
 
 export type PolicyEventType =
