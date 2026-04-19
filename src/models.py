@@ -98,3 +98,32 @@ class NationalSummary:
     adoption_distribution: Dict[PolicyAdoptionLevel, int]
     leading_states: List[str]
     timestamp: datetime = field(default_factory=datetime.now)
+
+
+@dataclass
+class InternationalComparison:
+    """International comparison data for benchmarking"""
+    country_name: str
+    country_code: str
+    adoption_score: float
+    key_policies: List[str] = field(default_factory=list)
+    population_million: Optional[float] = None
+    gdp_per_capita: Optional[float] = None
+    education_spending_pct: Optional[float] = None
+    notes: str = ""
+
+
+@dataclass
+class PolicyImpactMetrics:
+    """Metrics for analyzing policy impact on educational outcomes"""
+    state_name: str
+    policy_score: float
+    stem_achievement: Optional[float] = None
+    cs_enrollment: Optional[float] = None
+    teacher_ai_adoption: Optional[float] = None
+    ai_tools_usage: Optional[float] = None
+    title_i_schools_pct: Optional[float] = None
+    digital_divide_index: Optional[float] = None
+    edtech_companies: Optional[int] = None
+    ai_partnerships: Optional[int] = None
+    year: int = field(default_factory=lambda: datetime.now().year)
