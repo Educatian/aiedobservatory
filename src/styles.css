@@ -30,6 +30,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+
 html,
 body,
 #root {
@@ -6488,4 +6492,168 @@ tbody td {
 /* Smooth transition between modes */
 .choropleth-shell.district-mode .choropleth-map {
   transition: opacity 200ms ease;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE — ≤640px layout collapse + off-canvas sidebar
+   ═══════════════════════════════════════════════════════════ */
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  /* Off-canvas sidebar — reuse existing sidebarCollapsed state,
+     but here "collapsed" means hidden rather than narrow rail. */
+  .side-nav {
+    width: min(18rem, 86vw) !important;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+    z-index: 60;
+  }
+  .sidebar-collapsed .side-nav {
+    width: min(18rem, 86vw) !important;
+    transform: translateX(-100%);
+  }
+  .sidebar-collapsed .side-brand,
+  .sidebar-collapsed .side-cta,
+  .sidebar-collapsed .side-links,
+  .sidebar-collapsed .side-profile {
+    margin: 0 1.5rem;
+  }
+  .sidebar-collapsed .side-brand-text { display: block; }
+  .sidebar-collapsed .sidebar-toggle-label { display: inline; }
+  .sidebar-collapsed .side-links p { display: block; }
+  .sidebar-collapsed .main-shell { margin-left: 0; }
+
+  .main-shell {
+    margin-left: 0;
+  }
+
+  /* Backdrop when drawer is open */
+  .sentinel-shell:not(.sidebar-collapsed)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 6, 24, 0.55);
+    z-index: 50;
+    backdrop-filter: blur(2px);
+  }
+
+  /* Hamburger trigger — fixed, always reachable */
+  .mobile-nav-toggle {
+    display: inline-flex;
+    position: fixed;
+    top: 0.65rem;
+    left: 0.65rem;
+    z-index: 70;
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--outline);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(30, 16, 72, 0.15);
+  }
+  .mobile-nav-toggle .material-symbols-outlined {
+    font-size: 1.4rem;
+  }
+
+  /* Inspector + map — stack vertically */
+  .dash-viewport,
+  .map-workspace {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto;
+    overflow: visible;
+  }
+  .main-shell,
+  .dashboard-main {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+  .float-inspector {
+    border-right: none;
+    border-top: 1px solid rgba(167, 139, 250, 0.14);
+    max-height: none;
+  }
+  .map-card,
+  .choropleth-shell {
+    min-height: auto;
+  }
+  .choropleth-shell {
+    min-height: 18rem;
+  }
+
+  /* Typography floor — no chip under 11px on phone */
+  .overview-kicker,
+  .side-cta small,
+  .top-nav-route-button .route-label,
+  .status-pill,
+  .trust-boundary-chip,
+  .detail-label,
+  .mini-heading,
+  .section-kicker {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.1em;
+  }
+
+  /* Content shell gutter shrink to reclaim horizontal space */
+  .content-shell,
+  .overview-content {
+    width: calc(100% - 16px);
+  }
+
+  /* Compare grid — let it scroll but keep side-nav hamburger visible */
+  .compare-grid { min-width: 42rem; }
+
+  /* Top actions wrap tightly */
+  .top-brand {
+    padding-left: 3.5rem;  /* clear space for hamburger */
+  }
+  .top-actions .icon-button span,
+  .top-actions .export-button span:not(.material-symbols-outlined) {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TOUCH TARGETS — 44px minimum on coarse pointers
+   ═══════════════════════════════════════════════════════════ */
+
+@media (hover: none) and (pointer: coarse) {
+  .icon-button,
+  .top-nav-route-button,
+  .export-button,
+  .workspace-chip,
+  .teacher-mode-toggle,
+  .top-search {
+    min-height: 2.75rem !important;
+    min-width: 2.75rem;
+  }
+  .login-close-button {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+  .landing-topnav button,
+  .overview-topbar-button {
+    min-height: 2.75rem;
+    padding-inline: 1rem;
+  }
+  .side-links a,
+  .overview-topbar-nav a {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+  .sidebar-toggle-btn {
+    min-height: 2.75rem;
+  }
+  .mobile-nav-toggle {
+    width: 3rem;
+    height: 3rem;
+  }
 }

@@ -1970,48 +1970,97 @@ record.confidence = Number(
     <tr><td><code>docs/DATA_SOURCES_AND_EVALUATION.md</code></td><td>Full methodology reference (Korean)</td></tr>
   </table>
 
-  <h3>D.3 Cited literatures</h3>
-  <p>The following six works anchor the project's design. They appear on the public project-overview page under <em>Academic Grounding</em> and are the same references surfaced in <code>src/components/ProjectOverviewPage.tsx</code>. Each is listed in APA form with a one-line note on how it maps to the Observatory's architecture.</p>
+  <h3>D.3 Cited literatures — and the pragmatic adaptation</h3>
+  <p>The six works below appear on the public project-overview page under <em>Academic Grounding</em> (see <code>src/components/ProjectOverviewPage.tsx</code>). They were chosen because each supplies a concrete design principle a solo-researcher, code-first project could realistically adopt. §D.4 documents the pragmatic adaptation — what was borrowed, what was simplified, and what was deliberately deferred. The goal is working research infrastructure on a short horizon, not a faithful reproduction of any single paper's full methodology.</p>
 
   <ol class="references">
     <li>
       <p>Kavanagh, M. M., Meier, B. M., Pillinger, M., Huffstetler, H., &amp; Burris, S. (2020). Global policy surveillance: Creating and using comparative national data on health law and policy. <em>American Journal of Public Health, 110</em>(12), 1805–1810.</p>
-      <p class="ref-note"><span class="tag">policy surveillance</span> Establishes why laws and policies should be converted into structured, comparable, longitudinal datasets — the coding scheme in §9 is a simplified policy-surveillance codebook.</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The idea that scattered policy instruments should be converted into a single structured, comparable table of jurisdictions. The Observatory operationalises this as the canonical record (<code>src/types.ts</code>, <code>data/canonical/policy-records.schema.json</code>) with a fixed rubric shared across all states. A <code>year</code> field is built in so a future edition can stack snapshots without schema churn.</p>
     </li>
     <li>
       <p>Poirier, M. J. P., Viens, A. M., Penney, T. L., Van Katwyk, S. R., Astbury, C. C., Lin, G., Nanyangwe-Moyo, T., &amp; Hoffman, S. J. (2022). Principles and methods of global legal epidemiology. <em>Journal of Epidemiology &amp; Community Health, 76</em>(9), 828–832.</p>
-      <p class="ref-note"><span class="tag">legal epidemiology</span> Motivates formal inclusion rules, repeatable coding procedures, and cross-jurisdiction comparison — the discipline behind §9's analytic coding and §11's rubric.</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The commitment to repeatable coding procedures. Instead of running a full inter-rater reliability study, the project's pragmatic substitute is a fixed prompt-level rubric (<code>scripts/extract-policy-records-gemini.mjs</code>), a five-level source-authority hierarchy (§12), and a gold set that replays as a regression test. It is a compressed version of the method, not a replacement for κ.</p>
     </li>
     <li>
       <p>Ramanathan, T., Hulkower, R., Holbrook, J., &amp; Penn, M. (2017). Legal epidemiology: The science of law. <em>Journal of Law, Medicine &amp; Ethics, 45</em>(S1), 69–72.</p>
-      <p class="ref-note"><span class="tag">legal epidemiology</span> Frames law and policy as measurable interventions — the conceptual basis for turning AI-in-education governance into an analyzable dataset.</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The stance that policy is a measurable object worth coding, not a narrative to summarise. The Observatory takes this as licence to reduce policy language to rubric integers (§11) so jurisdictions become comparable. Linking those codes to downstream outcomes is out of scope for this edition — the paper's framing is used to justify measurement, not to claim an effect study.</p>
     </li>
     <li>
       <p>Ifenthaler, D., Majumdar, R., Gorissen, P., Judge, M., Mishra, S., Raffaghelli, J., &amp; Shimada, A. (2024). Artificial intelligence in education: Implications for policymakers, researchers, and practitioners. <em>Technology, Knowledge and Learning, 29</em>, 1693–1710.</p>
-      <p class="ref-note"><span class="tag">AI-in-education governance</span> Establishes AI in education as a governance problem — underwrites the domain list in §11.2 (AI use, assessment, privacy, teacher PD, implementation).</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The domain list that the paper says AI-in-education policy must cover — AI use, assessment, privacy, teacher support, implementation readiness. These are the five scored dimensions in §11 and the five required fields in the canonical schema. Academic integrity, procurement, and governance appear as additional domain tags so the coding surface is broader than the scored core.</p>
     </li>
     <li>
       <p>Dagdelen, J., Dunn, A., Lee, S., Walker, N., Rosen, A. S., Ceder, G., Persson, K. A., &amp; Jain, A. (2024). Structured information extraction from scientific text with large language models. <em>Nature Communications, 15</em>, 1418.</p>
-      <p class="ref-note"><span class="tag">structured extraction</span> Evidence that LLMs can produce useful structured records from unstructured text when the output schema is well designed — informs the evidence layer (§8.1) and citation-support metric (§10.2β).</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The method — schema-constrained LLM extraction with field-level evidence. Implemented directly: <code>scripts/extract-policy-records-gemini.mjs</code> passes a <code>responseJsonSchema</code> to Gemini with <code>responseMimeType: "application/json"</code>, and every rubric field is required to return an evidence span (field / quote / source_url / chunk_id). This is the one citation the repository implements at close to the level the paper describes.</p>
     </li>
     <li>
       <p>C R, C., Kulkarni, S., Sagi, S. R. A. V., Pandey, S., Yalavarthy, R., Chakraborty, D., &amp; Upadhyay, P. D. (2024). LeGen: Complex information extraction from legal sentences using generative models. In <em>Proceedings of the Natural Legal Language Processing Workshop 2024</em> (pp. 1–17).</p>
-      <p class="ref-note"><span class="tag">legal text extraction</span> Demonstrates why legal and policy text needs specialised extraction workflows rather than keyword collection — informs the LLM extraction path (<code>pipeline:gemini</code>) and confidence routing in §14.</p>
+      <p class="ref-note"><span class="tag">borrowed</span> The argument that legal/policy text demands specialised extraction rather than keyword matching. The pragmatic response is to run retrieval over chunked policy text and bind each rubric score to a quoted span — evidence-grounded extraction rather than LeGen's clause-level relations. The paper motivates <em>why</em> the keyword extractor alone is not enough (§16.1), not the specific relation-extraction architecture.</p>
     </li>
   </ol>
 
-  <h3>D.4 Coverage map of the cited literature</h3>
-  <p>The four framings below are what each citation actually carries. The map is useful because no single paper covers every decision the Observatory makes — multi-agent role decomposition and human-on-the-loop auditing, in particular, remain framings without a named citation in the current edition.</p>
+  <h3>D.4 Pragmatic adaptation in the code</h3>
+  <p>Each paper was adopted with a single, explicit simplification that a solo-researcher project could ship. The table below names what was borrowed, what the adaptation looks like in the code, and the shortcut that was taken to stay buildable.</p>
+
+  <table>
+    <tr>
+      <th style="width: 20%;">Citation</th>
+      <th style="width: 32%;">What was borrowed</th>
+      <th style="width: 28%;">How it shows up in the code</th>
+      <th>Pragmatic shortcut</th>
+    </tr>
+    <tr>
+      <td>Kavanagh et al. (2020)</td>
+      <td>Structure scattered policies into a single comparable table keyed by jurisdiction.</td>
+      <td>Canonical record schema (<code>src/types.ts</code>, <code>data/canonical/policy-records.schema.json</code>), state-level records rendered uniformly in the dashboard.</td>
+      <td>Single-snapshot per state; the <code>year</code> field is provisioned for future longitudinal use but not yet populated (§16.4).</td>
+    </tr>
+    <tr>
+      <td>Poirier et al. (2022)</td>
+      <td>Repeatable coding procedures rather than ad-hoc judgement.</td>
+      <td>Prompt-level rubric with fixed score bands, source-authority hierarchy (§12), and a replayable gold set used as regression fixtures.</td>
+      <td>A compressed stand-in for a full inter-rater study — no computed κ or dual coding, just prompt and gold-set discipline.</td>
+    </tr>
+    <tr>
+      <td>Ramanathan et al. (2017)</td>
+      <td>Treat policy as something measurable, not only narrative.</td>
+      <td>Every rubric dimension reduces to an integer band, enabling aggregation and cross-state comparison (§11).</td>
+      <td>The project measures policy <em>content</em>, not policy <em>effects</em> — linking codes to outcomes is out of scope.</td>
+    </tr>
+    <tr>
+      <td>Ifenthaler et al. (2024)</td>
+      <td>The governance-relevant domain list AI-in-education policy has to cover.</td>
+      <td>Five scored rubric dimensions (AI use, assessment, privacy, teacher PD, implementation) map 1:1 to the paper's emphasis; <code>policy_domains</code> enum carries the wider surface.</td>
+      <td>Oversight/accountability surfaces as <code>governance</code>, auto-derived from <code>implementation_stage ≥ 3</code> (<code>scripts/lib/policy-extraction-utils.mjs</code>) rather than coded directly.</td>
+    </tr>
+    <tr>
+      <td>Dagdelen et al. (2024)</td>
+      <td>Schema-constrained LLM extraction with evidence.</td>
+      <td><code>scripts/extract-policy-records-gemini.mjs</code> uses <code>responseJsonSchema</code> + <code>responseMimeType</code>; every rubric field returns a required evidence span; canonical records carry <code>extraction_model</code> and <code>coder_type: "hybrid"</code>.</td>
+      <td>No meaningful shortcut — this is the method, applied.</td>
+    </tr>
+    <tr>
+      <td>C R et al. (2024, LeGen)</td>
+      <td>Specialised policy/legal-text extraction rather than keyword heuristics.</td>
+      <td>Retrieval over chunked policy text (<code>pickTopChunksByField</code>) feeding Gemini extraction; keyword path retained only as fallback (§16.1).</td>
+      <td>Evidence-grounded rubric extraction stands in for clause-level relation extraction — LeGen is used as motivation, not architecture.</td>
+    </tr>
+  </table>
+
+  <h3>D.5 Coverage map of the cited literature</h3>
+  <p>The four framings below describe what the citation set is asked to carry. Read alongside §D.4: the map also flags where named prior work is still missing.</p>
 
   <div class="grid">
     <div class="cell">
       <h5><span class="tag">i</span> Policy surveillance</h5>
       <ul>
-        <li>Jurisdiction-level comparable observations</li>
+        <li>Comparable jurisdiction records</li>
         <li>Standardised coding, reproducibility</li>
         <li>Temporal policy tracking</li>
       </ul>
       <div class="good">Cited: Kavanagh et al. (2020); Poirier et al. (2022); Ramanathan et al. (2017).</div>
+      <div class="bad">Deferred: longitudinal snapshots, formal inter-rater reliability, policy-as-intervention outcome linkage.</div>
     </div>
     <div class="cell">
       <h5><span class="tag">ii</span> AI-in-education governance</h5>
@@ -2021,6 +2070,7 @@ record.confidence = Number(
         <li>Domain-level coding targets</li>
       </ul>
       <div class="good">Cited: Ifenthaler et al. (2024).</div>
+      <div class="bad">Deferred: oversight/accountability as a separately coded dimension rather than a maturity-derived proxy.</div>
     </div>
     <div class="cell">
       <h5><span class="tag">iii</span> Structured / legal IE</h5>
@@ -2029,7 +2079,8 @@ record.confidence = Number(
         <li>Evidence-span grounding</li>
         <li>Legal-text specialisation</li>
       </ul>
-      <div class="good">Cited: Dagdelen et al. (2024); C R et al. (2024).</div>
+      <div class="good">Cited: Dagdelen et al. (2024) — implemented; C R et al. (2024) — used as motivation.</div>
+      <div class="bad">Deferred: clause-level relation extraction and rhetorical-role tagging.</div>
     </div>
     <div class="cell">
       <h5><span class="tag">iv</span> Multi-agent &amp; human-on-the-loop</h5>
@@ -2038,13 +2089,13 @@ record.confidence = Number(
         <li>Confidence-triggered escalation</li>
         <li>Selective audit sampling</li>
       </ul>
-      <div class="bad">Not yet cited. Shapes §8.2 agent roles and §14 routing logic but currently rests on engineering practice rather than named prior work.</div>
+      <div class="bad">Not cited. Shapes §8.2 agent roles and §14 routing logic but currently rests on engineering practice rather than named prior work.</div>
     </div>
   </div>
 
   <div class="callout warn">
-    <span class="label">Honest disclosure</span>
-    <p>The six citations above are the project's anchoring literature, not a claim of derivative authorship. Specific design choices — the five-dimension rubric, the five-level source authority, the six agent roles, the confidence step function — are engineering decisions calibrated against the project's own gold set, not translations of any single paper. The multi-agent and human-oversight framings (cell iv above) remain un-cited in the current edition and should be closed in a future revision.</p>
+    <span class="label">Pragmatic stance</span>
+    <p>The six citations are adopted as design principles, not reproduced as full methodologies. Dagdelen is implemented at close to the paper's level; the three legal-epidemiology works (Kavanagh, Poirier, Ramanathan) are compressed into one working codebook-plus-rubric; Ifenthaler supplies the domain list; LeGen motivates evidence-grounded extraction without its clause-level apparatus. The deferred items in §D.4's shortcut column are the honest to-do list for a next edition — longitudinal snapshots, computed reliability, separately coded oversight, and a named citation for the multi-agent layer.</p>
   </div>
 </section>
 

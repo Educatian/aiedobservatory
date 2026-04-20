@@ -139,7 +139,9 @@ function App() {
     readWorkspaceSession()
   );
   const [teacherMode, setTeacherMode] = useState(false);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches
+  );
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
@@ -454,7 +456,27 @@ function App() {
   }
 
   return (
-    <div className={`sentinel-shell${sidebarCollapsed ? " sidebar-collapsed" : ""}`}>
+    <div
+      className={`sentinel-shell${sidebarCollapsed ? " sidebar-collapsed" : ""}`}
+      onClick={(e) => {
+        if (
+          !sidebarCollapsed &&
+          window.matchMedia("(max-width: 640px)").matches &&
+          e.target === e.currentTarget
+        ) {
+          setSidebarCollapsed(true);
+        }
+      }}
+    >
+      <button
+        type="button"
+        className="mobile-nav-toggle"
+        aria-label="Open navigation"
+        onClick={() => setSidebarCollapsed(false)}
+      >
+        <span className="material-symbols-outlined">menu</span>
+      </button>
+
       <aside className="side-nav">
         <div className="side-brand">
           <div className="brand-mark">
