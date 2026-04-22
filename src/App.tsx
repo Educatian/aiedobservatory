@@ -662,6 +662,16 @@ function App() {
               Teacher Mode
             </button>
 
+            <a
+              className="icon-button"
+              href="/guides/manual.html"
+              target="_blank"
+              rel="noopener"
+              aria-label="Reader's Manual"
+              title="Reader's Manual"
+            >
+              <span className="material-symbols-outlined">menu_book</span>
+            </a>
             <button
               type="button"
               className="icon-button whatsnew-trigger"
