@@ -7314,5 +7314,268 @@
         "Escalate suspected misuse through your building administrator."
       ]
     }
+  },
+  {
+    "record_id": "state-hi-v1",
+    "jurisdiction_id": "state-hi",
+    "jurisdiction_name": "Hawaii",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "HI",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.78,
+    "policy_strength": 11,
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "employee-guidance-led",
+    "notes": "Hawaii DOE issued employee-facing AI guidance (one-pager) plus a public AI landing page on hawaiipublicschools.org. Posture is cautious-permissive, with emphasis on verification, data protection, and disclosure.",
+    "version": 1,
+    "updated_at": "2026-04-22T00:00:00.000Z",
+    "source_documents": [
+      {
+        "url": "https://docs.google.com/presentation/d/1LQCtWDPMaLfzGpXD1mYKQDJr2LdAZLamJHsd4xe4zbw",
+        "title": "HIDOE AI Guidance for Employees",
+        "raw_file": "data/generated/raw/HI-official-guidance.pdf",
+        "published_date_guess": null,
+        "document_id": "HI-SRC-1",
+        "issuer_name": "Hawaii State Department of Education",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Employee-facing guidance covering AI use principles, data-protection rules, and disclosure expectations.",
+        "relations": []
+      },
+      {
+        "url": "https://hawaiipublicschools.org/student-programs/artificial-intelligence/",
+        "title": "Artificial Intelligence - Hawaii State Department of Education",
+        "raw_file": "data/generated/raw/HI-official-landing.html",
+        "published_date_guess": null,
+        "document_id": "HI-SRC-2",
+        "issuer_name": "Hawaii State Department of Education",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Public AI landing page collecting HIDOE AI resources and policy direction.",
+        "relations": []
+      }
+    ],
+    "source_authority": "official_guidance",
+    "verification_status": "supported",
+    "verification_notes": "Documents crawled from hawaiipublicschools.org and HIDOE employee portal per US DOE 2026 state AI guidance list."
+  },
+  {
+    "record_id": "state-nd-v1",
+    "jurisdiction_id": "state-nd",
+    "jurisdiction_name": "North Dakota",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "ND",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.86,
+    "policy_strength": 14,
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 3,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "implementation-guided",
+    "notes": "North Dakota DPI released the K-12 AI Guidance Framework with four role-specific implementation checklists (School Leadership, Educators, Business/IT, Policy/Ethical/Legal). Posture is operational and checklist-driven.",
+    "version": 1,
+    "updated_at": "2026-04-22T00:00:00.000Z",
+    "source_documents": [
+      {
+        "url": "https://www.nd.gov/dpi/policyguidelines/north-dakota-k-12-ai-guidance-framework",
+        "title": "North Dakota K-12 AI Guidance Framework",
+        "raw_file": "data/generated/raw/ND-official-guidance.html",
+        "published_date_guess": null,
+        "document_id": "ND-SRC-1",
+        "issuer_name": "North Dakota Department of Public Instruction",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Statewide framework for K-12 AI adoption, paired with four role-specific implementation checklists.",
+        "relations": []
+      },
+      {
+        "url": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20School%20Leadership.pdf",
+        "title": "ND Implementation Checklist - School Leadership",
+        "raw_file": "data/generated/raw/ND-official-guidance-linked-1.pdf",
+        "published_date_guess": null,
+        "document_id": "ND-SRC-2",
+        "issuer_name": "North Dakota Department of Public Instruction",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Role-specific implementation checklist for district and building leadership.",
+        "relations": [
+          {
+            "kind": "implements",
+            "target_document_id": "ND-SRC-1"
+          }
+        ]
+      },
+      {
+        "url": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20Educators.pdf",
+        "title": "ND Implementation Checklist - Educators",
+        "raw_file": "data/generated/raw/ND-official-guidance-linked-2.pdf",
+        "published_date_guess": null,
+        "document_id": "ND-SRC-3",
+        "issuer_name": "North Dakota Department of Public Instruction",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Classroom-facing checklist for educators.",
+        "relations": [
+          {
+            "kind": "implements",
+            "target_document_id": "ND-SRC-1"
+          }
+        ]
+      },
+      {
+        "url": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20Business%20and%20IT.pdf",
+        "title": "ND Implementation Checklist - Business and IT",
+        "raw_file": "data/generated/raw/ND-official-guidance-linked-3.pdf",
+        "published_date_guess": null,
+        "document_id": "ND-SRC-4",
+        "issuer_name": "North Dakota Department of Public Instruction",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Operations-side checklist for business and IT staff.",
+        "relations": [
+          {
+            "kind": "implements",
+            "target_document_id": "ND-SRC-1"
+          }
+        ]
+      },
+      {
+        "url": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20Policy%2C%20Ethical%2C%20Legal.pdf",
+        "title": "ND Implementation Checklist - Policy, Ethical, Legal",
+        "raw_file": "data/generated/raw/ND-official-guidance-linked-4.pdf",
+        "published_date_guess": null,
+        "document_id": "ND-SRC-5",
+        "issuer_name": "North Dakota Department of Public Instruction",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Governance-side checklist covering policy, ethics, and legal considerations.",
+        "relations": [
+          {
+            "kind": "implements",
+            "target_document_id": "ND-SRC-1"
+          }
+        ]
+      }
+    ],
+    "source_authority": "official_guidance",
+    "verification_status": "supported",
+    "verification_notes": "ND DPI framework + 4 linked checklists crawled per US DOE 2026 state AI guidance list."
+  },
+  {
+    "record_id": "state-nv-v1",
+    "jurisdiction_id": "state-nv",
+    "jurisdiction_name": "Nevada",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "NV",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.82,
+    "policy_strength": 13,
+    "ai_use_allowed": 3,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 3,
+    "implementation_stage": 3,
+    "policy_orientation": "implementation-guided",
+    "notes": "Nevada Department of Education published the STELLAR Pathway to AI Teaching and Learning — a 52-page operational playbook emphasising digital learning, educator readiness, and staged classroom adoption.",
+    "version": 1,
+    "updated_at": "2026-04-22T00:00:00.000Z",
+    "source_documents": [
+      {
+        "url": "https://doe.nv.gov/offices/office-of-teaching-and-learning/nevada-digital-learning",
+        "title": "Nevada STELLAR Pathway to AI Teaching and Learning",
+        "raw_file": "data/generated/raw/NV-official-guidance.pdf",
+        "published_date_guess": null,
+        "document_id": "NV-SRC-1",
+        "issuer_name": "Nevada Department of Education",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": null,
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "52-page operational playbook covering principles, educator readiness, and staged adoption of AI in classrooms.",
+        "relations": []
+      }
+    ],
+    "source_authority": "official_guidance",
+    "verification_status": "supported",
+    "verification_notes": "NV STELLAR playbook crawled from doe.nv.gov per US DOE 2026 state AI guidance list."
+  },
+  {
+    "record_id": "state-wy-v1",
+    "jurisdiction_id": "state-wy",
+    "jurisdiction_name": "Wyoming",
+    "jurisdiction_type": "state",
+    "parent_jurisdiction_id": null,
+    "state_abbr": "WY",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.8,
+    "policy_strength": 10,
+    "ai_use_allowed": 2,
+    "assessment_policy": 2,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "policy-development-guided",
+    "notes": "Wyoming Department of Education issued Guidance for AI Policy Development (June 2024), a district-facing scaffolding document for local AI policy drafting rather than a binding state rule.",
+    "version": 1,
+    "updated_at": "2026-04-22T00:00:00.000Z",
+    "source_documents": [
+      {
+        "url": "https://edu.wyoming.gov/wp-content/uploads/2024/06/Guidance-for-AI-Policy-Development.pdf",
+        "title": "Wyoming Guidance for AI Policy Development",
+        "raw_file": "data/generated/raw/WY-official-guidance.pdf",
+        "published_date_guess": "2024-06",
+        "document_id": "WY-SRC-1",
+        "issuer_name": "Wyoming Department of Education",
+        "issuer_level": "state_agency",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": "2024-06",
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "District-facing scaffolding for drafting local AI policy; not a binding statewide rule.",
+        "relations": []
+      }
+    ],
+    "source_authority": "official_guidance",
+    "verification_status": "supported",
+    "verification_notes": "WY guidance PDF crawled from edu.wyoming.gov per US DOE 2026 state AI guidance list."
   }
 ]
