@@ -11,6 +11,7 @@ import { NewAnalysisDrawer } from "./components/NewAnalysisDrawer";
 import { OperatorSurface } from "./components/OperatorSurface";
 import { PolicyChangeLog } from "./components/PolicyChangeLog";
 import { PolicyDetailPanel } from "./components/PolicyDetailPanel";
+import { DistrictLayerPanel } from "./components/DistrictLayerPanel";
 import { PolicyDomainsSection } from "./components/PolicyDomainsSection";
 import { PolicyStageSection } from "./components/PolicyStageSection";
 import { PolicyTable } from "./components/PolicyTable";
@@ -777,6 +778,7 @@ function App() {
                   ) : (
                     <PolicyDetailPanel record={selectedRecord} />
                   )}
+                  <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
                 </>
               )}
             </div>
