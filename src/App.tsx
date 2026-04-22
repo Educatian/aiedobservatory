@@ -175,6 +175,8 @@ function App() {
   }, []);
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
+  const [showBroadbandOverlay, setShowBroadbandOverlay] = useState(false);
+  const [broadbandPatternHatched, setBroadbandPatternHatched] = useState(false);
   const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
   const [currentPage, setCurrentPage] = useState<AppPage>(() =>
     typeof window === "undefined" ? "landing" : getAppPageFromPath(window.location.pathname)
@@ -781,6 +783,8 @@ function App() {
               sourceAddedStates={sourceAddedStateIds}
               playbackState={activePlaybackEvent?.stateAbbr ?? null}
               viewMode={viewMode}
+              showBroadbandOverlay={showBroadbandOverlay}
+              broadbandPatternHatched={broadbandPatternHatched}
               onSelect={selectState}
             />
 
@@ -798,6 +802,28 @@ function App() {
                   onClick={() => setViewMode("district")}
                 >District</button>
               </div>
+              {viewMode === "district" && (
+                <div className="broadband-toggle">
+                  <label className="toggle-row">
+                    <input
+                      type="checkbox"
+                      checked={showBroadbandOverlay}
+                      onChange={(e) => setShowBroadbandOverlay(e.target.checked)}
+                    />
+                    <span>Broadband overlay (ACS 2023)</span>
+                  </label>
+                  {showBroadbandOverlay && (
+                    <label className="toggle-row sub">
+                      <input
+                        type="checkbox"
+                        checked={broadbandPatternHatched}
+                        onChange={(e) => setBroadbandPatternHatched(e.target.checked)}
+                      />
+                      <span>Hatch under-served counties</span>
+                    </label>
+                  )}
+                </div>
+              )}
               <div className="legend-card" aria-label="Policy strength legend">
                 <p>Policy Strength</p>
                 <div className="legend-scale" />

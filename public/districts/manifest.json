@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-04-22T12:01:16.648Z",
+  "simplifyPercent": 8,
+  "source": "US Census TIGER/Line 2023 UNSD",
+  "states": [
+    {
+      "code": "AL",
+      "fips": "01",
+      "name": "Alabama"
+    },
+    {
+      "code": "CA",
+      "fips": "06",
+      "name": "California"
+    },
+    {
+      "code": "NY",
+      "fips": "36",
+      "name": "New York"
+    },
+    {
+      "code": "TX",
+      "fips": "48",
+      "name": "Texas"
+    },
+    {
+      "code": "WA",
+      "fips": "53",
+      "name": "Washington"
+    }
+  ]
+}
