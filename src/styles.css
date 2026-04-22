@@ -7354,3 +7354,38 @@ tbody td {
   .developer-links { justify-content: center; }
   .developer-topbar { padding: 0.85rem 1rem; }
 }
+
+.developer-affiliation {
+  color: #a5b4fc;
+  line-height: 1.55;
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+}
+.developer-expertise {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.developer-expertise li {
+  padding: 0.3rem 0.75rem;
+  background: rgba(124,58,237,0.12);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: #ddd6fe;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.developer-ref-footnote {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed rgba(255,255,255,0.08);
+  color: #94a3b8 !important;
+  font-size: 0.85rem;
+}
+.developer-ref-footnote a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+.developer-ref-footnote a:hover { text-decoration: underline; }
