@@ -2612,12 +2612,36 @@ select {
 .stage-column {
   padding: 1.2rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
+/* Cap the state list so Stage 3 (typically 20+ states) doesn't stretch
+   the whole row out of proportion; the list scrolls internally instead. */
 .stage-state-list {
   display: grid;
   gap: 0.6rem;
   margin-top: 1rem;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  /* Subtle fade at bottom so users can see there's more below. */
+  mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 24px), transparent 100%);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+}
+
+.stage-state-list::-webkit-scrollbar {
+  width: 6px;
+}
+.stage-state-list::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.55);
+  border-radius: 3px;
+}
+.stage-state-list::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .stage-state-pill {
