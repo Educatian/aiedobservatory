@@ -7,12 +7,20 @@ interface WhatsNewModalProps {
   onClose: () => void;
 }
 
-function spotlight(selector: string) {
-  const el = document.querySelector(selector) as HTMLElement | null;
-  if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "center" });
-  el.classList.add("whatsnew-spotlight-target");
-  window.setTimeout(() => el.classList.remove("whatsnew-spotlight-target"), 4200);
+function spotlight(selector: string, attempts = 8) {
+  // Element may mount after a state change (e.g. enabling Teacher Mode).
+  // Retry briefly before giving up.
+  const tryOnce = (remaining: number) => {
+    const el = document.querySelector(selector) as HTMLElement | null;
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.classList.add("whatsnew-spotlight-target");
+      window.setTimeout(() => el.classList.remove("whatsnew-spotlight-target"), 4200);
+      return;
+    }
+    if (remaining > 0) window.setTimeout(() => tryOnce(remaining - 1), 120);
+  };
+  tryOnce(attempts);
 }
 
 export function WhatsNewModal({ release, open, onClose }: WhatsNewModalProps) {
@@ -29,14 +37,17 @@ export function WhatsNewModal({ release, open, onClose }: WhatsNewModalProps) {
 
   if (!open) return null;
 
-  const handleShowMe = (selector?: string) => {
+  const handleShowMe = (selector?: string, prepare?: string) => {
     if (!selector) return;
     setClosing(true);
+    if (prepare) {
+      window.dispatchEvent(new CustomEvent("aiedob:release-prep", { detail: prepare }));
+    }
     window.setTimeout(() => {
       onClose();
       spotlight(selector);
       setClosing(false);
-    }, 220);
+    }, 260);
   };
 
   return (
@@ -72,7 +83,7 @@ export function WhatsNewModal({ release, open, onClose }: WhatsNewModalProps) {
                   <button
                     type="button"
                     className="whatsnew-show-btn"
-                    onClick={() => handleShowMe(h.spotlightSelector)}
+                    onClick={() => handleShowMe(h.spotlightSelector, h.prepare)}
                   >
                     <span className="material-symbols-outlined">arrow_outward</span>
                     Show me

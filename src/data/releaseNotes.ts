@@ -8,6 +8,11 @@ export interface ReleaseHighlight {
    * The element gets a pulsing ring for ~4s and scrolls into view.
    */
   spotlightSelector?: string;
+  /**
+   * Optional UI state the App should toggle ON before scrolling to the
+   * spotlight target — dispatched as a `aiedob:release-prep` CustomEvent.
+   */
+  prepare?: "enable_teacher_mode";
 }
 
 export interface ReleaseNote {
@@ -27,7 +32,7 @@ export interface ReleaseNote {
  */
 export const releaseNotes: ReleaseNote[] = [
   {
-    version: "2026.04.22-a",
+    version: "2026.04.22-b",
     date: "2026-04-22",
     title: "Multi-layer policy hierarchy + teacher-facing details",
     summary:
@@ -49,10 +54,11 @@ export const releaseNotes: ReleaseNote[] = [
       },
       {
         icon: "school",
-        title: "Grade-band teacher rules",
+        title: "Grade-band teacher rules (Teacher Mode)",
         body:
-          "The Teacher Guide panel now includes K-2 / 3-5 / 6-8 / 9-12 / higher-ed stance chips, disclosure & consent pills, a red-bordered data-guardrails list, classroom rules grid, action-item checklist, and a copy-ready syllabus template.",
-        spotlightSelector: ".teacher-guidance-panel"
+          "Flip the Teacher Mode toggle at the top of the inspector to open the Teacher Guide panel: K-2 / 3-5 / 6-8 / 9-12 / higher-ed stance chips, disclosure & consent pills, a red-bordered data-guardrails list, classroom rules grid, action-item checklist, and a copy-ready syllabus template.",
+        spotlightSelector: ".teacher-guidance-panel",
+        prepare: "enable_teacher_mode"
       },
       {
         icon: "compare_arrows",

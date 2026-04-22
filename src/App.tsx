@@ -163,6 +163,14 @@ function App() {
     }
   };
   const openWhatsNew = () => setWhatsNewOpen(true);
+  useEffect(() => {
+    const onPrep = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      if (detail === "enable_teacher_mode") setTeacherMode(true);
+    };
+    window.addEventListener("aiedob:release-prep", onPrep);
+    return () => window.removeEventListener("aiedob:release-prep", onPrep);
+  }, []);
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
