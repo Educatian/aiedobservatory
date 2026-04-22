@@ -17,8 +17,8 @@ const ROOT = path.resolve(__dirname, "..");
 const RAW = path.join(ROOT, "data", "generated", "raw");
 const CHUNKS = path.join(ROOT, "data", "generated", "chunks.jsonl");
 
-const NEW_STATES = ["AL", "AZ", "HI", "ND", "NV", "WY"];
-const STATE_NAMES = { AL: "Alabama", AZ: "Arizona", HI: "Hawaii", ND: "North Dakota", NV: "Nevada", WY: "Wyoming" };
+const NEW_STATES = ["AL", "AZ", "HI", "ND", "NV", "WY", "TX"];
+const STATE_NAMES = { AL: "Alabama", AZ: "Arizona", HI: "Hawaii", ND: "North Dakota", NV: "Nevada", WY: "Wyoming", TX: "Texas" };
 
 const SOURCE_URLS = {
   "AL-official-guidance.pdf": "https://oit.alabama.gov/wp-content/uploads/2025/01/Alabama-Generative-AI-Acceptable-Use-Policy.pdf",
@@ -32,7 +32,18 @@ const SOURCE_URLS = {
   "ND-official-guidance-linked-3.pdf": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20Business%20and%20IT.pdf",
   "ND-official-guidance-linked-4.pdf": "https://www.nd.gov/dpi/sites/www/files/documents/SAO/AI%20Checklist/Implementation%20Checklist%20-%20Policy%2C%20Ethical%2C%20Legal.pdf",
   "NV-official-guidance.pdf": "https://doe.nv.gov/offices/office-of-teaching-and-learning/nevada-digital-learning",
-  "WY-official-guidance.pdf": "https://edu.wyoming.gov/wp-content/uploads/2024/06/Guidance-for-AI-Policy-Development.pdf"
+  "WY-official-guidance.pdf": "https://edu.wyoming.gov/wp-content/uploads/2024/06/Guidance-for-AI-Policy-Development.pdf",
+  "TX-dir-ai-training.html": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+  "TX-tea-board-training.html": "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training",
+  "TX-governor-ai-news.html": "https://gov.texas.gov/news/category/artificial-intelligence",
+  "TX-hb2060-enrolled.html": "https://capitol.texas.gov/tlodocs/88R/billtext/html/HB02060F.htm",
+  "TX-hb2060-history.html": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB2060",
+  "TX-texas2036-ai-council.html": "https://texas2036.org/posts/the-ai-advisory-council-what-you-need-to-know/",
+  "TX-dallas-isd-ai.html": "https://www.dallasisd.org/departments/library-media-services/ai-in-dallas-isd",
+  "TX-thecb-ai-empowered.html": "https://dltx.highered.texas.gov/professional-learning/ai-empowered-series/",
+  "TX-ut-austin-ai-teaching.html": "https://provost.utexas.edu/2024/09/27/ai-in-edu-ut-austin-introduces-new-ai-support-for-teaching-and-learning/",
+  "TX-technology-framework.html": "https://tea.texas.gov/academics/learning-support-and-programs/technology-planning/long-range-plan-for-technology",
+  "TX-virtual-hybrid-guidance.html": "https://tea.texas.gov/about-tea/news-and-multimedia/correspondence/taa-letters/sb-569-overview-virtual-and-hybrid-learning-guidance-for-the-2025-2026-school-year"
 };
 
 const TITLES = {
@@ -47,7 +58,18 @@ const TITLES = {
   "ND-official-guidance-linked-3.pdf": "ND Implementation Checklist - Business and IT",
   "ND-official-guidance-linked-4.pdf": "ND Implementation Checklist - Policy, Ethical, Legal",
   "NV-official-guidance.pdf": "Nevada STELLAR Pathway to AI Teaching and Learning",
-  "WY-official-guidance.pdf": "Wyoming Guidance for AI Policy Development"
+  "WY-official-guidance.pdf": "Wyoming Guidance for AI Policy Development",
+  "TX-dir-ai-training.html": "Statewide AI Awareness Training | Texas Department of Information Resources",
+  "TX-tea-board-training.html": "School Board Member Training | Texas Education Agency",
+  "TX-governor-ai-news.html": "Office of the Governor of Texas — AI announcements",
+  "TX-hb2060-enrolled.html": "HB 2060 (88R) — Enrolled Text (Texas AI Advisory Council)",
+  "TX-hb2060-history.html": "HB 2060 (88R) — Bill History (Texas AI Advisory Council)",
+  "TX-texas2036-ai-council.html": "Texas AI Advisory Council — Final Report Overview (Texas 2036)",
+  "TX-dallas-isd-ai.html": "AI in Dallas ISD — Playbook for Responsible and Innovative Use",
+  "TX-thecb-ai-empowered.html": "THECB — AI EmpowerED Webinar Series",
+  "TX-ut-austin-ai-teaching.html": "UT Austin Provost — AI in EDU: New AI support for teaching and learning",
+  "TX-technology-framework.html": "TEA — Long-Range Plan for Technology",
+  "TX-virtual-hybrid-guidance.html": "TEA TAA Letter — SB 569 Virtual and Hybrid Learning Guidance (2025-2026)"
 };
 
 function stripHtml(html) {

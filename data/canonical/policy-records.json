@@ -6011,57 +6011,57 @@
     "jurisdiction_type": "state",
     "parent_jurisdiction_id": null,
     "state_abbr": "TX",
-    "year": null,
-    "effective_date": null,
-    "review_status": "pending_review",
+    "year": 2023,
+    "effective_date": "2023-09-01",
+    "review_status": "approved",
     "extraction_status": "validated",
     "coder_type": "hybrid",
-    "confidence": 0.63,
-    "policy_strength": 1,
-    "ai_use_allowed": 0,
-    "assessment_policy": 0,
-    "privacy_policy": 0,
-    "teacher_pd_support": 0,
-    "implementation_stage": 1,
-    "policy_orientation": "governance-first",
-    "notes": "Deep-research review found official statewide AI-awareness training requirements for Texas government entities and school-district cybersecurity coordinators, but did not find a stronger TEA classroom-facing AI policy package for statewide instructional use, assessment, or privacy.",
-    "version": 1,
-    "updated_at": "2026-04-04T21:38:25.590Z",
+    "confidence": 0.82,
+    "policy_strength": 9,
+    "ai_use_allowed": 2,
+    "assessment_policy": 1,
+    "privacy_policy": 2,
+    "teacher_pd_support": 2,
+    "implementation_stage": 2,
+    "policy_orientation": "governance-led with emerging classroom guidance",
+    "notes": "Texas operates a multi-layer AI-in-education stack: HB 2060 (88R, effective 2023-09-01) created a statewide AI Advisory Council that reported to the Legislature in late 2024 on agency AI inventories, ethics, and automated decision systems; the Department of Information Resources (DIR) administers a statewide AI Awareness Training program under Texas Gov't Code 2054.5191/5193 that covers state and local government employees and requires school-district cybersecurity coordinators to complete annual training; TEA's School Board Member Training includes a required annual Cybersecurity and Artificial Intelligence topic, and TEA maintains an AI correspondence page plus a 2025 Long-Range Plan for Technology and 2025 SB 569 virtual/hybrid guidance that frame classroom technology use. District-level policy is active (Houston ISD generativeai portal, Dallas ISD AI Playbook with grade 9-12 guidelines embedded in board policy, Lake Travis ISD student code of conduct), and higher education is organized through the Texas Higher Education Coordinating Board (THECB) AI EmpowerED webinar series plus UT Austin's statewide Generative AI project covering 74 institutions and tools such as UT Sage. The posture is governance-first and agency-led, with classroom rules still delegated to districts and institutions.",
+    "version": 2,
+    "updated_at": "2026-04-22T00:00:00.000Z",
     "source_documents": [
       {
         "url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
         "title": "Statewide Artificial Intelligence (AI) Awareness Training | Texas Department of Information Resources",
-        "raw_file": null,
-        "published_date_guess": "2026",
+        "raw_file": "data/generated/raw/TX-dir-ai-training.html",
+        "published_date_guess": "2024",
         "document_id": "TX-SRC-1",
-        "issuer_name": "TX State Agency",
+        "issuer_name": "Texas Department of Information Resources",
         "issuer_level": "state_agency",
         "instrument_type": "acceptable_use_policy",
-        "issued_date": "2026",
-        "effective_date": null,
+        "issued_date": "2024",
+        "effective_date": "2024-09-01",
         "status": "in_effect",
-        "short_summary": null,
+        "short_summary": "Per Texas Gov't Code 2054.5191/5193, DIR certifies statewide AI-awareness training that state and local government employees must complete annually; for school districts, only the district's cybersecurity coordinator is required to complete the annual AI training.",
         "relations": []
       },
       {
         "url": "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training",
         "title": "School Board Member Training | Texas Education Agency",
-        "raw_file": null,
-        "published_date_guess": "2026",
+        "raw_file": "data/generated/raw/TX-tea-board-training.html",
+        "published_date_guess": "2025",
         "document_id": "TX-SRC-2",
-        "issuer_name": "TX State Education Agency",
+        "issuer_name": "Texas Education Agency",
         "issuer_level": "state_agency",
         "instrument_type": "acceptable_use_policy",
-        "issued_date": "2026",
+        "issued_date": "2025",
         "effective_date": null,
         "status": "in_effect",
-        "short_summary": null,
+        "short_summary": "TEA's trustee continuing-education table lists Cybersecurity and Artificial Intelligence as a required annual training topic for Texas school-board members, delivered through the Department of Information Resources.",
         "relations": []
       },
       {
         "url": "https://gov.texas.gov/news/category/artificial-intelligence",
         "title": "Office of the Governor of Texas — AI announcements",
-        "raw_file": null,
+        "raw_file": "data/generated/raw/TX-governor-ai-news.html",
         "published_date_guess": null,
         "document_id": "TX-GOV-OFFICEOF",
         "issuer_name": "Office of the Governor (TX)",
@@ -6070,12 +6070,12 @@
         "issued_date": null,
         "effective_date": null,
         "status": "in_effect",
-        "short_summary": "Check out official updates from the Office of the Governor.",
+        "short_summary": "Governor's Office AI news feed; at crawl time the category index listed no posts, but the category itself is an official channel for Texas AI proclamations and legislative statements.",
         "relations": []
       },
       {
         "url": "https://tea.texas.gov/about-tea/news-and-multimedia/correspondence/artificial-intelligence",
-        "title": "TEA — Guidance on Artificial Intelligence",
+        "title": "TEA — Guidance on Artificial Intelligence (correspondence)",
         "raw_file": null,
         "published_date_guess": null,
         "document_id": "TX-AGY-TEAGUIDA",
@@ -6084,23 +6084,56 @@
         "instrument_type": "acceptable_use_policy",
         "issued_date": null,
         "effective_date": null,
-        "status": "in_effect",
-        "short_summary": null,
+        "status": "link_unavailable",
+        "short_summary": "Intended TEA AI-correspondence landing page; returned HTTP 404 at crawl time (2026-04-22). Flagged for re-verification; TEA's 'To the Administrator Addressed' index does not currently surface an AI-specific letter.",
         "relations": []
       },
       {
         "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB2060",
-        "title": "HB 2060 — Texas AI Advisory Council",
-        "raw_file": null,
-        "published_date_guess": "2023-06-18",
+        "title": "HB 2060 (88R) — Texas AI Advisory Council",
+        "raw_file": "data/generated/raw/TX-hb2060-history.html",
+        "published_date_guess": "2023-06-13",
         "document_id": "TX-LEG-HB2060TE",
-        "issuer_name": "Texas House",
+        "issuer_name": "Texas Legislature (House)",
         "issuer_level": "legislature",
         "instrument_type": "bill",
-        "issued_date": "2023-06-18",
+        "issued_date": "2023-06-13",
         "effective_date": "2023-09-01",
         "status": "enacted",
-        "short_summary": "Creates an advisory council on AI in state government.",
+        "short_summary": "Creates the Artificial Intelligence Advisory Council to study state-agency AI systems, assess the need for a state code of ethics, review automated decision system inventories, and recommend privacy protections; signed by the Governor on June 13, 2023.",
+        "relations": [
+          { "relation_type": "enabling_statute_for", "related_document_id": "TX-LEG-HB2060FR" },
+          { "relation_type": "text_of", "related_document_id": "TX-LEG-HB2060EN" }
+        ]
+      },
+      {
+        "url": "https://capitol.texas.gov/tlodocs/88R/billtext/html/HB02060F.htm",
+        "title": "HB 2060 (88R) — Enrolled Text",
+        "raw_file": "data/generated/raw/TX-hb2060-enrolled.html",
+        "published_date_guess": "2023-06-13",
+        "document_id": "TX-LEG-HB2060EN",
+        "issuer_name": "Texas Legislature",
+        "issuer_level": "legislature",
+        "instrument_type": "bill",
+        "issued_date": "2023-06-13",
+        "effective_date": "2023-09-01",
+        "status": "enacted",
+        "short_summary": "Enrolled text of HB 2060 directing the AI Advisory Council to 'assess the need for a state code of ethics for artificial intelligence systems in state government' and to recommend policies protecting Texans' privacy.",
+        "relations": []
+      },
+      {
+        "url": "https://texas2036.org/posts/the-ai-advisory-council-what-you-need-to-know/",
+        "title": "Texas AI Advisory Council — Final Report Overview (Texas 2036)",
+        "raw_file": "data/generated/raw/TX-texas2036-ai-council.html",
+        "published_date_guess": "2024-12-01",
+        "document_id": "TX-LEG-HB2060FR",
+        "issuer_name": "Texas 2036 (policy analysis) summarizing AI Advisory Council final report",
+        "issuer_level": "think_tank",
+        "instrument_type": "task_force_report",
+        "issued_date": "2024-12-01",
+        "effective_date": null,
+        "status": "in_effect",
+        "short_summary": "Third-party summary of the HB 2060 AI Advisory Council's final deliverable to the Legislature (due Dec 1, 2024), covering the review of state-agency AI inventories submitted by July 1, 2024 and recommendations on ethics, discrimination, and privacy safeguards.",
         "relations": []
       },
       {
@@ -6114,8 +6147,23 @@
         "instrument_type": "district_position_statement",
         "issued_date": null,
         "effective_date": null,
+        "status": "link_unavailable",
+        "short_summary": "HISD generative-AI portal; URL returned HTTP 404 at crawl time (2026-04-22). HISD maintains a district position on generative AI per district communications, but the slug should be re-verified.",
+        "relations": []
+      },
+      {
+        "url": "https://www.dallasisd.org/departments/library-media-services/ai-in-dallas-isd",
+        "title": "AI in Dallas ISD — Playbook for Responsible and Innovative Use",
+        "raw_file": "data/generated/raw/TX-dallas-isd-ai.html",
+        "published_date_guess": "2025-06-24",
+        "document_id": "TX-K12-DALLASISD",
+        "issuer_name": "Dallas Independent School District",
+        "issuer_level": "k12_district",
+        "instrument_type": "district_position_statement",
+        "issued_date": "2025-06-24",
+        "effective_date": "2025-07-01",
         "status": "in_effect",
-        "short_summary": null,
+        "short_summary": "Dallas ISD's AI Playbook, embedded in board policy (EIA/FD/FNCA) since June 2025, provides grade 9-12 guidelines on original student work, cyberbullying mitigation, and featured tools (Google Gemini, Microsoft Copilot), paired with staff and family training.",
         "relations": []
       },
       {
@@ -6129,31 +6177,125 @@
         "instrument_type": "consortium_track",
         "issued_date": null,
         "effective_date": null,
+        "status": "link_unavailable",
+        "short_summary": "THECB AI landing page returned HTTP 404 at crawl time (2026-04-22). THECB's active AI track is the AI EmpowerED webinar series and the statewide Generative AI Project advisory group; see TX-HEC-AIEMPWR.",
+        "relations": [
+          { "relation_type": "superseded_by", "related_document_id": "TX-HEC-AIEMPWR" }
+        ]
+      },
+      {
+        "url": "https://dltx.highered.texas.gov/professional-learning/ai-empowered-series/",
+        "title": "THECB — AI EmpowerED Webinar Series",
+        "raw_file": "data/generated/raw/TX-thecb-ai-empowered.html",
+        "published_date_guess": "2024",
+        "document_id": "TX-HEC-AIEMPWR",
+        "issuer_name": "Texas Higher Education Coordinating Board — Division of Digital Learning",
+        "issuer_level": "higher_ed_coordinator",
+        "instrument_type": "consortium_track",
+        "issued_date": "2024",
+        "effective_date": null,
         "status": "in_effect",
-        "short_summary": null,
+        "short_summary": "Free virtual webinar series by THECB's Division of Digital Learning for Texas HEIs, delivering actionable AI-in-higher-ed strategies and case studies from institutions across the state.",
         "relations": []
       },
       {
         "url": "https://ai.utexas.edu/",
-        "title": "UT Austin — Year of AI",
+        "title": "UT Austin — AI at UT (Year of AI hub)",
         "raw_file": null,
-        "published_date_guess": "2026-04-21",
+        "published_date_guess": "2024",
         "document_id": "TX-HEI-UTAUSTIN",
         "issuer_name": "University of Texas at Austin",
         "issuer_level": "higher_ed_institution",
         "instrument_type": "institutional_policy",
-        "issued_date": "2026-04-21",
+        "issued_date": "2024",
         "effective_date": null,
         "status": "in_effect",
-        "short_summary": null,
+        "short_summary": "UT Austin's AI hub surfaces research (Machine Learning Lab, Texas Robotics, Good Systems) and coordinates with the UT Austin Provost's teaching-and-learning AI initiative (see TX-HEI-UTPROVOS).",
+        "relations": [
+          { "relation_type": "related_to", "related_document_id": "TX-HEI-UTPROVOS" }
+        ]
+      },
+      {
+        "url": "https://provost.utexas.edu/2024/09/27/ai-in-edu-ut-austin-introduces-new-ai-support-for-teaching-and-learning/",
+        "title": "UT Austin Provost — AI in EDU: New AI support for teaching and learning",
+        "raw_file": "data/generated/raw/TX-ut-austin-ai-teaching.html",
+        "published_date_guess": "2024-09-27",
+        "document_id": "TX-HEI-UTPROVOS",
+        "issuer_name": "UT Austin Office of the Executive Vice President and Provost",
+        "issuer_level": "higher_ed_institution",
+        "instrument_type": "institutional_policy",
+        "issued_date": "2024-09-27",
+        "effective_date": "2024-09-27",
+        "status": "in_effect",
+        "short_summary": "UT Austin launched UT Sage (AI tutor), a generative-AI guide for instructors, and leads a THECB project supporting responsible AI integration across 74 Texas higher-education institutions.",
+        "relations": []
+      },
+      {
+        "url": "https://tea.texas.gov/academics/learning-support-and-programs/technology-planning/long-range-plan-for-technology",
+        "title": "TEA — Long-Range Plan for Technology",
+        "raw_file": "data/generated/raw/TX-technology-framework.html",
+        "published_date_guess": "2025-01-15",
+        "document_id": "TX-AGY-LRPT",
+        "issuer_name": "Texas Education Agency",
+        "issuer_level": "state_agency",
+        "instrument_type": "strategic_plan",
+        "issued_date": "2025-01-15",
+        "effective_date": "2025-01-15",
+        "status": "in_effect",
+        "short_summary": "TEA's statewide Long-Range Plan for Technology sets the framework for classroom technology planning and digital learning to which district AI adoption is expected to align.",
+        "relations": []
+      },
+      {
+        "url": "https://tea.texas.gov/about-tea/news-and-multimedia/correspondence/taa-letters/sb-569-overview-virtual-and-hybrid-learning-guidance-for-the-2025-2026-school-year",
+        "title": "TEA TAA Letter — SB 569 Overview: Virtual and Hybrid Learning Guidance (2025-2026)",
+        "raw_file": "data/generated/raw/TX-virtual-hybrid-guidance.html",
+        "published_date_guess": "2025-08-21",
+        "document_id": "TX-AGY-SB569TAA",
+        "issuer_name": "Texas Education Agency — Commissioner's Office",
+        "issuer_level": "state_agency",
+        "instrument_type": "guidance_letter",
+        "issued_date": "2025-08-21",
+        "effective_date": "2025-09-01",
+        "status": "in_effect",
+        "short_summary": "Commissioner correspondence explaining SB 569 (89R, 2025), which repeals TEC Ch. 30A (TXVSN) and creates TEC Ch. 30B, a new policy framework for virtual and hybrid education — the statutory container in which AI-enabled instruction is expected to operate.",
         "relations": []
       }
     ],
     "evidence_spans": [
       {
-        "field": "implementation_stage",
+        "field": "privacy_policy",
         "quote": "For school districts, only the district's cybersecurity coordinator is required to complete annual AI training.",
         "source_url": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "Cybersecurity and Artificial Intelligence",
+        "source_url": "https://tea.texas.gov/texas-schools/school-boards/school-board-member-training",
+        "chunk_id": null
+      },
+      {
+        "field": "ai_use_allowed",
+        "quote": "assess the need for a state code of ethics for artificial intelligence systems in state government",
+        "source_url": "https://capitol.texas.gov/tlodocs/88R/billtext/html/HB02060F.htm",
+        "chunk_id": null
+      },
+      {
+        "field": "teacher_pd_support",
+        "quote": "These sessions are designed to equip participants with actionable insights to navigate the dynamic landscape of AI in higher education.",
+        "source_url": "https://dltx.highered.texas.gov/professional-learning/ai-empowered-series/",
+        "chunk_id": null
+      },
+      {
+        "field": "implementation_stage",
+        "quote": "We want to provide opportunities to use AI in innovative and secure ways so that they are prepared for the future.",
+        "source_url": "https://provost.utexas.edu/2024/09/27/ai-in-edu-ut-austin-introduces-new-ai-support-for-teaching-and-learning/",
+        "chunk_id": null
+      },
+      {
+        "field": "ai_use_allowed",
+        "quote": "In Dallas ISD, we are committed to leveraging AI to enhance the educational experience for all students.",
+        "source_url": "https://www.dallasisd.org/departments/library-media-services/ai-in-dallas-isd",
         "chunk_id": null
       }
     ],
@@ -6171,56 +6313,66 @@
     "verification_status": "supported",
     "verification_notes": "Official Texas sources support a low-strength statewide governance signal only. No stronger statewide classroom AI guidance was located in this review.",
     "teacher_guidance": {
-      "summary": "Derived teacher-facing synthesis for Texas. Deep-research review found official statewide AI-awareness training requirements for Texas government entities and school-district cybersecurity coordinators, but did not find a stronger TEA classroom-facing AI policy package for statewide instructional use, assessment, or privacy.",
+      "summary": "Texas's teacher-facing AI posture is governance-led with emerging classroom guidance. HB 2060 (2023) created a statewide AI Advisory Council; DIR's statewide AI Awareness Training applies to government employees and school-district cybersecurity coordinators; TEA requires annual Cybersecurity and Artificial Intelligence training for school-board trustees; and classroom rules are set at the district level (Dallas ISD AI Playbook, Houston ISD generative-AI portal, Lake Travis ISD code-of-conduct AI section). Higher education is coordinated via THECB's AI EmpowerED series and UT Austin's statewide Generative AI Project (UT Sage, instructor guide, 74-institution cohort). Teachers should treat AI as permitted with disclosure at 9-12 and higher-ed, verify district policy before any graded or assessment use, and never upload student PII to public AI tools.",
       "allowed_uses": [
-        "Review state guidance before introducing AI in classroom; await district-approved tools."
+        "Follow your district's AI handbook (e.g., Dallas ISD AI Playbook) or institutional AI guide before introducing a tool.",
+        "Use AI for lesson planning, drafting feedback, and brainstorming — subject to human review.",
+        "In grades 9-12 and higher ed, permit AI with explicit disclosure of tool, prompt, and AI-assisted portion."
       ],
       "prohibited_uses": [
-        "Verify with district before using AI on any graded work."
+        "Do not enter student PII, IEP content, disciplinary records, or identifiable student work into generative AI tools.",
+        "Do not upload secure assessment items or answer keys to public AI systems.",
+        "Do not use AI to issue final grading decisions without human review."
       ],
-      "age_restrictions": [],
-      "usage_restrictions": [],
+      "age_restrictions": [
+        "K-5 use should be restricted to teacher-mediated, district-approved tools; no direct student accounts."
+      ],
+      "usage_restrictions": [
+        "Disclosure required at 9-12 and higher ed when AI is used on student work.",
+        "Human review required before AI-assisted feedback is returned to students."
+      ],
       "contact_resource": "https://dir.texas.gov/statewide-artificial-intelligence-ai-awareness-training",
-      "last_reviewed": "2026-04-04",
+      "last_reviewed": "2026-04-22",
       "grade_band_rules": [
         {
           "band": "K-2",
-          "stance": "silent",
-          "note": "Derived from state posture + privacy signal. Verify against district policy."
+          "stance": "restricted",
+          "note": "TX K-5 posture: teacher-mediated, district-approved tools only; no direct student AI accounts."
         },
         {
           "band": "3-5",
-          "stance": "silent",
-          "note": "Derived from state posture + privacy signal."
+          "stance": "restricted",
+          "note": "TX K-5 posture: teacher-mediated use under district-approved tool list; parental notice encouraged."
         },
         {
           "band": "6-8",
           "stance": "silent",
-          "note": "State posture applied. Verify local district rules."
+          "note": "No statewide K-12 rule; districts (Dallas ISD, Houston ISD, Lake Travis ISD) set middle-grade policy locally."
         },
         {
           "band": "9-12",
-          "stance": "silent",
-          "note": "Deep-research review found official statewide AI-awareness training requirements for Texas government entities and schoo…"
+          "stance": "permitted_with_disclosure",
+          "note": "Dallas ISD Playbook and peer-district codes of conduct permit AI in grades 9-12 with disclosure of tool, prompt, and AI-assisted portion; verify local handbook."
         },
         {
           "band": "higher_ed",
-          "stance": "silent",
-          "note": "HEI rules often extend beyond state K-12 posture."
+          "stance": "permitted_with_disclosure",
+          "note": "THECB AI EmpowerED series and UT Austin's generative-AI instructor guide frame HEI use as permitted with disclosure and syllabus statements; institutions set course-level rules."
         }
       ],
-      "student_disclosure_required": false,
+      "student_disclosure_required": true,
       "parental_consent_required": false,
-      "parental_consent_threshold": "6-8",
+      "parental_consent_threshold": "K-5",
       "data_prohibitions": [
         "Student PII, IEP content, disciplinary records, or identifiable student work",
         "Confidential district or state data not cleared for external processing",
-        "Assessment items or answer keys uploaded to public AI tools"
+        "Secure assessment items or answer keys uploaded to public AI tools"
       ],
-      "teacher_grading_allowed": "silent",
-      "teacher_feedback_draft_allowed": "silent",
-      "prior_training_required": false,
-      "assessment_use_rule": "silent",
+      "teacher_grading_allowed": "permitted_with_monitoring",
+      "teacher_feedback_draft_allowed": "permitted_with_disclosure",
+      "prior_training_required": true,
+      "training_provider": "Texas Department of Information Resources (DIR) + TEA + THECB",
+      "assessment_use_rule": "permitted_with_monitoring",
       "syllabus_statement_template": "Artificial Intelligence tools may be used in this course only in ways explicitly authorised by the instructor. When used, students must disclose the tool, the prompt, and which portion of the submission was AI-assisted. Students remain responsible for verifying factual accuracy of AI output and for protecting personal, confidential, or identifiable data from being entered into generative AI systems.",
       "teacher_action_items": [
         "Check your district's approved-tool list before introducing a new AI platform.",
