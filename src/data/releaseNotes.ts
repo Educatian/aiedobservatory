@@ -73,6 +73,35 @@ export const releaseNotes: ReleaseNote[] = [
           "Seven pilot states (CA, NY, TX, FL, WA, IL, WI) have been enriched with instruments from governor offices, state agencies, legislatures, districts, and HEIs via the new crawler. See docs/CRAWLING_STRATEGY.md for the plan."
       }
     ]
+  },
+  {
+    version: "2026.04.22-c",
+    date: "2026-04-22",
+    title: "Corpus completeness + Reader's Manual",
+    summary:
+      "Cross-checked our crawl against the US Department of Education's 2026 state AI guidance roster and filled the six missing states. Also surfaced the Reader's Manual as a persistent top-nav entry point.",
+    highlights: [
+      {
+        icon: "public",
+        title: "Six new states crawled (AL, AZ, HI, ND, NV, WY)",
+        body:
+          "Twelve new source documents added across six states listed in the US DOE 2026 'Guidance from States' roster. Chunks regenerated (685 kept + 180 new = 865 total); downstream analyses now run on N=35 states, with leave-one-out seed validation at 35/35 and bootstrap stable pairs up from 6 to 22.",
+        spotlightSelector: ".policy-tile-map"
+      },
+      {
+        icon: "menu_book",
+        title: "Reader's Manual in top nav",
+        body:
+          "The Reader's Manual is now one click away from any page — a new book icon in the top-actions row opens the full guide in a new tab. Its 'Back to App' button returns you to the dashboard map view, not the landing page.",
+        spotlightSelector: "a[href='/guides/manual.html']"
+      },
+      {
+        icon: "receipt_long",
+        title: "Changelog with supersession note",
+        body:
+          "docs/FUTURE_DIRECTIONS.md records the corpus-completeness update, what numbers drifted, and explicitly marks pre-2026-04-22T22:40 analytic outputs as superseded."
+      }
+    ]
   }
 ];
 
