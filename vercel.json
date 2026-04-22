@@ -15,6 +15,14 @@
     {
       "source": "/app/(.*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/developer",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/developer/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
