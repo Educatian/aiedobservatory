@@ -20,8 +20,12 @@ import { SecondarySignalsPanel } from "./components/SecondarySignalsPanel";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
 import { TrustPanel } from "./components/TrustPanel";
+import { WhatsNewModal } from "./components/WhatsNewModal";
 import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
+import { currentRelease } from "./data/releaseNotes";
 import type { PolicyEvent, PolicyRecord } from "./types";
+
+const WHATS_NEW_KEY = "aiedob.whatsNewSeenVersion";
 
 type CoverageFilter = "all" | "coded" | "queued";
 type AppPage = "landing" | "dashboard" | "projectoverview";
@@ -142,6 +146,23 @@ function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(
     () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches
   );
+  const [whatsNewOpen, setWhatsNewOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      return window.localStorage.getItem(WHATS_NEW_KEY) !== currentRelease.version;
+    } catch {
+      return false;
+    }
+  });
+  const closeWhatsNew = () => {
+    setWhatsNewOpen(false);
+    try {
+      window.localStorage.setItem(WHATS_NEW_KEY, currentRelease.version);
+    } catch {
+      /* noop */
+    }
+  };
+  const openWhatsNew = () => setWhatsNewOpen(true);
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [pendingDashboardSection, setPendingDashboardSection] = useState<NavSection>("map-view");
@@ -603,6 +624,15 @@ function App() {
               Teacher Mode
             </button>
 
+            <button
+              type="button"
+              className="icon-button whatsnew-trigger"
+              aria-label="What's new"
+              onClick={openWhatsNew}
+              title={`What's new · v${currentRelease.version}`}
+            >
+              <span className="material-symbols-outlined">campaign</span>
+            </button>
             <button type="button" className="icon-button" aria-label="History">
               <span className="material-symbols-outlined">history</span>
             </button>
@@ -782,6 +812,7 @@ function App() {
 
         </div>
       </div>
+      <WhatsNewModal release={currentRelease} open={whatsNewOpen} onClose={closeWhatsNew} />
     </div>
   );
 }

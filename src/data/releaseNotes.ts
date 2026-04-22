@@ -1,0 +1,73 @@
+export interface ReleaseHighlight {
+  /** Material Symbol name */
+  icon: string;
+  title: string;
+  body: string;
+  /**
+   * Optional CSS selector to spotlight when the user clicks "Show me".
+   * The element gets a pulsing ring for ~4s and scrolls into view.
+   */
+  spotlightSelector?: string;
+}
+
+export interface ReleaseNote {
+  /** Version string. When this increases, the modal re-appears on first visit. */
+  version: string;
+  date: string;
+  title: string;
+  summary: string;
+  highlights: ReleaseHighlight[];
+}
+
+/**
+ * The CURRENT release is the last entry in this array. Bump its `version`
+ * any time a new user-facing change ships and the "What's new" modal should
+ * re-surface. The modal reads localStorage key `aiedob.whatsNewSeenVersion`
+ * and only shows when the stored value !== currentRelease.version.
+ */
+export const releaseNotes: ReleaseNote[] = [
+  {
+    version: "2026.04.22-a",
+    date: "2026-04-22",
+    title: "Multi-layer policy hierarchy + teacher-facing details",
+    summary:
+      "Every state record now exposes a five-layer policy stack (governor, state agency, legislature, K-12 district, higher-ed) and a teacher guidance panel with grade-band rules, data guardrails, and a copy-ready syllabus template.",
+    highlights: [
+      {
+        icon: "hub",
+        title: "Policy hierarchy diagram",
+        body:
+          "Above each state's metadata grid, a new diagram stacks instruments across up to seven issuer layers and draws dashed arrows along recommends / derives_from / tasks relations.",
+        spotlightSelector: ".hierarchy-diagram"
+      },
+      {
+        icon: "timeline",
+        title: "Instrument timeline",
+        body:
+          "Dated instruments are plotted on a horizontal timeline, colour-coded by branch (executive, legislative, K-12, higher-ed).",
+        spotlightSelector: ".instrument-timeline"
+      },
+      {
+        icon: "school",
+        title: "Grade-band teacher rules",
+        body:
+          "The Teacher Guide panel now includes K-2 / 3-5 / 6-8 / 9-12 / higher-ed stance chips, disclosure & consent pills, a red-bordered data-guardrails list, classroom rules grid, action-item checklist, and a copy-ready syllabus template.",
+        spotlightSelector: ".teacher-guidance-panel"
+      },
+      {
+        icon: "compare_arrows",
+        title: "Richer comparison matrix",
+        body:
+          "Compare two states across grade-band stance, count of data prohibitions, and whether prior AI training is required — in addition to the existing score rows."
+      },
+      {
+        icon: "travel_explore",
+        title: "Multi-layer crawler",
+        body:
+          "Seven pilot states (CA, NY, TX, FL, WA, IL, WI) have been enriched with instruments from governor offices, state agencies, legislatures, districts, and HEIs via the new crawler. See docs/CRAWLING_STRATEGY.md for the plan."
+      }
+    ]
+  }
+];
+
+export const currentRelease = releaseNotes[releaseNotes.length - 1];
