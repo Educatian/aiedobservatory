@@ -5,6 +5,7 @@ interface LandingPageProps {
   onOpenLogin: () => void;
   onOpenDashboard: () => void;
   onOpenProjectOverview: () => void;
+  onOpenDeveloper: () => void;
   onSkipTesting: () => void;
 }
 
@@ -13,6 +14,7 @@ export function LandingPage({
   onOpenLogin,
   onOpenDashboard,
   onOpenProjectOverview,
+  onOpenDeveloper,
   onSkipTesting
 }: LandingPageProps) {
   return (
@@ -27,6 +29,7 @@ export function LandingPage({
 
         <nav className="landing-topnav" aria-label="Landing navigation">
           <button type="button" onClick={onOpenProjectOverview}>About</button>
+          <button type="button" onClick={onOpenDeveloper}>Developer</button>
           <button
             type="button"
             className="landing-topnav-cta"

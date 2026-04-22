@@ -16,6 +16,7 @@ import { PolicyStageSection } from "./components/PolicyStageSection";
 import { PolicyTable } from "./components/PolicyTable";
 import { PolicyTileMap } from "./components/PolicyTileMap";
 import { ProjectOverviewPage } from "./components/ProjectOverviewPage";
+import { DeveloperPage } from "./components/DeveloperPage";
 import { SecondarySignalsPanel } from "./components/SecondarySignalsPanel";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
@@ -28,7 +29,7 @@ import type { PolicyEvent, PolicyRecord } from "./types";
 const WHATS_NEW_KEY = "aiedob.whatsNewSeenVersion";
 
 type CoverageFilter = "all" | "coded" | "queued";
-type AppPage = "landing" | "dashboard" | "projectoverview";
+type AppPage = "landing" | "dashboard" | "projectoverview" | "developer";
 type NavSection =
   | "map-view"
   | "compare"
@@ -48,6 +49,7 @@ const TEST_WORKSPACE_SESSION: WorkspaceSession = {
 function getAppPageFromPath(pathname: string): AppPage {
   const normalized = pathname.toLowerCase();
   if (normalized.startsWith("/projectoverview")) return "projectoverview";
+  if (normalized.startsWith("/developer")) return "developer";
   if (normalized.startsWith("/app")) return "dashboard";
   return "landing";
 }
@@ -398,6 +400,14 @@ function App() {
     openDashboard(section);
   }
 
+  function navigateToDeveloper() {
+    if (typeof window !== "undefined") {
+      window.history.pushState({}, "", "/developer");
+      setCurrentPage("developer");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   function navigateToProjectOverview() {
     if (typeof window !== "undefined") {
       window.history.pushState({}, "", "/projectoverview");
@@ -458,7 +468,25 @@ function App() {
           onOpenLogin={() => setIsLoginModalOpen(true)}
           onOpenDashboard={() => navigateToDashboard("map-view")}
           onOpenProjectOverview={navigateToProjectOverview}
+          onOpenDeveloper={navigateToDeveloper}
           onSkipTesting={handleSkipTesting}
+        />
+        <LoginModal
+          open={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
+          onSubmit={handleWorkspaceLogin}
+          onSkipTesting={handleSkipTesting}
+        />
+      </>
+    );
+  }
+
+  if (currentPage === "developer") {
+    return (
+      <>
+        <DeveloperPage
+          onOpenDashboard={() => navigateToDashboard("map-view")}
+          onOpenLanding={navigateToLanding}
         />
         <LoginModal
           open={isLoginModalOpen}
