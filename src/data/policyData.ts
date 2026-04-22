@@ -334,7 +334,22 @@ export const policyRecords: PolicyRecord[] = stateTiles.map((tile) => {
         url: doc.url,
         title: doc.title ?? null,
         rawFile: doc.raw_file ?? null,
-        publishedDateGuess: doc.published_date_guess ?? null
+        publishedDateGuess: doc.published_date_guess ?? null,
+        documentId: doc.document_id ?? undefined,
+        issuerName: doc.issuer_name ?? undefined,
+        issuerLevel: doc.issuer_level ?? undefined,
+        instrumentType: doc.instrument_type ?? undefined,
+        issuedDate: doc.issued_date ?? undefined,
+        effectiveDate: doc.effective_date ?? undefined,
+        status: doc.status ?? undefined,
+        shortSummary: doc.short_summary ?? undefined,
+        relations: Array.isArray(doc.relations)
+          ? doc.relations.map((rel: any) => ({
+              kind: rel.kind,
+              targetDocumentId: rel.target_document_id,
+              note: rel.note ?? undefined
+            }))
+          : undefined
       })),
       sourceAuthority: canonicalMatch.source_authority ?? undefined,
       approvalRoute: canonicalMatch.approval_route ?? undefined,
@@ -365,7 +380,34 @@ export const policyRecords: PolicyRecord[] = stateTiles.map((tile) => {
               sourceUrl: r.source_url ?? undefined
             })),
             contactResource: canonicalMatch.teacher_guidance.contact_resource ?? undefined,
-            lastReviewed: canonicalMatch.teacher_guidance.last_reviewed ?? undefined
+            lastReviewed: canonicalMatch.teacher_guidance.last_reviewed ?? undefined,
+            gradeBandRules: Array.isArray(canonicalMatch.teacher_guidance.grade_band_rules)
+              ? canonicalMatch.teacher_guidance.grade_band_rules.map((g: any) => ({
+                  band: g.band,
+                  stance: g.stance,
+                  note: g.note ?? undefined
+                }))
+              : undefined,
+            studentDisclosureRequired:
+              canonicalMatch.teacher_guidance.student_disclosure_required ?? undefined,
+            studentDisclosureFormat:
+              canonicalMatch.teacher_guidance.student_disclosure_format ?? undefined,
+            parentalConsentRequired:
+              canonicalMatch.teacher_guidance.parental_consent_required ?? undefined,
+            parentalConsentThreshold:
+              canonicalMatch.teacher_guidance.parental_consent_threshold ?? undefined,
+            dataProhibitions: canonicalMatch.teacher_guidance.data_prohibitions ?? undefined,
+            teacherGradingAllowed:
+              canonicalMatch.teacher_guidance.teacher_grading_allowed ?? undefined,
+            teacherFeedbackDraftAllowed:
+              canonicalMatch.teacher_guidance.teacher_feedback_draft_allowed ?? undefined,
+            priorTrainingRequired:
+              canonicalMatch.teacher_guidance.prior_training_required ?? undefined,
+            trainingProvider: canonicalMatch.teacher_guidance.training_provider ?? undefined,
+            assessmentUseRule: canonicalMatch.teacher_guidance.assessment_use_rule ?? undefined,
+            syllabusStatementTemplate:
+              canonicalMatch.teacher_guidance.syllabus_statement_template ?? undefined,
+            teacherActionItems: canonicalMatch.teacher_guidance.teacher_action_items ?? undefined
           }
         : undefined
     };

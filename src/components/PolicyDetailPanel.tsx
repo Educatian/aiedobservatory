@@ -6,6 +6,7 @@ import {
   scoringLabels
 } from "../data/policyData";
 import type { EvidenceSpan, PolicyRecord } from "../types";
+import { InstrumentTimelineSvg } from "./InstrumentTimelineSvg";
 
 interface PolicyDetailPanelProps {
   record: PolicyRecord;
@@ -143,6 +144,8 @@ export function PolicyDetailPanel({ record }: PolicyDetailPanelProps) {
           {record.snapshotStatus === "coded" ? "Coded snapshot" : "Queued"}
         </div>
       </div>
+
+      <InstrumentTimelineSvg record={record} />
 
       <div className="detail-highlight">
         <div>

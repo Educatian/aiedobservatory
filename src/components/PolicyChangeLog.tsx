@@ -33,6 +33,10 @@ function getEventLabel(event: PolicyEvent): string {
       return "Confidence updated";
     case "stage_changed":
       return "Stage updated";
+    case "instrument_added":
+      return "Instrument added";
+    case "instrument_status_changed":
+      return "Instrument status";
     case "record_created":
       return "Record created";
     case "record_updated":

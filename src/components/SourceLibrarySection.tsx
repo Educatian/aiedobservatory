@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { formatConfidence } from "../data/policyData";
-import type { EvidenceSpan, PolicyRecord } from "../types";
+import type { EvidenceSpan, InstrumentType, IssuerLevel, PolicyRecord } from "../types";
 
 interface SourceLibrarySectionProps {
   records: PolicyRecord[];
@@ -15,6 +15,10 @@ interface SourceRow {
   title: string;
   url: string;
   publishedDateGuess?: string | null;
+  effectiveDate?: string;
+  issuerName?: string;
+  issuerLevel?: IssuerLevel;
+  instrumentType?: InstrumentType;
   sourceAuthority?: string;
   approvalRoute?: PolicyRecord["approvalRoute"];
   auditStatus?: PolicyRecord["auditStatus"];
@@ -23,6 +27,42 @@ interface SourceRow {
 }
 
 const PAGE_SIZE = 12;
+
+const INSTRUMENT_TYPE_LABELS: Record<InstrumentType, string> = {
+  acceptable_use_policy: "Acceptable-use",
+  governance_body_charter: "Charter",
+  task_force_report: "Task-force report",
+  bill: "Bill",
+  legislative_study_report: "Study report",
+  district_position_statement: "District stance",
+  curricular_program: "Curricular program",
+  consortium_track: "Consortium track",
+  faculty_guideline: "Faculty guideline",
+  institutional_policy: "HEI policy"
+};
+
+const INSTRUMENT_FAMILY: Record<InstrumentType, "exec" | "legis" | "k12" | "highered"> = {
+  acceptable_use_policy: "exec",
+  governance_body_charter: "exec",
+  task_force_report: "exec",
+  bill: "legis",
+  legislative_study_report: "legis",
+  district_position_statement: "k12",
+  curricular_program: "k12",
+  consortium_track: "highered",
+  faculty_guideline: "highered",
+  institutional_policy: "highered"
+};
+
+const ISSUER_LEVEL_LABELS: Record<IssuerLevel, string> = {
+  governor_office: "Governor's Office",
+  state_agency: "State Agency",
+  legislature: "Legislature",
+  legislative_study_body: "Legislative Study Body",
+  k12_district: "K-12 District",
+  higher_ed_coordinator: "Higher-Ed Coordinator",
+  higher_ed_institution: "Higher-Ed Institution"
+};
 
 function formatPolicyLevel(authority?: string): string {
   switch (authority) {
@@ -150,6 +190,10 @@ export function SourceLibrarySection({ records, onSelectState }: SourceLibrarySe
           title: source.title ?? source.url,
           url: source.url,
           publishedDateGuess: source.publishedDateGuess ?? null,
+          effectiveDate: source.effectiveDate,
+          issuerName: source.issuerName,
+          issuerLevel: source.issuerLevel,
+          instrumentType: source.instrumentType,
           sourceAuthority: record.sourceAuthority,
           approvalRoute: record.approvalRoute,
           auditStatus: record.auditStatus,
@@ -270,6 +314,7 @@ export function SourceLibrarySection({ records, onSelectState }: SourceLibrarySe
               <tr>
                 <th>Region</th>
                 <th>Source Title</th>
+                <th>Type</th>
                 <th>Date</th>
                 <th>Policy Level</th>
                 <th>Confidence</th>
@@ -290,6 +335,12 @@ export function SourceLibrarySection({ records, onSelectState }: SourceLibrarySe
                     <td>
                       <span className="source-title">{row.title}</span>
                       <span className="source-url">{row.url.replace(/^https?:\/\//, "")}</span>
+                      {row.issuerName && (
+                        <span className="source-issuer">
+                          {row.issuerName}
+                          {row.issuerLevel ? ` · ${ISSUER_LEVEL_LABELS[row.issuerLevel]}` : ""}
+                        </span>
+                      )}
                       <div className="source-meta-row">
                         <span className={`source-route-badge ${row.approvalRoute ?? "unrouted"}`}>
                           {formatApprovalRoute(row.approvalRoute)}
@@ -297,7 +348,27 @@ export function SourceLibrarySection({ records, onSelectState }: SourceLibrarySe
                         <SourceEvidenceHover evidence={row.evidence} />
                       </div>
                     </td>
-                    <td>{formatDateLabel(row.publishedDateGuess)}</td>
+                    <td>
+                      {row.instrumentType ? (
+                        <span
+                          className={`source-instrument-pill source-instrument-${
+                            INSTRUMENT_FAMILY[row.instrumentType]
+                          }`}
+                        >
+                          {INSTRUMENT_TYPE_LABELS[row.instrumentType]}
+                        </span>
+                      ) : (
+                        <span className="source-instrument-pill source-instrument-unknown">—</span>
+                      )}
+                    </td>
+                    <td>
+                      <div>{formatDateLabel(row.publishedDateGuess)}</div>
+                      {row.effectiveDate && row.effectiveDate !== row.publishedDateGuess && (
+                        <div className="source-effective-chip">
+                          Effective {formatDateLabel(row.effectiveDate)}
+                        </div>
+                      )}
+                    </td>
                     <td>
                       <span className="source-level-pill">{formatPolicyLevel(row.sourceAuthority)}</span>
                     </td>

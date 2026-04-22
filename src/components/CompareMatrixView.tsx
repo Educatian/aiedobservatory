@@ -142,6 +142,62 @@ const compareRows: CompareRowDefinition[] = [
     )
   },
   {
+    label: "Grade-Band Stance",
+    render: (record) => {
+      const rules = record.teacherGuidance?.gradeBandRules;
+      if (!rules || rules.length === 0)
+        return <span className="compare-pill compare-pill-subtle">Silent</span>;
+      const strictest = rules.reduce<string>((acc, r) => {
+        const order = ["prohibited", "restricted", "permitted_with_disclosure", "permitted", "silent"];
+        return order.indexOf(r.stance) < order.indexOf(acc || "silent") ? r.stance : acc;
+      }, "");
+      return (
+        <div className="compare-band-row">
+          {rules.slice(0, 4).map((r, i) => (
+            <span key={i} className={`tg-band-chip tg-band-${r.stance}`} title={r.note ?? r.stance}>
+              <span className="tg-band-chip-band">{r.band}</span>
+            </span>
+          ))}
+          <span className="compare-pill compare-pill-subtle">
+            Strictest: {strictest.replace(/_/g, " ")}
+          </span>
+        </div>
+      );
+    }
+  },
+  {
+    label: "Data Prohibitions",
+    render: (record) => {
+      const count = record.teacherGuidance?.dataProhibitions?.length ?? 0;
+      return count > 0 ? (
+        <span className="compare-pill compare-pill-prohibited">
+          <span className="material-symbols-outlined">shield</span>
+          {count} item{count === 1 ? "" : "s"}
+        </span>
+      ) : (
+        <span className="compare-pill compare-pill-subtle">Not coded</span>
+      );
+    }
+  },
+  {
+    label: "Training Required",
+    render: (record) => {
+      const v = record.teacherGuidance?.priorTrainingRequired;
+      if (v === undefined)
+        return <span className="compare-pill compare-pill-subtle">Silent</span>;
+      return (
+        <span
+          className={`compare-pill ${v ? "compare-pill-active" : "compare-pill-subtle"}`}
+        >
+          {v ? "Required" : "Not required"}
+          {v && record.teacherGuidance?.trainingProvider
+            ? ` · ${record.teacherGuidance.trainingProvider}`
+            : ""}
+        </span>
+      );
+    }
+  },
+  {
     label: "Confidence Level",
     render: (record) => (
       <span className="compare-pill compare-pill-confidence">

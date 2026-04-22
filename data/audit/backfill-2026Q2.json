@@ -1,0 +1,372 @@
+{
+  "generated_at": "2026-04-22T07:29:25.710Z",
+  "alabama_inserted": true,
+  "per_state": [
+    {
+      "state": "AL",
+      "action": "inserted",
+      "source_count": 11,
+      "confidence": 0.85
+    },
+    {
+      "state": "AZ",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.79,
+      "confidence_after": 0.81,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "CA",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "CO",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.86,
+      "confidence_after": 0.88,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "CT",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.89,
+      "confidence_after": 0.91,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "DE",
+      "action": "backfilled",
+      "source_count_before": 7,
+      "source_count_after": 7,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "FL",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.84,
+      "confidence_after": 0.86,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "GA",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "IA",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.81,
+      "confidence_after": 0.83,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "IL",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.78,
+      "confidence_after": 0.8,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "KY",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.91,
+      "confidence_after": 0.93,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "LA",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.86,
+      "confidence_after": 0.88,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "MA",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.94,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "MD",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.88,
+      "confidence_after": 0.9,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "ME",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 0.87,
+      "confidence_after": 0.88,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "MI",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 0.78,
+      "confidence_after": 0.79,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "MN",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 0.93,
+      "confidence_after": 0.94,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "MO",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.88,
+      "confidence_after": 0.9,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NC",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NE",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.76,
+      "confidence_after": 0.78,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NH",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.75,
+      "confidence_after": 0.77,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NJ",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.79,
+      "confidence_after": 0.81,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NM",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.87,
+      "confidence_after": 0.89,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "NY",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.77,
+      "confidence_after": 0.79,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "OH",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "OK",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.93,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "OR",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "PA",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.96,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "RI",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "SC",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.82,
+      "confidence_after": 0.84,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "TN",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.76,
+      "confidence_after": 0.78,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "TX",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.58,
+      "confidence_after": 0.6,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "UT",
+      "action": "backfilled",
+      "source_count_before": 8,
+      "source_count_after": 8,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "VA",
+      "action": "backfilled",
+      "source_count_before": 2,
+      "source_count_after": 2,
+      "confidence_before": 0.88,
+      "confidence_after": 0.9,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "WA",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 1,
+      "confidence_after": 0.95,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "WI",
+      "action": "backfilled",
+      "source_count_before": 3,
+      "source_count_after": 3,
+      "confidence_before": 0.87,
+      "confidence_after": 0.89,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    },
+    {
+      "state": "WV",
+      "action": "backfilled",
+      "source_count_before": 1,
+      "source_count_after": 1,
+      "confidence_before": 0.88,
+      "confidence_after": 0.89,
+      "has_grade_band_rules": true,
+      "has_syllabus_template": true
+    }
+  ]
+}

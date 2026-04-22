@@ -6657,3 +6657,247 @@ tbody td {
     height: 3rem;
   }
 }
+
+/* ============================================================
+   Instrument hierarchy & teacher-facing extensions (2026 Q2)
+   ============================================================ */
+
+/* Grade-band chips */
+.tg-band-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.tg-band-chip {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: #f8fafc;
+  color: #334155;
+  min-width: 4rem;
+  text-align: center;
+  align-items: center;
+}
+.tg-band-chip-band { font-weight: 700; font-size: 0.78rem; }
+.tg-band-chip-stance { font-size: 0.65rem; opacity: 0.8; margin-top: 0.15rem; }
+.tg-band-prohibited { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+.tg-band-restricted { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
+.tg-band-permitted_with_disclosure { background: #dbeafe; border-color: #3b82f6; color: #1e40af; }
+.tg-band-permitted { background: #dcfce7; border-color: #22c55e; color: #166534; }
+.tg-band-silent { background: #f1f5f9; border-color: #94a3b8; color: #475569; }
+
+/* Disclosure/consent */
+.tg-consent-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+.tg-consent-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid;
+}
+.tg-consent-pill .material-symbols-outlined { font-size: 1rem; }
+.tg-consent-yes { background: #eef2ff; border-color: #6366f1; color: #3730a3; }
+.tg-consent-no { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
+.tg-consent-threshold { font-style: normal; font-size: 0.7rem; opacity: 0.75; }
+.tg-consent-format {
+  font-size: 0.78rem;
+  color: #475569;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  background: #f8fafc;
+  border-left: 2px solid #6366f1;
+  border-radius: 0.25rem;
+}
+
+/* Data guardrails */
+.tg-data-guardrails {
+  border-left: 3px solid #dc2626;
+  padding-left: 0.75rem;
+  background: linear-gradient(180deg, rgba(254, 226, 226, 0.3), transparent);
+}
+.tg-list-guardrails li {
+  color: #7f1d1d;
+  font-weight: 500;
+}
+.tg-list-guardrails .tg-list-icon { color: #dc2626; }
+
+/* Classroom rules grid */
+.tg-rule-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
+}
+.tg-rule-grid dt { font-weight: 600; color: #475569; }
+.tg-rule-grid dd { margin: 0; color: #1e293b; text-transform: capitalize; }
+
+/* Action items */
+.tg-action-list {
+  margin: 0.35rem 0 0 1.2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: #1e293b;
+}
+.tg-action-list li { line-height: 1.4; }
+
+/* Syllabus template */
+.tg-syllabus-block {
+  background: #faf5ff;
+  border: 1px solid #d8b4fe;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+.tg-syllabus-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: #6d28d9;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  font-size: 0.82rem;
+}
+.tg-syllabus-body { margin-top: 0.5rem; }
+.tg-syllabus-text {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #1e1048;
+  white-space: pre-wrap;
+  margin: 0 0 0.5rem;
+  padding: 0.6rem;
+  background: #ffffff;
+  border-radius: 0.35rem;
+  border: 1px solid #e9d5ff;
+}
+.tg-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.35rem;
+  background: #6d28d9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  min-height: 2.25rem;
+}
+.tg-copy-btn:hover { background: #5b21b6; }
+
+/* Instrument timeline */
+.instrument-timeline {
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.instrument-timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+.instrument-timeline-range {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+.instrument-timeline svg {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+}
+.instrument-timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  color: #475569;
+  margin-top: 0.35rem;
+  align-items: center;
+}
+.itl-swatch {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+.itl-exec { background: #d97706; }
+.itl-legis { background: #7c3aed; }
+.itl-k12 { background: #0d9488; }
+.itl-highered { background: #4f46e5; }
+
+/* Source library instrument pill + issuer */
+.source-instrument-pill {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.source-instrument-exec { background: #fef3c7; color: #92400e; }
+.source-instrument-legis { background: #ede9fe; color: #5b21b6; }
+.source-instrument-k12 { background: #ccfbf1; color: #115e59; }
+.source-instrument-highered { background: #e0e7ff; color: #3730a3; }
+.source-instrument-unknown { background: #f1f5f9; color: #64748b; }
+.source-issuer {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+}
+.source-effective-chip {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.66rem;
+  color: #6d28d9;
+  background: #f5f3ff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+/* Compare-matrix additions */
+.compare-band-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+.compare-pill-subtle {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+.compare-pill-prohibited {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.compare-pill-active {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #c4b5fd;
+}

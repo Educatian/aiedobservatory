@@ -1,7 +1,37 @@
-import type { PolicyRecord, TeacherRestriction } from "../types";
+import { useState } from "react";
+import type { GradeBandRule, GradeBandStance, PolicyRecord, TeacherRestriction } from "../types";
 
 interface TeacherGuidancePanelProps {
   record: PolicyRecord;
+}
+
+const BAND_LABELS: Record<string, string> = {
+  "K-2": "K–2",
+  "3-5": "3–5",
+  "6-8": "6–8",
+  "9-12": "9–12",
+  higher_ed: "Higher Ed",
+  all_grades: "All grades"
+};
+
+const STANCE_LABELS: Record<GradeBandStance, string> = {
+  prohibited: "Prohibited",
+  restricted: "Restricted",
+  permitted_with_disclosure: "With disclosure",
+  permitted: "Permitted",
+  silent: "Silent"
+};
+
+function GradeBandChip({ rule }: { rule: GradeBandRule }) {
+  return (
+    <span
+      className={`tg-band-chip tg-band-${rule.stance}`}
+      title={rule.note ?? `${BAND_LABELS[rule.band] ?? rule.band}: ${STANCE_LABELS[rule.stance]}`}
+    >
+      <span className="tg-band-chip-band">{BAND_LABELS[rule.band] ?? rule.band}</span>
+      <span className="tg-band-chip-stance">{STANCE_LABELS[rule.stance]}</span>
+    </span>
+  );
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -31,6 +61,19 @@ function RestrictionCard({ item }: { item: TeacherRestriction }) {
 
 export function TeacherGuidancePanel({ record }: TeacherGuidancePanelProps) {
   const g = record.teacherGuidance;
+  const [syllabusOpen, setSyllabusOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copySyllabus = async () => {
+    if (!g?.syllabusStatementTemplate) return;
+    try {
+      await navigator.clipboard.writeText(g.syllabusStatementTemplate);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      /* noop */
+    }
+  };
 
   return (
     <aside className="detail-panel teacher-guidance-panel">
@@ -61,6 +104,120 @@ export function TeacherGuidancePanel({ record }: TeacherGuidancePanelProps) {
               <span className="tg-reviewed-date">Policy reviewed: {g.lastReviewed}</span>
             )}
           </div>
+
+          {g.gradeBandRules && g.gradeBandRules.length > 0 && (
+            <div className="detail-block">
+              <div className="mini-heading tg-section-head">
+                <span className="material-symbols-outlined">school</span>
+                Grade-Band Stance
+              </div>
+              <div className="tg-band-row">
+                {g.gradeBandRules.map((rule, i) => (
+                  <GradeBandChip key={`${rule.band}-${i}`} rule={rule} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {(g.studentDisclosureRequired !== undefined ||
+            g.parentalConsentRequired !== undefined) && (
+            <div className="detail-block tg-consent-block">
+              <div className="mini-heading tg-section-head">
+                <span className="material-symbols-outlined">verified_user</span>
+                Disclosure &amp; Consent
+              </div>
+              <div className="tg-consent-row">
+                {g.studentDisclosureRequired !== undefined && (
+                  <span
+                    className={`tg-consent-pill ${
+                      g.studentDisclosureRequired ? "tg-consent-yes" : "tg-consent-no"
+                    }`}
+                  >
+                    <span className="material-symbols-outlined">
+                      {g.studentDisclosureRequired ? "task_alt" : "do_not_disturb_on"}
+                    </span>
+                    Student disclosure {g.studentDisclosureRequired ? "required" : "not required"}
+                  </span>
+                )}
+                {g.parentalConsentRequired !== undefined && (
+                  <span
+                    className={`tg-consent-pill ${
+                      g.parentalConsentRequired ? "tg-consent-yes" : "tg-consent-no"
+                    }`}
+                  >
+                    <span className="material-symbols-outlined">
+                      {g.parentalConsentRequired ? "family_restroom" : "do_not_disturb_on"}
+                    </span>
+                    Parental consent {g.parentalConsentRequired ? "required" : "not required"}
+                    {g.parentalConsentThreshold && (
+                      <em className="tg-consent-threshold">
+                        &nbsp;({BAND_LABELS[g.parentalConsentThreshold] ?? g.parentalConsentThreshold}
+                        &nbsp;&amp; below)
+                      </em>
+                    )}
+                  </span>
+                )}
+              </div>
+              {g.studentDisclosureFormat && (
+                <p className="tg-consent-format">{g.studentDisclosureFormat}</p>
+              )}
+            </div>
+          )}
+
+          {g.dataProhibitions && g.dataProhibitions.length > 0 && (
+            <div className="detail-block tg-data-guardrails">
+              <div className="mini-heading tg-section-head tg-prohibited-head">
+                <span className="material-symbols-outlined">shield</span>
+                Data Guardrails — Never Input to AI
+              </div>
+              <ul className="tg-list tg-list-guardrails">
+                {g.dataProhibitions.map((item, i) => (
+                  <li key={i}>
+                    <span className="material-symbols-outlined tg-list-icon">warning</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {(g.assessmentUseRule || g.teacherGradingAllowed || g.teacherFeedbackDraftAllowed) && (
+            <div className="detail-block tg-classroom-rules">
+              <div className="mini-heading tg-section-head">
+                <span className="material-symbols-outlined">edit_note</span>
+                Classroom Rules
+              </div>
+              <dl className="tg-rule-grid">
+                {g.assessmentUseRule && g.assessmentUseRule !== "silent" && (
+                  <>
+                    <dt>Assessments</dt>
+                    <dd>{g.assessmentUseRule.replace(/_/g, " ")}</dd>
+                  </>
+                )}
+                {g.teacherGradingAllowed && g.teacherGradingAllowed !== "silent" && (
+                  <>
+                    <dt>AI grading</dt>
+                    <dd>{g.teacherGradingAllowed.replace(/_/g, " ")}</dd>
+                  </>
+                )}
+                {g.teacherFeedbackDraftAllowed && g.teacherFeedbackDraftAllowed !== "silent" && (
+                  <>
+                    <dt>AI feedback drafts</dt>
+                    <dd>{g.teacherFeedbackDraftAllowed.replace(/_/g, " ")}</dd>
+                  </>
+                )}
+                {g.priorTrainingRequired !== undefined && (
+                  <>
+                    <dt>Prior training</dt>
+                    <dd>
+                      {g.priorTrainingRequired ? "Required" : "Not required"}
+                      {g.trainingProvider && ` · ${g.trainingProvider}`}
+                    </dd>
+                  </>
+                )}
+              </dl>
+            </div>
+          )}
 
           <div className="detail-block">
             <div className="mini-heading tg-section-head tg-allowed-head">
@@ -125,6 +282,51 @@ export function TeacherGuidancePanel({ record }: TeacherGuidancePanelProps) {
                   <RestrictionCard key={i} item={item} />
                 ))}
               </div>
+            </div>
+          )}
+
+          {g.teacherActionItems && g.teacherActionItems.length > 0 && (
+            <div className="detail-block">
+              <div className="mini-heading tg-section-head">
+                <span className="material-symbols-outlined">checklist</span>
+                Teacher Action Items
+              </div>
+              <ol className="tg-action-list">
+                {g.teacherActionItems.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {g.syllabusStatementTemplate && (
+            <div className="detail-block tg-syllabus-block">
+              <div className="mini-heading tg-section-head">
+                <span className="material-symbols-outlined">description</span>
+                Syllabus Statement Template
+              </div>
+              <button
+                type="button"
+                className="tg-syllabus-toggle"
+                onClick={() => setSyllabusOpen((v) => !v)}
+                aria-expanded={syllabusOpen}
+              >
+                <span className="material-symbols-outlined">
+                  {syllabusOpen ? "expand_less" : "expand_more"}
+                </span>
+                {syllabusOpen ? "Hide" : "Show"} template
+              </button>
+              {syllabusOpen && (
+                <div className="tg-syllabus-body">
+                  <p className="tg-syllabus-text">{g.syllabusStatementTemplate}</p>
+                  <button type="button" className="tg-copy-btn" onClick={copySyllabus}>
+                    <span className="material-symbols-outlined">
+                      {copied ? "check" : "content_copy"}
+                    </span>
+                    {copied ? "Copied" : "Copy to clipboard"}
+                  </button>
+                </div>
+              )}
             </div>
           )}
 

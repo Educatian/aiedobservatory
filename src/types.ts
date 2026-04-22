@@ -9,6 +9,29 @@ export interface TeacherRestriction {
   sourceUrl?: string;
 }
 
+export type GradeBand = "K-2" | "3-5" | "6-8" | "9-12" | "higher_ed" | "all_grades";
+
+export type GradeBandStance =
+  | "prohibited"
+  | "restricted"
+  | "permitted_with_disclosure"
+  | "permitted"
+  | "silent";
+
+export interface GradeBandRule {
+  band: GradeBand;
+  stance: GradeBandStance;
+  note?: string;
+}
+
+export type TeacherGradingAllowed = "yes" | "with_human_review" | "no" | "silent";
+export type TeacherFeedbackDraftAllowed = "yes" | "with_disclosure" | "no" | "silent";
+export type AssessmentUseRule =
+  | "prohibited"
+  | "permitted_with_monitoring"
+  | "permitted"
+  | "silent";
+
 export interface TeacherGuidanceInfo {
   summary: string;
   allowedUses: string[];
@@ -17,6 +40,20 @@ export interface TeacherGuidanceInfo {
   usageRestrictions: TeacherRestriction[];
   contactResource?: string;
   lastReviewed?: string;
+  // Extended (all optional — backward-compatible) — populated during 2026 Q2 back-code pass.
+  gradeBandRules?: GradeBandRule[];
+  studentDisclosureRequired?: boolean;
+  studentDisclosureFormat?: string;
+  parentalConsentRequired?: boolean;
+  parentalConsentThreshold?: GradeBand;
+  dataProhibitions?: string[];
+  teacherGradingAllowed?: TeacherGradingAllowed;
+  teacherFeedbackDraftAllowed?: TeacherFeedbackDraftAllowed;
+  priorTrainingRequired?: boolean;
+  trainingProvider?: string;
+  assessmentUseRule?: AssessmentUseRule;
+  syllabusStatementTemplate?: string;
+  teacherActionItems?: string[];
 }
 
 export interface EvidenceSpan {
@@ -26,11 +63,62 @@ export interface EvidenceSpan {
   chunkId?: string | null;
 }
 
+export type IssuerLevel =
+  | "governor_office"
+  | "state_agency"
+  | "legislature"
+  | "legislative_study_body"
+  | "k12_district"
+  | "higher_ed_coordinator"
+  | "higher_ed_institution";
+
+export type InstrumentType =
+  | "acceptable_use_policy"
+  | "governance_body_charter"
+  | "task_force_report"
+  | "bill"
+  | "legislative_study_report"
+  | "district_position_statement"
+  | "curricular_program"
+  | "consortium_track"
+  | "faculty_guideline"
+  | "institutional_policy";
+
+export type InstrumentStatus =
+  | "proposed"
+  | "enacted"
+  | "in_effect"
+  | "superseded"
+  | "completed";
+
+export type InstrumentRelationKind =
+  | "recommends"
+  | "supersedes"
+  | "implements"
+  | "tasks"
+  | "derives_from";
+
+export interface InstrumentRelation {
+  kind: InstrumentRelationKind;
+  targetDocumentId: string;
+  note?: string;
+}
+
 export interface SourceDocument {
   url: string;
   title?: string | null;
   rawFile?: string | null;
   publishedDateGuess?: string | null;
+  // Extended (all optional) — enables instrument hierarchy + timeline visualisation.
+  documentId?: string;
+  issuerName?: string;
+  issuerLevel?: IssuerLevel;
+  instrumentType?: InstrumentType;
+  issuedDate?: string;
+  effectiveDate?: string;
+  status?: InstrumentStatus;
+  shortSummary?: string;
+  relations?: InstrumentRelation[];
 }
 
 export interface StateTile {
@@ -82,7 +170,9 @@ export type PolicyEventType =
   | "approval_route_changed"
   | "review_status_changed"
   | "confidence_changed"
-  | "stage_changed";
+  | "stage_changed"
+  | "instrument_added"
+  | "instrument_status_changed";
 
 export interface PolicyEvent {
   id: string;

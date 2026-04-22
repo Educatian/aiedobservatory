@@ -107,7 +107,126 @@
             "url": { "type": "string" },
             "title": { "type": ["string", "null"] },
             "raw_file": { "type": ["string", "null"] },
-            "published_date_guess": { "type": ["string", "null"] }
+            "published_date_guess": { "type": ["string", "null"] },
+            "document_id": { "type": ["string", "null"] },
+            "issuer_name": { "type": ["string", "null"] },
+            "issuer_level": {
+              "type": ["string", "null"],
+              "enum": [
+                "governor_office",
+                "state_agency",
+                "legislature",
+                "legislative_study_body",
+                "k12_district",
+                "higher_ed_coordinator",
+                "higher_ed_institution",
+                null
+              ]
+            },
+            "instrument_type": {
+              "type": ["string", "null"],
+              "enum": [
+                "acceptable_use_policy",
+                "governance_body_charter",
+                "task_force_report",
+                "bill",
+                "legislative_study_report",
+                "district_position_statement",
+                "curricular_program",
+                "consortium_track",
+                "faculty_guideline",
+                "institutional_policy",
+                null
+              ]
+            },
+            "issued_date": { "type": ["string", "null"] },
+            "effective_date": { "type": ["string", "null"] },
+            "status": {
+              "type": ["string", "null"],
+              "enum": ["proposed", "enacted", "in_effect", "superseded", "completed", null]
+            },
+            "short_summary": { "type": ["string", "null"] },
+            "relations": {
+              "type": ["array", "null"],
+              "items": {
+                "type": "object",
+                "required": ["kind", "target_document_id"],
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "enum": ["recommends", "supersedes", "implements", "tasks", "derives_from"]
+                  },
+                  "target_document_id": { "type": "string" },
+                  "note": { "type": ["string", "null"] }
+                }
+              }
+            }
+          }
+        }
+      },
+      "teacher_guidance": {
+        "type": ["object", "null"],
+        "properties": {
+          "summary": { "type": "string" },
+          "allowed_uses": { "type": "array", "items": { "type": "string" } },
+          "prohibited_uses": { "type": "array", "items": { "type": "string" } },
+          "age_restrictions": { "type": "array" },
+          "usage_restrictions": { "type": "array" },
+          "contact_resource": { "type": ["string", "null"] },
+          "last_reviewed": { "type": ["string", "null"] },
+          "grade_band_rules": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "object",
+              "required": ["band", "stance"],
+              "properties": {
+                "band": {
+                  "type": "string",
+                  "enum": ["K-2", "3-5", "6-8", "9-12", "higher_ed", "all_grades"]
+                },
+                "stance": {
+                  "type": "string",
+                  "enum": [
+                    "prohibited",
+                    "restricted",
+                    "permitted_with_disclosure",
+                    "permitted",
+                    "silent"
+                  ]
+                },
+                "note": { "type": ["string", "null"] }
+              }
+            }
+          },
+          "student_disclosure_required": { "type": ["boolean", "null"] },
+          "student_disclosure_format": { "type": ["string", "null"] },
+          "parental_consent_required": { "type": ["boolean", "null"] },
+          "parental_consent_threshold": {
+            "type": ["string", "null"],
+            "enum": ["K-2", "3-5", "6-8", "9-12", "higher_ed", "all_grades", null]
+          },
+          "data_prohibitions": {
+            "type": ["array", "null"],
+            "items": { "type": "string" }
+          },
+          "teacher_grading_allowed": {
+            "type": ["string", "null"],
+            "enum": ["yes", "with_human_review", "no", "silent", null]
+          },
+          "teacher_feedback_draft_allowed": {
+            "type": ["string", "null"],
+            "enum": ["yes", "with_disclosure", "no", "silent", null]
+          },
+          "prior_training_required": { "type": ["boolean", "null"] },
+          "training_provider": { "type": ["string", "null"] },
+          "assessment_use_rule": {
+            "type": ["string", "null"],
+            "enum": ["prohibited", "permitted_with_monitoring", "permitted", "silent", null]
+          },
+          "syllabus_statement_template": { "type": ["string", "null"] },
+          "teacher_action_items": {
+            "type": ["array", "null"],
+            "items": { "type": "string" }
           }
         }
       },
