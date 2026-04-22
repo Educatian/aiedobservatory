@@ -1,0 +1,490 @@
+{
+  "file name" : "AL-district-tuscaloosa-city-ai-position.pdf",
+  "number of pages" : 2,
+  "author" : null,
+  "title" : "Position Statement on AI in TCS",
+  "creation date" : null,
+  "modification date" : null,
+  "kids" : [ {
+    "type" : "image",
+    "id" : 16,
+    "page number" : 1,
+    "bounding box" : [ 237.375, 704.25, 374.625, 736.5 ],
+    "source" : "AL-district-tuscaloosa-city-ai-position_images/imageFile1.png"
+  }, {
+    "type" : "heading",
+    "id" : 6,
+    "level" : "Doctitle",
+    "page number" : 1,
+    "bounding box" : [ 199.111, 683.923, 412.894, 699.564 ],
+    "heading level" : 1,
+    "font" : "Arial-BoldMT",
+    "font size" : 14.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Position Statement on AI in TCS"
+  }, {
+    "type" : "paragraph",
+    "id" : 7,
+    "page number" : 1,
+    "bounding box" : [ 36.0, 567.035, 569.474, 666.602 ],
+    "font" : "ArialMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Educational systems and institutions are increasingly attending to the role of Artificial Intelligence (AI) in the activities of employees and students. AI broadly encompasses tools that draw upon data sets to detect patterns, create models, and generate new content and outputs. There is an ongoing explosion in the creation and application of AI technologies across all dimensions of modern life, including education. The purpose of this document is to clarify the role of AI in the Tuscaloosa City Schools and the overlap with existing policy. This document is intended to be a living document that will be modified as our experience and understanding of the role of AI in education evolves."
+  }, {
+    "type" : "paragraph",
+    "id" : 8,
+    "page number" : 1,
+    "bounding box" : [ 36.0, 537.943, 75.11, 550.232 ],
+    "font" : "Arial-ItalicMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Position"
+  }, {
+    "type" : "list",
+    "id" : 9,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 54.0, 436.119, 575.068, 535.686 ],
+    "numbering style" : "unordered",
+    "number of list items" : 3,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 494.304, 570.575, 535.686 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Tuscaloosa City Schools employees and students can use tools, applications, and resources that incorporate AI for instructional, learning, logistical, and operational activities where such tools meet our standards for data privacy, security, and quality practice.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 465.212, 528.631, 492.047 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Tuscaloosa City Schools employees and students will provide proper acknowledgement of the contribution of AI to the creation of learning, instructional, communication, and other products.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 436.119, 575.068, 462.954 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Tuscaloosa City Schools employees and students will adhere to existing academic honesty policies and procedures as outlined in the Code of Conduct.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 10,
+    "page number" : 1,
+    "bounding box" : [ 36.0, 392.48, 420.294, 419.316 ],
+    "font" : "ArialMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Existing Use AI is embedded in many tools currently used in TCS. Here are a few examples:"
+  }, {
+    "type" : "list",
+    "id" : 11,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 54.0, 319.749, 560.813, 390.223 ],
+    "numbering style" : "unordered",
+    "number of list items" : 4,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 363.388, 560.813, 390.223 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Digital learning resources that leverage AI for the creation of learning paths and prioritizing access to content at appropriate reading levels.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 348.841, 470.351, 361.13 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Spelling and grammar correction features in email and word processing platforms.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 334.295, 555.304, 346.584 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Bus routing software that optimizes district resources and the unique needs of schools and families.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 319.749, 447.765, 332.038 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Online applications that provide translation services for students and families.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 12,
+    "page number" : 1,
+    "bounding box" : [ 36.0, 276.11, 493.037, 302.945 ],
+    "font" : "ArialMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Benefits The strategic use of AI in education can provide significant benefits. Here are a few examples:"
+  }, {
+    "type" : "list",
+    "id" : 13,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 54.0, 203.379, 559.986, 273.853 ],
+    "numbering style" : "unordered",
+    "number of list items" : 3,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 247.018, 557.158, 273.853 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Student experiences and skill development that prepares them for college and careers, especially in STEM fields that are leading the way in AI development.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 217.925, 559.986, 244.76 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Improved efficiency and accuracy that can reduce logistical, administrative, and clerical labor, paving the way for deeper practice.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 203.379, 404.215, 215.668 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Personalized and/or differentiated learning experiences for students.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 14,
+    "page number" : 1,
+    "bounding box" : [ 36.0, 159.74, 574.335, 186.575 ],
+    "font" : "ArialMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Concerns The expansion of AI in education has prompted concerns that TCS must acknowledge and attend to, including:"
+  }, {
+    "type" : "list",
+    "id" : 15,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 54.0, 57.916, 569.369, 157.483 ],
+    "numbering style" : "unordered",
+    "number of list items" : 5,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 130.647, 569.369, 157.483 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Outputs of generative AI may include erroneous information, enhance biases, lack fairness, or exclude essential components.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 116.101, 371.974, 128.39 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● New ways for students to represent others’ work as their own.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 101.555, 540.646, 113.844 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Over reliance on AI resources in instructional decision making and student learning experiences.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 87.009, 315.563, 99.298 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Threats to data privacy and infrastructure security.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 54.0, 57.916, 555.344, 84.751 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Increased reliance on and contribution to systems that collect and leverage personal data, including demographic, personality, and biometric data.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "footer",
+    "id" : 17,
+    "page number" : 1,
+    "bounding box" : [ 520.985, 37.897, 576.004, 50.186 ],
+    "kids" : [ {
+      "type" : "heading",
+      "id" : 3,
+      "page number" : 1,
+      "bounding box" : [ 520.985, 37.897, 576.004, 50.186 ],
+      "heading level" : 2,
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "05/13/2024"
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 19,
+    "page number" : 2,
+    "bounding box" : [ 36.0, 696.259, 88.544, 723.094 ],
+    "font" : "Arial-ItalicMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Limitations In TCS,"
+  }, {
+    "type" : "list",
+    "id" : 20,
+    "level" : "1",
+    "page number" : 2,
+    "bounding box" : [ 54.0, 638.073, 563.314, 694.001 ],
+    "numbering style" : "unordered",
+    "number of list items" : 2,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 667.166, 547.77, 694.001 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● AI tools will be blocked if they do not meet our standards for security and data privacy, and/or they violate FERPA, CIPA, COPPA, and IDEA.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 638.073, 563.314, 664.909 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Educational professionals are expected to engage their pedagogical content knowledge to selectively draw upon a variety of resources to best meet the needs of their learners on the path to mastery.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 21,
+    "page number" : 2,
+    "bounding box" : [ 36.0, 579.888, 558.584, 621.27 ],
+    "font" : "ArialMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Best Practice As teachers use AI tools for planning and instruction, they will implement the TCS Instructional Tights with a focus on:"
+  }, {
+    "type" : "list",
+    "id" : 22,
+    "level" : "1",
+    "page number" : 2,
+    "bounding box" : [ 54.0, 478.065, 567.563, 577.631 ],
+    "numbering style" : "unordered",
+    "number of list items" : 5,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 565.342, 468.59, 577.631 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Balancing the use of AI in order to ensure deep learning and high quality practice.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 536.25, 567.563, 563.085 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Engaging pedagogical content knowledge to selectively draw upon a variety of resources to best meet the needs of learners on the path to mastery.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 521.703, 395.853, 533.992 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Learning experiences that are active, open, complex, and creative.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 492.611, 562.472, 519.446 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Providing students with scaffolded experiences using AI tools in order to help students gain exposure and experience.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 478.065, 527.834, 490.354 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Providing clear boundaries and expectations for student use of AI tools in the course syllabus.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 23,
+    "page number" : 2,
+    "bounding box" : [ 36.0, 448.972, 89.768, 461.261 ],
+    "font" : "Arial-ItalicMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Next Steps"
+  }, {
+    "type" : "list",
+    "id" : 24,
+    "level" : "1",
+    "page number" : 2,
+    "bounding box" : [ 54.0, 376.241, 561.441, 446.715 ],
+    "numbering style" : "unordered",
+    "number of list items" : 4,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 434.426, 499.71, 446.715 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Share with the TCS Board of Education as an informational item (complete 05/07/2024).",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 419.88, 450.191, 432.169 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Determine the best filtering/firewall settings that match our position statement.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 405.333, 543.722, 417.622 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Provide professional learning opportunities for teachers and administrators about AI in education.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 376.241, 561.441, 403.076 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Review current resource vetting processes and revise as needed to ensure proper evaluation of data privacy, security, and quality practice components.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 25,
+    "page number" : 2,
+    "bounding box" : [ 36.0, 347.148, 88.544, 359.437 ],
+    "font" : "Arial-ItalicMT",
+    "font size" : 11.0,
+    "text color" : "[0.0, 0.0, 0.0]",
+    "content" : "Resources"
+  }, {
+    "type" : "list",
+    "id" : 26,
+    "level" : "1",
+    "page number" : 2,
+    "bounding box" : [ 54.0, 172.593, 573.587, 344.891 ],
+    "numbering style" : "unordered",
+    "number of list items" : 5,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 318.056, 529.897, 344.891 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● International Society for Technology in Education (2023). AI exploration for educators: Putting educators and students in the driver's seat. https://www.iste.org/areas-of-focus/AI-in-education",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 288.963, 570.793, 315.798 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● International Society for Technology in Education (2023). Bringing AI to school: Tips for school leaders. https://cdn.iste.org/www-root/2023-07/Bringing_AI_to_School-2023_07.pdf",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 245.324, 565.941, 286.706 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Office of Educational Technology. (2023). Artificial intelligence and the future of teaching and learning: Insights and recommendations. U.S. Department of Education. https://www2.ed.gov/documents/ai-report/ai-report.pdf",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 201.686, 573.587, 243.067 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Consortium for School Networking (CoSN). (2023). Artificial intelligence & generative AI: Empowering a deeper conversation. EmpowerED Superintendent. https://www.cosn.org/wp-content/uploads/2023/04/EmpSupAI.pdf",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 54.0, 172.593, 556.492, 199.428 ],
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "● Holland, B. (2023). Artificial Intelligence (AI) in K-12, Version 1.1. Consortium for School Networking (CoSN). https://www.cosn.org/wp-content/uploads/2023/03/CoSN-AI-Report-2023-1.pdf",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "footer",
+    "id" : 28,
+    "page number" : 2,
+    "bounding box" : [ 520.985, 37.897, 576.004, 50.186 ],
+    "kids" : [ {
+      "type" : "heading",
+      "id" : 4,
+      "page number" : 2,
+      "bounding box" : [ 520.985, 37.897, 576.004, 50.186 ],
+      "heading level" : 2,
+      "font" : "ArialMT",
+      "font size" : 11.0,
+      "text color" : "[0.0, 0.0, 0.0]",
+      "content" : "05/13/2024"
+    } ]
+  } ]
+}

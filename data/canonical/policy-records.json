@@ -7824,7 +7824,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_pdf recovered. PDF: data/generated/raw/AL-district-tuscaloosa-city-ai-position.pdf. Structured JSON: data/generated/pdf-structured/AL-district-tuscaloosa-city-ai-position.json (2pp, title='Position Statement on AI in TCS', dated 05/13/2024). Section structure: Position / Existing Use / Benefits / Concerns / Limitations / Best Practice / Next Steps / Resources."
   },
   {
     "record_id": "district-al-vestavia-hills-v1",
@@ -7866,7 +7866,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_html recovered. Policy 4.10 — Data Governance . Excerpt: \"responsible use, management, and oversight of AI...data privacy, security, ethical use\" \"applies to all AI systems, applications, and tools...including AI-driven analytics, automated decision-making tools, and AI-enhanced educational technologies\" AI guidelines live in referenced Document M not inlined on policy index page; follow-up fetch needed to locate attachment."
   },
   {
     "record_id": "district-al-cullman-city-v1",
@@ -7908,7 +7908,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 4.9.6 (Generative Artificial Intelligence). Adoption/date: 2025-10-21. Key facts: • Adopted 2025-10-21 alongside vape policy 4.2.8 • Stated purpose: strengthen student education and districtwide policy clarity on emerging tech • No quoted provisions or vote breakdown in article"
   },
   {
     "record_id": "district-al-talladega-city-v1",
@@ -8034,7 +8034,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_html recovered.  Internet Safety and Acceptable Use Policy (Plagiarism section). Excerpt: \"Artificial intelligence is a vastly emerging technology...its use will be treated like any established technology resource in ACS. Any work produced must be properly cited and/or attributed to the gen…\" Short but genuine primary AI clause embedded in existing AUP; recovered verbatim."
   },
   {
     "record_id": "district-al-florence-city-v1",
@@ -8076,7 +8076,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • AI Information Night 2026-03-31 at Florence City BOE • Event provides general knowledge of AI and district applications • No policy document referenced"
   },
   {
     "record_id": "district-al-madison-county-v1",
@@ -8118,7 +8118,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • 2025-01-09 work session: draft AI policy presented • Aligns with ALSDE guidelines across 7 pillars: data governance, privacy/security, procurement, implementation, educator competency, risk management, utility/effectiveness • Next step: route to teacher/support-staff associations for feedback before formal board consideration • Educator training precedes student rollout"
   },
   {
     "record_id": "district-al-baldwin-county-v1",
@@ -8160,7 +8160,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 7.17 (Artificial Intelligence). Adoption/date: 2025-06-17. Key facts: • Policy 7.17 approved 2025-06-17 alongside revised 6.21 (electronic communication devices) • Board described planned committees and data-governance steps for classroom/instructional AI use • Specific provisions not in summary"
   },
   {
     "record_id": "district-al-morgan-county-v1",
@@ -8202,7 +8202,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Supt. Tracie Turrentine: district allows unrestricted ChatGPT/LLM use on school servers • Detection via comparing on-demand writing to prior student work • Third infraction of improper AI use = zero grade • Teachers use ChatGPT for explaining concepts and coding instruction"
   },
   {
     "record_id": "district-al-huntsville-city-v1",
@@ -8244,7 +8244,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • New 'Intro to AI' elective rolling out fall 2026 • ALSDE partnership with Alabama School of Cyber Technology and Engineering (ASCTE) • Curriculum developed by Mary Claire Wright (ASCTE) and student Emory Wilkinson • ~15 AL schools adopting: Huntsville City, Hartselle, Sylacauga CTC, Deshler, Cullman County CT • Covers AI mechanics, failures, environmental costs, academic integrity, mental health"
   },
   {
     "record_id": "district-al-mobile-county-v1",
@@ -8286,7 +8286,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Turnitin AI detection contract (≤$4,800) approved 2024-12-20 for Murphy High School • Dr. Reginald Crenshaw (board president) quoted on ensuring student skills vs. plagiarism • Procurement, not a formal written AI policy • Turnitin cited stat: 59% students use AI monthly"
   },
   {
     "record_id": "district-al-montgomery-public-v1",
@@ -8328,7 +8328,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • 'Life Be Life-ing App' pilot with L-Evate Academy launched 2026-02-05 • AI-powered student mentorship: daily emotional check-ins, resilience lessons, teacher dashboards with anonymized trends • Framework: '5Gs of Growth' • Promotional announcement, not a policy document"
   },
   {
     "record_id": "district-al-trussville-city-v1",
@@ -8370,6 +8370,6 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Preparing teacher training on AI integration • Reassessing classroom tech through Haidt's 'The Anxious Generation' lens • No policy number, adoption date, or policy text — planning-stage discussion only"
   }
 ]
