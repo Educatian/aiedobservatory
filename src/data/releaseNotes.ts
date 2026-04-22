@@ -102,6 +102,33 @@ export const releaseNotes: ReleaseNote[] = [
           "docs/FUTURE_DIRECTIONS.md records the corpus-completeness update, what numbers drifted, and explicitly marks pre-2026-04-22T22:40 analytic outputs as superseded."
       }
     ]
+  },
+  {
+    version: "2026.04.22-d",
+    date: "2026-04-22",
+    title: "Alabama district-level body extraction",
+    summary:
+      "Fifteen Alabama LEAs are now classified by whether their AI policy text is actually recoverable. Four districts yielded primary PDFs (extracted with opendataloader-pdf); two have primary HTML clauses; nine are news-reported only — an honest ceiling on district-level AIED policy formalization in Alabama.",
+    highlights: [
+      {
+        icon: "picture_as_pdf",
+        title: "4 district AI policies extracted as structured PDF",
+        body:
+          "Madison City AUP, Talladega City AUP, Gadsden City Code of Conduct (AI section), and Tuscaloosa City Position Statement on AI — all run through opendataloader-pdf for heading-aware JSON. Template-adoption check against the ALSDE/aiforeducation.io LEA template came back NEGATIVE for all four: Alabama districts draft locally, not from the state model."
+      },
+      {
+        icon: "fact_check",
+        title: "12 URL triage with classification + evidence",
+        body:
+          "Each remaining district URL was fetched and tagged primary_pdf / primary_html / secondary_reporting / dead. Nine turned out to be news coverage (Cullman Policy 4.9.6 adopted 2025-10-21, Baldwin 7.17 approved 2025-06-17, etc.), not primary documents. All 15 verification_notes fields now record the classification and what was (or wasn't) recoverable."
+      },
+      {
+        icon: "insights",
+        title: "Research finding: AL district AI formalization is shallow",
+        body:
+          "Only 6 of 15 Alabama LEAs in our sample publish primary AI-policy text; the other 9 stop at board-meeting announcements or news mentions. Evidence artifact at data/generated/al-district-evidence.json."
+      }
+    ]
   }
 ];
 
