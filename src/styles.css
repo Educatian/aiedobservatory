@@ -2468,8 +2468,7 @@ select {
   min-width: 0;
 }
 
-.domain-card-head,
-.stage-column-head {
+.domain-card-head {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -2481,14 +2480,25 @@ select {
   min-width: 0;
 }
 
+/* Stage columns: count always sits below the title so all 5 columns share
+   identical vertical rhythm regardless of whether the title wraps. */
+.stage-column-head {
+  display: block;
+}
+
+.stage-column-head > div:first-child {
+  min-width: 0;
+}
+
 .domain-card-head strong,
 .stage-column-head strong {
   display: block;
-  margin-top: 0.35rem;
+  margin-top: 0.55rem;
   color: var(--primary);
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 .domain-score-chip {
