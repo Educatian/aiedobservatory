@@ -7,6 +7,7 @@ import {
 } from "../data/policyData";
 import type { EvidenceSpan, PolicyRecord } from "../types";
 import { InstrumentTimelineSvg } from "./InstrumentTimelineSvg";
+import { HierarchyDiagramSvg } from "./HierarchyDiagramSvg";
 
 interface PolicyDetailPanelProps {
   record: PolicyRecord;
@@ -145,6 +146,7 @@ export function PolicyDetailPanel({ record }: PolicyDetailPanelProps) {
         </div>
       </div>
 
+      <HierarchyDiagramSvg record={record} />
       <InstrumentTimelineSvg record={record} />
 
       <div className="detail-highlight">

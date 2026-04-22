@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-04-22T08:10:35.370Z",
+  "mode": "network",
+  "per_state": [
+    {
+      "state": "CA",
+      "added": 6,
+      "confidence_before": 0.95,
+      "confidence_after": 0.95
+    },
+    {
+      "state": "NY",
+      "added": 6,
+      "confidence_before": 0.79,
+      "confidence_after": 0.82
+    },
+    {
+      "state": "TX",
+      "added": 6,
+      "confidence_before": 0.6,
+      "confidence_after": 0.63
+    },
+    {
+      "state": "FL",
+      "added": 5,
+      "confidence_before": 0.86,
+      "confidence_after": 0.89
+    },
+    {
+      "state": "WA",
+      "added": 4,
+      "confidence_before": 0.95,
+      "confidence_after": 0.95
+    },
+    {
+      "state": "IL",
+      "added": 5,
+      "confidence_before": 0.8,
+      "confidence_after": 0.83
+    },
+    {
+      "state": "WI",
+      "added": 5,
+      "confidence_before": 0.89,
+      "confidence_after": 0.92
+    }
+  ]
+}

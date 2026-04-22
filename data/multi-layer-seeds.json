@@ -1,0 +1,403 @@
+{
+  "generated_at": "2026-04-22",
+  "states": {
+    "CA": {
+      "state_name": "California",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://www.gov.ca.gov/2023/09/06/governor-newsom-signs-executive-order-to-prepare-california-for-the-progress-of-artificial-intelligence/",
+            "title": "Governor Newsom Signs Executive Order on Generative AI (N-12-23)",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (CA)",
+            "issued_date": "2023-09-06",
+            "status": "in_effect",
+            "short_summary": "Executive Order N-12-23 directing state agencies to study and prepare for GenAI risks and opportunities."
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://www.cde.ca.gov/ci/pl/aiineducation.asp",
+            "title": "CDE — Artificial Intelligence in Education",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "California Department of Education",
+            "status": "in_effect",
+            "short_summary": "CDE guidance hub on responsible AI use in California schools."
+          }
+        ],
+        "legislature": [
+          {
+            "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240SB942",
+            "title": "SB 942 — California AI Transparency Act",
+            "instrument_type": "bill",
+            "issuer_name": "California Senate",
+            "issued_date": "2024-09-19",
+            "effective_date": "2026-01-01",
+            "status": "enacted",
+            "short_summary": "Requires disclosure for AI-generated content from covered providers."
+          }
+        ],
+        "k12_district": [
+          {
+            "url": "https://achieve.lausd.net/ai",
+            "title": "LAUSD AI Strategy",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Los Angeles Unified School District",
+            "status": "in_effect",
+            "short_summary": "District-level AI adoption framework following CDE guidance."
+          }
+        ],
+        "higher_ed_coordinator": [
+          {
+            "url": "https://www.calstate.edu/impact-of-the-csu/teaching-and-learning/ai-commons",
+            "title": "CSU AI Commons",
+            "instrument_type": "consortium_track",
+            "issuer_name": "California State University System",
+            "status": "in_effect",
+            "short_summary": "CSU-wide AI enablement + governance consortium."
+          }
+        ],
+        "higher_ed_institution": [
+          {
+            "url": "https://teaching.berkeley.edu/resources/learn/ai-teaching-and-learning",
+            "title": "UC Berkeley — AI Teaching & Learning Resources",
+            "instrument_type": "faculty_guideline",
+            "issuer_name": "UC Berkeley Center for Teaching & Learning",
+            "status": "in_effect",
+            "short_summary": "Faculty-facing guidance on syllabus disclosure and academic integrity."
+          }
+        ]
+      }
+    },
+    "NY": {
+      "state_name": "New York",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://www.governor.ny.gov/news/governor-hochul-unveils-empire-ai",
+            "title": "Governor Hochul — Empire AI Consortium Launch",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (NY)",
+            "issued_date": "2024-01-08",
+            "status": "in_effect",
+            "short_summary": "Empire AI public-private consortium announcement."
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://www.nysed.gov/curriculum-instruction/artificial-intelligence-schools",
+            "title": "NYSED — Artificial Intelligence in Schools",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "New York State Education Department",
+            "status": "in_effect",
+            "short_summary": "State education department guidance for AI in K-12."
+          }
+        ],
+        "legislature": [
+          {
+            "url": "https://www.nysenate.gov/legislation/bills/2023/S7532",
+            "title": "NY S7532 — AI Transparency & Bias Review",
+            "instrument_type": "bill",
+            "issuer_name": "New York Senate",
+            "issued_date": "2023-06-02",
+            "status": "proposed"
+          }
+        ],
+        "k12_district": [
+          {
+            "url": "https://www.schools.nyc.gov/about-us/policies/gen-ai",
+            "title": "NYC Public Schools — Generative AI Policy",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "NYC Public Schools",
+            "issued_date": "2023-05-01",
+            "effective_date": "2023-09-01",
+            "status": "in_effect",
+            "short_summary": "NYCPS lifted the initial ChatGPT ban and adopted a disclosure-first policy."
+          }
+        ],
+        "higher_ed_coordinator": [
+          {
+            "url": "https://www.suny.edu/impact/artificial-intelligence/",
+            "title": "SUNY AI Initiative",
+            "instrument_type": "consortium_track",
+            "issuer_name": "State University of New York",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_institution": [
+          {
+            "url": "https://www.cornell.edu/academics/ai-at-cornell.cfm",
+            "title": "Cornell — AI at Cornell",
+            "instrument_type": "institutional_policy",
+            "issuer_name": "Cornell University",
+            "status": "in_effect"
+          }
+        ]
+      }
+    },
+    "TX": {
+      "state_name": "Texas",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://gov.texas.gov/news/category/artificial-intelligence",
+            "title": "Office of the Governor of Texas — AI announcements",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (TX)",
+            "status": "in_effect"
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://tea.texas.gov/about-tea/news-and-multimedia/correspondence/artificial-intelligence",
+            "title": "TEA — Guidance on Artificial Intelligence",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "Texas Education Agency",
+            "status": "in_effect"
+          }
+        ],
+        "legislature": [
+          {
+            "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB2060",
+            "title": "HB 2060 — Texas AI Advisory Council",
+            "instrument_type": "bill",
+            "issuer_name": "Texas House",
+            "issued_date": "2023-06-18",
+            "effective_date": "2023-09-01",
+            "status": "enacted",
+            "short_summary": "Creates an advisory council on AI in state government."
+          }
+        ],
+        "k12_district": [
+          {
+            "url": "https://www.houstonisd.org/generativeai",
+            "title": "Houston ISD — Generative AI in HISD",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Houston Independent School District",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_coordinator": [
+          {
+            "url": "https://www.highered.texas.gov/our-work/supporting-our-institutions/artificial-intelligence/",
+            "title": "THECB — Artificial Intelligence in Higher Education",
+            "instrument_type": "consortium_track",
+            "issuer_name": "Texas Higher Education Coordinating Board",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_institution": [
+          {
+            "url": "https://ai.utexas.edu/",
+            "title": "UT Austin — Year of AI",
+            "instrument_type": "institutional_policy",
+            "issuer_name": "University of Texas at Austin",
+            "status": "in_effect"
+          }
+        ]
+      }
+    },
+    "FL": {
+      "state_name": "Florida",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://www.flgov.com/",
+            "title": "Office of the Governor (FL) — AI announcements hub",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (FL)",
+            "status": "in_effect"
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://www.fldoe.org/academics/standards/subject-areas/math-science/computer-science/ai-in-the-classroom.stml",
+            "title": "FDOE — AI in the Classroom",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "Florida Department of Education",
+            "status": "in_effect"
+          }
+        ],
+        "legislature": [
+          {
+            "url": "https://www.flsenate.gov/Session/Bill/2024/1459",
+            "title": "SB 1459 — AI in K-12 instruction",
+            "instrument_type": "bill",
+            "issuer_name": "Florida Senate",
+            "issued_date": "2024-01-05",
+            "status": "proposed"
+          }
+        ],
+        "k12_district": [
+          {
+            "url": "https://www.dadeschools.net/",
+            "title": "Miami-Dade County Public Schools — AI guidance",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Miami-Dade County Public Schools",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_coordinator": [],
+        "higher_ed_institution": [
+          {
+            "url": "https://www.ai.ufl.edu/",
+            "title": "UF — AI Initiative",
+            "instrument_type": "institutional_policy",
+            "issuer_name": "University of Florida",
+            "status": "in_effect"
+          }
+        ]
+      }
+    },
+    "WA": {
+      "state_name": "Washington",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://governor.wa.gov/issues/issues/governor-initiatives/ai-community-conversations",
+            "title": "Governor Inslee — AI Community Conversations",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (WA)",
+            "status": "in_effect"
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://ospi.k12.wa.us/policy-funding/ai-education",
+            "title": "OSPI — Artificial Intelligence in Education",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "Washington OSPI",
+            "issued_date": "2024-01-12",
+            "status": "in_effect"
+          }
+        ],
+        "legislature": [],
+        "k12_district": [
+          {
+            "url": "https://www.seattleschools.org/departments/dots/instructional-technology/ai/",
+            "title": "Seattle Public Schools — AI for Teaching and Learning",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Seattle Public Schools",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_coordinator": [],
+        "higher_ed_institution": [
+          {
+            "url": "https://teaching.washington.edu/topics/engaging-students-in-learning/teaching-with-ai-tools/",
+            "title": "UW — Teaching with AI Tools",
+            "instrument_type": "faculty_guideline",
+            "issuer_name": "University of Washington",
+            "status": "in_effect"
+          }
+        ]
+      }
+    },
+    "IL": {
+      "state_name": "Illinois",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://www.illinois.gov/news/press-release.27044.html",
+            "title": "Illinois Governor — Generative AI and Natural Language Processing Task Force",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (IL)",
+            "issued_date": "2023-08-04",
+            "status": "completed"
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://www.isbe.net/Pages/Artificial-Intelligence-Guidance.aspx",
+            "title": "ISBE — Artificial Intelligence Guidance",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "Illinois State Board of Education",
+            "status": "in_effect"
+          }
+        ],
+        "legislature": [
+          {
+            "url": "https://www.ilga.gov/legislation/BillStatus.asp?GAID=17&DocTypeID=HB&DocNum=3773",
+            "title": "HB 3773 — Illinois Human Rights Act AI amendment",
+            "instrument_type": "bill",
+            "issuer_name": "Illinois House",
+            "issued_date": "2024-08-09",
+            "effective_date": "2026-01-01",
+            "status": "enacted"
+          }
+        ],
+        "k12_district": [
+          {
+            "url": "https://www.cps.edu/",
+            "title": "Chicago Public Schools — AI guidance",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Chicago Public Schools",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_coordinator": [],
+        "higher_ed_institution": [
+          {
+            "url": "https://ai.uillinois.edu/",
+            "title": "University of Illinois System — AI@UI",
+            "instrument_type": "institutional_policy",
+            "issuer_name": "University of Illinois System",
+            "status": "in_effect"
+          }
+        ]
+      }
+    },
+    "WI": {
+      "state_name": "Wisconsin",
+      "layers": {
+        "governor_office": [
+          {
+            "url": "https://content.govdelivery.com/accounts/WIGOV/bulletins/36b2e32",
+            "title": "Governor Evers — Wisconsin AI Task Force",
+            "instrument_type": "task_force_report",
+            "issuer_name": "Office of the Governor (WI)",
+            "issued_date": "2023-08-28",
+            "status": "completed"
+          }
+        ],
+        "state_agency": [
+          {
+            "url": "https://dpi.wi.gov/artificial-intelligence",
+            "title": "DPI — Artificial Intelligence in Education",
+            "instrument_type": "acceptable_use_policy",
+            "issuer_name": "Wisconsin DPI",
+            "status": "in_effect"
+          }
+        ],
+        "legislature": [],
+        "k12_district": [
+          {
+            "url": "https://mps.milwaukee.k12.wi.us/",
+            "title": "Milwaukee Public Schools — AI guidance",
+            "instrument_type": "district_position_statement",
+            "issuer_name": "Milwaukee Public Schools",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_coordinator": [
+          {
+            "url": "https://www.wisconsin.edu/ai/",
+            "title": "University of Wisconsin System — AI Hub",
+            "instrument_type": "consortium_track",
+            "issuer_name": "University of Wisconsin System",
+            "status": "in_effect"
+          }
+        ],
+        "higher_ed_institution": [
+          {
+            "url": "https://teachlearn.provost.wisc.edu/generative-ai/",
+            "title": "UW-Madison — Generative AI Guidance",
+            "instrument_type": "faculty_guideline",
+            "issuer_name": "UW-Madison",
+            "status": "in_effect"
+          }
+        ]
+      }
+    }
+  }
+}

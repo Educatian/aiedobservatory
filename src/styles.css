@@ -6901,3 +6901,26 @@ tbody td {
   color: #5b21b6;
   border: 1px solid #c4b5fd;
 }
+
+/* Hierarchy diagram */
+.hierarchy-diagram {
+  padding: 0.75rem 1rem;
+  background: linear-gradient(180deg, #faf5ff 0%, #f8fafc 100%);
+  border: 1px solid #e9d5ff;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.hierarchy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+.hierarchy-range {
+  font-size: 0.72rem;
+  color: #6d28d9;
+}
+.hierarchy-diagram svg {
+  width: 100%;
+  height: auto;
+}
