@@ -7762,7 +7762,7 @@
     "policy_orientation": "permissive-with-disclosure",
     "notes": "Formal AI Acceptable Use Policy (board-adopted; created June 2023). Blocks student-account access to ChatGPT on Chromebooks, requires disclosure of AI use on all schoolwork, requires AI-literacy framing (ACE: Awareness / Critique / Exploration). Teacher PD delivered through district Transformative Teaching Group. One of the first Alabama LEAs to pass an AI policy.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:45:00.000Z",
     "source_documents": [
       {
         "url": "https://www.madisoncity.k12.al.us/cms/lib/AL50000433/Centricity/Domain/4/AI%20Acceptable%20Use%20Policy.pdf",
@@ -7782,7 +7782,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). Policy is a standalone locally-drafted flat-narrative AUP."
   },
   {
     "record_id": "district-al-tuscaloosa-city-v1",
@@ -7930,7 +7930,7 @@
     "policy_orientation": "acceptable-use-policy",
     "notes": "Policy 5.90.3 — Acceptable Use of Artificial Intelligence (AI) Tools and Applications; authored January 2026 (metadata), hosted in district policy manual. PDF captured but in-session text extraction unsuccessful; section-order match to aiforeducation.io template unverified.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:45:00.000Z",
     "source_documents": [
       {
         "url": "https://4.files.edl.io/63b4/01/21/26/163727-0b5b7296-0a32-4402-9a96-ceceae7714fc.pdf",
@@ -7950,7 +7950,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). District uses its own 4-section board-policy shape (General / Responsibilities / Compliance / Signatures)."
   },
   {
     "record_id": "district-al-gadsden-city-v1",
@@ -7972,7 +7972,7 @@
     "policy_orientation": "code-of-conduct-mention",
     "notes": "AI addressed within the 2024-2025 Code of Student Conduct (referenced around p. 41). Integrated as conduct rule rather than standalone policy; binary PDF captured but text extraction unsuccessful in-session.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:45:00.000Z",
     "source_documents": [
       {
         "url": "https://www.gcs.k12.al.us/wp-content/uploads/sites/4/2024/01/2024-2025-Code-of-Conduct.pdf",
@@ -7992,7 +7992,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (1/10 section markers — only 'purpose' matched incidentally). AI rules are embedded in the broader Student Code of Conduct rather than a standalone policy."
   },
   {
     "record_id": "district-al-athens-city-v1",

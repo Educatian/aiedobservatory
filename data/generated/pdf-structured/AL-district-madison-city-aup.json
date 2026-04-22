@@ -1,0 +1,118 @@
+{
+  "file name" : "AL-district-madison-city-aup.pdf",
+  "number of pages" : 1,
+  "author" : null,
+  "title" : null,
+  "creation date" : "D:20230629160738-05'00'",
+  "modification date" : "D:20230629160739-05'00'",
+  "kids" : [ {
+    "type" : "paragraph",
+    "id" : 3,
+    "page number" : 1,
+    "bounding box" : [ 72.0, 707.34, 281.729, 719.674 ],
+    "font" : "ArialMT",
+    "font size" : 11.04,
+    "text color" : "[0.0]",
+    "content" : "Artificial Intelligence Acceptable Use Policy"
+  }, {
+    "type" : "paragraph",
+    "id" : 4,
+    "page number" : 1,
+    "bounding box" : [ 72.0, 680.812, 530.336, 705.137 ],
+    "font" : "Arial-ItalicMT",
+    "font size" : 9.96,
+    "text color" : "[0.0]",
+    "content" : "This policy outlines the acceptable use of artificial intelligence (AI) tools and applications within Madison City Schools to ensure their safe, ethical, and responsible use."
+  }, {
+    "type" : "paragraph",
+    "id" : 5,
+    "page number" : 1,
+    "bounding box" : [ 72.0, 579.073, 524.614, 664.117 ],
+    "font" : "ArialMT",
+    "font size" : 11.04,
+    "text color" : "[0.0]",
+    "content" : "Madison City Schools acknowledges that technology is ever-changing and has a tremendous impact on our global society, local community, and classrooms. Artificial intelligence (AI), including generative forms of AI, is becoming more a part of our everyday lives. It is our responsibility to educate and train students to utilize AI in an ethical and educational way. Therefore, Madison City Schools is not banning the student or teacher use of AI, but each student will need to be aware of the limitations and guidelines of its usage:"
+  }, {
+    "type" : "list",
+    "id" : 6,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 90.006, 302.753, 536.725, 576.89 ],
+    "numbering style" : "unordered",
+    "number of list items" : 4,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 90.006, 520.882, 531.209, 576.89 ],
+      "font" : "ArialMT",
+      "font size" : 11.04,
+      "text color" : "[0.0]",
+      "content" : "● Madison City Schools student email accounts and chromebook access to specific open AI software, such as ChatGPT, are blocked due to data and security concerns. Any misuse of AI tools and applications, such as hacking or altering data, is strictly prohibited.",
+      "kids" : [ {
+        "type" : "list",
+        "id" : 1,
+        "level" : "2",
+        "page number" : 1,
+        "bounding box" : [ 126.019, 448.172, 525.039, 518.698 ],
+        "numbering style" : "unordered",
+        "number of list items" : 2,
+        "list items" : [ {
+          "type" : "list item",
+          "page number" : 1,
+          "bounding box" : [ 126.019, 477.329, 521.242, 518.698 ],
+          "font" : "ArialMT",
+          "font size" : 11.04,
+          "text color" : "[0.0]",
+          "content" : "○ Teachers may allow the use of AI for curriculum purposes. Access to specific websites will be granted on an as needed basis, adhering to specific data and privacy guidelines regarding age restrictions and usage.",
+          "kids" : [ ]
+        }, {
+          "type" : "list item",
+          "page number" : 1,
+          "bounding box" : [ 126.03, 448.172, 525.039, 475.023 ],
+          "font" : "ArialMT",
+          "font size" : 11.04,
+          "text color" : "[0.0]",
+          "content" : "○ College Board and Dual Enrollment college and university classes may have additional restrictions and limitations regarding the use of Artificial Intelligence.",
+          "kids" : [ ]
+        } ]
+      } ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 90.028, 404.498, 536.725, 445.988 ],
+      "font" : "ArialMT",
+      "font size" : 11.04,
+      "text color" : "[0.0]",
+      "content" : "● Students who use AI software with a personal device and/or personal credentials should do so at their own risk - acknowledging that each platform is collecting various forms of data.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 90.039, 375.463, 523.988, 402.314 ],
+      "font" : "ArialMT",
+      "font size" : 11.04,
+      "text color" : "[0.0]",
+      "content" : "● Students must acknowledge the use of AI in any capacity related to their school work: text, image, multimedia, etc.",
+      "kids" : [ {
+        "type" : "paragraph",
+        "id" : 2,
+        "level" : "3",
+        "page number" : 1,
+        "bounding box" : [ 126.052, 360.945, 466.776, 373.279 ],
+        "font" : "ArialMT",
+        "font size" : 11.04,
+        "text color" : "[0.0]",
+        "content" : "○ The use of AI could be subject to the Academic Dishonesty Policy."
+      } ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 90.061, 302.753, 528.843, 358.761 ],
+      "font" : "ArialMT",
+      "font size" : 11.04,
+      "text color" : "[0.0]",
+      "content" : "● Students should acknowledge that AI is not always factually accurate, nor seen as a credible source, and should be able to provide evidence to support its claims. All users must also be aware of the potential for bias and discrimination in AI tools and applications.",
+      "kids" : [ ]
+    } ]
+  } ]
+}

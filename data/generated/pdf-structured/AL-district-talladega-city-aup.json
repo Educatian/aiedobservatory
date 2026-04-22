@@ -1,0 +1,305 @@
+{
+  "file name" : "AL-district-talladega-city-aup.pdf",
+  "number of pages" : 2,
+  "author" : "Daphne Morris",
+  "title" : null,
+  "creation date" : "D:20260115085158-06'00'",
+  "modification date" : "D:20260115085158-06'00'",
+  "kids" : [ {
+    "type" : "paragraph",
+    "id" : 7,
+    "page number" : 1,
+    "bounding box" : [ 226.01, 706.18, 386.138, 717.436 ],
+    "font" : "Arial-BoldMT",
+    "font size" : 12.0,
+    "text color" : "[0.122]",
+    "content" : "CHAPTER 5.00 - STUDENTS"
+  }, {
+    "type" : "text block",
+    "id" : 8,
+    "page number" : 1,
+    "bounding box" : [ 66.144, 655.78, 545.98, 686.38 ],
+    "kids" : [ {
+      "type" : "paragraph",
+      "id" : 1,
+      "page number" : 1,
+      "bounding box" : [ 72.024, 657.34, 539.884, 682.396 ],
+      "font" : "Arial-BoldMT",
+      "font size" : 12.0,
+      "text color" : "[0.122]",
+      "content" : "ACCEPTABLE USE OF ARTIFICIAL INTELLIGENCE (AI) TOOLS AND APPLICATIONS 5.90.3"
+    } ]
+  }, {
+    "type" : "paragraph",
+    "id" : 9,
+    "page number" : 1,
+    "bounding box" : [ 72.024, 599.222, 530.592, 647.497 ],
+    "font" : "ArialMT",
+    "font size" : 11.04,
+    "text color" : "[0.122]",
+    "content" : "To maintain a legal, ethical, and safe technological environment consistent with its educational vision, mission, and goals, the Talladega City Board of Education adopts this policy for the acceptable use of artificial intelligence (AI) tools and applications. This includes generative forms of AI."
+  }, {
+    "type" : "paragraph",
+    "id" : 10,
+    "page number" : 1,
+    "bounding box" : [ 72.024, 561.902, 530.278, 584.857 ],
+    "font" : "ArialMT",
+    "font size" : 11.04,
+    "text color" : "[0.122]",
+    "content" : "The Board recognizes the ever-changing nature of technology, the impact of AI on society and education, and the responsibility to educate students on its ethical and educational use."
+  }, {
+    "type" : "heading",
+    "id" : 13,
+    "level" : "Doctitle",
+    "page number" : 1,
+    "bounding box" : [ 72.024, 521.148, 266.231, 533.305 ],
+    "heading level" : 1,
+    "font" : "Arial-BoldMT",
+    "font size" : 12.96,
+    "text color" : "[0.122]",
+    "content" : "I. General Guidelines for AI Use"
+  }, {
+    "type" : "list",
+    "id" : 14,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 93.024, 375.992, 533.647, 514.803 ],
+    "numbering style" : "unordered",
+    "number of list items" : 5,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 489.872, 513.994, 514.803 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Talladega City Schools is not banning the student or teacher use of AI, but all users must be aware of the limitations and guidelines of its usage.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 451.832, 533.647, 489.483 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Teachers may allow the use of AI for curriculum purposes. Access to specific websites will be granted on an as-needed basis, adhering to specific data and privacy guidelines regarding age restrictions and usage.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 426.632, 529.978, 451.563 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• College Board and Dual Enrollment college and university classes may have additional restrictions and limitations regarding the use of Artificial Intelligence.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 401.312, 515.359, 426.243 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• All users must be aware of the potential for bias and discrimination in AI tools and applications.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 375.992, 532.5, 400.923 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• AI is not always factually accurate, nor should it be seen as a credible source. Students must be able to provide evidence to support any claims derived from AI.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "heading",
+    "id" : 17,
+    "level" : "Doctitle",
+    "page number" : 1,
+    "bounding box" : [ 72.024, 329.248, 337.619, 341.405 ],
+    "heading level" : 1,
+    "font" : "Arial-BoldMT",
+    "font size" : 12.96,
+    "text color" : "[0.122]",
+    "content" : "II. Student Responsibilities and Limitations"
+  }, {
+    "type" : "list",
+    "id" : 18,
+    "level" : "1",
+    "page number" : 1,
+    "bounding box" : [ 93.024, 196.692, 532.976, 322.903 ],
+    "numbering style" : "unordered",
+    "number of list items" : 5,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 297.972, 532.976, 322.903 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Students must acknowledge the use of AI in any capacity related to their school work, including text, image, and multimedia.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 285.252, 397.301, 297.583 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• The use of AI is subject to the Academic Dishonesty Policy.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 259.932, 514.183, 284.983 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Any misuse of AI tools and applications, such as hacking or altering data, is strictly prohibited.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 234.732, 528.685, 259.663 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Students using AI software with a personal device and/or personal credentials do so at their own risk, acknowledging that each platform collects various forms of data.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 1,
+      "bounding box" : [ 93.024, 196.692, 512.824, 234.343 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Talladega City Schools student email accounts and Chromebook access to specific open AI software, such as ChatGPT, may be blocked due to data and security concerns.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "heading",
+    "id" : 19,
+    "level" : "Subtitle",
+    "page number" : 1,
+    "bounding box" : [ 250.198, 74.146, 539.074, 84.501 ],
+    "heading level" : 2,
+    "font" : "Arial-BoldMT",
+    "font size" : 11.04,
+    "text color" : "[0.122]",
+    "content" : "Page 1 of 2 Talladega City Schools 5.90.3"
+  }, {
+    "type" : "paragraph",
+    "id" : 20,
+    "page number" : 2,
+    "bounding box" : [ 224.69, 706.157, 387.47, 719.563 ],
+    "font" : "Arial-BoldMT",
+    "font size" : 12.0,
+    "text color" : "[0.0]",
+    "content" : "CHAPTER 5.00 – STUDENTS"
+  }, {
+    "type" : "heading",
+    "id" : 23,
+    "level" : "Doctitle",
+    "page number" : 2,
+    "bounding box" : [ 72.024, 663.618, 273.362, 675.775 ],
+    "heading level" : 1,
+    "font" : "Arial-BoldMT",
+    "font size" : 12.96,
+    "text color" : "[0.122]",
+    "content" : "III. Compliance and Enforcement"
+  }, {
+    "type" : "list",
+    "id" : 24,
+    "level" : "1",
+    "page number" : 2,
+    "bounding box" : [ 93.024, 543.782, 538.301, 657.273 ],
+    "numbering style" : "unordered",
+    "number of list items" : 4,
+    "list items" : [ {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 93.024, 619.742, 538.301, 657.273 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Employees and students shall use technology resources, including AI tools, in accordance with Board policies and procedures, as well as local, state, and federal laws and guidelines governing the use of technology.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 93.024, 594.422, 533.334, 619.353 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Misuse of the school system's technology, including AI tools, by students will be subject to normal disciplinary procedures in accordance with the student code of conduct.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 93.024, 569.102, 512.393, 594.033 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Employees who misuse the school system's technology may be subject to denial of computer usage, monetary charges, reprimands, and/or loss of employment.",
+      "kids" : [ ]
+    }, {
+      "type" : "list item",
+      "page number" : 2,
+      "bounding box" : [ 93.024, 543.782, 520.673, 568.833 ],
+      "font" : "SymbolMT",
+      "font size" : 11.04,
+      "text color" : "[0.122]",
+      "content" : "• Violation of civil and/or criminal law relating to technology and its use will result in the notification of law enforcement officials.",
+      "kids" : [ ]
+    } ]
+  }, {
+    "type" : "heading",
+    "id" : 27,
+    "level" : "Doctitle",
+    "page number" : 2,
+    "bounding box" : [ 72.024, 497.028, 158.533, 509.185 ],
+    "heading level" : 1,
+    "font" : "Arial-BoldMT",
+    "font size" : 12.96,
+    "text color" : "[0.122]",
+    "content" : "IV. Signatures"
+  }, {
+    "type" : "paragraph",
+    "id" : 28,
+    "level" : "2",
+    "page number" : 2,
+    "bounding box" : [ 93.024, 465.752, 524.567, 490.683 ],
+    "font" : "ArialMT",
+    "font size" : 11.04,
+    "text color" : "[0.122]",
+    "content" : "• All students, parents/guardians, and employees will be required to sign that they have read and agree with the acceptable use policy every school year."
+  }, {
+    "type" : "paragraph",
+    "id" : 31,
+    "page number" : 2,
+    "bounding box" : [ 72.024, 235.01, 539.452, 273.866 ],
+    "font" : "Arial-BoldMT",
+    "font size" : 12.0,
+    "text color" : "[0.0]",
+    "content" : "STATUTORY AUTHORITY: CODE OF ALABAMA 16-1-30 LAW(S) IMPLEMENTED:"
+  }, {
+    "type" : "paragraph",
+    "id" : 32,
+    "page number" : 2,
+    "bounding box" : [ 72.024, 163.7, 534.229, 218.351 ],
+    "font" : "Arial-BoldMT",
+    "font size" : 12.0,
+    "text color" : "[0.0]",
+    "content" : "ALABAMA ADMINISTRATIVE PROCEDURE ACT: § ________ HISTORY: ADOPTED: January 13, 2026 FORMERLY: N/A"
+  }, {
+    "type" : "paragraph",
+    "id" : 33,
+    "page number" : 2,
+    "bounding box" : [ 241.932, 105.02, 536.77, 116.276 ],
+    "font" : "Arial-BoldMT",
+    "font size" : 12.0,
+    "text color" : "[0.0]",
+    "content" : "Page 2 of 2 Talladega City Schools 5.90.3"
+  } ]
+}
