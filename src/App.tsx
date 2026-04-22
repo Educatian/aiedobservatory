@@ -819,7 +819,7 @@ function App() {
                         checked={broadbandPatternHatched}
                         onChange={(e) => setBroadbandPatternHatched(e.target.checked)}
                       />
-                      <span>Hatch under-served counties</span>
+                      <span>Highlight under-served counties</span>
                     </label>
                   )}
                 </div>

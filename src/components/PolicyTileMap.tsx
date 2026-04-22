@@ -320,11 +320,10 @@ export function PolicyTileMap({
           aria-hidden="true"
         >
           <defs>
-            {/* Diagonal hatch pattern for broadband-deficient counties. */}
-            <pattern id="bb-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <rect width="6" height="6" fill="transparent" />
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#0f172a" strokeWidth="1.1" opacity="0.55" />
-            </pattern>
+            {/* Glow filter so the deficit outline reads on both light and dark fills. */}
+            <filter id="deficit-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" />
+            </filter>
           </defs>
 
           {/* Layer 1: broadband-colored counties (beneath districts). */}
@@ -356,15 +355,22 @@ export function PolicyTileMap({
               })}
               {broadbandPatternHatched && districtAtlasData.countyShapes
                 .filter(({ pct }) => pct != null && pct < BROADBAND_THRESHOLD)
-                .map(({ geoid, path }) => (
-                  <path
-                    key={`hatch-${geoid}`}
-                    d={path}
-                    fill="url(#bb-hatch)"
-                    stroke="none"
-                    pointerEvents="none"
-                  />
-                ))}
+                .map(({ geoid, path, pct }) => {
+                  // Stroke width scales with deficit severity: ~1.2px at threshold, ~2.4px at 55%.
+                  const deficit = pct == null ? 0 : Math.max(0, BROADBAND_THRESHOLD - pct);
+                  const strokeWidth = Math.min(2.4, 1.2 + deficit * 4);
+                  return (
+                    <path
+                      key={`deficit-${geoid}`}
+                      d={path}
+                      fill="none"
+                      stroke="#dc2626"
+                      strokeWidth={strokeWidth}
+                      strokeLinejoin="round"
+                      pointerEvents="none"
+                    />
+                  );
+                })}
             </g>
           )}
 
