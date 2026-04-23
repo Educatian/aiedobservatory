@@ -778,9 +778,11 @@ function App() {
                   ) : (
                     <PolicyDetailPanel record={selectedRecord} />
                   )}
-                  <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
                 </>
               )}
+
+              {/* Always-visible district drill-in (renders null when state has no district records) */}
+              <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
             </div>
           </div>
 
