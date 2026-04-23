@@ -5225,6 +5225,10 @@ tbody td {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  /* .sentinel-shell only sets min-height, so the flex chain can't
+     bound us — pin an explicit viewport-relative cap so overflow-y
+     actually produces a scrollbar. */
+  max-height: calc(100vh - 180px);
 }
 
 .float-body > * {
