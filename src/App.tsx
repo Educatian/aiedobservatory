@@ -744,6 +744,10 @@ function App() {
             </div>
 
             <div className="float-body">
+              {/* Always-visible district drill-in — pinned at top so it's
+                  above the fold when a state with districts is selected */}
+              <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
+
               {inspectorTab === "brief" && (
                 <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
               )}
@@ -781,8 +785,6 @@ function App() {
                 </>
               )}
 
-              {/* Always-visible district drill-in (renders null when state has no district records) */}
-              <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
             </div>
           </div>
 

@@ -7501,11 +7501,13 @@ tbody td {
 
 /* ---------- District layer panel (Tier 1) ---------- */
 .district-layer-panel {
-  margin-top: 14px;
-  border: 1px solid #e2e8f0;
+  margin: 12px 14px 14px;
+  border: 1px solid #c7d2fe;
+  border-left: 3px solid #6366f1;
   border-radius: 10px;
   background: #f8fafc;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .district-layer-header {
   width: 100%;
