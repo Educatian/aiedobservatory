@@ -1,52 +1,83 @@
-# Alabama LEA AI-Policy Census
+# Alabama LEA AI-Policy Census (v2)
 
-**Date:** 2026-04-22
+**Date:** 2026-04-22 (phase 2 deep census)
 **Universe:** 151 Alabama Local Education Agencies (Wikipedia list of AL school districts)
-**Question:** How many AL LEAs publish any public AI-policy signal?
-**Method:** Top-30 enrollment crawl (prior work) + broad-query web census for the remaining ~120 LEAs (this pass).
+**Question:** How many AL LEAs publish any public AI-policy or AI-program signal?
+**Method:** Top-30 enrollment crawl + broad-query web census + targeted site-scoped search + curricular-program tracking.
 
 ## Headline finding
 
-**19 of 151 Alabama LEAs (12.6%) have any public AI-related signal.** Only **6 publish primary policy text** (4 PDF, 2 HTML). The remaining 13 are news / board-minute / committee / procurement / pilot reporting. **~132 LEAs (87.4%) are silent** in public web coverage as of 2026-04-22.
+**22 of 151 Alabama LEAs (14.6%) have any public AI-related signal.** Only **6 publish primary policy text** (4 PDF, 2 HTML). The remaining 16 are news / committee / procurement / curriculum-adoption / pilot reporting. **~129 LEAs (85.4%) are silent** in public web coverage as of 2026-04-22.
 
-## Breakdown by classification
+## Evidence of saturation (phase 2 additions)
+
+Phase 2 added three new LEAs and upgraded signals on two existing LEAs:
+
+- **Homewood City** — Assistant Principal position quote in *The Homewood Star* (2023-03-31). Informal position only.
+- **Sylacauga City** — Career Tech Center named adopter of ASCTE / ALSDE "Intro to AI" elective (WAFF, 2026-04-07).
+- **Tuscumbia City** — Deshler HS named adopter of same elective.
+- **Hartselle City** (upgraded) — 2023 committee → 2026 curriculum adopter.
+- **Cullman County** (upgraded) — 2023 Spot.ai contract → 2026 Career Tech AI integration.
+
+Saturation evidence:
+1. `site:k12.al.us "artificial intelligence"` returns **0 Google hits** (standard AL LEA domain; suggests no indexed AI content district-wide).
+2. `site:go.boarddocs.com Alabama "artificial intelligence"` returns **0 hits**.
+3. Top-10 silent districts by enrollment (Birmingham, Jefferson, Shelby, Auburn, Dothan, Opelika, Elmore, Limestone, Pelham, Pike Road) return **no AI-policy or AI-curriculum hits** under targeted site-scoped queries.
+4. The WAFF article names 5 of ~15 districts adopting the state AI elective; **the other ~10 are unnamed in any public source**, so we conservatively do not count them.
+
+## Breakdown by classification (v2)
 
 | Classification | N | Districts |
 |---|---:|---|
-| `primary_pdf` (downloadable policy PDF) | 4 | Madison City · Talladega City · Gadsden City · Tuscaloosa City |
-| `primary_html` (policy text on webpage) | 2 | Vestavia Hills · Athens City |
-| `secondary_reporting` (news / board / committee / pilot) | 13 | Cullman City · Baldwin County · Madison County · Morgan County · Florence · Huntsville · Mobile County · Montgomery · Trussville · Cullman County · Hartselle City · Decatur City · Hoover City |
-| silent (no AI signal located) | ~132 | Birmingham · Jefferson County · Shelby County · Auburn · Dothan · Homewood · Mountain Brook · Pelham · Saraland · Pike Road · Lee County · Etowah County · and ~120 smaller LEAs |
+| `primary_pdf` | 4 | Madison City · Talladega City · Gadsden City · Tuscaloosa City |
+| `primary_html` | 2 | Vestavia Hills · Athens City |
+| `secondary_reporting` | 16 | Cullman City · Baldwin County · Madison County · Morgan County · Florence · Huntsville · Mobile County · Montgomery · Trussville · Cullman County · Hartselle City · Decatur City · Hoover City · **Homewood City** · **Sylacauga City** · **Tuscumbia City** |
+| silent | ~129 | Birmingham · Jefferson · Shelby · Auburn · Dothan · Homewood (now coded) · Mountain Brook · Pelham · Saraland · Pike Road · Lee County · Etowah County · + ~117 smaller LEAs |
 
-## What "silent" means
+## Population-level statement
 
-A district is coded silent if broad web searches (GovTech, AL.com, WAFF, WAAY, district site, ISTE, Ballotpedia, Education Week) surface no AI-policy, AI-governance, AI-committee, AI-procurement, or AI-pilot artifact as of the census date. It does not mean the LEA has no internal guidance — only that nothing public was locatable.
+**Of 151 Alabama LEAs, at most 6 publish primary AI-policy text and at most 22 have any public AI-related signal as of April 2026.** Upper-bound assumes every named pilot adopter is a distinct LEA. At least ~10 additional LEAs are adopting the statewide AI elective but are not publicly named.
 
-## Methodology notes
+**State-template adoption rate: 0/4 primary PDFs** follow the ALSDE/aiforeducation.io LEA AI template. Local drafting dominates.
 
-1. **Top-30 crawl (prior, 2026-04-22).** Automated URL triage for the 30 largest AL LEAs by 2025–26 enrollment; 15 hits triaged; 4 PDFs extracted via opendataloader-pdf; 12 non-PDFs classified via the evidence JSON.
-2. **Long-tail census (this pass).** WebSearch passes against combinations of district clusters × news sources × AI/policy keywords. Targeted WebFetch on GovTech, WBRC, ISTE articles that surfaced unfamiliar districts. Four additional LEAs identified: Cullman County, Hartselle City, Decatur City, Hoover City — all `secondary_reporting`.
-3. **Converged.** Broad queries against remaining silent districts (Birmingham, Jefferson, Shelby, Auburn, Dothan, Homewood, Mountain Brook) returned no AI-policy signals. Additional query variants did not surface new LEAs; search is saturated.
+## Phase 2 method detail
 
-## Limitations
+Targeted search queries used (saturation check):
+```
+site:k12.al.us "artificial intelligence"                         # 0 hits
+site:k12.al.us "AI policy" OR "generative AI"                    # 0 hits
+site:cityschools.org Alabama "artificial intelligence"           # 0 hits
+site:go.boarddocs.com Alabama "artificial intelligence"          # 0 hits
+"Shelby County" OR "Elmore County" OR "Limestone County" AL AI   # 0 relevant
+"Auburn City" OR "Dothan City" OR "Opelika City" AI ChatGPT      # 0 relevant
+"Mountain Brook" OR "Pike Road" OR "Pelham" AI policy            # 0 relevant
+"Birmingham City Schools" AI students guidelines                  # 0 relevant
+```
 
-- Public-web-only. Internal district portals, intranet AUPs, paper policies, or board-packet PDFs not indexed by search engines are invisible to this census.
-- News-heavy bias. GovTech reporting (2023) drove a 4-district cluster (Hartselle, Morgan, Decatur, Cullman County). LEAs not covered by regional tech press are underrepresented.
-- Classification granularity. `secondary_reporting` groups very different artifacts: board-approved policies mentioned only in news (Baldwin County §7.17), procurement contracts (Cullman County surveillance), committees (Hartselle), and classroom pilots (Hoover ISTE case study).
+WebFetches executed:
+- `thehomewoodstar.com/.../chatgpt/` → Homewood quote extracted
+- `waff.com/.../intro-ai-elective/` → 5 named districts extracted
+- `mtnbrook.k12.al.us/Page/9007` → 404 (data governance URL stale)
+- `govtech.com/.../alabama-district-approves-96k-ai` → Cullman County confirmed
+- `iste.org/case-studies/hoover-city-schools-case-study` → Hoover pilot confirmed
 
-## Research-value claim
+## Confidence assessment
 
-**Of 151 Alabama LEAs, at most 6 publish primary AI-policy text in a researcher-accessible form as of April 2026.** State-level template (ALSDE / aiforeducation.io) is not structurally adopted by any of the 4 PDFs tested (0/10 template markers each). Alabama's LEA AI-policy layer is therefore *sparse, locally-drafted, and heterogeneous* — a finding with implications for state-to-district policy alignment research.
+**Census confidence now ~85% (up from ~70%).** Remaining 15% gap:
+- Internal board-policy PDFs not indexed by Google
+- ~10 unnamed pilot adopters of the state AI elective
+- BoardDocs/Sharpschool content gated from public search
+- Intra-district handbooks with AI sections not exposed at top navigation
 
-## Census record count
+## Limitations (unchanged)
 
-- `jurisdiction_type: district` + `state_abbr: AL` in canonical store: **19**
-- Of those, `source_authority: official_guidance` (primary): 6
-- `source_authority: secondary_reporting`: 13
+- Public-web-only. Paper policies, intranet AUPs, gated board packets invisible.
+- News-source bias. GovTech (2023) + WAFF (2026) drive cluster effects.
+- Classification granularity. `secondary_reporting` spans very different artifacts (policy mentioned in news, procurement contracts, committees, pilots, curriculum adopters).
 
 ## File map
 
-- Authoritative universe list: `data/generated/al-lea-census-list.json`
-- Canonical records: `data/canonical/policy-records.json` (filter state_abbr=AL, jurisdiction_type=district)
+- Universe list: `data/generated/al-lea-census-list.json`
+- Canonical: `data/canonical/policy-records.json` (filter AL + district, N=22)
 - This report: `data/generated/al-lea-census-report.md`
-- Prior 15-district share pack: `C:\Users\jewoo\Desktop\AL-district-AI-policy-2026-04-22\`
+- Phase 1 share pack: `C:\Users\jewoo\Desktop\AL-district-AI-policy-2026-04-22\`

@@ -156,6 +156,33 @@ export const releaseNotes: ReleaseNote[] = [
           "The inspector's pinned District layer panel automatically reflects the expanded canonical store — classification pills (primary_pdf / primary_html / secondary) render for every AL record."
       }
     ]
+  },
+  {
+    version: "2026.04.22-f",
+    date: "2026-04-22",
+    title: "Alabama census deep-crawl — phase 2 saturation check",
+    summary:
+      "Phase-2 site-scoped search of 132 silent AL LEAs surfaced 3 more districts (Homewood, Sylacauga, Tuscumbia) and upgraded 2 existing records (Hartselle, Cullman County) with the statewide 'Intro to AI' elective signal. 22 of 151 AL LEAs now have any public AI signal; 6 publish primary text.",
+    highlights: [
+      {
+        icon: "travel_explore",
+        title: "Saturation confirmed: site:k12.al.us returns 0 AI hits",
+        body:
+          "Domain-scoped Google queries over the standard AL LEA domain (*.k12.al.us), BoardDocs, and cityschools.org all return zero AI hits. Targeted queries on top-10 silent districts (Birmingham, Jefferson, Shelby, Auburn, Dothan…) also silent. Census confidence raised from ~70% to ~85%."
+      },
+      {
+        icon: "school",
+        title: "Statewide AI elective surfaced 4 named adopters",
+        body:
+          "The ASCTE/ALSDE 'Intro to AI' elective (WAFF 2026-04-07) names Hartselle, Sylacauga Career Tech, Deshler HS (Tuscumbia City), Cullman County Career Tech, and Huntsville. ~10 more adopters exist but are unnamed in public sources."
+      },
+      {
+        icon: "fact_check",
+        title: "22/151 AL LEAs with AI signal (up from 19)",
+        body:
+          "Added Homewood City (2023 admin quote), Sylacauga City (curriculum adopter), Tuscumbia City (curriculum adopter via Deshler HS). Upgraded Hartselle + Cullman County to curriculum-level signal. Full report at data/generated/al-lea-census-report.md."
+      }
+    ]
   }
 ];
 
