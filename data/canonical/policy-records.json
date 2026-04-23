@@ -7762,7 +7762,7 @@
     "policy_orientation": "permissive-with-disclosure",
     "notes": "Formal AI Acceptable Use Policy (board-adopted; created June 2023). Blocks student-account access to ChatGPT on Chromebooks, requires disclosure of AI use on all schoolwork, requires AI-literacy framing (ACE: Awareness / Critique / Exploration). Teacher PD delivered through district Transformative Teaching Group. One of the first Alabama LEAs to pass an AI policy.",
     "version": 1,
-    "updated_at": "2026-04-22T23:45:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.madisoncity.k12.al.us/cms/lib/AL50000433/Centricity/Domain/4/AI%20Acceptable%20Use%20Policy.pdf",
@@ -7778,11 +7778,30 @@
         "status": "in_effect",
         "short_summary": "District AI AUP: blocks ChatGPT on student accounts, requires disclosure, frames AI as learning tool with ACE model.",
         "relations": []
+      },
+      {
+        "url": "https://www.madisoncity.k12.al.us/Page/8887",
+        "title": "Madison City Schools — Overview / Artificial Intelligence Acceptable Use Policy (HTML)",
+        "published_date_guess": "2023-06-29",
+        "document_id": "AL-DISTRICT-MADISON-CITY-AUP-HTML",
+        "issuer_name": "Madison City Schools",
+        "issuer_level": "k12_district",
+        "instrument_type": "acceptable_use_policy",
+        "issued_date": "2023-06-29",
+        "status": "in_effect",
+        "short_summary": "HTML version of Madison AUP discovered during phase-3 counter-factual validation test.",
+        "relations": [
+          {
+            "kind": "implements",
+            "targetDocumentId": "AL-DISTRICT-MADISON-CITY-AUP",
+            "note": "HTML mirror of the PDF"
+          }
+        ]
       }
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). Policy is a standalone locally-drafted flat-narrative AUP."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). Policy is a standalone locally-drafted flat-narrative AUP. [2026-04-22 phase3] HTML mirror at Page/8887 discovered during counter-factual test. [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-tuscaloosa-city-v1",
@@ -7804,7 +7823,7 @@
     "policy_orientation": "position-statement-with-parent-engagement",
     "notes": "District AI Position Statement linked from Technology department page; committee under Superintendent Dr. Mike Daria surveyed parents (September 2025 deadline) to inform AI classroom strengthening. Emphasis on safety and privacy. Already referenced in the Alabama state record.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.tuscaloosacityschools.com/departments/departments/technology",
@@ -7824,7 +7843,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_pdf recovered. PDF: data/generated/raw/AL-district-tuscaloosa-city-ai-position.pdf. Structured JSON: data/generated/pdf-structured/AL-district-tuscaloosa-city-ai-position.json (2pp, title='Position Statement on AI in TCS', dated 05/13/2024). Section structure: Position / Existing Use / Benefits / Concerns / Limitations / Best Practice / Next Steps / Resources."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_pdf recovered. PDF: data/generated/raw/AL-district-tuscaloosa-city-ai-position.pdf. Structured JSON: data/generated/pdf-structured/AL-district-tuscaloosa-city-ai-position.json (2pp, title='Position Statement on AI in TCS', dated 05/13/2024). Section structure: Position / Existing Use / Benefits / Concerns / Limitations / Best Practice / Next Steps / Resources. [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-vestavia-hills-v1",
@@ -7888,7 +7907,7 @@
     "policy_orientation": "board-adopted-generative-ai-policy",
     "notes": "Board formally adopted Policy 4.9.6 — Generative Artificial Intelligence on October 21, 2025. Described as strengthening student education and districtwide policy clarity on emerging technological issues. Policy text not publicly posted at time of crawl.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.cullmantribune.com/2025/10/26/city-school-board-approves-vape-and-ai-policies/",
@@ -7908,7 +7927,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 4.9.6 (Generative Artificial Intelligence). Adoption/date: 2025-10-21. Key facts: • Adopted 2025-10-21 alongside vape policy 4.2.8 • Stated purpose: strengthen student education and districtwide policy clarity on emerging tech • No quoted provisions or vote breakdown in article"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 4.9.6 (Generative Artificial Intelligence). Adoption/date: 2025-10-21. Key facts: • Adopted 2025-10-21 alongside vape policy 4.2.8 • Stated purpose: strengthen student education and districtwide policy clarity on emerging tech • No quoted provisions or vote breakdown in article [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-talladega-city-v1",
@@ -7930,7 +7949,7 @@
     "policy_orientation": "acceptable-use-policy",
     "notes": "Policy 5.90.3 — Acceptable Use of Artificial Intelligence (AI) Tools and Applications; authored January 2026 (metadata), hosted in district policy manual. PDF captured but in-session text extraction unsuccessful; section-order match to aiforeducation.io template unverified.",
     "version": 1,
-    "updated_at": "2026-04-22T23:45:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://4.files.edl.io/63b4/01/21/26/163727-0b5b7296-0a32-4402-9a96-ceceae7714fc.pdf",
@@ -7950,7 +7969,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). District uses its own 4-section board-policy shape (General / Responsibilities / Compliance / Signatures)."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (0/10 section markers). District uses its own 4-section board-policy shape (General / Responsibilities / Compliance / Signatures). [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-gadsden-city-v1",
@@ -7972,7 +7991,7 @@
     "policy_orientation": "code-of-conduct-mention",
     "notes": "AI addressed within the 2024-2025 Code of Student Conduct (referenced around p. 41). Integrated as conduct rule rather than standalone policy; binary PDF captured but text extraction unsuccessful in-session.",
     "version": 1,
-    "updated_at": "2026-04-22T23:45:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.gcs.k12.al.us/wp-content/uploads/sites/4/2024/01/2024-2025-Code-of-Conduct.pdf",
@@ -7992,7 +8011,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (1/10 section markers — only 'purpose' matched incidentally). AI rules are embedded in the broader Student Code of Conduct rather than a standalone policy."
+    "verification_notes": "PDF successfully extracted via opendataloader-pdf (2026-04-22). Template-adoption check against ALSDE LEA AI Policy Template: NEGATIVE (1/10 section markers — only 'purpose' matched incidentally). AI rules are embedded in the broader Student Code of Conduct rather than a standalone policy. [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-athens-city-v1",
@@ -8014,7 +8033,7 @@
     "policy_orientation": "aup-citation-clause",
     "notes": "AI clause in Internet Safety and Acceptable Use Policy: AI treated like any established technology resource, generative AI output must be cited/attributed, malicious or unethical use triggers Code of Conduct discipline.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.acs-k12.org/departments/technology",
@@ -8034,7 +8053,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_html recovered.  Internet Safety and Acceptable Use Policy (Plagiarism section). Excerpt: \"Artificial intelligence is a vastly emerging technology...its use will be treated like any established technology resource in ACS. Any work produced must be properly cited and/or attributed to the gen…\" Short but genuine primary AI clause embedded in existing AUP; recovered verbatim."
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] primary_html recovered.  Internet Safety and Acceptable Use Policy (Plagiarism section). Excerpt: \"Artificial intelligence is a vastly emerging technology...its use will be treated like any established technology resource in ACS. Any work produced must be properly cited and/or attributed to the gen…\" Short but genuine primary AI clause embedded in existing AUP; recovered verbatim. [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-florence-city-v1",
@@ -8056,7 +8075,7 @@
     "policy_orientation": "community-engagement-only",
     "notes": "Held a parent and community AI information night (March 31) delivering general knowledge on current and future district AI use. No public AI policy located at crawl time. Note: Florence 1 Schools (South Carolina) has a formal policy and is unrelated.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.timesdaily.com/news/education/florence-city-schools-will-have-ai-information-night/article_b9e4718f-f2b5-4547-85f4-1ef4b7f49b6a.html",
@@ -8076,7 +8095,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • AI Information Night 2026-03-31 at Florence City BOE • Event provides general knowledge of AI and district applications • No policy document referenced"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • AI Information Night 2026-03-31 at Florence City BOE • Event provides general knowledge of AI and district applications • No policy document referenced [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-madison-county-v1",
@@ -8098,7 +8117,7 @@
     "policy_orientation": "draft-policy-in-review",
     "notes": "January 9, 2025 board received a draft AI policy aligned to seven ALSDE pillars (data governance, privacy/security, procurement, implementation, educator competency, risk management, utility/effectiveness). Staff indicated rollout will prioritize educator training before student use. No formal adoption yet.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://citizenportal.ai/articles/6390843/Madison-County-board-receives-draft-AI-policy-staff-to-route-for-association-review",
@@ -8118,7 +8137,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • 2025-01-09 work session: draft AI policy presented • Aligns with ALSDE guidelines across 7 pillars: data governance, privacy/security, procurement, implementation, educator competency, risk management, utility/effectiveness • Next step: route to teacher/support-staff associations for feedback before formal board consideration • Educator training precedes student rollout"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • 2025-01-09 work session: draft AI policy presented • Aligns with ALSDE guidelines across 7 pillars: data governance, privacy/security, procurement, implementation, educator competency, risk management, utility/effectiveness • Next step: route to teacher/support-staff associations for feedback before formal board consideration • Educator training precedes student rollout [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-baldwin-county-v1",
@@ -8140,7 +8159,7 @@
     "policy_orientation": "board-adopted-policy",
     "notes": "Board adopted an AI policy (alongside electronic devices policy) on June 17, 2025 per official board votes summary. Full policy text not publicly posted at crawl time.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://citizenportal.ai/articles/6508242/Votes-at-a-glance-Baldwin-County-Board-approves-architect-contracts-budget-amendment-policies-personnel-items-and-tax-district-allocations",
@@ -8160,7 +8179,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 7.17 (Artificial Intelligence). Adoption/date: 2025-06-17. Key facts: • Policy 7.17 approved 2025-06-17 alongside revised 6.21 (electronic communication devices) • Board described planned committees and data-governance steps for classroom/instructional AI use • Specific provisions not in summary"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Reported policy 7.17 (Artificial Intelligence). Adoption/date: 2025-06-17. Key facts: • Policy 7.17 approved 2025-06-17 alongside revised 6.21 (electronic communication devices) • Board described planned committees and data-governance steps for classroom/instructional AI use • Specific provisions not in summary [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-morgan-county-v1",
@@ -8182,7 +8201,7 @@
     "policy_orientation": "permissive-with-integrity-checks",
     "notes": "No formal written policy located, but Superintendent Tracie Turrentine described an operative rule-set: unrestricted ChatGPT/LLM access on school servers, teachers use AI for concept explanation and programming instruction, progressive academic-integrity discipline up to a zero grade on the third infraction, detection via in-class vs take-home writing comparison.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.govtech.com/education/k-12/alabama-schools-establish-committees-rules-to-deal-with-ai",
@@ -8202,7 +8221,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Supt. Tracie Turrentine: district allows unrestricted ChatGPT/LLM use on school servers • Detection via comparing on-demand writing to prior student work • Third infraction of improper AI use = zero grade • Teachers use ChatGPT for explaining concepts and coding instruction"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Supt. Tracie Turrentine: district allows unrestricted ChatGPT/LLM use on school servers • Detection via comparing on-demand writing to prior student work • Third infraction of improper AI use = zero grade • Teachers use ChatGPT for explaining concepts and coding instruction [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-huntsville-city-v1",
@@ -8224,7 +8243,7 @@
     "policy_orientation": "curriculum-led",
     "notes": "Early adopter of statewide Intro-to-AI elective (Fall 2026) developed by Alabama School of Cyber Technology and Engineering. Aligned with Mayor's AI Task Force education committee (~100 members) coordinating AI standards across Huntsville/Madison City/Madison County. No public AI AUP located at crawl time.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://www.waff.com/2026/04/07/new-intro-ai-elective-rolling-out-alabama-schools-this-fall/",
@@ -8244,7 +8263,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • New 'Intro to AI' elective rolling out fall 2026 • ALSDE partnership with Alabama School of Cyber Technology and Engineering (ASCTE) • Curriculum developed by Mary Claire Wright (ASCTE) and student Emory Wilkinson • ~15 AL schools adopting: Huntsville City, Hartselle, Sylacauga CTC, Deshler, Cullman County CT • Covers AI mechanics, failures, environmental costs, academic integrity, mental health"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • New 'Intro to AI' elective rolling out fall 2026 • ALSDE partnership with Alabama School of Cyber Technology and Engineering (ASCTE) • Curriculum developed by Mary Claire Wright (ASCTE) and student Emory Wilkinson • ~15 AL schools adopting: Huntsville City, Hartselle, Sylacauga CTC, Deshler, Cullman County CT • Covers AI mechanics, failures, environmental costs, academic integrity, mental health [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-mobile-county-v1",
@@ -8266,7 +8285,7 @@
     "policy_orientation": "detection-procurement-only",
     "notes": "School board approved a Turnitin contract to deploy AI writing detection against students using ChatGPT and other AI writing tools for schoolwork. No public AI AUP or classroom guidance located at crawl time; posture is assessment-integrity-focused.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://mynbc15.com/news/local/mobile-county-public-schools-using-ai-to-catch-students-using-it-to-cheat",
@@ -8286,7 +8305,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Turnitin AI detection contract (≤$4,800) approved 2024-12-20 for Murphy High School • Dr. Reginald Crenshaw (board president) quoted on ensuring student skills vs. plagiarism • Procurement, not a formal written AI policy • Turnitin cited stat: 59% students use AI monthly"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Turnitin AI detection contract (≤$4,800) approved 2024-12-20 for Murphy High School • Dr. Reginald Crenshaw (board president) quoted on ensuring student skills vs. plagiarism • Procurement, not a formal written AI policy • Turnitin cited stat: 59% students use AI monthly [ai_classification: instructional_ai]"
   },
   {
     "record_id": "district-al-montgomery-public-v1",
@@ -8350,7 +8369,7 @@
     "policy_orientation": "internal-discussion-only",
     "notes": "Administrators publicly signaled continued AI conversations, planning additional teacher training and responsible classroom integration; tech-usage policies reviewed (inspired by Haidt's The Anxious Generation). No public AUP or board-adopted AI policy located.",
     "version": 1,
-    "updated_at": "2026-04-22T00:00:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_documents": [
       {
         "url": "https://cahabasun.com/community/trussville-schools-gear-up-for-high-energy-high-impact-year/",
@@ -8370,7 +8389,7 @@
     ],
     "source_authority": "official_guidance",
     "verification_status": "supported",
-    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Preparing teacher training on AI integration • Reassessing classroom tech through Haidt's 'The Anxious Generation' lens • No policy number, adoption date, or policy text — planning-stage discussion only"
+    "verification_notes": "Crawled from district website on 2026-04-22. | [2026-04-22 body extraction] secondary_reporting; no primary policy text available from this URL. Key facts: • Preparing teacher training on AI integration • Reassessing classroom tech through Haidt's 'The Anxious Generation' lens • No policy number, adoption date, or policy text — planning-stage discussion only [ai_classification: instructional_ai]"
   },
   {
     "jurisdiction_type": "district",
@@ -8388,7 +8407,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:30.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-cullman-county-v1",
@@ -8423,7 +8442,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 census] secondary_reporting. Procurement-level signal only (AI surveillance contract). No instructional AI policy located on district site. [2026-04-22 phase2 upgrade] Now incorporating ASCTE/ALSDE AI curriculum into career-tech classes."
+    "verification_notes": "[2026-04-22 census] secondary_reporting. Procurement-level signal only (AI surveillance contract). No instructional AI policy located on district site. [2026-04-22 phase2 upgrade] Now incorporating ASCTE/ALSDE AI curriculum into career-tech classes. [ai_classification: ai_adjacent]"
   },
   {
     "jurisdiction_type": "district",
@@ -8441,7 +8460,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:30.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-hartselle-city-v1",
@@ -8476,7 +8495,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 census] secondary_reporting. Committee formation + informal restrictions; no public policy document. [2026-04-22 phase2 upgrade] Now adopts ASCTE/ALSDE 'Intro to AI' elective curriculum (WAFF 2026-04-07)."
+    "verification_notes": "[2026-04-22 census] secondary_reporting. Committee formation + informal restrictions; no public policy document. [2026-04-22 phase2 upgrade] Now adopts ASCTE/ALSDE 'Intro to AI' elective curriculum (WAFF 2026-04-07). [ai_classification: instructional_ai]"
   },
   {
     "jurisdiction_type": "district",
@@ -8494,7 +8513,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-decatur-city-v1",
@@ -8516,7 +8535,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 census] secondary_reporting. Superintendent quote only; no public policy document."
+    "verification_notes": "[2026-04-22 census] secondary_reporting. Superintendent quote only; no public policy document. [ai_classification: instructional_ai]"
   },
   {
     "jurisdiction_type": "district",
@@ -8534,7 +8553,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:00.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-hoover-city-v1",
@@ -8555,7 +8574,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 census] secondary_reporting. Classroom pilot (ISTE case study); no districtwide policy."
+    "verification_notes": "[2026-04-22 census] secondary_reporting. Classroom pilot (ISTE case study); no districtwide policy. [ai_classification: ai_adjacent]"
   },
   {
     "jurisdiction_type": "district",
@@ -8573,7 +8592,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:30.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-homewood-city-v1",
@@ -8595,7 +8614,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Administrative quotes in local newspaper; no formal policy document."
+    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Administrative quotes in local newspaper; no formal policy document. [ai_classification: instructional_ai]"
   },
   {
     "jurisdiction_type": "district",
@@ -8613,7 +8632,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:30.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-sylacauga-city-v1",
@@ -8635,7 +8654,7 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Named adopter of statewide AI elective curriculum; no standalone policy document."
+    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Named adopter of statewide AI elective curriculum; no standalone policy document. [ai_classification: instructional_ai]"
   },
   {
     "jurisdiction_type": "district",
@@ -8653,7 +8672,7 @@
     "implementation_stage": null,
     "policy_orientation": null,
     "version": 1,
-    "updated_at": "2026-04-22T23:59:30.000Z",
+    "updated_at": "2026-04-22T23:59:59.000Z",
     "source_authority": "secondary_reporting",
     "verification_status": "partial",
     "record_id": "district-al-tuscumbia-city-v1",
@@ -8675,6 +8694,124 @@
         "relations": []
       }
     ],
-    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Named adopter of statewide AI elective curriculum; no standalone policy document."
+    "verification_notes": "[2026-04-22 phase2 census] secondary_reporting. Named adopter of statewide AI elective curriculum; no standalone policy document. [ai_classification: instructional_ai]"
+  },
+  {
+    "jurisdiction_type": "district",
+    "parent_jurisdiction_id": "state-al",
+    "state_abbr": "AL",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.9,
+    "policy_strength": 0,
+    "ai_use_allowed": null,
+    "assessment_policy": null,
+    "privacy_policy": null,
+    "teacher_pd_support": null,
+    "implementation_stage": 0,
+    "policy_orientation": "silent",
+    "version": 1,
+    "updated_at": "2026-04-22T23:59:59.000Z",
+    "source_authority": "unknown",
+    "verification_status": "supported",
+    "record_id": "district-al-birmingham-city-v1",
+    "jurisdiction_id": "district-al-birmingham-city",
+    "jurisdiction_name": "Birmingham City Schools",
+    "notes": "Direct PDF inspection (Student Code of Conduct, 1.3MB) confirms NO AI-related language as of 2026-04. Hard-verified silent.",
+    "source_documents": [
+      {
+        "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4669/SMS/4431473/BCS_Student_Code_of_Conduct.pdf",
+        "title": "Birmingham City Schools — Student Code of Conduct (checked for AI language)",
+        "published_date_guess": null,
+        "document_id": "AL-DISTRICT-BIRMINGHAM-CITY-CODE-CHECKED",
+        "issuer_name": "Birmingham City Schools",
+        "issuer_level": "k12_district",
+        "instrument_type": "district_position_statement",
+        "status": "in_effect",
+        "short_summary": "Code of Conduct directly inspected; contains no artificial-intelligence / ChatGPT / GenAI language.",
+        "relations": []
+      }
+    ],
+    "verification_notes": "[2026-04-22 phase3 verified-silent] Direct-fetch confirmation via WebFetch on Code of Conduct PDF returned NO AI-related language. [ai_classification: verified_silent]"
+  },
+  {
+    "jurisdiction_type": "district",
+    "parent_jurisdiction_id": "state-al",
+    "state_abbr": "AL",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.9,
+    "policy_strength": 0,
+    "ai_use_allowed": null,
+    "assessment_policy": null,
+    "privacy_policy": null,
+    "teacher_pd_support": null,
+    "implementation_stage": 0,
+    "policy_orientation": "silent",
+    "version": 1,
+    "updated_at": "2026-04-22T23:59:59.000Z",
+    "source_authority": "unknown",
+    "verification_status": "supported",
+    "record_id": "district-al-auburn-city-v1",
+    "jurisdiction_id": "district-al-auburn-city",
+    "jurisdiction_name": "Auburn City Schools",
+    "notes": "Direct HTML inspection of Auburn City Schools Acceptable Use Policy confirms NO AI-related language as of 2026-04. Hard-verified silent.",
+    "source_documents": [
+      {
+        "url": "https://www.auburnschools.org/acceptable-use-policy",
+        "title": "Auburn City Schools — Acceptable Use Policy (checked for AI language)",
+        "published_date_guess": null,
+        "document_id": "AL-DISTRICT-AUBURN-CITY-AUP-CHECKED",
+        "issuer_name": "Auburn City Schools",
+        "issuer_level": "k12_district",
+        "instrument_type": "acceptable_use_policy",
+        "status": "in_effect",
+        "short_summary": "District AUP directly inspected; contains no artificial-intelligence / ChatGPT / GenAI language.",
+        "relations": []
+      }
+    ],
+    "verification_notes": "[2026-04-22 phase3 verified-silent] Direct-fetch confirmation via WebFetch on AUP HTML returned NO AI-related language. [ai_classification: verified_silent]"
+  },
+  {
+    "jurisdiction_type": "district",
+    "parent_jurisdiction_id": "state-al",
+    "state_abbr": "AL",
+    "review_status": "approved",
+    "extraction_status": "validated",
+    "coder_type": "hybrid",
+    "confidence": 0.9,
+    "policy_strength": 0,
+    "ai_use_allowed": null,
+    "assessment_policy": null,
+    "privacy_policy": null,
+    "teacher_pd_support": null,
+    "implementation_stage": 0,
+    "policy_orientation": "silent",
+    "version": 1,
+    "updated_at": "2026-04-22T23:59:59.000Z",
+    "source_authority": "unknown",
+    "verification_status": "supported",
+    "record_id": "district-al-pickens-county-v1",
+    "jurisdiction_id": "district-al-pickens-county",
+    "jurisdiction_name": "Pickens County Schools",
+    "notes": "Random-sample audit target. Direct PDF inspection of 2024-2025 Code of Conduct confirms NO AI-related language. Hard-verified silent.",
+    "source_documents": [
+      {
+        "url": "https://resources.finalsite.net/images/v1744650399/pickenscountyschoolsnet/xwnsjah4ovebketze8jb/PickensCountySchoolsStudentParentCodeofConductandResourceGuide2024-2025.pdf",
+        "title": "Pickens County Schools — Student/Parent Code of Conduct and Resource Guide 2024-2025 (checked)",
+        "published_date_guess": "2024-08-01",
+        "document_id": "AL-DISTRICT-PICKENS-COUNTY-CODE-CHECKED",
+        "issuer_name": "Pickens County Schools",
+        "issuer_level": "k12_district",
+        "instrument_type": "district_position_statement",
+        "issued_date": "2024-08-01",
+        "status": "in_effect",
+        "short_summary": "Code of Conduct directly inspected; contains no AI-related language.",
+        "relations": []
+      }
+    ],
+    "verification_notes": "[2026-04-22 phase3 verified-silent] Random-sample audit (seed 42, pick 1/10). Direct-fetch confirmation via WebFetch on 2024-2025 Code PDF returned NO AI-related language. [ai_classification: verified_silent]"
   }
 ]

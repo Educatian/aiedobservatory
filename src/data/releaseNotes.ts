@@ -183,6 +183,39 @@ export const releaseNotes: ReleaseNote[] = [
           "Added Homewood City (2023 admin quote), Sylacauga City (curriculum adopter), Tuscumbia City (curriculum adopter via Deshler HS). Upgraded Hartselle + Cullman County to curriculum-level signal. Full report at data/generated/al-lea-census-report.md."
       }
     ]
+  },
+  {
+    version: "2026.04.22-g",
+    date: "2026-04-22",
+    title: "Alabama census — dialectical validation (v3)",
+    summary:
+      "Phase-3 dialectical pass invalidated the site:-operator saturation argument (0 recall on known positives) but validated the small-N finding via random 10-sample audit (0/10 false negatives) and external corroboration (Marshall & Nelson 2024: 15/139). Canonical now has 25 AL district records including 3 hard-verified silent.",
+    highlights: [
+      {
+        icon: "science",
+        title: "Counter-factual test failed — site: operator retracted",
+        body:
+          "site:madisoncity.k12.al.us, site:gcs.k12.al.us, site:tuscaloosacityschools.com all returned 0 hits for 'artificial intelligence' despite those districts HAVING public AI policies. Phase-2 saturation claim retracted; unfiltered queries + direct-fetch retained."
+      },
+      {
+        icon: "check_circle",
+        title: "External validation: Marshall & Nelson (2024) 15/139",
+        body:
+          "Auburn University researchers' Alabama Daily News op-ed (2024-11-25) independently reports '15 of 139' Alabama districts with public-facing AI policies — compatible with this census's 6 primary / 20 instructional signal range."
+      },
+      {
+        icon: "verified",
+        title: "3 hard-silent districts added (Birmingham, Auburn, Pickens)",
+        body:
+          "Direct-fetched Birmingham Code of Conduct PDF, Auburn AUP HTML, and Pickens County Code of Conduct PDF — all confirmed to contain ZERO AI language. Random 10-sample audit yielded 0/10 false negatives in the silent pool."
+      },
+      {
+        icon: "category",
+        title: "Classification refined: instructional_ai vs ai_adjacent vs verified_silent",
+        body:
+          "Every canonical record now carries an [ai_classification] tag. Cullman County (surveillance procurement) and Hoover City (classroom pilot only) re-coded as ai_adjacent, separating instructional-AI policy signals from AI-adjacent artifacts. Madison City HTML mirror at Page/8887 added as new primary_html source."
+      }
+    ]
   }
 ];
 
