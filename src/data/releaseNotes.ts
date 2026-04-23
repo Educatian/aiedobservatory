@@ -129,6 +129,33 @@ export const releaseNotes: ReleaseNote[] = [
           "Only 6 of 15 Alabama LEAs in our sample publish primary AI-policy text; the other 9 stop at board-meeting announcements or news mentions. Evidence artifact at data/generated/al-district-evidence.json."
       }
     ]
+  },
+  {
+    version: "2026.04.22-e",
+    date: "2026-04-22",
+    title: "Alabama LEA census — full 151-district sweep",
+    summary:
+      "We extended the Alabama district layer from a top-30 sample to a census of all 151 LEAs on the Wikipedia list. Of 151, only 19 show any public AI-policy signal — 6 publish primary text, 13 are news/committee/procurement/pilot-level, and ~132 are silent.",
+    highlights: [
+      {
+        icon: "fact_check",
+        title: "4 new LEAs surfaced in the long-tail sweep",
+        body:
+          "Cullman County (Spot.ai surveillance contract, 2023), Hartselle City (committee + app restrictions after ChatGPT incident), Decatur City (superintendent quote), and Hoover City (ISTE classroom pilot). All four are secondary_reporting — none publish a primary AI policy document."
+      },
+      {
+        icon: "insights",
+        title: "Population-level finding: 6/151 primary, 13/151 secondary, ~132/151 silent",
+        body:
+          "Of 151 Alabama LEAs, at most 6 publish primary AI-policy text in a researcher-accessible form as of April 2026. Full report at data/generated/al-lea-census-report.md. Caveats: public-web-only, news-source biased."
+      },
+      {
+        icon: "groups",
+        title: "District layer panel now shows 19 AL districts",
+        body:
+          "The inspector's pinned District layer panel automatically reflects the expanded canonical store — classification pills (primary_pdf / primary_html / secondary) render for every AL record."
+      }
+    ]
   }
 ];
 
