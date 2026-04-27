@@ -92,7 +92,7 @@ export function DeveloperPage({ onOpenDashboard, onOpenLanding }: DeveloperPageP
   const [imgFailed, setImgFailed] = useState(false);
 
   return (
-    <div className="developer-shell">
+    <div className="developer-shell aied-themed">
       <header className="developer-topbar">
         <button type="button" className="developer-brand" onClick={onOpenLanding}>
           <AppIcon className="brand-icon" decorative />

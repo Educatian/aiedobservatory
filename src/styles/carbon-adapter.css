@@ -1,0 +1,257 @@
+/*
+ * Carbon adapter — rebinds the project's legacy theme variables to Carbon
+ * tokens INSIDE the new shell (.aied-themed). Existing rules in styles.css that
+ * use var(--surface), var(--primary), etc. automatically inherit the new
+ * Carbon palette without rewriting every selector.
+ *
+ * Loaded after styles.css so the variable rebinding wins inside .aied-themed.
+ * Targeted overrides at the bottom handle places where colors are hardcoded
+ * in styles.css (status pills, gradients, tile-strength rules).
+ */
+
+/* Body baseline — Plex Sans default, Carbon background. */
+html { color-scheme: light; }
+body {
+  font-family: var(--cds-font-sans);
+  background: var(--cds-background);
+  color: var(--cds-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Carbon-style focus ring everywhere — overrides browser defaults. */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
+
+.aied-themed {
+  /* Surface */
+  --background: var(--cds-background);
+  --surface: var(--cds-layer-02);
+  --surface-low: var(--cds-layer-01);
+  --surface-mid: var(--cool-gray-10);
+  --surface-high: var(--cool-gray-20);
+  --surface-variant: var(--cool-gray-30);
+
+  /* Brand */
+  --primary: var(--blue-70);
+  --primary-container: var(--blue-80);
+  --secondary: var(--blue-60);
+  --secondary-soft: var(--blue-30);
+  --tertiary: var(--purple-70);
+  --tertiary-soft: var(--purple-40);
+
+  /* Text */
+  --ink: var(--cds-text-primary);
+  --muted: var(--cds-text-secondary);
+  --outline: var(--cds-border-subtle-01);
+
+  /* Elevation */
+  --shadow-soft: var(--aied-elev-soft);
+  --shadow-strong: var(--aied-elev-lifted);
+
+  /* Choropleth tiles */
+  --tile-high: var(--aied-strength-robust);
+  --tile-mid: var(--aied-strength-developing);
+  --tile-low: var(--aied-strength-emerging);
+  --tile-queued: var(--gray-20);
+
+  /* Default body type */
+  font-family: var(--cds-font-sans);
+  color: var(--cds-text-primary);
+}
+
+/* Headings inside the dashboard switch from Manrope to Plex Sans. */
+.aied-themed h1,
+.aied-themed h2,
+.aied-themed h3,
+.aied-themed h4,
+.aied-themed h5,
+.aied-themed h6,
+.aied-themed .dash-state-name,
+.aied-themed .detail-header h3,
+.aied-themed .section-overlay h2,
+.aied-themed .section-overlay h3 {
+  font-family: var(--cds-font-sans);
+  letter-spacing: 0;
+}
+
+.aied-themed code,
+.aied-themed pre,
+.aied-themed .dash-state-abbr,
+.aied-themed .citation-chip {
+  font-family: var(--cds-font-mono);
+}
+
+.aied-themed body,
+.aied-themed p,
+.aied-themed li,
+.aied-themed span,
+.aied-themed a,
+.aied-themed button,
+.aied-themed input,
+.aied-themed select,
+.aied-themed textarea {
+  font-family: inherit;
+}
+
+/* ── Hardcoded color overrides ───────────────────────────────────── */
+
+/* Status pills — re-tint to Carbon */
+.aied-themed .status-pill.coded {
+  background: var(--blue-10);
+  color: var(--blue-70);
+}
+.aied-themed .status-pill.queued {
+  background: var(--gray-20);
+  color: var(--cds-text-secondary);
+}
+
+/* Trust / citation chips */
+.aied-themed .trust-boundary-chip {
+  background: var(--cds-layer-01);
+  color: var(--cds-text-secondary);
+  border-color: var(--cds-border-subtle-01);
+}
+.aied-themed .citation-chip {
+  background: var(--blue-10);
+  color: var(--blue-70);
+  border-color: rgba(15, 98, 254, 0.2);
+}
+
+/* Score bar gradient → Carbon blue→purple */
+.aied-themed .score-bar { background: var(--cds-layer-accent-01); }
+.aied-themed .score-bar span,
+.aied-themed .score-bar > span {
+  background: var(--aied-brand-gradient);
+}
+
+/* Buttons that use hardcoded purple */
+.aied-themed .table-section button.primary,
+.aied-themed .compare-matrix-shell button.primary,
+.aied-themed .method-card button.primary {
+  background: var(--cds-button-primary);
+  color: var(--cds-text-on-color);
+  border-color: transparent;
+}
+.aied-themed .table-section button.primary:hover,
+.aied-themed .compare-matrix-shell button.primary:hover,
+.aied-themed .method-card button.primary:hover {
+  background: var(--cds-button-primary-hover);
+}
+
+/* Borders on big card surfaces lighten to Carbon */
+.aied-themed .detail-panel,
+.aied-themed .method-card,
+.aied-themed .compare-matrix-shell,
+.aied-themed .table-section,
+.aied-themed .stage-column,
+.aied-themed .leadership-readiness-card,
+.aied-themed .live-rail-card {
+  border-color: var(--cds-border-subtle-01);
+  background: var(--cds-layer-02);
+  box-shadow: var(--aied-elev-soft);
+}
+
+/* Section headers in overlays look like proper Carbon section titles */
+.aied-themed .section-overlay h2,
+.aied-themed .aied-section-overlay__body h2 {
+  font: var(--cds-fw-regular) 28px/1.286 var(--cds-font-sans);
+  color: var(--cds-text-primary);
+  letter-spacing: 0;
+  margin: 0 0 var(--cds-spacing-04);
+}
+
+.aied-themed .section-overlay p.lede,
+.aied-themed .aied-section-overlay__body p.lede {
+  font: var(--cds-fw-regular) 16px/1.5 var(--cds-font-sans);
+  color: var(--cds-text-secondary);
+  margin: 0 0 var(--cds-spacing-06);
+  max-width: 70ch;
+}
+
+/* Table styling — clean Carbon grid lines */
+.aied-themed table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.aied-themed .table-section thead th,
+.aied-themed .compare-matrix-shell thead th {
+  background: var(--cds-layer-01);
+  color: var(--cds-text-secondary);
+  font: var(--cds-fw-semibold) 12px/1.286 var(--cds-font-sans);
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--cds-border-subtle-01);
+  padding: var(--cds-spacing-03) var(--cds-spacing-04);
+  text-align: left;
+}
+.aied-themed .table-section tbody td,
+.aied-themed .compare-matrix-shell tbody td {
+  border-bottom: 1px solid var(--cds-border-subtle-00);
+  padding: var(--cds-spacing-03) var(--cds-spacing-04);
+  color: var(--cds-text-primary);
+  font-size: 13px;
+  line-height: 1.42857;
+}
+.aied-themed .table-section tbody tr:hover,
+.aied-themed .compare-matrix-shell tbody tr:hover {
+  background: var(--cds-layer-hover-01);
+}
+
+/* Links inside dashboard adopt Carbon link blue */
+.aied-themed a {
+  color: var(--cds-link-primary);
+  text-decoration: none;
+}
+.aied-themed a:hover { color: var(--cds-link-primary-hover); text-decoration: underline; }
+
+/* Inputs / textareas in legacy markup pick up Carbon style */
+.aied-themed input[type="text"]:not(.aied-textfield__input),
+.aied-themed input[type="search"]:not(.aied-textfield__input),
+.aied-themed textarea {
+  border: 1px solid var(--cds-border-subtle-01);
+  border-radius: 8px;
+  padding: 0 var(--cds-spacing-04);
+  height: 32px;
+  font-family: inherit;
+  font-size: 13px;
+  background: var(--cds-field-02);
+  color: var(--cds-text-primary);
+}
+.aied-themed textarea { height: auto; padding: var(--cds-spacing-03) var(--cds-spacing-04); }
+.aied-themed input[type="text"]:not(.aied-textfield__input):focus,
+.aied-themed input[type="search"]:not(.aied-textfield__input):focus,
+.aied-themed textarea:focus {
+  outline: none;
+  border-color: var(--cds-border-interactive);
+  box-shadow: inset 0 0 0 1px var(--cds-border-interactive);
+}
+
+/* Stage / kanban columns — neutralize purple highlights */
+.aied-themed .stage-column .stage-pill,
+.aied-themed .stage-column .stage-card {
+  border-radius: 8px;
+}
+.aied-themed .stage-pill.high,    .aied-themed .stage-card.high    { background: var(--blue-10);     color: var(--blue-70); }
+.aied-themed .stage-pill.medium,  .aied-themed .stage-card.medium  { background: var(--cool-gray-10); color: var(--cds-text-primary); }
+.aied-themed .stage-pill.low,     .aied-themed .stage-card.low     { background: var(--gray-20);     color: var(--cds-text-secondary); }
+
+/* Drawer + modal surfaces adopt Carbon */
+.aied-themed .analysis-drawer,
+.aied-themed .login-modal,
+.aied-themed .whatsnew-modal {
+  background: var(--cds-layer-02);
+  color: var(--cds-text-primary);
+}
+.aied-themed .analysis-drawer-backdrop,
+.aied-themed .login-modal-backdrop,
+.aied-themed .whatsnew-modal-backdrop {
+  background: var(--cds-overlay);
+}
+
+/* Confidence accents */
+.aied-themed .confidence-high   { color: var(--aied-confidence-high); }
+.aied-themed .confidence-medium { color: var(--aied-confidence-moderate); }
+.aied-themed .confidence-low    { color: var(--aied-confidence-low); }

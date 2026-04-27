@@ -36,7 +36,7 @@ export function LoginModal({ open, onClose, onSubmit, onSkipTesting }: LoginModa
   }
 
   return (
-    <div className="login-modal-backdrop" onClick={onClose}>
+    <div className="login-modal-backdrop aied-themed" onClick={onClose}>
       <div className="login-modal" onClick={(event) => event.stopPropagation()}>
         <div className="login-modal-header">
           <div>

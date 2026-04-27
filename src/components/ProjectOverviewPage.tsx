@@ -104,7 +104,7 @@ export function ProjectOverviewPage({ records, onOpenDashboard }: ProjectOvervie
     (evaluation.approval_route_distribution?.sample_audit ?? 0);
 
   return (
-    <div className="overview-shell">
+    <div className="overview-shell aied-themed">
       <header className="overview-topbar">
         <div className="overview-topbar-brand">
           <span className="overview-topbar-mark">

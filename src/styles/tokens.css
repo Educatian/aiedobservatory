@@ -1,0 +1,377 @@
+/*
+ * AIED Observatory — design tokens
+ *
+ * Foundation layer for the Direction-A visual system. Built on IBM Carbon
+ * tokens (colors, type, spacing, motion) with project-specific extensions
+ * for policy strength buckets and the brand gradient. All UI components in
+ * src/components/ui/ and src/components/shell/ consume tokens defined here.
+ *
+ * Loaded before styles.css so legacy rules can opt in by switching to the
+ * --cds-* / --aied-* custom properties as they are migrated.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Swatch palette — raw Carbon colors. Use semantic tokens in components.
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  --black-100: #000000;
+  --white-0: #ffffff;
+
+  --gray-10: #f4f4f4;  --gray-20: #e0e0e0;  --gray-30: #c6c6c6;
+  --gray-40: #a8a8a8;  --gray-50: #8d8d8d;  --gray-60: #6f6f6f;
+  --gray-70: #525252;  --gray-80: #393939;  --gray-90: #262626;
+  --gray-100: #161616;
+
+  --cool-gray-10: #f2f4f8; --cool-gray-20: #dde1e6; --cool-gray-30: #c1c7cd;
+  --cool-gray-40: #a2a9b0; --cool-gray-50: #878d96; --cool-gray-60: #697077;
+  --cool-gray-70: #4d5358; --cool-gray-80: #343a3f; --cool-gray-90: #21272a;
+  --cool-gray-100: #121619;
+
+  --blue-10: #edf5ff; --blue-20: #d0e2ff; --blue-30: #a6c8ff; --blue-40: #78a9ff;
+  --blue-50: #4589ff; --blue-60: #0f62fe; --blue-70: #0043ce; --blue-80: #002d9c;
+  --blue-90: #001d6c; --blue-100: #001141;
+
+  --cyan-10: #e5f6ff; --cyan-20: #bae6ff; --cyan-30: #82cfff; --cyan-40: #33b1ff;
+  --cyan-50: #1192e8; --cyan-60: #0072c3; --cyan-70: #00539a; --cyan-80: #003a6d;
+  --cyan-90: #012749; --cyan-100: #061727;
+
+  --teal-10: #d9fbfb; --teal-20: #9ef0f0; --teal-30: #3ddbd9; --teal-40: #08bdba;
+  --teal-50: #009d9a; --teal-60: #007d79; --teal-70: #005d5d; --teal-80: #004144;
+  --teal-90: #022b30; --teal-100: #081a1c;
+
+  --green-10: #defbe6; --green-20: #a7f0ba; --green-30: #6fdc8c; --green-40: #42be65;
+  --green-50: #24a148; --green-60: #198038; --green-70: #0e6027; --green-80: #044317;
+  --green-90: #022d0d; --green-100: #071908;
+
+  --yellow-10: #fcf4d6; --yellow-20: #fddc69; --yellow-30: #f1c21b; --yellow-40: #d2a106;
+  --yellow-50: #b28600; --yellow-60: #8e6a00; --yellow-70: #684e00; --yellow-80: #483700;
+  --yellow-90: #302400; --yellow-100: #1c1500;
+
+  --orange-10: #fff2e8; --orange-20: #ffd9be; --orange-30: #ffb784; --orange-40: #ff832b;
+  --orange-50: #eb6200; --orange-60: #ba4e00; --orange-70: #8a3800; --orange-80: #5e2900;
+  --orange-90: #3e1a00; --orange-100: #231000;
+
+  --red-10: #fff1f1; --red-20: #ffd7d9; --red-30: #ffb3b8; --red-40: #ff8389;
+  --red-50: #fa4d56; --red-60: #da1e28; --red-70: #a2191f; --red-80: #750e13;
+  --red-90: #520408; --red-100: #2d0709;
+
+  --magenta-10: #fff0f7; --magenta-20: #ffd6e8; --magenta-30: #ffafd2; --magenta-40: #ff7eb6;
+  --magenta-50: #ee5396; --magenta-60: #d02670; --magenta-70: #9f1853; --magenta-80: #740937;
+  --magenta-90: #510224; --magenta-100: #2a0a18;
+
+  --purple-10: #f6f2ff; --purple-20: #e8daff; --purple-30: #d4bbff; --purple-40: #be95ff;
+  --purple-50: #a56eff; --purple-60: #8a3ffc; --purple-70: #6929c4; --purple-80: #491d8b;
+  --purple-90: #31135e; --purple-100: #1c0f30;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Semantic tokens — light theme (default)
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  --cds-color-scheme: light;
+
+  /* Background / layers */
+  --cds-background: var(--white-0);
+  --cds-background-inverse: var(--gray-80);
+  --cds-background-brand: var(--blue-60);
+  --cds-background-active: rgba(141, 141, 141, 0.5);
+  --cds-background-hover: rgba(141, 141, 141, 0.12);
+  --cds-background-selected: rgba(141, 141, 141, 0.2);
+  --cds-background-selected-hover: rgba(141, 141, 141, 0.32);
+
+  --cds-layer-01: var(--gray-10);
+  --cds-layer-active-01: var(--gray-30);
+  --cds-layer-hover-01: #e8e8e8;
+  --cds-layer-selected-01: var(--gray-20);
+  --cds-layer-selected-inverse: var(--gray-100);
+
+  --cds-layer-02: var(--white-0);
+  --cds-layer-hover-02: #e8e8e8;
+  --cds-layer-selected-02: var(--gray-20);
+
+  --cds-layer-accent-01: var(--gray-20);
+  --cds-layer-accent-02: var(--gray-20);
+
+  /* Field (form input backgrounds) */
+  --cds-field-01: var(--gray-10);
+  --cds-field-hover-01: #e8e8e8;
+  --cds-field-02: var(--white-0);
+  --cds-field-hover-02: #e8e8e8;
+
+  /* Border */
+  --cds-border-subtle-00: var(--gray-20);
+  --cds-border-subtle-01: var(--gray-30);
+  --cds-border-subtle-02: var(--gray-20);
+  --cds-border-strong-01: var(--gray-50);
+  --cds-border-strong-02: var(--gray-50);
+  --cds-border-tile-01: var(--gray-30);
+  --cds-border-inverse: var(--gray-100);
+  --cds-border-interactive: var(--blue-60);
+  --cds-border-disabled: var(--gray-30);
+
+  /* Text */
+  --cds-text-primary: var(--gray-100);
+  --cds-text-secondary: var(--gray-70);
+  --cds-text-placeholder: rgba(22, 22, 22, 0.4);
+  --cds-text-helper: var(--gray-60);
+  --cds-text-error: var(--red-60);
+  --cds-text-inverse: var(--white-0);
+  --cds-text-on-color: var(--white-0);
+  --cds-text-on-color-disabled: var(--gray-50);
+  --cds-text-disabled: rgba(22, 22, 22, 0.25);
+
+  /* Link */
+  --cds-link-primary: var(--blue-60);
+  --cds-link-primary-hover: var(--blue-70);
+  --cds-link-secondary: var(--blue-70);
+  --cds-link-visited: var(--purple-60);
+
+  /* Icon */
+  --cds-icon-primary: var(--gray-100);
+  --cds-icon-secondary: var(--gray-70);
+  --cds-icon-inverse: var(--white-0);
+  --cds-icon-on-color: var(--white-0);
+  --cds-icon-interactive: var(--blue-60);
+
+  /* Support / status */
+  --cds-support-error: var(--red-60);
+  --cds-support-success: var(--green-50);
+  --cds-support-warning: var(--yellow-30);
+  --cds-support-info: var(--blue-70);
+  --cds-support-caution-minor: var(--yellow-30);
+  --cds-support-caution-major: var(--orange-40);
+
+  /* Focus */
+  --cds-focus: var(--blue-60);
+  --cds-focus-inset: var(--white-0);
+  --cds-focus-inverse: var(--white-0);
+
+  /* Misc */
+  --cds-interactive: var(--blue-60);
+  --cds-highlight: var(--blue-20);
+  --cds-overlay: rgba(0, 0, 0, 0.6);
+  --cds-toggle-off: var(--gray-50);
+  --cds-shadow: rgba(0, 0, 0, 0.3);
+  --cds-skeleton-background: #e8e8e8;
+  --cds-skeleton-element: var(--gray-30);
+
+  /* Buttons */
+  --cds-button-primary: var(--blue-60);
+  --cds-button-primary-hover: var(--blue-70);
+  --cds-button-primary-active: var(--blue-80);
+  --cds-button-secondary: var(--gray-80);
+  --cds-button-secondary-hover: var(--gray-90);
+  --cds-button-secondary-active: var(--gray-60);
+  --cds-button-tertiary: var(--blue-60);
+  --cds-button-tertiary-hover: var(--blue-70);
+  --cds-button-danger-primary: var(--red-60);
+  --cds-button-danger-hover: var(--red-70);
+  --cds-button-danger-active: var(--red-80);
+  --cds-button-disabled: var(--gray-30);
+  --cds-button-separator: var(--gray-20);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Dark theme — opt-in via [data-theme="dark"] on <html> or <body>.
+   Reserved for a future "presentation mode"; not active in Phase 1.
+   ──────────────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --cds-color-scheme: dark;
+
+  --cds-background: var(--gray-100);
+  --cds-background-inverse: var(--gray-10);
+  --cds-background-active: rgba(141, 141, 141, 0.4);
+  --cds-background-hover: rgba(141, 141, 141, 0.16);
+  --cds-background-selected: rgba(141, 141, 141, 0.24);
+  --cds-background-selected-hover: rgba(141, 141, 141, 0.32);
+
+  --cds-layer-01: var(--gray-90);
+  --cds-layer-active-01: var(--gray-70);
+  --cds-layer-hover-01: #333333;
+  --cds-layer-selected-01: var(--gray-80);
+  --cds-layer-02: var(--gray-80);
+  --cds-layer-hover-02: #474747;
+  --cds-layer-selected-02: var(--gray-70);
+  --cds-layer-accent-01: var(--gray-80);
+  --cds-layer-accent-02: var(--gray-70);
+
+  --cds-field-01: var(--gray-90);
+  --cds-field-hover-01: #333333;
+  --cds-field-02: var(--gray-80);
+  --cds-field-hover-02: #474747;
+
+  --cds-border-subtle-00: var(--gray-80);
+  --cds-border-subtle-01: var(--gray-70);
+  --cds-border-subtle-02: var(--gray-60);
+  --cds-border-strong-01: var(--gray-60);
+  --cds-border-strong-02: var(--gray-50);
+  --cds-border-tile-01: var(--gray-70);
+  --cds-border-inverse: var(--gray-10);
+  --cds-border-interactive: var(--blue-50);
+  --cds-border-disabled: rgba(141, 141, 141, 0.5);
+
+  --cds-text-primary: var(--gray-10);
+  --cds-text-secondary: var(--gray-30);
+  --cds-text-placeholder: rgba(244, 244, 244, 0.4);
+  --cds-text-helper: var(--gray-40);
+  --cds-text-error: var(--red-40);
+  --cds-text-inverse: var(--gray-100);
+  --cds-text-disabled: rgba(244, 244, 244, 0.25);
+
+  --cds-link-primary: var(--blue-40);
+  --cds-link-primary-hover: var(--blue-30);
+
+  --cds-icon-primary: var(--gray-10);
+  --cds-icon-secondary: var(--gray-30);
+  --cds-icon-inverse: var(--gray-100);
+
+  --cds-focus: var(--white-0);
+  --cds-focus-inset: var(--gray-100);
+  --cds-focus-inverse: var(--blue-60);
+
+  --cds-interactive: var(--blue-50);
+  --cds-highlight: var(--blue-90);
+  --cds-overlay: rgba(0, 0, 0, 0.6);
+  --cds-shadow: rgba(0, 0, 0, 0.8);
+  --cds-skeleton-background: #1c1c1c;
+  --cds-skeleton-element: var(--gray-80);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type — families, weights, scale
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  --cds-font-sans: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --cds-font-sans-condensed: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+  --cds-font-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-font-mono: 'IBM Plex Mono', Menlo, 'DejaVu Sans Mono', Courier, monospace;
+
+  --cds-fw-light: 300;
+  --cds-fw-regular: 400;
+  --cds-fw-medium: 500;
+  --cds-fw-semibold: 600;
+  --cds-fw-bold: 700;
+}
+
+/* Productive type scale — utility classes for ad-hoc use; components prefer
+   composing the family/size/weight tokens directly. */
+.cds-label-01        { font-family: var(--cds-font-sans); font-size: .75rem;   line-height: 1.33333; letter-spacing: .32px; font-weight: 400; }
+.cds-label-02        { font-family: var(--cds-font-sans); font-size: .875rem;  line-height: 1.28572; letter-spacing: .16px; font-weight: 400; }
+.cds-helper-01       { font-family: var(--cds-font-sans); font-size: .75rem;   line-height: 1.33333; letter-spacing: .32px; }
+.cds-body-01         { font-family: var(--cds-font-sans); font-size: .875rem;  line-height: 1.42857; letter-spacing: .16px; font-weight: 400; }
+.cds-body-02         { font-family: var(--cds-font-sans); font-size: 1rem;     line-height: 1.5;     letter-spacing: 0;     font-weight: 400; }
+.cds-body-compact-01 { font-family: var(--cds-font-sans); font-size: .875rem;  line-height: 1.28572; letter-spacing: .16px; font-weight: 400; }
+.cds-body-compact-02 { font-family: var(--cds-font-sans); font-size: 1rem;     line-height: 1.375;   letter-spacing: 0;     font-weight: 400; }
+.cds-code-01         { font-family: var(--cds-font-mono); font-size: .75rem;   line-height: 1.33333; letter-spacing: .32px; font-weight: 400; }
+.cds-code-02         { font-family: var(--cds-font-mono); font-size: .875rem;  line-height: 1.42857; letter-spacing: .32px; font-weight: 400; }
+.cds-heading-01      { font-family: var(--cds-font-sans); font-size: .875rem;  line-height: 1.28572; letter-spacing: .16px; font-weight: 600; }
+.cds-heading-02      { font-family: var(--cds-font-sans); font-size: 1rem;     line-height: 1.375;   letter-spacing: 0;     font-weight: 600; }
+.cds-heading-03      { font-family: var(--cds-font-sans); font-size: 1.25rem;  line-height: 1.4;     letter-spacing: 0;     font-weight: 400; }
+.cds-heading-04      { font-family: var(--cds-font-sans); font-size: 1.75rem;  line-height: 1.28572; letter-spacing: 0;     font-weight: 400; }
+.cds-heading-05      { font-family: var(--cds-font-sans); font-size: 2rem;     line-height: 1.25;    letter-spacing: 0;     font-weight: 400; }
+.cds-heading-06      { font-family: var(--cds-font-sans); font-size: 2.625rem; line-height: 1.199;   letter-spacing: 0;     font-weight: 300; }
+.cds-heading-07      { font-family: var(--cds-font-sans); font-size: 3.375rem; line-height: 1.199;   letter-spacing: 0;     font-weight: 300; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Spacing — Carbon's mini-unit scale (8-based)
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  --cds-spacing-01: 0.125rem;  /*  2px */
+  --cds-spacing-02: 0.25rem;   /*  4px */
+  --cds-spacing-03: 0.5rem;    /*  8px */
+  --cds-spacing-04: 0.75rem;   /* 12px */
+  --cds-spacing-05: 1rem;      /* 16px */
+  --cds-spacing-06: 1.5rem;    /* 24px */
+  --cds-spacing-07: 2rem;      /* 32px */
+  --cds-spacing-08: 2.5rem;    /* 40px */
+  --cds-spacing-09: 3rem;      /* 48px */
+  --cds-spacing-10: 4rem;      /* 64px */
+  --cds-spacing-11: 5rem;      /* 80px */
+  --cds-spacing-12: 6rem;      /* 96px */
+  --cds-spacing-13: 10rem;     /* 160px */
+
+  --cds-size-xs: 1.5rem;       /* 24 */
+  --cds-size-sm: 2rem;         /* 32 */
+  --cds-size-md: 2.5rem;       /* 40 */
+  --cds-size-lg: 3rem;         /* 48 */
+  --cds-size-xl: 4rem;         /* 64 */
+  --cds-size-2xl: 5rem;        /* 80 */
+
+  --cds-icon-size-01: 1rem;
+  --cds-icon-size-02: 1.25rem;
+
+  --cds-bp-sm: 20rem;
+  --cds-bp-md: 42rem;
+  --cds-bp-lg: 66rem;
+  --cds-bp-xlg: 82rem;
+  --cds-bp-max: 99rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Motion
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  --cds-duration-fast-01: 70ms;
+  --cds-duration-fast-02: 110ms;
+  --cds-duration-moderate-01: 150ms;
+  --cds-duration-moderate-02: 240ms;
+  --cds-duration-slow-01: 400ms;
+  --cds-duration-slow-02: 700ms;
+
+  --cds-easing-standard-productive: cubic-bezier(0.2, 0, 0.38, 0.9);
+  --cds-easing-standard-expressive: cubic-bezier(0.4, 0.14, 0.3, 1);
+  --cds-easing-entrance-productive: cubic-bezier(0, 0, 0.38, 0.9);
+  --cds-easing-entrance-expressive: cubic-bezier(0, 0, 0.3, 1);
+  --cds-easing-exit-productive: cubic-bezier(0.2, 0, 1, 0.9);
+  --cds-easing-exit-expressive: cubic-bezier(0.4, 0.14, 1, 1);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   AIED Observatory — project tokens
+   Brand gradient, policy-strength buckets, and dashboard-specific layer
+   colors. These layer on top of Carbon and are owned by this app.
+   ──────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --aied-brand-from: var(--blue-60);
+  --aied-brand-to: var(--purple-70);
+  --aied-brand-gradient: linear-gradient(135deg, var(--aied-brand-from) 0%, var(--aied-brand-to) 100%);
+  --aied-brand-gradient-soft: linear-gradient(135deg, rgba(15, 98, 254, 0.08) 0%, rgba(105, 41, 196, 0.10) 100%);
+
+  /* Policy strength buckets (matches design-set STRENGTH_BUCKETS) */
+  --aied-strength-no-data:     var(--gray-20);   /* 0–4   */
+  --aied-strength-emerging:    var(--blue-30);   /* 5–8   */
+  --aied-strength-developing:  var(--blue-50);   /* 9–11  */
+  --aied-strength-established: var(--blue-60);   /* 12–13 */
+  --aied-strength-robust:      var(--purple-80); /* 14–16 */
+
+  /* Confidence bands */
+  --aied-confidence-high:     var(--green-50);
+  --aied-confidence-moderate: var(--yellow-30);
+  --aied-confidence-low:      var(--orange-40);
+
+  /* Dashboard layout heights / widths */
+  --aied-topbar-h: 56px;
+  --aied-rail-w: 268px;
+  --aied-rail-w-collapsed: 56px;
+  --aied-inspector-w: 380px;
+
+  /* Elevation — soft (resting cards) and lifted (sheets / modals) */
+  --aied-elev-soft:   0 1px 2px rgba(22, 22, 22, 0.04), 0 2px 6px rgba(22, 22, 22, 0.06);
+  --aied-elev-lifted: 0 4px 12px rgba(22, 22, 22, 0.08), 0 16px 32px rgba(22, 22, 22, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Baseline — opt-in body class. Apply once we migrate the root shell.
+   ──────────────────────────────────────────────────────────────────────── */
+body.cds-baseline {
+  font-family: var(--cds-font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.28572;
+  letter-spacing: 0.16px;
+  color: var(--cds-text-primary);
+  background: var(--cds-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

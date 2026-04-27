@@ -14,6 +14,38 @@ Evidence-grounded observatory for tracking AI-in-education guidance across U.S. 
 
 Brand assets for deployment and sharing live in [`public/app-icon.svg`](./public/app-icon.svg), [`public/icon-192.png`](./public/icon-192.png), [`public/icon-512.png`](./public/icon-512.png), and [`public/social-preview.png`](./public/social-preview.png).
 
+## Preview
+
+The dashboard runs on an IBM-Carbon-derived design system (IBM Plex Sans, Carbon swatch palette, productive sidebar layout). Screenshots regenerate via `node scripts/capture-ui-screenshots.mjs` against a running dev server.
+
+<p align="center">
+  <img src="./docs/screenshots/01-landing.png" alt="Landing page" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/02-dashboard-map.png" alt="Dashboard — map view" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/03-dashboard-compare.png" alt="Dashboard — compare regions" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/04-dashboard-timeline.png" alt="Dashboard — policy timeline" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/05-dashboard-sources.png" alt="Dashboard — source library" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/06-dashboard-methodology.png" alt="Dashboard — methodology" width="900" />
+</p>
+
+<p align="center">
+  <img src="./docs/screenshots/07-projectoverview.png" alt="Project overview page" width="900" />
+</p>
+
 ## What it is
 
 This project turns fragmented guidance pages, PDFs, implementation memos, and related policy artifacts into inspectable state-level records for leadership, policy analysis, and longitudinal monitoring.

@@ -18,7 +18,7 @@ export function LandingPage({
   onSkipTesting
 }: LandingPageProps) {
   return (
-    <div className="landing-shell">
+    <div className="landing-shell aied-themed">
       <header className="landing-topbar">
         <div className="landing-brand">
           <div className="landing-brand-mark">

@@ -23,9 +23,18 @@ import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
 import { TrustPanel } from "./components/TrustPanel";
 import { WhatsNewModal } from "./components/WhatsNewModal";
+import { SideRail, TopBar, type FilterDimension, type TopBarView } from "./components/shell";
+import { SegmentControl } from "./components/ui";
 import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
 import { currentRelease } from "./data/releaseNotes";
 import type { PolicyEvent, PolicyRecord } from "./types";
+
+const PROJECT_POLICY_DOMAINS = ["AI Use", "Assessment", "Privacy", "Teacher PD"];
+
+function activeSectionToTopBarView(section: NavSection): TopBarView {
+  if (section === "policy-domains" || section === "table-view") return "map-view";
+  return section;
+}
 
 const WHATS_NEW_KEY = "aiedob.whatsNewSeenVersion";
 
@@ -109,17 +118,6 @@ function readWorkspaceSession(): WorkspaceSession | null {
   }
 }
 
-function getInitials(value: string): string {
-  const initials = value
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
-
-  return initials || "AO";
-}
-
 function isLocalWorkspaceSession(session: WorkspaceSession | null): boolean {
   return Boolean(session?.email.endsWith("@local.aied-policy-atlas"));
 }
@@ -175,6 +173,7 @@ function App() {
     return () => window.removeEventListener("aiedob:release-prep", onPrep);
   }, []);
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
+  const [activeFilter, setActiveFilter] = useState<FilterDimension>("geo");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [showBroadbandOverlay, setShowBroadbandOverlay] = useState(false);
   const [broadbandPatternHatched, setBroadbandPatternHatched] = useState(false);
@@ -516,379 +515,287 @@ function App() {
   }
 
   return (
-    <div
-      className={`sentinel-shell${sidebarCollapsed ? " sidebar-collapsed" : ""}`}
-      onClick={(e) => {
-        if (
-          !sidebarCollapsed &&
-          window.matchMedia("(max-width: 640px)").matches &&
-          e.target === e.currentTarget
-        ) {
-          setSidebarCollapsed(true);
+    <div className="aied-app aied-themed">
+      <NewAnalysisDrawer
+        open={isAnalysisDrawerOpen}
+        records={records}
+        selectedState={selectedState}
+        onClose={() => setIsAnalysisDrawerOpen(false)}
+        onNavigate={navigateToDashboard}
+        onSelectState={selectState}
+      />
+
+      <LoginModal
+        open={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onSubmit={handleWorkspaceLogin}
+        onSkipTesting={handleSkipTesting}
+      />
+
+      <TopBar
+        activeView={activeSectionToTopBarView(activeSection)}
+        onSelectView={navigateToDashboard}
+        search={searchQuery}
+        onSearch={setSearchQuery}
+        onOpenWhatsNew={openWhatsNew}
+        whatsNewVersion={currentRelease.version}
+        workspaceSession={
+          workspaceSession
+            ? {
+                displayName: getWorkspaceLabel(workspaceSession),
+                organization: workspaceSession.organization,
+              }
+            : null
         }
-      }}
-    >
-      <button
-        type="button"
-        className="mobile-nav-toggle"
-        aria-label="Open navigation"
-        onClick={() => setSidebarCollapsed(false)}
-      >
-        <span className="material-symbols-outlined">menu</span>
-      </button>
+        onLogout={handleWorkspaceLogout}
+        teacherMode={teacherMode}
+        onToggleTeacherMode={() => setTeacherMode((v) => !v)}
+        onHomeClick={navigateToLanding}
+      />
 
-      <aside className="side-nav">
-        <div className="side-brand">
-          <div className="brand-mark">
-            <AppIcon className="brand-icon" decorative />
-          </div>
-          <div className="side-brand-text">
-            <h1>AI Education Policy Observatory</h1>
-            <p>An Agentic Policy Surveillance Framework</p>
-          </div>
-        </div>
-
-        <button
-          type="button"
-          className="sidebar-toggle-btn"
-          onClick={() => setSidebarCollapsed(v => !v)}
-          aria-label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-        >
-          <span className="material-symbols-outlined">
-            {sidebarCollapsed ? "chevron_right" : "chevron_left"}
-          </span>
-          <span className="sidebar-toggle-label">Collapse</span>
-        </button>
-
-        <button className="side-cta" type="button" onClick={() => setIsAnalysisDrawerOpen(true)}>
-          <span className="material-symbols-outlined">add_circle</span>
-          New Analysis
-        </button>
-
-        <nav className="side-links" aria-label="Core filters">
-          <p>Core Filters</p>
-          <a title="Geography" className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
-            <span className="material-symbols-outlined">public</span>
-            Geography
-          </a>
-          <a title="Policy Domains" className={activeSection === "policy-domains" ? "active" : ""} href="#policy-domains" onClick={() => navigateToDashboard("policy-domains")}>
-            <span className="material-symbols-outlined">domain</span>
-            Policy Domains
-          </a>
-          <a title="Policy Stage" className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
-            <span className="material-symbols-outlined">step</span>
-            Policy Stage
-          </a>
-          <a title="Confidence" className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
-            <span className="material-symbols-outlined">verified</span>
-            Confidence
-          </a>
-          <a title="Timeline" className={activeSection === "table-view" ? "active" : ""} href="#table-view" onClick={() => navigateToDashboard("table-view")}>
-            <span className="material-symbols-outlined">schedule</span>
-            Time
-          </a>
-        </nav>
-
-        <div className="side-profile">
-          <div className="profile-avatar">{getInitials(workspaceSession?.displayName ?? "AS")}</div>
-          <div>
-            <strong>{getWorkspaceLabel(workspaceSession)}</strong>
-            <span>{workspaceSession?.organization ?? "Local session access"}</span>
-          </div>
-          <button type="button" className="icon-button" onClick={handleWorkspaceLogout} aria-label="Log out">
-            <span className="material-symbols-outlined">logout</span>
-          </button>
-        </div>
-      </aside>
-
-      <div className="main-shell">
-        <NewAnalysisDrawer
-          open={isAnalysisDrawerOpen}
-          records={records}
-          selectedState={selectedState}
-          onClose={() => setIsAnalysisDrawerOpen(false)}
-          onNavigate={navigateToDashboard}
-          onSelectState={selectState}
+      <div className="aied-app__body">
+        <SideRail
+          open={!sidebarCollapsed}
+          onToggle={() => setSidebarCollapsed((v) => !v)}
+          activeFilter={activeFilter}
+          onSelectFilter={setActiveFilter}
+          onNewAnalysis={() => setIsAnalysisDrawerOpen(true)}
+          workspaceSession={
+            workspaceSession
+              ? {
+                  displayName: getWorkspaceLabel(workspaceSession),
+                  organization: workspaceSession.organization,
+                }
+              : null
+          }
+          onLogout={handleWorkspaceLogout}
+          filterPanelProps={{
+            geoMode: viewMode,
+            onChangeGeoMode: setViewMode,
+            coverage: coverageFilter,
+            onChangeCoverage: setCoverageFilter,
+            policyDomains: PROJECT_POLICY_DOMAINS,
+          }}
         />
 
-        <LoginModal
-          open={isLoginModalOpen}
-          onClose={() => setIsLoginModalOpen(false)}
-          onSubmit={handleWorkspaceLogin}
-          onSkipTesting={handleSkipTesting}
-        />
+        <main className="aied-app__main">
+          <div className="aied-workspace">
+            <aside className="aied-inspector" aria-label={`${selectedRecord.stateName} inspector`}>
+              <header className="aied-inspector__header">
+                <div className="aied-inspector__state-row">
+                  <h2 className="aied-inspector__state-name">{selectedRecord.stateName}</h2>
+                  <span className="aied-inspector__state-abbr">{selectedRecord.stateAbbr}</span>
+                  <span className="aied-inspector__live-dot" aria-hidden="true" />
+                  <span className="aied-inspector__updated">{latestChangedLabel}</span>
+                </div>
 
-        <header className="top-nav">
-          <div className="top-brand">
-            <button type="button" className="top-brand-home" onClick={() => navigateToDashboard("map-view")}>
-              AI Education Policy Observatory
-            </button>
-            <nav>
-              <a className={activeSection === "map-view" ? "active" : ""} href="#map-view" onClick={() => navigateToDashboard("map-view")}>
-                Map View
-              </a>
-              <a className={activeSection === "compare" ? "active" : ""} href="#compare" onClick={() => navigateToDashboard("compare")}>
-                Compare Regions
-              </a>
-              <a className={activeSection === "policy-stage" ? "active" : ""} href="#policy-stage" onClick={() => navigateToDashboard("policy-stage")}>
-                Policy Timeline
-              </a>
-              <a className={activeSection === "source-library" ? "active" : ""} href="#source-library" onClick={() => navigateToDashboard("source-library")}>
-                Source Library
-              </a>
-              <a className={activeSection === "methodology" ? "active" : ""} href="#methodology" onClick={() => navigateToDashboard("methodology")}>
-                Methodology
-              </a>
-            </nav>
-          </div>
+                <div className="aied-inspector__stats">
+                  <div className="aied-inspector__stat">
+                    <span className="aied-inspector__stat-label">States</span>
+                    <span className="aied-inspector__stat-value">{totalCount}</span>
+                  </div>
+                  <div className="aied-inspector__stat">
+                    <span className="aied-inspector__stat-label">Coded</span>
+                    <span className="aied-inspector__stat-value">{codedCount}</span>
+                  </div>
+                  <div className="aied-inspector__stat">
+                    <span className="aied-inspector__stat-label">Guidance</span>
+                    <span className="aied-inspector__stat-value">{releasedGuidanceCount}</span>
+                  </div>
+                  <div className="aied-inspector__stat">
+                    <span className="aied-inspector__stat-label">Stage</span>
+                    <span className="aied-inspector__stat-value">{dominantStage}</span>
+                  </div>
+                </div>
 
-          <div className="top-actions">
-            <label className="top-search">
-              <span className="material-symbols-outlined">search</span>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-                placeholder="Search policies..."
-              />
-            </label>
+                <nav className="aied-inspector__tabs" role="tablist" aria-label="Inspector tabs">
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={inspectorTab === "brief"}
+                    className={`aied-inspector__tab${inspectorTab === "brief" ? " aied-inspector__tab--selected" : ""}`}
+                    onClick={() => setInspectorTab("brief")}
+                  >Brief</button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={inspectorTab === "activity"}
+                    className={`aied-inspector__tab${inspectorTab === "activity" ? " aied-inspector__tab--selected" : ""}`}
+                    onClick={() => setInspectorTab("activity")}
+                  >Activity</button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={inspectorTab === "log"}
+                    className={`aied-inspector__tab${inspectorTab === "log" ? " aied-inspector__tab--selected" : ""}`}
+                    onClick={() => setInspectorTab("log")}
+                  >Details</button>
+                </nav>
+              </header>
 
-            <button
-              type="button"
-              className={`teacher-mode-toggle ${teacherMode ? "on" : "off"}`}
-              onClick={() => setTeacherMode((v) => !v)}
-              aria-pressed={teacherMode}
-            >
-              <span className="material-symbols-outlined">school</span>
-              Teacher Mode
-            </button>
+              <div className="aied-inspector__body">
+                <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
 
-            <a
-              className="icon-button"
-              href="/guides/manual.html"
-              target="_blank"
-              rel="noopener"
-              aria-label="Reader's Manual"
-              title="Reader's Manual"
-            >
-              <span className="material-symbols-outlined">menu_book</span>
-            </a>
-            <button
-              type="button"
-              className="icon-button whatsnew-trigger"
-              aria-label="What's new"
-              onClick={openWhatsNew}
-              title={`What's new · v${currentRelease.version}`}
-            >
-              <span className="material-symbols-outlined">campaign</span>
-            </button>
-            <button type="button" className="icon-button" aria-label="History">
-              <span className="material-symbols-outlined">history</span>
-            </button>
-            <button type="button" className="icon-button" aria-label="Notifications">
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <button type="button" className="export-button">
-              <span className="material-symbols-outlined">download</span>
-              Export Data
-            </button>
-            {workspaceSession ? (
-              <button type="button" className="workspace-chip" onClick={handleWorkspaceLogout}>
-                <span className="workspace-avatar">{getInitials(workspaceSession.displayName)}</span>
-                {getWorkspaceLabel(workspaceSession)}
-              </button>
-            ) : null}
-          </div>
-        </header>
+                {inspectorTab === "brief" && (
+                  <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
+                )}
 
-        {/* ── MAP WORKSPACE — grid: inspector left | map right ── */}
-        <div className="map-workspace">
-
-          {/* LEFT: inspector panel */}
-          <div className="float-inspector">
-            <div className="float-header">
-              <div className="dash-state-line">
-                <span className="dash-state-name">{selectedRecord.stateName}</span>
-                <span className="dash-state-abbr">{selectedRecord.stateAbbr}</span>
-                <span className="dash-live-dot" aria-hidden="true" />
-                <span className="dash-updated">{latestChangedLabel}</span>
-              </div>
-
-              <div className="dash-mini-stats">
-                <div><span>States</span><strong>{totalCount}</strong></div>
-                <div><span>Coded</span><strong>{codedCount}</strong></div>
-                <div><span>Guidance</span><strong>{releasedGuidanceCount}</strong></div>
-                <div><span>Stage</span><strong>{dominantStage}</strong></div>
-              </div>
-
-              <div className="inspector-tabs" role="tablist">
-                <button
-                  role="tab"
-                  aria-selected={inspectorTab === "brief"}
-                  className={inspectorTab === "brief" ? "active" : ""}
-                  onClick={() => setInspectorTab("brief")}
-                >Brief</button>
-                <button
-                  role="tab"
-                  aria-selected={inspectorTab === "activity"}
-                  className={inspectorTab === "activity" ? "active" : ""}
-                  onClick={() => setInspectorTab("activity")}
-                >Activity</button>
-                <button
-                  role="tab"
-                  aria-selected={inspectorTab === "log"}
-                  className={inspectorTab === "log" ? "active" : ""}
-                  onClick={() => setInspectorTab("log")}
-                >Details</button>
-              </div>
-            </div>
-
-            <div className="float-body">
-              {/* Always-visible district drill-in — pinned at top so it's
-                  above the fold when a state with districts is selected */}
-              <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
-
-              {inspectorTab === "brief" && (
-                <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
-              )}
-
-              {inspectorTab === "activity" && (
-                <LiveActivityRail
-                  events={recentEvents}
-                  livePolling={livePolling}
-                  playbackIndex={safePlaybackIndex}
-                  playbackRunning={playbackRunning}
-                  onToggleLivePolling={() => setLivePolling((current) => !current)}
-                  onTogglePlayback={() => setPlaybackRunning((current) => !current)}
-                  onPlaybackIndexChange={setPlaybackIndex}
-                  onSelectEvent={(event, index) => {
-                    setPlaybackIndex(Math.max(index, 0));
-                    setPlaybackRunning(false);
-                    selectState(event.stateAbbr);
-                  }}
-                />
-              )}
-
-              {inspectorTab === "log" && (
-                <>
-                  <PolicyChangeLog
-                    stateAbbr={selectedRecord.stateAbbr}
-                    stateName={selectedRecord.stateName}
-                    events={policyEvents}
-                    maxItems={5}
+                {inspectorTab === "activity" && (
+                  <LiveActivityRail
+                    events={recentEvents}
+                    livePolling={livePolling}
+                    playbackIndex={safePlaybackIndex}
+                    playbackRunning={playbackRunning}
+                    onToggleLivePolling={() => setLivePolling((current) => !current)}
+                    onTogglePlayback={() => setPlaybackRunning((current) => !current)}
+                    onPlaybackIndexChange={setPlaybackIndex}
+                    onSelectEvent={(event, index) => {
+                      setPlaybackIndex(Math.max(index, 0));
+                      setPlaybackRunning(false);
+                      selectState(event.stateAbbr);
+                    }}
                   />
-                  {teacherMode ? (
-                    <TeacherGuidancePanel record={selectedRecord} />
-                  ) : (
-                    <PolicyDetailPanel record={selectedRecord} />
-                  )}
-                </>
-              )}
+                )}
 
-            </div>
-          </div>
-
-          {/* RIGHT: map ground — map fills this column */}
-          <div className="map-ground">
-            <PolicyTileMap
-              records={records}
-              selectedState={selectedState}
-              visibleIds={filteredStateIds}
-              pulseStates={pulseStateIds}
-              confidenceShiftStates={confidenceShiftStateIds}
-              sourceAddedStates={sourceAddedStateIds}
-              playbackState={activePlaybackEvent?.stateAbbr ?? null}
-              viewMode={viewMode}
-              showBroadbandOverlay={showBroadbandOverlay}
-              broadbandPatternHatched={broadbandPatternHatched}
-              onSelect={selectState}
-            />
-
-            {/* Map controls — legend + view toggle */}
-            <div className="float-map-controls">
-              <div className="view-toggle">
-                <button
-                  type="button"
-                  className={viewMode === "state" ? "active" : ""}
-                  onClick={() => setViewMode("state")}
-                >State</button>
-                <button
-                  type="button"
-                  className={viewMode === "district" ? "active" : ""}
-                  onClick={() => setViewMode("district")}
-                >District</button>
-              </div>
-              {viewMode === "district" && (
-                <div className="broadband-toggle">
-                  <label className="toggle-row">
-                    <input
-                      type="checkbox"
-                      checked={showBroadbandOverlay}
-                      onChange={(e) => setShowBroadbandOverlay(e.target.checked)}
+                {inspectorTab === "log" && (
+                  <>
+                    <PolicyChangeLog
+                      stateAbbr={selectedRecord.stateAbbr}
+                      stateName={selectedRecord.stateName}
+                      events={policyEvents}
+                      maxItems={5}
                     />
-                    <span>Broadband overlay (ACS 2023)</span>
-                  </label>
-                  {showBroadbandOverlay && (
-                    <label className="toggle-row sub">
+                    {teacherMode ? (
+                      <TeacherGuidancePanel record={selectedRecord} />
+                    ) : (
+                      <PolicyDetailPanel record={selectedRecord} />
+                    )}
+                  </>
+                )}
+              </div>
+            </aside>
+
+            <section className="aied-map-ground">
+              <PolicyTileMap
+                records={records}
+                selectedState={selectedState}
+                visibleIds={filteredStateIds}
+                pulseStates={pulseStateIds}
+                confidenceShiftStates={confidenceShiftStateIds}
+                sourceAddedStates={sourceAddedStateIds}
+                playbackState={activePlaybackEvent?.stateAbbr ?? null}
+                viewMode={viewMode}
+                showBroadbandOverlay={showBroadbandOverlay}
+                broadbandPatternHatched={broadbandPatternHatched}
+                onSelect={selectState}
+              />
+
+              <div className="aied-map-controls">
+                <SegmentControl
+                  value={viewMode}
+                  onChange={setViewMode}
+                  options={[
+                    { value: "state", label: "State" },
+                    { value: "district", label: "District" },
+                  ]}
+                  ariaLabel="Map granularity"
+                />
+
+                {viewMode === "district" && (
+                  <div className="aied-broadband-toggle">
+                    <label className="aied-broadband-toggle__row">
                       <input
                         type="checkbox"
-                        checked={broadbandPatternHatched}
-                        onChange={(e) => setBroadbandPatternHatched(e.target.checked)}
+                        checked={showBroadbandOverlay}
+                        onChange={(e) => setShowBroadbandOverlay(e.target.checked)}
                       />
-                      <span>Highlight under-served counties</span>
+                      <span>Broadband overlay (ACS 2023)</span>
                     </label>
-                  )}
+                    {showBroadbandOverlay && (
+                      <label className="aied-broadband-toggle__row aied-broadband-toggle__row--sub">
+                        <input
+                          type="checkbox"
+                          checked={broadbandPatternHatched}
+                          onChange={(e) => setBroadbandPatternHatched(e.target.checked)}
+                        />
+                        <span>Highlight under-served counties</span>
+                      </label>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="aied-legend" aria-label="Policy strength legend">
+                <div className="aied-legend__title">Policy strength</div>
+                <div className="aied-legend__scale" aria-hidden="true">
+                  <span style={{ background: "var(--aied-strength-no-data)" }} />
+                  <span style={{ background: "var(--aied-strength-emerging)" }} />
+                  <span style={{ background: "var(--aied-strength-developing)" }} />
+                  <span style={{ background: "var(--aied-strength-established)" }} />
+                  <span style={{ background: "var(--aied-strength-robust)" }} />
                 </div>
-              )}
-              <div className="legend-card" aria-label="Policy strength legend">
-                <p>Policy Strength</p>
-                <div className="legend-scale" />
-                <div className="legend-labels">
+                <div className="aied-legend__labels">
                   <span>Weak</span>
                   <span>Robust</span>
                 </div>
+                <ul className="aied-legend__buckets">
+                  <li className="aied-legend__bucket">
+                    <span className="aied-legend__swatch" style={{ background: "var(--aied-strength-emerging)" }} />
+                    Emerging · 5–8
+                  </li>
+                  <li className="aied-legend__bucket">
+                    <span className="aied-legend__swatch" style={{ background: "var(--aied-strength-developing)" }} />
+                    Developing · 9–11
+                  </li>
+                  <li className="aied-legend__bucket">
+                    <span className="aied-legend__swatch" style={{ background: "var(--aied-strength-established)" }} />
+                    Established · 12–13
+                  </li>
+                  <li className="aied-legend__bucket">
+                    <span className="aied-legend__swatch" style={{ background: "var(--aied-strength-robust)" }} />
+                    Robust · 14–16
+                  </li>
+                </ul>
               </div>
-            </div>
 
-            {/* Section overlay — shown for non-map nav sections */}
-            {activeSection !== "map-view" && (
-              <div className="section-overlay">
-                <div className="section-overlay-body">
-                  {activeSection === "compare" && (
-                    <CompareMatrixView
-                      records={codedRecords}
-                      compareStates={compareStates}
-                      onChangeState={changeCompareState}
-                    />
-                  )}
-                  {activeSection === "policy-stage" && (
-                    <>
-                      <ImplementationReadinessSection
-                        records={records}
-                        selectedState={selectedState}
-                        onSelectState={selectState}
+              {activeSection !== "map-view" && (
+                <div className="aied-section-overlay">
+                  <div className="aied-section-overlay__body">
+                    {activeSection === "compare" && (
+                      <CompareMatrixView
+                        records={codedRecords}
+                        compareStates={compareStates}
+                        onChangeState={changeCompareState}
                       />
-                      <PolicyStageSection records={records} onSelectState={selectState} />
-                    </>
-                  )}
-                  {activeSection === "policy-domains" && (
-                    <PolicyDomainsSection records={records} onSelectState={selectState} />
-                  )}
-                  {activeSection === "source-library" && (
-                    <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
-                  )}
-                  {activeSection === "methodology" && (
-                    <MethodologySection records={records} />
-                  )}
-                  {activeSection === "table-view" && (
-                    <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />
-                  )}
+                    )}
+                    {activeSection === "policy-stage" && (
+                      <>
+                        <ImplementationReadinessSection
+                          records={records}
+                          selectedState={selectedState}
+                          onSelectState={selectState}
+                        />
+                        <PolicyStageSection records={records} onSelectState={selectState} />
+                      </>
+                    )}
+                    {activeSection === "policy-domains" && (
+                      <PolicyDomainsSection records={records} onSelectState={selectState} />
+                    )}
+                    {activeSection === "source-library" && (
+                      <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
+                    )}
+                    {activeSection === "methodology" && (
+                      <MethodologySection records={records} />
+                    )}
+                    {activeSection === "table-view" && (
+                      <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </section>
           </div>
-
-        </div>
+        </main>
       </div>
       <WhatsNewModal release={currentRelease} open={whatsNewOpen} onClose={closeWhatsNew} />
     </div>

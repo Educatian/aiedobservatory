@@ -1,0 +1,40 @@
+.aied-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-family: var(--cds-font-sans);
+  font-weight: var(--cds-fw-medium);
+  letter-spacing: 0.16px;
+  white-space: nowrap;
+  --tag-bg: var(--gray-20);
+  --tag-fg: var(--gray-100);
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+}
+
+.aied-tag__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.aied-tag__label { min-width: 0; }
+
+/* sizes */
+.aied-tag--sm { font-size: 12px; line-height: 16px; }
+.aied-tag--md { font-size: 13px; line-height: 18px; padding: 3px 10px; }
+
+/* kinds — paired backgrounds and accessible foregrounds */
+.aied-tag--neutral { --tag-bg: var(--gray-20);     --tag-fg: var(--gray-100); }
+.aied-tag--blue    { --tag-bg: var(--blue-10);     --tag-fg: var(--blue-70);  }
+.aied-tag--purple  { --tag-bg: var(--purple-10);   --tag-fg: var(--purple-80);}
+.aied-tag--teal    { --tag-bg: var(--teal-10);     --tag-fg: var(--teal-70);  }
+.aied-tag--cyan    { --tag-bg: var(--cyan-10);     --tag-fg: var(--cyan-80);  }
+.aied-tag--green   { --tag-bg: var(--green-10);    --tag-fg: var(--green-70); }
+.aied-tag--red     { --tag-bg: var(--red-20);      --tag-fg: var(--red-70);   }
+.aied-tag--yellow  { --tag-bg: var(--yellow-10);   --tag-fg: var(--yellow-70);}
+.aied-tag--cool    { --tag-bg: var(--cool-gray-10);--tag-fg: var(--gray-80);  }

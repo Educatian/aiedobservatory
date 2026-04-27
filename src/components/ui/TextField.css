@@ -1,0 +1,81 @@
+.aied-textfield {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--cds-font-sans);
+}
+
+.aied-textfield__label {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.32px;
+  color: var(--cds-text-secondary);
+  font-weight: var(--cds-fw-regular);
+}
+
+.aied-textfield__field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cds-spacing-03);
+  padding: 0 var(--cds-spacing-04);
+  background: var(--cds-field-02);
+  border: 1px solid var(--cds-border-subtle-01);
+  border-radius: 8px;
+  transition: border-color var(--cds-duration-fast-02) var(--cds-easing-standard-productive);
+}
+
+.aied-textfield--sm .aied-textfield__field { height: 32px; }
+.aied-textfield--md .aied-textfield__field { height: 40px; }
+
+.aied-textfield__field:hover {
+  border-color: var(--cds-border-strong-01);
+}
+
+.aied-textfield__field:focus-within {
+  border-color: var(--cds-border-interactive);
+  box-shadow: inset 0 0 0 1px var(--cds-border-interactive);
+  outline: none;
+}
+
+.aied-textfield--invalid .aied-textfield__field {
+  border-color: var(--cds-support-error);
+  box-shadow: inset 0 0 0 1px var(--cds-support-error);
+}
+
+.aied-textfield__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--cds-icon-secondary);
+}
+
+.aied-textfield__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: var(--cds-fw-regular) 14px/1 var(--cds-font-sans);
+  color: var(--cds-text-primary);
+}
+
+.aied-textfield__input::placeholder {
+  color: var(--cds-text-placeholder);
+}
+
+.aied-textfield__shortcut {
+  font: var(--cds-fw-medium) 11px/1 var(--cds-font-mono);
+  color: var(--cds-text-helper);
+  padding: 2px 6px;
+  border: 1px solid var(--cds-border-subtle-01);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.aied-textfield__helper {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.32px;
+  color: var(--cds-text-helper);
+}
+.aied-textfield__helper--error { color: var(--cds-text-error); }
