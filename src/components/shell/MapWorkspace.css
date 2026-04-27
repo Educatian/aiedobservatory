@@ -101,13 +101,13 @@
 }
 
 .aied-inspector__stat-value {
-  font: var(--cds-fw-semibold) 18px/1.1 var(--cds-font-sans);
+  font: var(--cds-fw-semibold) 16px/1.15 var(--cds-font-sans);
   color: var(--cds-text-primary);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
 }
 
 /* Tabs */
@@ -147,6 +147,37 @@
   display: flex;
   flex-direction: column;
   gap: var(--cds-spacing-05);
+}
+
+/* Force inner panels in the narrow inspector to single-column layouts so
+   long words like "Released guidance" or "Strong evidence base" don't wrap
+   mid-word into ugly fragments. */
+.aied-inspector .leadership-readiness-grid,
+.aied-inspector .brief-readiness-grid,
+.aied-inspector .meta-grid,
+.aied-inspector .domain-score-grid,
+.aied-inspector .readiness-grid {
+  grid-template-columns: 1fr !important;
+  gap: var(--cds-spacing-03) !important;
+}
+
+.aied-inspector .detail-panel,
+.aied-inspector .leadership-readiness-card,
+.aied-inspector .live-rail-card {
+  padding: var(--cds-spacing-04) !important;
+}
+
+/* Word-wrap defense — the inspector is narrow, so allow long words to wrap
+   gracefully rather than overflow or break mid-letter. */
+.aied-inspector p,
+.aied-inspector li,
+.aied-inspector strong,
+.aied-inspector small,
+.aied-inspector .detail-header h3,
+.aied-inspector .leadership-readiness-card h4,
+.aied-inspector .score-row strong {
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 /* ── Map ground ──────────────────────────────────────────────────── */

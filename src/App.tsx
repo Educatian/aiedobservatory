@@ -25,6 +25,16 @@ import { TrustPanel } from "./components/TrustPanel";
 import { WhatsNewModal } from "./components/WhatsNewModal";
 import { SideRail, TopBar, type FilterDimension, type TopBarView } from "./components/shell";
 import { SegmentControl } from "./components/ui";
+import {
+  ActivityPanel,
+  BriefPanel,
+  CompareView as CompareViewNew,
+  DetailsPanel,
+  MethodView,
+  SourceView as SourceViewNew,
+  TimelineView as TimelineViewNew,
+} from "./components/views";
+import { toDisplayState } from "./lib/displayState";
 import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
 import { currentRelease } from "./data/releaseNotes";
 import type { PolicyEvent, PolicyRecord } from "./types";
@@ -450,6 +460,20 @@ function App() {
     navigateToLanding();
   }
 
+  function addCompareState(code: string) {
+    setCompareStates((current) => {
+      if (current.includes(code) || current.length >= 6) return current;
+      return [...current, code];
+    });
+  }
+
+  function removeCompareState(code: string) {
+    setCompareStates((current) => {
+      if (current.length <= 1) return current;
+      return current.filter((c) => c !== code);
+    });
+  }
+
   function changeCompareState(slot: number, nextState: string) {
     setCompareStates((current) => {
       const next = [...current];
@@ -637,39 +661,17 @@ function App() {
                 <DistrictLayerPanel stateAbbr={selectedRecord.stateAbbr} />
 
                 {inspectorTab === "brief" && (
-                  <ExecutiveBriefPanel record={selectedRecord} benchmarkRecords={benchmarkRecords} />
+                  <BriefPanel state={toDisplayState(selectedRecord)} />
                 )}
 
                 {inspectorTab === "activity" && (
-                  <LiveActivityRail
-                    events={recentEvents}
-                    livePolling={livePolling}
-                    playbackIndex={safePlaybackIndex}
-                    playbackRunning={playbackRunning}
-                    onToggleLivePolling={() => setLivePolling((current) => !current)}
-                    onTogglePlayback={() => setPlaybackRunning((current) => !current)}
-                    onPlaybackIndexChange={setPlaybackIndex}
-                    onSelectEvent={(event, index) => {
-                      setPlaybackIndex(Math.max(index, 0));
-                      setPlaybackRunning(false);
-                      selectState(event.stateAbbr);
-                    }}
-                  />
+                  <ActivityPanel state={toDisplayState(selectedRecord)} events={policyEvents} />
                 )}
 
                 {inspectorTab === "log" && (
                   <>
-                    <PolicyChangeLog
-                      stateAbbr={selectedRecord.stateAbbr}
-                      stateName={selectedRecord.stateName}
-                      events={policyEvents}
-                      maxItems={5}
-                    />
-                    {teacherMode ? (
-                      <TeacherGuidancePanel record={selectedRecord} />
-                    ) : (
-                      <PolicyDetailPanel record={selectedRecord} />
-                    )}
+                    <DetailsPanel state={toDisplayState(selectedRecord)} />
+                    {teacherMode && <TeacherGuidancePanel record={selectedRecord} />}
                   </>
                 )}
               </div>
@@ -762,31 +764,28 @@ function App() {
                 <div className="aied-section-overlay">
                   <div className="aied-section-overlay__body">
                     {activeSection === "compare" && (
-                      <CompareMatrixView
+                      <CompareViewNew
                         records={codedRecords}
                         compareStates={compareStates}
                         onChangeState={changeCompareState}
+                        onAddState={addCompareState}
+                        onRemoveState={removeCompareState}
                       />
                     )}
                     {activeSection === "policy-stage" && (
-                      <>
-                        <ImplementationReadinessSection
-                          records={records}
-                          selectedState={selectedState}
-                          onSelectState={selectState}
-                        />
-                        <PolicyStageSection records={records} onSelectState={selectState} />
-                      </>
+                      <TimelineViewNew
+                        records={records}
+                        events={policyEvents}
+                        onSelectState={selectState}
+                      />
                     )}
                     {activeSection === "policy-domains" && (
                       <PolicyDomainsSection records={records} onSelectState={selectState} />
                     )}
                     {activeSection === "source-library" && (
-                      <SourceLibrarySection records={codedRecords} onSelectState={selectState} />
+                      <SourceViewNew records={codedRecords} onSelectState={selectState} />
                     )}
-                    {activeSection === "methodology" && (
-                      <MethodologySection records={records} />
-                    )}
+                    {activeSection === "methodology" && <MethodView />}
                     {activeSection === "table-view" && (
                       <PolicyTable records={filteredRecords} selectedState={selectedState} onSelect={selectState} />
                     )}
