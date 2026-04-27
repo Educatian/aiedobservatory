@@ -12,6 +12,46 @@ export interface TimelineViewProps {
 
 type FilterKey = "all" | "released" | "updated" | "draft" | "withdrawn";
 
+/**
+ * Derive timeline events from policy records when the live event log is
+ * empty (the data pipeline hasn't been run, so /policy-events.json is []).
+ * Sources with issuedDate become "instrument_added"; each record's
+ * lastUpdated becomes "record_updated".
+ */
+function deriveEventsFromRecords(records: PolicyRecord[]): PolicyEvent[] {
+  const out: PolicyEvent[] = [];
+  for (const r of records) {
+    if (r.lastUpdated) {
+      out.push({
+        id: `derived-update-${r.stateAbbr}-${r.lastUpdated}`,
+        eventType: "record_updated",
+        stateAbbr: r.stateAbbr,
+        stateName: r.stateName,
+        occurredAt: r.lastUpdated,
+        title: `${r.stateName} record refreshed`,
+        description: r.notes?.slice(0, 160) || `Coding refreshed at ${r.lastUpdated}.`,
+      });
+    }
+    const docs = r.sourceDocuments ?? [];
+    for (let i = 0; i < docs.length; i++) {
+      const doc = docs[i];
+      const at = doc.issuedDate || doc.effectiveDate || doc.publishedDateGuess;
+      if (!at) continue;
+      out.push({
+        id: `derived-instrument-${r.stateAbbr}-${i}`,
+        eventType: "instrument_added",
+        stateAbbr: r.stateAbbr,
+        stateName: r.stateName,
+        occurredAt: at,
+        title: doc.title ?? `Source attached: ${doc.url}`,
+        description: doc.shortSummary ?? `Issuer: ${doc.issuerName ?? "—"}`,
+        sourceUrl: doc.url,
+      });
+    }
+  }
+  return out;
+}
+
 const TYPE_LABEL: Record<string, { kind: "green" | "blue" | "yellow" | "red" | "cool"; label: string }> = {
   record_created: { kind: "blue", label: "Coded" },
   record_updated: { kind: "blue", label: "Updated" },
@@ -47,19 +87,28 @@ function fmtMonthDay(iso: string): { md: string; yr: string } {
 const TimelineView: React.FC<TimelineViewProps> = ({ records, events, onSelectState }) => {
   const [filter, setFilter] = useState<FilterKey>("all");
   const stateByCode = useMemo(() => new Map(records.map(r => [r.stateAbbr, r])), [records]);
-  const filtered = events
+  const effectiveEvents = useMemo(
+    () => (events.length > 0 ? events : deriveEventsFromRecords(records)),
+    [events, records],
+  );
+  const usingDerived = events.length === 0 && effectiveEvents.length > 0;
+  const filtered = effectiveEvents
     .filter(e => passesFilter(e, filter))
     .slice()
     .sort((a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime())
-    .slice(0, 60);
+    .slice(0, 80);
 
   return (
     <div>
       <header className="aied-pagehead">
         <div className="aied-pagehead__col">
           <span className="aied-pagehead__kicker">Policy timeline</span>
-          <h1 className="aied-pagehead__title">Activity stream · last 90 days</h1>
-          <span className="aied-pagehead__sub">Coding pipeline events across all tracked jurisdictions.</span>
+          <h1 className="aied-pagehead__title">Activity stream</h1>
+          <span className="aied-pagehead__sub">
+            {usingDerived
+              ? `${effectiveEvents.length} events derived from source-document and record metadata. Run the pipeline (\`npm run pipeline:events\`) to publish a live event log.`
+              : `${effectiveEvents.length} coding pipeline events across all tracked jurisdictions.`}
+          </span>
         </div>
         <span className="aied-pagehead__spacer" />
         <div className="aied-pagehead__actions">
