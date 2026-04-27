@@ -23,7 +23,7 @@ import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
 import { TrustPanel } from "./components/TrustPanel";
 import { WhatsNewModal } from "./components/WhatsNewModal";
-import { SideRail, TopBar, type FilterDimension, type TopBarView } from "./components/shell";
+import { SideRail, TopBar, type FilterDimension, type TimeWindow, type TopBarView } from "./components/shell";
 import { SegmentControl } from "./components/ui";
 import {
   ActivityPanel,
@@ -35,7 +35,7 @@ import {
   TimelineView as TimelineViewNew,
 } from "./components/views";
 import { toDisplayState } from "./lib/displayState";
-import { getPolicyStageLabel, policyRecords as initialPolicyRecords } from "./data/policyData";
+import { getPolicyStageLabel, getPriorityDomains, policyRecords as initialPolicyRecords } from "./data/policyData";
 import { currentRelease } from "./data/releaseNotes";
 import type { PolicyEvent, PolicyRecord } from "./types";
 
@@ -184,6 +184,10 @@ function App() {
   }, []);
   const [inspectorTab, setInspectorTab] = useState<"brief" | "activity" | "log">("brief");
   const [activeFilter, setActiveFilter] = useState<FilterDimension>("geo");
+  const [selectedDomains, setSelectedDomains] = useState<Set<string>>(() => new Set());
+  const [selectedStages, setSelectedStages] = useState<Set<number>>(() => new Set());
+  const [minConfidence, setMinConfidence] = useState(0);
+  const [timeWindow, setTimeWindow] = useState<TimeWindow>("all");
   const [viewMode, setViewMode] = useState<"state" | "district">("state");
   const [showBroadbandOverlay, setShowBroadbandOverlay] = useState(false);
   const [broadbandPatternHatched, setBroadbandPatternHatched] = useState(false);
@@ -202,19 +206,65 @@ function App() {
     [records]
   );
 
+  const timeCutoff = useMemo(() => {
+    const now = new Date();
+    if (timeWindow === "30d") return new Date(now.getTime() - 30 * 86400_000);
+    if (timeWindow === "90d") return new Date(now.getTime() - 90 * 86400_000);
+    if (timeWindow === "ytd") return new Date(now.getFullYear(), 0, 1);
+    return null;
+  }, [timeWindow]);
+
   const filteredRecords = useMemo(() => {
     return records.filter((record) => {
       const matchesCoverage =
         coverageFilter === "all" ? true : record.snapshotStatus === coverageFilter;
+
       const matchesQuery =
         normalizedQuery.length === 0
           ? true
           : record.stateName.toLowerCase().includes(normalizedQuery) ||
             record.stateAbbr.toLowerCase().includes(normalizedQuery);
 
-      return matchesCoverage && matchesQuery;
+      const matchesDomains =
+        selectedDomains.size === 0
+          ? true
+          : (record.policyDomains ?? []).some((d) => selectedDomains.has(d)) ||
+            getPriorityDomains(record).some((d) => selectedDomains.has(d));
+
+      const matchesStage =
+        selectedStages.size === 0
+          ? true
+          : selectedStages.has(record.implementationStage ?? 0);
+
+      const matchesConfidence = (record.confidence ?? 0) >= minConfidence;
+
+      const matchesTime =
+        !timeCutoff
+          ? true
+          : (() => {
+              if (!record.lastUpdated) return false;
+              const t = new Date(record.lastUpdated).getTime();
+              return Number.isFinite(t) && t >= timeCutoff.getTime();
+            })();
+
+      return (
+        matchesCoverage &&
+        matchesQuery &&
+        matchesDomains &&
+        matchesStage &&
+        matchesConfidence &&
+        matchesTime
+      );
     });
-  }, [coverageFilter, normalizedQuery, records]);
+  }, [
+    coverageFilter,
+    normalizedQuery,
+    records,
+    selectedDomains,
+    selectedStages,
+    minConfidence,
+    timeCutoff,
+  ]);
 
   const filteredStateIds = useMemo(
     () => new Set(filteredRecords.map((record) => record.stateAbbr)),
@@ -460,6 +510,45 @@ function App() {
     navigateToLanding();
   }
 
+  function toggleDomain(domain: string) {
+    setSelectedDomains((current) => {
+      const next = new Set(current);
+      if (next.has(domain)) next.delete(domain);
+      else next.add(domain);
+      return next;
+    });
+  }
+
+  function toggleStage(stage: number) {
+    setSelectedStages((current) => {
+      const next = new Set(current);
+      if (next.has(stage)) next.delete(stage);
+      else next.add(stage);
+      return next;
+    });
+  }
+
+  function resetActiveFilter() {
+    switch (activeFilter) {
+      case "geo":
+        setViewMode("state");
+        setCoverageFilter("all");
+        break;
+      case "domains":
+        setSelectedDomains(new Set());
+        break;
+      case "stage":
+        setSelectedStages(new Set());
+        break;
+      case "confidence":
+        setMinConfidence(0);
+        break;
+      case "time":
+        setTimeWindow("all");
+        break;
+    }
+  }
+
   function addCompareState(code: string) {
     setCompareStates((current) => {
       if (current.includes(code) || current.length >= 6) return current;
@@ -599,6 +688,17 @@ function App() {
             coverage: coverageFilter,
             onChangeCoverage: setCoverageFilter,
             policyDomains: PROJECT_POLICY_DOMAINS,
+            selectedDomains,
+            onToggleDomain: toggleDomain,
+            selectedStages,
+            onToggleStage: toggleStage,
+            minConfidence,
+            onChangeMinConfidence: setMinConfidence,
+            timeWindow,
+            onChangeTimeWindow: setTimeWindow,
+            matchedCount: filteredRecords.length,
+            totalCount: records.length,
+            onResetActive: resetActiveFilter,
           }}
         />
 

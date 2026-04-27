@@ -1,11 +1,12 @@
 import React from "react";
-import { SegmentControl, Tag } from "../ui";
+import { Btn, SegmentControl, Tag } from "../ui";
 import "./FilterPanel.css";
 
 export type FilterDimension = "geo" | "domains" | "stage" | "confidence" | "time";
 
 export type GeoMode = "state" | "district";
 export type CoverageMode = "all" | "coded" | "queued";
+export type TimeWindow = "30d" | "90d" | "ytd" | "all";
 
 export interface FilterPanelProps {
   activeFilter: FilterDimension;
@@ -18,27 +19,31 @@ export interface FilterPanelProps {
   policyDomains?: string[];
   selectedDomains?: ReadonlySet<string>;
   onToggleDomain?: (domain: string) => void;
+  /** Stage pane */
+  selectedStages?: ReadonlySet<number>;
+  onToggleStage?: (stage: number) => void;
   /** Confidence pane */
   minConfidence?: number;
   onChangeMinConfidence?: (next: number) => void;
+  /** Time pane */
+  timeWindow?: TimeWindow;
+  onChangeTimeWindow?: (next: TimeWindow) => void;
+  /** Live result counter — "X of Y states" rendered below each pane. */
+  matchedCount?: number;
+  totalCount?: number;
+  /** Clear-all callback for the active dimension. */
+  onResetActive?: () => void;
 }
-
-const REGION_GROUPS: ReadonlyArray<{ name: string; states: string }> = [
-  { name: "Northeast", states: "9 states" },
-  { name: "Midwest", states: "12 states" },
-  { name: "South", states: "16 states" },
-  { name: "West", states: "13 states" },
-];
 
 const STAGE_BUCKETS: ReadonlyArray<{ value: number; label: string }> = [
   { value: 0, label: "Not started" },
   { value: 1, label: "Exploration" },
   { value: 2, label: "Drafting" },
   { value: 3, label: "Released guidance" },
-  { value: 4, label: "Implemented" },
+  { value: 4, label: "Operationalized" },
 ];
 
-const TIME_RANGES: ReadonlyArray<{ value: string; label: string }> = [
+const TIME_RANGES: ReadonlyArray<{ value: TimeWindow; label: string }> = [
   { value: "30d", label: "Last 30 days" },
   { value: "90d", label: "Last 90 days" },
   { value: "ytd", label: "Year to date" },
@@ -54,9 +59,31 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   policyDomains = [],
   selectedDomains,
   onToggleDomain,
+  selectedStages,
+  onToggleStage,
   minConfidence = 0,
   onChangeMinConfidence,
+  timeWindow = "all",
+  onChangeTimeWindow,
+  matchedCount,
+  totalCount,
+  onResetActive,
 }) => {
+  const renderFooter = () => {
+    if (matchedCount === undefined || totalCount === undefined) return null;
+    const filtered = matchedCount < totalCount;
+    return (
+      <div className="aied-filterpanel__footer">
+        <span className="aied-filterpanel__count">
+          {matchedCount} of {totalCount} states
+        </span>
+        {filtered && onResetActive && (
+          <Btn kind="ghost" size="sm" onClick={onResetActive}>Reset</Btn>
+        )}
+      </div>
+    );
+  };
+
   if (activeFilter === "geo") {
     return (
       <section className="aied-filterpanel">
@@ -82,21 +109,21 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
           ]}
           ariaLabel="Snapshot coverage"
         />
-
-        <div className="aied-filterpanel__group-label aied-filterpanel__group-label--top">Region</div>
-        <div className="aied-filterpanel__chips">
-          {REGION_GROUPS.map(r => (
-            <Tag key={r.name} kind="cool">{r.name} · {r.states}</Tag>
-          ))}
-        </div>
+        {renderFooter()}
       </section>
     );
   }
 
   if (activeFilter === "domains") {
+    const selectedCount = selectedDomains?.size ?? 0;
     return (
       <section className="aied-filterpanel">
-        <div className="aied-filterpanel__group-label">Domains</div>
+        <div className="aied-filterpanel__group-row">
+          <span className="aied-filterpanel__group-label">Priority domains</span>
+          <span className="aied-filterpanel__hint">
+            {selectedCount === 0 ? "All shown" : `${selectedCount} selected`}
+          </span>
+        </div>
         {policyDomains.length === 0 ? (
           <p className="aied-filterpanel__empty">No domains available.</p>
         ) : (
@@ -118,25 +145,43 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
             })}
           </ul>
         )}
+        <p className="aied-filterpanel__hint aied-filterpanel__hint--block">
+          A state passes if any selected domain is in its priority set. Leave empty to match all.
+        </p>
+        {renderFooter()}
       </section>
     );
   }
 
   if (activeFilter === "stage") {
+    const selectedCount = selectedStages?.size ?? 0;
     return (
       <section className="aied-filterpanel">
-        <div className="aied-filterpanel__group-label">Implementation stage</div>
+        <div className="aied-filterpanel__group-row">
+          <span className="aied-filterpanel__group-label">Implementation stage</span>
+          <span className="aied-filterpanel__hint">
+            {selectedCount === 0 ? "All shown" : `${selectedCount} selected`}
+          </span>
+        </div>
         <ul className="aied-filterpanel__checklist">
-          {STAGE_BUCKETS.map(b => (
-            <li key={b.value}>
-              <label className="aied-filterpanel__check">
-                <input type="checkbox" defaultChecked />
-                <span>{b.label}</span>
-                <span className="aied-filterpanel__hint">stage {b.value}</span>
-              </label>
-            </li>
-          ))}
+          {STAGE_BUCKETS.map(b => {
+            const checked = selectedStages?.has(b.value) ?? false;
+            return (
+              <li key={b.value}>
+                <label className="aied-filterpanel__check">
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => onToggleStage?.(b.value)}
+                  />
+                  <span>{b.label}</span>
+                  <span className="aied-filterpanel__hint">stage {b.value}</span>
+                </label>
+              </li>
+            );
+          })}
         </ul>
+        {renderFooter()}
       </section>
     );
   }
@@ -164,6 +209,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
           <Tag kind="yellow" dot>Moderate 60–84%</Tag>
           <Tag kind="red" dot>Low &lt; 60%</Tag>
         </div>
+        {renderFooter()}
       </section>
     );
   }
@@ -173,10 +219,26 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
       <section className="aied-filterpanel">
         <div className="aied-filterpanel__group-label">Time window</div>
         <div className="aied-filterpanel__chips aied-filterpanel__chips--stack">
-          {TIME_RANGES.map(r => (
-            <Tag key={r.value} kind="neutral">{r.label}</Tag>
-          ))}
+          {TIME_RANGES.map(r => {
+            const selected = timeWindow === r.value;
+            return (
+              <button
+                key={r.value}
+                type="button"
+                className={`aied-filterpanel__radio${selected ? " aied-filterpanel__radio--selected" : ""}`}
+                onClick={() => onChangeTimeWindow?.(r.value)}
+                aria-pressed={selected}
+              >
+                <span className="aied-filterpanel__radio-dot" aria-hidden />
+                {r.label}
+              </button>
+            );
+          })}
         </div>
+        <p className="aied-filterpanel__hint aied-filterpanel__hint--block">
+          Filters records by their last-updated date.
+        </p>
+        {renderFooter()}
       </section>
     );
   }
