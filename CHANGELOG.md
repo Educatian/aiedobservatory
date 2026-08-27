@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0-rc.4 — 2026-08-27
+
+- Restricted live policy-data polling to the landing and dashboard routes.
+- Removed the receipt demo's unnecessary background requests and Vercel rate-limit errors.
+
 ## 0.2.0-rc.3 — 2026-08-27
 
 - Fixed cross-platform receipt hashing by pinning release JSON fixtures to LF line endings.

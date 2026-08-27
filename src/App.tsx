@@ -397,6 +397,8 @@ function App() {
   }, [codedRecords, selectedState]);
 
   useEffect(() => {
+    if (currentPage !== "landing" && currentPage !== "dashboard") return undefined;
+
     void refreshLiveData();
     if (!livePolling) return undefined;
 
@@ -405,7 +407,7 @@ function App() {
     }, 15000);
 
     return () => window.clearInterval(intervalId);
-  }, [livePolling, refreshLiveData]);
+  }, [currentPage, livePolling]);
 
   useEffect(() => {
     function handleLocationChange() {
