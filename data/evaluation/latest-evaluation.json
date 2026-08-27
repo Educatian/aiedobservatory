@@ -1,50 +1,65 @@
 {
-  "generated_at": "2026-04-05T20:54:22.602Z",
+  "generated_at": "2026-08-27T19:25:02.948Z",
   "gold_record_count": 35,
   "matched_record_count": 35,
   "gold_coverage_rate": 1,
-  "metrics_scope": "independent_gold_subset",
+  "metrics_scope": "no_verified_independent_gold_primary_metrics_withheld",
   "gold_label_method_distribution": {
     "independent_review": 13,
     "packet_backed_review": 3,
     "canonical_aligned": 19
   },
   "field_accuracy": {
-    "ai_use_allowed": 1,
-    "assessment_policy": 1,
-    "privacy_policy": 1,
-    "teacher_pd_support": 1,
-    "implementation_stage": 1
+    "ai_use_allowed": null,
+    "assessment_policy": null,
+    "privacy_policy": null,
+    "teacher_pd_support": null,
+    "implementation_stage": null
   },
-  "stage_accuracy": 1,
-  "domain_accuracy": 1,
-  "approval_route_accuracy": 1,
-  "citation_support_rate": 1,
-  "missing_required_citation_rate": 0,
-  "supported_positive_rate": 1,
-  "unsupported_positive_rate": 0,
-  "positive_field_precision": 1,
-  "review_queue_rate": 0.611,
-  "review_queue_count": 22,
+  "stage_accuracy": null,
+  "domain_accuracy": null,
+  "approval_route_accuracy": null,
+  "citation_support_rate": null,
+  "missing_required_citation_rate": null,
+  "supported_positive_rate": null,
+  "unsupported_positive_rate": null,
+  "positive_field_precision": null,
+  "review_queue_rate": 0.697,
+  "review_queue_count": 46,
   "approval_route_distribution": {
-    "sample_audit": 21,
-    "auto_approve": 7,
-    "human_review": 8
+    "human_review": 36,
+    "sample_audit": 17,
+    "auto_approve": 13
   },
-  "deep_research_recommended_rate": 0.028,
-  "independent_subset": {
+  "deep_research_recommended_rate": 0.455,
+  "verified_independent_subset": {
+    "manifest_status": "independent_annotation_rebuild_required",
+    "gold_record_count": 0,
+    "matched_record_count": 0,
+    "field_accuracy": {
+      "ai_use_allowed": null,
+      "assessment_policy": null,
+      "privacy_policy": null,
+      "teacher_pd_support": null,
+      "implementation_stage": null
+    },
+    "stage_accuracy": null,
+    "domain_accuracy": null,
+    "approval_route_accuracy": null
+  },
+  "legacy_independent_subset": {
     "gold_record_count": 16,
     "matched_record_count": 16,
     "field_accuracy": {
-      "ai_use_allowed": 1,
-      "assessment_policy": 1,
-      "privacy_policy": 1,
-      "teacher_pd_support": 1,
-      "implementation_stage": 1
+      "ai_use_allowed": 0.938,
+      "assessment_policy": 0.938,
+      "privacy_policy": 0.938,
+      "teacher_pd_support": 0.938,
+      "implementation_stage": 0.938
     },
-    "stage_accuracy": 1,
-    "domain_accuracy": 1,
-    "approval_route_accuracy": 1
+    "stage_accuracy": 0.938,
+    "domain_accuracy": 0.938,
+    "approval_route_accuracy": 0.813
   },
   "canonical_aligned_subset": {
     "gold_record_count": 19,
@@ -58,25 +73,39 @@
     },
     "stage_accuracy": 1,
     "domain_accuracy": 1,
-    "approval_route_accuracy": 1
+    "approval_route_accuracy": 0.842
   },
   "packet_backed_subset": {
     "gold_record_count": 3,
     "matched_record_count": 3,
     "field_accuracy": {
-      "ai_use_allowed": 1,
-      "assessment_policy": 1,
-      "privacy_policy": 1,
-      "teacher_pd_support": 1,
-      "implementation_stage": 1
+      "ai_use_allowed": 0.667,
+      "assessment_policy": 0.667,
+      "privacy_policy": 0.667,
+      "teacher_pd_support": 0.667,
+      "implementation_stage": 0.667
     },
-    "stage_accuracy": 1,
-    "domain_accuracy": 1,
-    "approval_route_accuracy": 1
+    "stage_accuracy": 0.667,
+    "domain_accuracy": 0.667,
+    "approval_route_accuracy": 0.333
+  },
+  "legacy_diagnostic": {
+    "matched_record_count": 35,
+    "field_accuracy": {
+      "ai_use_allowed": 0.971,
+      "assessment_policy": 0.971,
+      "privacy_policy": 0.971,
+      "teacher_pd_support": 0.971,
+      "implementation_stage": 0.971
+    },
+    "citation_support_rate": 1,
+    "supported_positive_rate": 0.994,
+    "positive_field_precision": 0.974
   },
   "warnings": [
-    "Primary metrics are reported against the independent gold subset.",
-    "Canonical-aligned gold records are retained for calibration coverage but should not be used as the sole quality claim."
+    "Primary accuracy metrics are withheld until the annotation manifest contains verified independent records.",
+    "Legacy and canonical-aligned labels are reported only as diagnostics and must not be presented as independent model performance.",
+    "Structural validation does not establish content accuracy."
   ],
   "results": [
     {
@@ -139,17 +168,17 @@
       "gold_label_method": "packet_backed_review",
       "source_packet": "data/generated/deep-research/tx.evidence-packet.json",
       "field_scores": {
-        "ai_use_allowed": 1,
-        "assessment_policy": 1,
-        "privacy_policy": 1,
-        "teacher_pd_support": 1,
-        "implementation_stage": 1
+        "ai_use_allowed": 0,
+        "assessment_policy": 0,
+        "privacy_policy": 0,
+        "teacher_pd_support": 0,
+        "implementation_stage": 0
       },
-      "stage_match": 1,
-      "domain_match": 1,
-      "predicted_approval_route": "human_review",
+      "stage_match": 0,
+      "domain_match": 0,
+      "predicted_approval_route": "sample_audit",
       "gold_approval_route": "human_review",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-va",
@@ -165,9 +194,9 @@
       },
       "stage_match": 1,
       "domain_match": 1,
-      "predicted_approval_route": "sample_audit",
+      "predicted_approval_route": "auto_approve",
       "gold_approval_route": "sample_audit",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-ct",
@@ -183,9 +212,9 @@
       },
       "stage_match": 1,
       "domain_match": 1,
-      "predicted_approval_route": "sample_audit",
+      "predicted_approval_route": "auto_approve",
       "gold_approval_route": "sample_audit",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-de",
@@ -507,9 +536,9 @@
       },
       "stage_match": 1,
       "domain_match": 1,
-      "predicted_approval_route": "sample_audit",
+      "predicted_approval_route": "auto_approve",
       "gold_approval_route": "sample_audit",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-mi",
@@ -543,9 +572,9 @@
       },
       "stage_match": 1,
       "domain_match": 1,
-      "predicted_approval_route": "sample_audit",
+      "predicted_approval_route": "auto_approve",
       "gold_approval_route": "sample_audit",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-ne",
@@ -687,9 +716,9 @@
       },
       "stage_match": 1,
       "domain_match": 1,
-      "predicted_approval_route": "sample_audit",
+      "predicted_approval_route": "auto_approve",
       "gold_approval_route": "sample_audit",
-      "approval_route_match": 1
+      "approval_route_match": 0
     },
     {
       "jurisdiction_id": "state-wv",

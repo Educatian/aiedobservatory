@@ -1,0 +1,39 @@
+name: External reproduction report
+description: Report a clean-environment release reproduction
+title: "[reproduction] "
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets. State any project relationship or conflict."
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or tag
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Node.js, npm, and network restrictions
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands and complete result
+    validations:
+      required: true
+  - type: textarea
+    id: deviations
+    attributes:
+      label: Deviations, warnings, and failures
+    validations:
+      required: true
+  - type: textarea
+    id: independence
+    attributes:
+      label: Relationship and conflict disclosure
+    validations:
+      required: true

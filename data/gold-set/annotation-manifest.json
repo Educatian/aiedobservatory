@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "updated_at": "2026-08-27",
+  "verified_independent_records": [],
+  "legacy_record_count": 35,
+  "status": "independent_annotation_rebuild_required",
+  "requirements_for_verified_status": [
+    "at least two named or pseudonymous independent annotators",
+    "annotation timestamps and codebook version",
+    "record-level labels created without access to the prediction",
+    "documented disagreements and adjudication",
+    "source and evidence lineage"
+  ],
+  "note": "Existing labels remain useful as legacy calibration artifacts but are not treated as verified independent performance evidence."
+}

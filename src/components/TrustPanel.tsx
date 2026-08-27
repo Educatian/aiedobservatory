@@ -47,6 +47,19 @@ function getApprovalRouteLabel(route: PolicyRecord["approvalRoute"]): string {
   }
 }
 
+function getIntegrityLabel(status: PolicyRecord["sourceIntegrityStatus"]): string {
+  switch (status) {
+    case "verified":
+      return "Verified for this release";
+    case "mixed":
+      return "Mixed source status";
+    case "needs_review":
+      return "Needs source repair";
+    default:
+      return "Not yet audited";
+  }
+}
+
 export function TrustPanel({ record, events = [] }: TrustPanelProps) {
   const evidenceCount = record.evidenceSpans.length;
   const sourceCount = record.sourceDocuments.length;
@@ -82,6 +95,10 @@ export function TrustPanel({ record, events = [] }: TrustPanelProps) {
         <div>
           <span className="detail-label">Approval route</span>
           <strong>{getApprovalRouteLabel(record.approvalRoute)}</strong>
+        </div>
+        <div>
+          <span className="detail-label">Source integrity</span>
+          <strong>{getIntegrityLabel(record.sourceIntegrityStatus)}</strong>
         </div>
       </div>
 

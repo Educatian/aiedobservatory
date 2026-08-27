@@ -1,0 +1,16 @@
+{
+  "name": "@openpolicy/receipts",
+  "version": "0.1.0-rc.1",
+  "description": "Domain-agnostic, tamper-evident action receipts for public-interest AI agents.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": "./src/index.mjs",
+  "files": [
+    "src",
+    "schema",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

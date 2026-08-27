@@ -22,6 +22,7 @@ import { SecondarySignalsPanel } from "./components/SecondarySignalsPanel";
 import { SourceLibrarySection } from "./components/SourceLibrarySection";
 import { TeacherGuidancePanel } from "./components/TeacherGuidancePanel";
 import { TrustPanel } from "./components/TrustPanel";
+import { ReceiptDemoPage } from "./components/ReceiptDemoPage";
 import { WhatsNewModal } from "./components/WhatsNewModal";
 import { SideRail, TopBar, type FilterDimension, type TimeWindow, type TopBarView } from "./components/shell";
 import { SegmentControl } from "./components/ui";
@@ -49,7 +50,7 @@ function activeSectionToTopBarView(section: NavSection): TopBarView {
 const WHATS_NEW_KEY = "aiedob.whatsNewSeenVersion";
 
 type CoverageFilter = "all" | "coded" | "queued";
-type AppPage = "landing" | "dashboard" | "projectoverview" | "developer";
+type AppPage = "landing" | "dashboard" | "projectoverview" | "developer" | "receipts";
 type NavSection =
   | "map-view"
   | "compare"
@@ -70,6 +71,7 @@ function getAppPageFromPath(pathname: string): AppPage {
   const normalized = pathname.toLowerCase();
   if (normalized.startsWith("/projectoverview")) return "projectoverview";
   if (normalized.startsWith("/developer")) return "developer";
+  if (normalized.startsWith("/receipts")) return "receipts";
   if (normalized.startsWith("/app")) return "dashboard";
   return "landing";
 }
@@ -432,6 +434,8 @@ function App() {
     document.title =
       currentPage === "projectoverview"
         ? "Project Overview - AI Education Policy Observatory"
+        : currentPage === "receipts"
+          ? "OpenPolicy Receipts - Browser Verification Demo"
         : currentPage === "landing"
           ? "AI Education Policy Observatory"
           : "AI Education Policy Observatory | Workspace";
@@ -474,6 +478,14 @@ function App() {
     if (typeof window !== "undefined") {
       window.history.pushState({}, "", "/projectoverview");
       setCurrentPage("projectoverview");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function navigateToReceiptDemo() {
+    if (typeof window !== "undefined") {
+      window.history.pushState({}, "", "/receipts");
+      setCurrentPage("receipts");
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
@@ -584,6 +596,7 @@ function App() {
           onOpenDashboard={() => navigateToDashboard("map-view")}
           onOpenProjectOverview={navigateToProjectOverview}
           onOpenDeveloper={navigateToDeveloper}
+          onOpenReceiptDemo={navigateToReceiptDemo}
           onSkipTesting={handleSkipTesting}
         />
         <LoginModal
@@ -611,6 +624,10 @@ function App() {
         />
       </>
     );
+  }
+
+  if (currentPage === "receipts") {
+    return <ReceiptDemoPage onOpenLanding={navigateToLanding} />;
   }
 
   if (currentPage === "projectoverview") {

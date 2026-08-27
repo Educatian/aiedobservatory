@@ -1,0 +1,59 @@
+{
+  "receipt": {
+    "receipt_version": "1.0-draft",
+    "receipt_id": "opr-standalone-example",
+    "generated_at": "2026-08-27T20:01:00.000Z",
+    "actor": "standalone-evidence-agent",
+    "action": "extract_claim",
+    "resource": "https://example.gov/guidance",
+    "authorization": {
+      "allowed_actions": [
+        "extract_claim"
+      ],
+      "allowed_resources": [
+        "https://example.gov/*"
+      ],
+      "network_access": false,
+      "secrets_access": false,
+      "delegated_by": null,
+      "expires_at": null
+    },
+    "provenance": {
+      "source_url": "https://example.gov/guidance",
+      "source_sha256": "50cb6fe12522400bbfa0d4bbea5eea40357a516a2849ed269c56d9844d2c554b"
+    },
+    "inputs": [
+      {
+        "name": "source",
+        "media_type": "application/json",
+        "bytes": 145,
+        "sha256": "50cb6fe12522400bbfa0d4bbea5eea40357a516a2849ed269c56d9844d2c554b"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "claim",
+        "media_type": "application/json",
+        "bytes": 75,
+        "sha256": "882c44d0cf660da955bc1140fb417d54ff7e2eabac980ec9b09f98ce6ad658bf"
+      }
+    ],
+    "review": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null
+    },
+    "lifecycle": [],
+    "state": "active",
+    "signature": {
+      "algorithm": "Ed25519",
+      "key_id": "standalone-example-key",
+      "signed_digest_sha256": "8aeb0677ab2b0194c2e09862cdb56d2ee0ec09822086fc1e1557ae265711e319",
+      "value_base64": "0s+c22pYG1t0D3fWWEDN5BtMn4nH37yRsZRR12+yythXQEJxvT+kX0w4EwAAH3JO9zrk+3flhxilSnUSqXNBBw=="
+    }
+  },
+  "verification": {
+    "ok": true,
+    "errors": []
+  }
+}

@@ -154,6 +154,8 @@ export interface PolicyRecord {
   auditStatus?: "not_required" | "pending_sample" | "pending_human_review" | "completed";
   policyDomains?: string[];
   verificationNotes?: string;
+  sourceIntegrityStatus?: "verified" | "mixed" | "needs_review";
+  sourceIntegrityCheckedAt?: string;
   routingReasons?: string[];
   deepResearchRecommended?: boolean;
   deepResearchReasons?: string[];

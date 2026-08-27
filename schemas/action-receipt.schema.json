@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Educatian/aiedobservatory/schemas/action-receipt.schema.json",
+  "title": "OpenPolicy Action Receipt",
+  "type": "object",
+  "required": [
+    "receipt_version",
+    "run_id",
+    "generated_at",
+    "action",
+    "actor",
+    "authorization_scope",
+    "code",
+    "runtime",
+    "inputs",
+    "outputs",
+    "review"
+  ],
+  "properties": {
+    "receipt_version": { "const": "0.1" },
+    "run_id": { "type": "string", "minLength": 8 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "action": { "type": "string", "minLength": 1 },
+    "actor": { "type": "string", "minLength": 1 },
+    "authorization_scope": {
+      "type": "object",
+      "required": ["allowed_actions", "network_access", "secrets_access"],
+      "properties": {
+        "allowed_actions": { "type": "array", "items": { "type": "string" } },
+        "network_access": { "type": "boolean" },
+        "secrets_access": { "type": "boolean" }
+      }
+    },
+    "code": {
+      "type": "object",
+      "required": ["repository", "commit", "dirty"],
+      "properties": {
+        "repository": { "type": "string" },
+        "commit": { "type": "string" },
+        "dirty": { "type": "boolean" }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["node", "platform", "model_path"],
+      "properties": {
+        "node": { "type": "string" },
+        "platform": { "type": "string" },
+        "model_path": { "type": "string" },
+        "prompt_version": { "type": ["string", "null"] }
+      }
+    },
+    "inputs": { "$ref": "#/$defs/artifacts" },
+    "outputs": { "$ref": "#/$defs/artifacts" },
+    "review": {
+      "type": "object",
+      "required": ["status", "reviewer", "correction_or_retirement"],
+      "properties": {
+        "status": { "enum": ["pending", "approved", "rejected", "retired"] },
+        "reviewer": { "type": ["string", "null"] },
+        "correction_or_retirement": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "bytes"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "bytes": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

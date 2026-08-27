@@ -1,0 +1,47 @@
+{
+  "release": "v0.1",
+  "generated_at": "2026-08-27T20:34:18.443Z",
+  "all_sources_ok": true,
+  "source_count": 3,
+  "results": [
+    {
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "requested_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-(AI)-for-K-12-Schools.aspx",
+      "final_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-(AI)-for-K-12-Schools.aspx",
+      "checked_at": "2026-08-27T20:34:18.187Z",
+      "http_status": 200,
+      "ok": true,
+      "content_type": "text/html; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 27 Aug 2026 20:34:19 GMT",
+      "bytes": 255990,
+      "sha256": "f94e9f1a63a324a0ea791ea4a15af6950f5646d4e54f588dc493e5376a5d912b"
+    },
+    {
+      "source_id": "or-ode-policy-protocols-v2",
+      "requested_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
+      "final_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
+      "checked_at": "2026-08-27T20:34:18.338Z",
+      "http_status": 200,
+      "ok": true,
+      "content_type": "application/pdf",
+      "etag": "W/\"{AC61419B-4C95-4DF8-B48C-1BDB9CA50AF2},21\"",
+      "last_modified": "Wed, 17 Jun 2026 00:55:23 GMT",
+      "bytes": 392106,
+      "sha256": "8d77866a05ac1e8d90d9703c2367bf89536fef0ce4265275fff32025e7d1de7c"
+    },
+    {
+      "source_id": "or-ode-classrooms-v2",
+      "requested_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf",
+      "final_url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf",
+      "checked_at": "2026-08-27T20:34:18.443Z",
+      "http_status": 200,
+      "ok": true,
+      "content_type": "application/pdf",
+      "etag": "W/\"{28BD19ED-DDA1-4669-A9FA-24D0EEA4ECF1},7\"",
+      "last_modified": "Tue, 07 Apr 2026 11:14:02 GMT",
+      "bytes": 625071,
+      "sha256": "a3c0b73a23db7a2b1781b11cbf663760a05b532d66ca362cecfbdcd51a43ecce"
+    }
+  ]
+}

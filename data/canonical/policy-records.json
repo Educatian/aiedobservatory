@@ -8,20 +8,20 @@
     "state_abbr": "AL",
     "year": 2026,
     "effective_date": "2025-01-31",
-    "review_status": "approved",
-    "extraction_status": "validated",
+    "review_status": "needs_revision",
+    "extraction_status": "draft_extracted",
     "coder_type": "hybrid",
-    "confidence": 0.85,
-    "policy_strength": 10,
-    "ai_use_allowed": 2,
-    "assessment_policy": 2,
-    "privacy_policy": 3,
-    "teacher_pd_support": 2,
-    "implementation_stage": 3,
-    "policy_orientation": "compliance-led with higher-ed autonomy",
-    "notes": "Alabama operates a five-layer AI policy stack: a binding state-agency AUP (OIT, Jan 2025), a cross-branch governance body (TQAB, Feb 2026) derived from the Governor's 2024 Task Force, two 2026 legislative instruments (SB328 proposed; HB604 enacted, effective July 2026), an interim legislative study report, a district position statement (Tuscaloosa City Schools) plus curricular programs in Birmingham/Huntsville, the ACHE AI Exchange consortium track, and HEI-level faculty guidelines (UA) and institutional policy (UNA 2024/2025).",
+    "confidence": 0.1,
+    "policy_strength": 0,
+    "ai_use_allowed": null,
+    "assessment_policy": null,
+    "privacy_policy": null,
+    "teacher_pd_support": null,
+    "implementation_stage": null,
+    "policy_orientation": "unverified_source_integrity",
+    "notes": "Quarantined from public scoring pending source repair: Five sampled source URLs returned 404 or failed DNS resolution on 2026-08-27, and the record lacked stable raw/chunk provenance for reconstruction.",
     "version": 1,
-    "updated_at": "2026-04-27T02:05:45.637Z",
+    "updated_at": "2026-08-27T19:25:02.567Z",
     "source_documents": [
       {
         "url": "https://oit.alabama.gov/policies/",
@@ -201,49 +201,21 @@
         "relations": []
       }
     ],
-    "evidence_spans": [
-      {
-        "field": "ai_use_allowed",
-        "quote": "State employees may use generative AI only with human-in-the-loop review; AI-generated code and output must be annotated as such.",
-        "source_url": "https://oit.alabama.gov/policies/",
-        "chunk_id": null
-      },
-      {
-        "field": "privacy_policy",
-        "quote": "Confidential or sensitive state data may not be entered into AI queries without Agency Head approval.",
-        "source_url": "https://oit.alabama.gov/policies/",
-        "chunk_id": null
-      },
-      {
-        "field": "assessment_policy",
-        "quote": "Faculty must verify AI-assisted outputs and disclose use in the syllabus; students must disclose AI use on graded work.",
-        "source_url": "https://una.edu/policy/ai",
-        "chunk_id": null
-      },
-      {
-        "field": "teacher_pd_support",
-        "quote": "TQAB oversight and ACHE AI Exchange provide coordinated training across state workforce and higher-ed faculty.",
-        "source_url": "https://governor.alabama.gov/tqab",
-        "chunk_id": null
-      },
-      {
-        "field": "implementation_stage",
-        "quote": "Learning Blade modules are already deployed in Birmingham and Huntsville districts; UA and UNA have active syllabus-level rules.",
-        "source_url": "https://www.alsde.edu/learningblade",
-        "chunk_id": null
-      }
-    ],
+    "evidence_spans": [],
     "extraction_model": "hand-coded-2026Q2",
-    "verification_status": "supported",
-    "verification_notes": "Five-layer cross-branch record synthesised from OIT AUP, TQAB charter, 2024 Task Force report, SB328/HB604, legislative interim study, TCS district stance, ALSDE curricular deployment, ACHE consortium track, UA faculty guide, and UNA institutional policy.",
+    "verification_status": "needs_review",
+    "verification_notes": "Five sampled source URLs returned 404 or failed DNS resolution on 2026-08-27, and the record lacked stable raw/chunk provenance for reconstruction.",
     "approval_route": "human_review",
-    "audit_status": "completed",
-    "source_authority": "binding_law_or_regulation",
+    "audit_status": "pending_human_review",
+    "source_authority": "unknown",
     "routing_reasons": [
-      "manual_review_completed"
+      "source_integrity_failure",
+      "manual_source_repair_required"
     ],
-    "deep_research_recommended": false,
-    "deep_research_reasons": [],
+    "deep_research_recommended": true,
+    "deep_research_reasons": [
+      "Five sampled source URLs returned 404 or failed DNS resolution on 2026-08-27, and the record lacked stable raw/chunk provenance for reconstruction."
+    ],
     "policy_domains": [
       "governance",
       "academic_integrity",
@@ -254,101 +226,9 @@
       "privacy",
       "teacher_pd"
     ],
-    "teacher_guidance": {
-      "summary": "Alabama K-12 teachers work inside a state-agency acceptable-use rule (OIT) and district-level stance (e.g., TCS); higher-ed faculty operate under UA/UNA syllabus-disclosure rules. Student disclosure is expected across levels; PII and sensitive state data must never enter AI tools without approval.",
-      "allowed_uses": [
-        "Brainstorming lesson ideas and drafting rubrics with AI, provided outputs are reviewed before use in class",
-        "Providing AI-generated feedback drafts to students when disclosed and teacher-reviewed",
-        "Using district-approved AI platforms (Learning Blade etc.) aligned with ALSDE curricular modules",
-        "Demonstrating AI tools to 9-12 / higher-ed students with an explicit syllabus statement"
-      ],
-      "prohibited_uses": [
-        "Entering confidential or sensitive state data / student PII into public generative AI without Agency Head approval",
-        "Using AI to make high-stakes grading decisions without human review",
-        "Submitting AI-generated content as one's own without disclosure",
-        "Deploying AI tools below the district's approved age threshold without parental consent"
-      ],
-      "age_restrictions": [
-        {
-          "category": "grade",
-          "description": "K-5 use is permitted only through district-approved, COPPA-compliant tools; AI outputs must be teacher-mediated.",
-          "source_quote": "District stance: AI tools in elementary settings require teacher approval and COPPA-compliant platforms.",
-          "source_url": "https://tcs.k12.al.us/ai-position"
-        },
-        {
-          "category": "grade",
-          "description": "6-12 students may use AI with disclosure; graded work must carry an AI-use annotation.",
-          "source_quote": "Students must disclose AI use on graded work; AI-generated code/output must be annotated.",
-          "source_url": "https://oit.alabama.gov/policies/"
-        }
-      ],
-      "usage_restrictions": [
-        {
-          "category": "tool",
-          "description": "Only district-approved AI platforms; no free-tier consumer accounts with student data.",
-          "source_quote": "District tech portals list approved AI platforms.",
-          "source_url": "https://tcs.k12.al.us/ai-position"
-        },
-        {
-          "category": "use_case",
-          "description": "Assessment use permitted only with teacher monitoring; high-stakes grading requires human review.",
-          "source_quote": "Faculty must verify AI-assisted outputs before high-stakes decisions.",
-          "source_url": "https://oaa.ua.edu/ai-faculty-guide"
-        }
-      ],
-      "contact_resource": "https://oit.alabama.gov/policies/",
-      "last_reviewed": "2025-01-31",
-      "grade_band_rules": [
-        {
-          "band": "K-2",
-          "stance": "restricted",
-          "note": "Teacher-mediated only via district-approved tools; no direct student input of PII."
-        },
-        {
-          "band": "3-5",
-          "stance": "restricted",
-          "note": "District-approved tools; parental consent required for new AI platforms."
-        },
-        {
-          "band": "6-8",
-          "stance": "permitted_with_disclosure",
-          "note": "Disclosure on graded work; district-approved tools only."
-        },
-        {
-          "band": "9-12",
-          "stance": "permitted_with_disclosure",
-          "note": "Syllabus statement + AI-annotation on generated code/output."
-        },
-        {
-          "band": "higher_ed",
-          "stance": "permitted_with_disclosure",
-          "note": "UA/UNA syllabus-statement regime; faculty must verify AI outputs."
-        }
-      ],
-      "student_disclosure_required": true,
-      "student_disclosure_format": "Syllabus statement (HEI) + AI annotation on generated code/output (state OIT). Students disclose AI use on graded submissions.",
-      "parental_consent_required": true,
-      "parental_consent_threshold": "6-8",
-      "data_prohibitions": [
-        "Confidential or sensitive state data in AI queries without Agency Head approval",
-        "Student PII / IEP content / disciplinary records",
-        "Assessment items without teacher review",
-        "Identifiable student work uploaded to free-tier consumer AI tools"
-      ],
-      "teacher_grading_allowed": "with_human_review",
-      "teacher_feedback_draft_allowed": "with_disclosure",
-      "prior_training_required": true,
-      "training_provider": "State OIT (via TQAB oversight) + district tech portals + ACHE AI Exchange (higher-ed)",
-      "assessment_use_rule": "permitted_with_monitoring",
-      "syllabus_statement_template": "Artificial Intelligence tools may be used in this course in ways explicitly authorised by the instructor. When used, students must disclose the tool, the prompt, and the portion of the submission that was AI-assisted. AI-generated output must be verified by the student; factual or interpretive errors remain the student's responsibility. Use of generative AI on assignments not authorised for AI use constitutes a violation of the academic-integrity policy. Personal, confidential, or identifiable data about yourself or others must not be entered into generative AI tools.",
-      "teacher_action_items": [
-        "Check your district's technology portal for the current list of approved AI platforms before introducing a new tool.",
-        "Add an AI-use statement to your syllabus (paste the template above and tailor it to your subject).",
-        "Apply human review to any AI-generated feedback before returning it to students.",
-        "Redact student PII / IEP content / identifiable work before any AI prompt.",
-        "Escalate suspected misuse through your building administrator; document the incident in line with district policy."
-      ]
-    }
+    "teacher_guidance": null,
+    "source_integrity_status": "needs_review",
+    "source_integrity_checked_at": "2026-08-27T19:25:02.568Z"
   },
   {
     "record_id": "state-az-v1",
@@ -5142,7 +5022,7 @@
     "updated_at": "2026-04-04T21:38:25.590Z",
     "source_documents": [
       {
-        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-%28AI%29-for-K-12-Schools.aspx",
+        "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-(AI)-for-K-12-Schools.aspx",
         "title": null,
         "raw_file": "data/generated/raw/OR-official-guidance.html",
         "published_date_guess": null,
@@ -5240,6 +5120,8 @@
     "extraction_model": "gemini-2.5-pro",
     "verification_status": "supported",
     "verification_notes": "Human review confirmed the Oregon guidance hub and linked materials support the released-guidance coding.",
+    "source_integrity_status": "verified",
+    "source_integrity_checked_at": "2026-08-27T19:00:00.000Z",
     "approval_route": "human_review",
     "audit_status": "completed",
     "source_authority": "official_guidance",

@@ -96,6 +96,11 @@
         "enum": ["supported", "needs_review", null]
       },
       "verification_notes": { "type": ["string", "null"] },
+      "source_integrity_status": {
+        "type": ["string", "null"],
+        "enum": ["verified", "mixed", "needs_review", null]
+      },
+      "source_integrity_checked_at": { "type": ["string", "null"] },
       "version": { "type": "integer" },
       "updated_at": { "type": "string" },
       "source_documents": {

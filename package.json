@@ -1,12 +1,30 @@
 {
   "name": "aied-policy-atlas",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0-rc.2",
+  "description": "Auditable open-source pipeline and observatory for AI-in-education policy evidence.",
+  "license": "Apache-2.0",
+  "author": "Jewoong Moon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Educatian/aiedobservatory.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs && npm run pipeline:validate",
+    "test:unit": "node --test tests/*.test.mjs",
+    "release:prepare": "npm run audit:sources && npm run pipeline:evaluate:release && npm run benchmark:validate && npm run receipt:example && npm run receipt:signed-examples && npm run receipt:conformance",
+    "release:check": "npm run release:prepare && npm test && npm run build",
+    "audit:sources": "node scripts/audit-source-integrity.mjs",
+    "data:quarantine": "node scripts/quarantine-source-record.mjs",
+    "receipt:example": "node scripts/generate-action-receipt.mjs",
+    "receipt:signed-examples": "node scripts/generate-signed-receipt-examples.mjs",
+    "receipt:conformance": "node scripts/run-receipt-conformance.mjs",
+    "benchmark:validate": "node scripts/validate-benchmark-packet.mjs",
+    "reproduce:internal": "node scripts/internal-clean-room-reproduce.mjs",
     "crawl:sources": "node scripts/crawl-policy-sources.mjs",
     "pipeline:import:docx": "node scripts/import-local-docx.mjs",
     "pipeline:merge:manifest": "node scripts/merge-manifest-into-canonical.mjs",
@@ -27,9 +45,13 @@
     "pipeline:review-queue": "node scripts/build-review-queue.mjs",
     "pipeline:publish": "node scripts/publish-app-data.mjs",
     "pipeline:evaluate": "node scripts/evaluate-policy-records.mjs",
+    "pipeline:evaluate:release": "node scripts/evaluate-release-slice.mjs",
     "pipeline:evaluate:synthesis": "node scripts/evaluate-synthesis-calibration.mjs",
     "pipeline:events": "node scripts/build-policy-events.mjs",
     "assets:codebook": "node scripts/generate-codebook-pdf.mjs"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",

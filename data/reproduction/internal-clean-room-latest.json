@@ -1,0 +1,110 @@
+{
+  "reproduction_type": "internal_clean_room_not_independent_external_reproduction",
+  "generated_at": "2026-08-27T20:04:30.876Z",
+  "source_state": "current_working_tree_copy_excluding_git_node_modules_dist_and_large_raw_cache",
+  "environment": {
+    "platform": "win32-x64",
+    "node": "v24.15.0",
+    "temp_root_redacted": true
+  },
+  "checks": [
+    {
+      "command": "npm ci --ignore-scripts",
+      "exit_code": 0,
+      "elapsed_ms": 1844,
+      "output_tail": [
+        "added 75 packages, and audited 76 packages in 2s",
+        "",
+        "9 packages are looking for funding",
+        "  run `npm fund` for details",
+        "",
+        "found 0 vulnerabilities"
+      ]
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "elapsed_ms": 804,
+      "output_tail": [
+        "✔ canonical serialization is independent of object insertion order (0.5313ms)",
+        "✔ Ed25519 receipts verify and detect content tampering (2.351ms)",
+        "✔ review and retirement events preserve a signed digest chain (0.932ms)",
+        "✔ the frozen conformance suite contains 30 passing cases (8.1149ms)",
+        "✔ both reference adapters emit verifiable receipts (3.0802ms)",
+        "✔ release claims have a declared source, rights decision, and honest review status (3.0607ms)",
+        "✔ stored integrity audit covers every release source (1.3835ms)",
+        "✔ action receipt hashes match current release artifacts (4.1994ms)",
+        "✔ evaluation card does not imply independent validation (0.6851ms)",
+        "✔ hostile source instructions remain bounded as untrusted evidence (0.8992ms)",
+        "✔ tool actions outside the declared scope are rejected (0.3112ms)",
+        "✔ a forged closing marker cannot escape the untrusted block (0.109ms)",
+        "ℹ tests 14",
+        "ℹ suites 0",
+        "ℹ pass 14",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 113.7222",
+        "",
+        "> aied-policy-atlas@0.2.0-rc.2 pipeline:validate",
+        "> node scripts/validate-policy-records.mjs",
+        "",
+        "Validated 66 records with no issues."
+      ]
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "elapsed_ms": 2729,
+      "output_tail": [
+        "> aied-policy-atlas@0.2.0-rc.2 build",
+        "> vite build",
+        "",
+        "vite v6.4.3 building for production...",
+        "transforming...",
+        "✓ 217 modules transformed.",
+        "rendering chunks...",
+        "computing gzip size...",
+        "dist/index.html                     2.41 kB │ gzip:   0.82 kB",
+        "dist/assets/index-Co4IaBG7.css    188.95 kB │ gzip:  32.91 kB",
+        "dist/assets/index-CUUco9gs.js   1,674.90 kB │ gzip: 449.69 kB",
+        "✓ built in 1.68s",
+        "",
+        "",
+        "(!) Some chunks are larger than 500 kB after minification. Consider:",
+        "- Using dynamic import() to code-split the application",
+        "- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks",
+        "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit."
+      ]
+    },
+    {
+      "command": "npm run benchmark:validate",
+      "exit_code": 0,
+      "elapsed_ms": 318,
+      "output_tail": [
+        "> aied-policy-atlas@0.2.0-rc.2 benchmark:validate",
+        "> node scripts/validate-benchmark-packet.mjs",
+        "",
+        "Benchmark packet valid: 30 decisions; 2 blank sheets"
+      ]
+    },
+    {
+      "command": "npm run receipt:conformance",
+      "exit_code": 0,
+      "elapsed_ms": 293,
+      "output_tail": [
+        "> aied-policy-atlas@0.2.0-rc.2 receipt:conformance",
+        "> node scripts/run-receipt-conformance.mjs",
+        "",
+        "Receipt conformance: 30/30 passed"
+      ]
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "The project maintainer initiated this run, so it does not satisfy the independent reproduction gate.",
+    "The run exercises the current working tree, not a public clean git tag.",
+    "Large raw crawl caches are excluded because the release contract does not require them."
+  ]
+}

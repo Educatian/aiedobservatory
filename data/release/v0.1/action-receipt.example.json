@@ -1,0 +1,56 @@
+{
+  "receipt_version": "0.1",
+  "run_id": "openpolicy-a23ef8e4-1c67-4df5-b660-efd7c4f9ec1d",
+  "generated_at": "2026-08-27T20:34:19.511Z",
+  "action": "assemble_and_evaluate_link_only_oregon_release_slice",
+  "actor": "Jewoong Moon",
+  "authorization_scope": {
+    "allowed_actions": [
+      "read_release_inputs",
+      "fetch_declared_sources",
+      "write_release_audit"
+    ],
+    "network_access": true,
+    "secrets_access": false
+  },
+  "code": {
+    "repository": "https://github.com/Educatian/aiedobservatory",
+    "commit": "6743c9b6157f06fe4202878bb2e9ede73d60a7a6",
+    "dirty": true
+  },
+  "runtime": {
+    "node": "v24.15.0",
+    "platform": "win32-x64; 10.0.26200",
+    "model_path": "deterministic_release_audit_no_model",
+    "prompt_version": null
+  },
+  "inputs": [
+    {
+      "path": "data/release/v0.1/policy-claims.json",
+      "sha256": "48d235d3a951bc525d35864d279ef1d3ff8935f5d0b0bbf512ef825ba4f21931",
+      "bytes": 3256
+    },
+    {
+      "path": "data/release/v0.1/source-rights.json",
+      "sha256": "c0128535c2b48cd8a994a30cd554ade70306f5d48e38ef4d03e5298226f7067e",
+      "bytes": 2498
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/release/v0.1/source-integrity.json",
+      "sha256": "15dafe0985e51cd69f2fa323756443fd9041b7f07ff3da99128a328e25141024",
+      "bytes": 2451
+    },
+    {
+      "path": "data/release/v0.1/evaluation-card.json",
+      "sha256": "8adbdb5f48202cfce20cc44d8f6d4bf075ac8e897193b572362cb45e7288becf",
+      "bytes": 627
+    }
+  ],
+  "review": {
+    "status": "pending",
+    "reviewer": null,
+    "correction_or_retirement": null
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "release": "v0.1",
+  "data_license": "CC0-1.0",
+  "jurisdiction": "Oregon",
+  "scope": "One official state guidance source family; factual coding only",
+  "limitations": [
+    "This is a single-curator release candidate, not an independently validated gold set.",
+    "Source materials are linked, not redistributed.",
+    "The records summarize guidance and are not legal advice."
+  ],
+  "claims": [
+    {
+      "claim_id": "or-v01-guidance-format",
+      "field": "implementation_stage",
+      "value": "current_web_guidance",
+      "summary": "ODE maintains a current web-based version of its generative-AI guidance.",
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "source_anchor": "Important News & Resources",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    },
+    {
+      "claim_id": "or-v01-system-planning",
+      "field": "district_governance",
+      "value": "system_level_planning_recommended",
+      "summary": "The guidance recommends district-level planning and clear local policy processes for AI use.",
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "source_anchor": "GenAI in K-12 Classrooms",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    },
+    {
+      "claim_id": "or-v01-family-engagement",
+      "field": "stakeholder_participation",
+      "value": "family_and_community_engagement_recommended",
+      "summary": "The guidance identifies families and communities as participants in AI planning and evaluation.",
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "source_anchor": "Guiding Principles: Continuous Evaluation, Future Readiness, and Community Partnership",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    },
+    {
+      "claim_id": "or-v01-privacy",
+      "field": "privacy_policy",
+      "value": "privacy_safeguards_addressed",
+      "summary": "The guidance directs district leaders to consider staff and student privacy in school settings.",
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "source_anchor": "Deeper Dives for District Leaders",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    },
+    {
+      "claim_id": "or-v01-equity-access",
+      "field": "equity_access",
+      "value": "disability_language_connectivity_considered",
+      "summary": "The guidance addresses equitable access, including disability, multilingual, device, and connectivity considerations.",
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "source_anchor": "Guiding Principles: Equity and Access for All Learners",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    },
+    {
+      "claim_id": "or-v01-policy-development-resource",
+      "field": "policy_support",
+      "value": "policy_development_resource_available",
+      "summary": "ODE provides a separate resource for developing local policies and protocols for generative AI.",
+      "source_id": "or-ode-policy-protocols-v2",
+      "source_anchor": "Document title and purpose",
+      "review_status": "single_curator_reviewed",
+      "independent_review_status": "pending"
+    }
+  ]
+}

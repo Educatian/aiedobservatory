@@ -6,6 +6,7 @@ interface LandingPageProps {
   onOpenDashboard: () => void;
   onOpenProjectOverview: () => void;
   onOpenDeveloper: () => void;
+  onOpenReceiptDemo: () => void;
   onSkipTesting: () => void;
 }
 
@@ -15,6 +16,7 @@ export function LandingPage({
   onOpenDashboard,
   onOpenProjectOverview,
   onOpenDeveloper,
+  onOpenReceiptDemo,
   onSkipTesting
 }: LandingPageProps) {
   return (
@@ -30,6 +32,7 @@ export function LandingPage({
         <nav className="landing-topnav" aria-label="Landing navigation">
           <button type="button" onClick={onOpenProjectOverview}>About</button>
           <button type="button" onClick={onOpenDeveloper}>Developer</button>
+          <button type="button" onClick={onOpenReceiptDemo}>Receipt demo</button>
           <button
             type="button"
             className="landing-topnav-cta"
@@ -58,6 +61,12 @@ export function LandingPage({
             traced to source documents.
           </p>
 
+          <p className="landing-sub">
+            Research prototype: the broader corpus contains mixed-stage records. The bounded
+            v0.1 evidence slice currently covers three verified Oregon sources and six
+            single-curator claims; independent review is pending.
+          </p>
+
           <div className="landing-ctas">
             <button
               type="button"
@@ -77,18 +86,18 @@ export function LandingPage({
 
           <div className="landing-stats">
             <div className="landing-stat">
-              <strong>51</strong>
-              <span>States tracked</span>
+              <strong>Prototype</strong>
+              <span>Not legal advice</span>
             </div>
             <div className="landing-stat-divider" />
             <div className="landing-stat">
-              <strong>248+</strong>
-              <span>Source documents</span>
+              <strong>3</strong>
+              <span>Verified release sources</span>
             </div>
             <div className="landing-stat-divider" />
             <div className="landing-stat">
-              <strong>92%</strong>
-              <span>Citation coverage</span>
+              <strong>0%</strong>
+              <span>Independent review completed</span>
             </div>
           </div>
         </div>

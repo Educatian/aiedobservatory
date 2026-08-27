@@ -1,0 +1,78 @@
+{
+  "benchmark": "openpolicy-oregon-claim-audit-v0.1",
+  "status": "frozen_pending_independent_annotation",
+  "frozen_at": "2026-08-27T20:30:00.000Z",
+  "jurisdiction": "Oregon",
+  "source_release": "data/release/v0.1/policy-claims.json",
+  "claim_count": 6,
+  "criteria_count": 5,
+  "decision_count": 30,
+  "gold_labels_in_packet": false,
+  "claims": [
+    { "claim_id": "or-v01-guidance-format", "source_id": "or-ode-ai-guidance-web-v3" },
+    { "claim_id": "or-v01-system-planning", "source_id": "or-ode-ai-guidance-web-v3" },
+    { "claim_id": "or-v01-family-engagement", "source_id": "or-ode-ai-guidance-web-v3" },
+    { "claim_id": "or-v01-privacy", "source_id": "or-ode-ai-guidance-web-v3" },
+    { "claim_id": "or-v01-equity-access", "source_id": "or-ode-ai-guidance-web-v3" },
+    { "claim_id": "or-v01-policy-development-resource", "source_id": "or-ode-policy-protocols-v2" }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "claim_presence",
+      "question": "Does the cited source communicate the factual proposition in the claim summary?",
+      "labels": ["supported", "not_supported", "unclear"]
+    },
+    {
+      "criterion_id": "source_support",
+      "question": "How directly does the cited source support the claim?",
+      "labels": ["direct", "indirect", "none", "unclear"]
+    },
+    {
+      "criterion_id": "anchor_locatability",
+      "question": "Can the stated source anchor be located in the retrieved official source?",
+      "labels": ["located", "not_located", "source_unavailable"]
+    },
+    {
+      "criterion_id": "jurisdiction_attribution",
+      "question": "Is the claim correctly attributed to the Oregon Department of Education source family?",
+      "labels": ["correct", "incorrect", "unclear"]
+    },
+    {
+      "criterion_id": "value_consistency",
+      "question": "Is the structured field/value consistent with the claim summary and source evidence?",
+      "labels": ["consistent", "inconsistent", "unclear"]
+    }
+  ],
+  "blinded_decision_order": [
+    { "decision_id": "d01", "claim_id": "or-v01-family-engagement", "criterion_id": "source_support" },
+    { "decision_id": "d02", "claim_id": "or-v01-privacy", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d03", "claim_id": "or-v01-guidance-format", "criterion_id": "value_consistency" },
+    { "decision_id": "d04", "claim_id": "or-v01-equity-access", "criterion_id": "claim_presence" },
+    { "decision_id": "d05", "claim_id": "or-v01-system-planning", "criterion_id": "jurisdiction_attribution" },
+    { "decision_id": "d06", "claim_id": "or-v01-policy-development-resource", "criterion_id": "source_support" },
+    { "decision_id": "d07", "claim_id": "or-v01-guidance-format", "criterion_id": "claim_presence" },
+    { "decision_id": "d08", "claim_id": "or-v01-family-engagement", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d09", "claim_id": "or-v01-privacy", "criterion_id": "value_consistency" },
+    { "decision_id": "d10", "claim_id": "or-v01-equity-access", "criterion_id": "jurisdiction_attribution" },
+    { "decision_id": "d11", "claim_id": "or-v01-system-planning", "criterion_id": "source_support" },
+    { "decision_id": "d12", "claim_id": "or-v01-policy-development-resource", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d13", "claim_id": "or-v01-guidance-format", "criterion_id": "jurisdiction_attribution" },
+    { "decision_id": "d14", "claim_id": "or-v01-family-engagement", "criterion_id": "value_consistency" },
+    { "decision_id": "d15", "claim_id": "or-v01-privacy", "criterion_id": "claim_presence" },
+    { "decision_id": "d16", "claim_id": "or-v01-equity-access", "criterion_id": "source_support" },
+    { "decision_id": "d17", "claim_id": "or-v01-system-planning", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d18", "claim_id": "or-v01-policy-development-resource", "criterion_id": "value_consistency" },
+    { "decision_id": "d19", "claim_id": "or-v01-guidance-format", "criterion_id": "source_support" },
+    { "decision_id": "d20", "claim_id": "or-v01-family-engagement", "criterion_id": "jurisdiction_attribution" },
+    { "decision_id": "d21", "claim_id": "or-v01-privacy", "criterion_id": "source_support" },
+    { "decision_id": "d22", "claim_id": "or-v01-equity-access", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d23", "claim_id": "or-v01-system-planning", "criterion_id": "value_consistency" },
+    { "decision_id": "d24", "claim_id": "or-v01-policy-development-resource", "criterion_id": "claim_presence" },
+    { "decision_id": "d25", "claim_id": "or-v01-guidance-format", "criterion_id": "anchor_locatability" },
+    { "decision_id": "d26", "claim_id": "or-v01-family-engagement", "criterion_id": "claim_presence" },
+    { "decision_id": "d27", "claim_id": "or-v01-privacy", "criterion_id": "jurisdiction_attribution" },
+    { "decision_id": "d28", "claim_id": "or-v01-equity-access", "criterion_id": "value_consistency" },
+    { "decision_id": "d29", "claim_id": "or-v01-system-planning", "criterion_id": "claim_presence" },
+    { "decision_id": "d30", "claim_id": "or-v01-policy-development-resource", "criterion_id": "jurisdiction_attribution" }
+  ]
+}

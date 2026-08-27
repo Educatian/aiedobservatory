@@ -1,0 +1,187 @@
+{
+  "suite": "openpolicy-receipts-conformance",
+  "version": "0.1",
+  "frozen_at": "2026-08-27T20:00:00.000Z",
+  "evaluation_type": "deterministic_conformance_not_independent_security_review",
+  "total": 30,
+  "passed": 30,
+  "failed": 0,
+  "category_summary": {
+    "valid": {
+      "passed": 5,
+      "total": 5
+    },
+    "tamper": {
+      "passed": 8,
+      "total": 8
+    },
+    "scope": {
+      "passed": 5,
+      "total": 5
+    },
+    "signature": {
+      "passed": 5,
+      "total": 5
+    },
+    "freshness": {
+      "passed": 2,
+      "total": 2
+    },
+    "hostile_content": {
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "results": [
+    {
+      "id": "valid-01",
+      "category": "valid",
+      "passed": true
+    },
+    {
+      "id": "valid-02",
+      "category": "valid",
+      "passed": true
+    },
+    {
+      "id": "valid-03",
+      "category": "valid",
+      "passed": true
+    },
+    {
+      "id": "valid-04",
+      "category": "valid",
+      "passed": true
+    },
+    {
+      "id": "valid-05",
+      "category": "valid",
+      "passed": true
+    },
+    {
+      "id": "tamper-01",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-02",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-03",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-04",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-05",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-06",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-07",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "tamper-08",
+      "category": "tamper",
+      "passed": true
+    },
+    {
+      "id": "scope-01",
+      "category": "scope",
+      "passed": true
+    },
+    {
+      "id": "scope-02",
+      "category": "scope",
+      "passed": true
+    },
+    {
+      "id": "scope-03",
+      "category": "scope",
+      "passed": true
+    },
+    {
+      "id": "scope-04",
+      "category": "scope",
+      "passed": true
+    },
+    {
+      "id": "scope-05",
+      "category": "scope",
+      "passed": true
+    },
+    {
+      "id": "signature-01",
+      "category": "signature",
+      "passed": true
+    },
+    {
+      "id": "signature-02",
+      "category": "signature",
+      "passed": true
+    },
+    {
+      "id": "signature-03",
+      "category": "signature",
+      "passed": true
+    },
+    {
+      "id": "signature-04",
+      "category": "signature",
+      "passed": true
+    },
+    {
+      "id": "signature-05",
+      "category": "signature",
+      "passed": true
+    },
+    {
+      "id": "replay-01",
+      "category": "freshness",
+      "passed": true
+    },
+    {
+      "id": "replay-02",
+      "category": "freshness",
+      "passed": true
+    },
+    {
+      "id": "hostile-01",
+      "category": "hostile_content",
+      "passed": true
+    },
+    {
+      "id": "hostile-02",
+      "category": "hostile_content",
+      "passed": true
+    },
+    {
+      "id": "hostile-03",
+      "category": "hostile_content",
+      "passed": true
+    },
+    {
+      "id": "hostile-04",
+      "category": "hostile_content",
+      "passed": true
+    },
+    {
+      "id": "hostile-05",
+      "category": "hostile_content",
+      "passed": true
+    }
+  ]
+}

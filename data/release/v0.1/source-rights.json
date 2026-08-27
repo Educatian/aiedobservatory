@@ -1,0 +1,43 @@
+{
+  "release": "v0.1",
+  "scope": "Oregon Department of Education generative-AI guidance source family",
+  "rights_model": "link_only_sources_cc0_project_facts",
+  "reviewed_at": "2026-08-27",
+  "project_authored_data_license": "CC0-1.0",
+  "raw_source_redistribution": false,
+  "sources": [
+    {
+      "source_id": "or-ode-ai-guidance-web-v3",
+      "issuer": "Oregon Department of Education",
+      "title": "Generative Artificial Intelligence (AI) in K-12 Classrooms Guidance",
+      "source_role": "claim_bearing",
+      "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Pages/Generative-Artificial-Intelligence-(AI)-for-K-12-Schools.aspx",
+      "source_material_decision": "link_only",
+      "raw_copy_in_release": false,
+      "derived_facts_decision": "project-authored factual coding released under CC0-1.0",
+      "rationale": "The project does not claim ownership or redistribution permission for the source page. The release contains links, hashes, section anchors, and project-authored factual coding only."
+    },
+    {
+      "source_id": "or-ode-policy-protocols-v2",
+      "issuer": "Oregon Department of Education",
+      "title": "Developing Policy and Protocols for the Use of Generative AI in K-12 Classrooms",
+      "source_role": "claim_bearing",
+      "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Developing%20Policy%20and%20Protocols%20for%20the%20use%20of%20Generative%20AI%20in%20K-12%20Classrooms_March%202025.pdf",
+      "source_material_decision": "link_only",
+      "raw_copy_in_release": false,
+      "derived_facts_decision": "project-authored factual coding released under CC0-1.0",
+      "rationale": "The PDF remains at the issuing agency. No PDF or extended quotation is redistributed in the release."
+    },
+    {
+      "source_id": "or-ode-classrooms-v2",
+      "issuer": "Oregon Department of Education",
+      "title": "Generative Artificial Intelligence (AI) in K-12 Classrooms v2",
+      "source_role": "supporting_context",
+      "url": "https://www.oregon.gov/ode/educator-resources/teachingcontent/Documents/Generative%20Artificial%20Intelligence%20(AI)%20in%20K-12%20Classrooms%20v2.pdf",
+      "source_material_decision": "link_only",
+      "raw_copy_in_release": false,
+      "derived_facts_decision": "project-authored factual coding released under CC0-1.0",
+      "rationale": "The PDF remains at the issuing agency. No PDF or extended quotation is redistributed in the release."
+    }
+  ]
+}

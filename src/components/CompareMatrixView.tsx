@@ -202,7 +202,7 @@ const compareRows: CompareRowDefinition[] = [
     render: (record) => (
       <span className="compare-pill compare-pill-confidence">
         <span className="material-symbols-outlined">verified</span>
-        {formatConfidence(record.confidence)} reliable
+        {formatConfidence(record.confidence)} extraction confidence
       </span>
     )
   }

@@ -1,0 +1,17 @@
+{
+  "release": "v0.1",
+  "generated_at": "2026-08-27T20:34:18.765Z",
+  "evaluation_type": "release_contract_completeness_not_model_accuracy",
+  "claim_count": 6,
+  "source_count": 3,
+  "source_link_rate": 1,
+  "source_integrity_rate": 1,
+  "rights_decision_rate": 1,
+  "independent_review_rate": 0,
+  "raw_third_party_files_in_release": 0,
+  "limitations": [
+    "This card measures release-contract completeness, not extraction accuracy.",
+    "Independent review is pending and is reported as zero rather than inferred.",
+    "The release covers one official source family and does not support national generalization."
+  ]
+}
