@@ -49,7 +49,7 @@
       "algorithm": "Ed25519",
       "key_id": "standalone-example-key",
       "signed_digest_sha256": "8aeb0677ab2b0194c2e09862cdb56d2ee0ec09822086fc1e1557ae265711e319",
-      "value_base64": "0s+c22pYG1t0D3fWWEDN5BtMn4nH37yRsZRR12+yythXQEJxvT+kX0w4EwAAH3JO9zrk+3flhxilSnUSqXNBBw=="
+      "value_base64": "0ojoa4A+sudSz62aPyFFdd/y47pQLGvqnb/QDv9qu4YkshI1c3Bxeg+IloMe9Qon35ia5qY4zvd+YqnD3aXvDA=="
     }
   },
   "verification": {

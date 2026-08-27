@@ -1,7 +1,7 @@
 {
   "receipt_version": "0.1",
-  "run_id": "openpolicy-a23ef8e4-1c67-4df5-b660-efd7c4f9ec1d",
-  "generated_at": "2026-08-27T20:34:19.511Z",
+  "run_id": "openpolicy-01df91c7-7af0-48b6-bedc-978fc6017ef6",
+  "generated_at": "2026-08-27T20:38:53.583Z",
   "action": "assemble_and_evaluate_link_only_oregon_release_slice",
   "actor": "Jewoong Moon",
   "authorization_scope": {
@@ -15,7 +15,7 @@
   },
   "code": {
     "repository": "https://github.com/Educatian/aiedobservatory",
-    "commit": "6743c9b6157f06fe4202878bb2e9ede73d60a7a6",
+    "commit": "ff09dcf08668905b53f70c453c7ed9d27930e93c",
     "dirty": true
   },
   "runtime": {
@@ -27,8 +27,8 @@
   "inputs": [
     {
       "path": "data/release/v0.1/policy-claims.json",
-      "sha256": "48d235d3a951bc525d35864d279ef1d3ff8935f5d0b0bbf512ef825ba4f21931",
-      "bytes": 3256
+      "sha256": "f30a471c14726a40ad051e68814935f56e3449e9215918cee28181e0c448c517",
+      "bytes": 3255
     },
     {
       "path": "data/release/v0.1/source-rights.json",
@@ -39,12 +39,12 @@
   "outputs": [
     {
       "path": "data/release/v0.1/source-integrity.json",
-      "sha256": "15dafe0985e51cd69f2fa323756443fd9041b7f07ff3da99128a328e25141024",
+      "sha256": "0a1b775e6a4aa8d663a2428efb15ec78fbce571e8473e8e8de6b80c9ead31e6c",
       "bytes": 2451
     },
     {
       "path": "data/release/v0.1/evaluation-card.json",
-      "sha256": "8adbdb5f48202cfce20cc44d8f6d4bf075ac8e897193b572362cb45e7288becf",
+      "sha256": "da34a56b1f241c12be04069c006f6e9e5a7ccf9fdf4661320ecce25a06862e2a",
       "bytes": 627
     }
   ],

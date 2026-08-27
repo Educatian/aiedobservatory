@@ -2,8 +2,8 @@
   "adapter": "aied-observatory-release",
   "receipt": {
     "receipt_version": "1.0-draft",
-    "receipt_id": "opr-24a86dca-6ada-4a36-9476-fce4ddd6dc27",
-    "generated_at": "2026-08-27T20:34:19.844Z",
+    "receipt_id": "opr-fcc62090-63b7-46e7-9536-db1209f3a525",
+    "generated_at": "2026-08-27T20:38:53.928Z",
     "actor": "aied-observatory-release-agent",
     "action": "evaluate_release",
     "resource": "openpolicy://release/v0.1",
@@ -36,7 +36,7 @@
         "name": "evaluation_card",
         "media_type": "application/json",
         "bytes": 564,
-        "sha256": "6018d968d9b364271e1a4cabc609bb42fd0ee13c65911b06b35af7042e5507c7"
+        "sha256": "6cc03679163413ea22f48db2fc163af6fbccbf6d842c12a1696bbf50c7d3b81c"
       }
     ],
     "review": {
@@ -49,11 +49,11 @@
     "signature": {
       "algorithm": "Ed25519",
       "key_id": "observatory-release-example-key",
-      "signed_digest_sha256": "e7a142bc1cae8c19614893e687695674c66b387ecd886d994bd6d845486660ff",
-      "value_base64": "bpR8/djmH0o2gEAIHFkQzYjjUZIUyc8WiI6LmS782w1eC+ql4hpyiEddZDpV+GLz1AzVH+mQmRNZVKAFifxfDg=="
+      "signed_digest_sha256": "eefd835fe7052137142698075692f44e9c503ce7f70a74c904ada4a32ea13d45",
+      "value_base64": "7bJwSC36sqwsFeH5RAZhSZ4I+1WVPO7BBL1wvE8+xIywW4eiUKXKPr+grj51u2PeR8J7PBxbv3yPlDYnuCdcAw=="
     }
   },
-  "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAgJk9vmlgBuApuqdnx9XbF45qrolhMyXHUrjmfD+dQtQ=\n-----END PUBLIC KEY-----\n",
+  "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAK4Sg2EXXXBxiufqt6nJtdztJKdbsZClY/E1PpGuPaKE=\n-----END PUBLIC KEY-----\n",
   "verification": {
     "ok": true,
     "errors": []

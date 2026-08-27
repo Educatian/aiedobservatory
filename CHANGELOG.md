@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0-rc.3 — 2026-08-27
+
+- Fixed cross-platform receipt hashing by pinning release JSON fixtures to LF line endings.
+- Supersedes `v0.2.0-rc.2`, whose GitHub CI exposed the Windows/Linux newline mismatch.
+
 ## 0.2.0-rc.2 — 2026-08-27
 
 - Added the domain-agnostic OpenPolicy Receipts release-candidate package.

@@ -1,0 +1,5 @@
+data/release/v0.1/*.json text eol=lf
+data/conformance/**/*.json text eol=lf
+data/reproduction/**/*.json text eol=lf
+packages/openpolicy-receipts/**/*.json text eol=lf
+public/receipt-demo.json text eol=lf

@@ -5,7 +5,7 @@
 # AI Education Policy Observatory
 
 <p align="center">
-  <img alt="Status" src="https://img.shields.io/badge/status-v0.2.0--rc.2-0b6b8f?style=flat-square" />
+  <img alt="Status" src="https://img.shields.io/badge/status-v0.2.0--rc.3-0b6b8f?style=flat-square" />
   <img alt="License" src="https://img.shields.io/badge/code-Apache--2.0-162839?style=flat-square" />
   <img alt="Tests" src="https://img.shields.io/badge/tests-14%20passing-198038?style=flat-square" />
 </p>

@@ -1,7 +1,7 @@
 {
   "name": "aied-policy-atlas",
   "private": true,
-  "version": "0.2.0-rc.2",
+  "version": "0.2.0-rc.3",
   "description": "Auditable open-source pipeline and observatory for AI-in-education policy evidence.",
   "license": "Apache-2.0",
   "author": "Jewoong Moon",
